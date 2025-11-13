@@ -34,7 +34,7 @@
 
 .field public mEnrollPaused:Z
 
-.field public final mEnrollmentCallback:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6;
+.field public final mEnrollmentCallback:Lcom/samsung/android/bio/face/SemBioFaceManager$EnrollmentCallback;
 
 .field public mErrorDialog:Landroid/app/AlertDialog;
 
@@ -44,7 +44,7 @@
 
 .field public mFaceHelpGuideText:Landroid/widget/TextView;
 
-.field public mFaceManager:Landroid/hardware/face/FaceManager;
+.field public mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public mFaceProgressText:Landroid/widget/TextView;
 
@@ -445,7 +445,7 @@
     const/4 v0, 0x0
 
     .line 5
-    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 6
     .line 7
@@ -618,7 +618,7 @@
     .line 90
     .line 91
     .line 92
-    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mEnrollmentCallback:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6;
+    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mEnrollmentCallback:Lcom/samsung/android/bio/face/SemBioFaceManager$EnrollmentCallback;
 
     .line 93
     .line 94
@@ -1150,7 +1150,7 @@
     .line 86
     .line 87
     :cond_4
-    iget-object p1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 88
     .line 89
@@ -1158,7 +1158,7 @@
 
     .line 90
     .line 91
-    invoke-virtual {p1}, Landroid/hardware/face/FaceManager;->semResumeEnroll()V
+    invoke-virtual {p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->semResumeEnroll()V
 
     .line 92
     .line 93
@@ -1883,7 +1883,7 @@
     .line 36
     .line 37
     :cond_0
-    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 38
     .line 39
@@ -1912,7 +1912,7 @@
     .line 50
     .line 51
     :cond_1
-    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 52
     .line 53
@@ -1928,7 +1928,7 @@
 
     .line 58
     .line 59
-    invoke-virtual {v0, v3, v4, v5, v6}, Landroid/hardware/face/FaceManager;->revokeChallenge(IIJ)V
+    invoke-virtual {v0, v3, v4, v5, v6}, Lcom/samsung/android/bio/face/SemBioFaceManager;->revokeChallenge(IIJ)V
 
     .line 60
     .line 61
@@ -2582,46 +2582,10 @@
 
     .line 254
     :cond_6
-    const-string v1, "face"
+    invoke-direct {p0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->getFaceManager()Z
 
-    .line 255
-    .line 256
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    move-result v1
 
-    .line 257
-    .line 258
-    .line 259
-    move-result-object v1
-
-    .line 260
-    check-cast v1, Landroid/hardware/face/FaceManager;
-
-    .line 261
-    .line 262
-    iput-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
-
-    .line 263
-    .line 264
-    if-nez v1, :cond_7
-
-    .line 265
-    .line 266
-    const-string v1, "getFaceManager() : mFaceManager == null"
-
-    .line 267
-    .line 268
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 269
-    .line 270
-    .line 271
-    iput-boolean v2, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mIsFaceManagerBinded:Z
-
-    .line 272
-    .line 273
-    goto :goto_2
-
-    .line 274
     :cond_7
     iput-boolean v4, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mIsFaceManagerBinded:Z
 
@@ -2659,7 +2623,7 @@
     move-result-object v0
 
     .line 292
-    invoke-virtual {p0, v8, v0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->showFaceErrorDialog(ILjava/lang/CharSequence;)V
+  #  invoke-virtual {p0, v8, v0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->showFaceErrorDialog(ILjava/lang/CharSequence;)V
 
     .line 293
     .line 294
@@ -2668,7 +2632,7 @@
 
     .line 296
     :cond_8
-    iget-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 297
     .line 298
@@ -2709,7 +2673,7 @@
     .line 314
     .line 315
     .line 316
-    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 317
     .line 318
@@ -2726,7 +2690,7 @@
     .line 323
     .line 324
     .line 325
-    invoke-virtual {v0, v1, v2}, Landroid/hardware/face/FaceManager;->generateChallenge(ILandroid/hardware/face/FaceManager$GenerateChallengeCallback;)V
+    invoke-virtual {v0, v1, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->generateChallenge(ILcom/samsung/android/bio/face/SemBioFaceManager$GenerateChallengeCallback;)V
 
     .line 326
     .line 327
@@ -2819,6 +2783,59 @@
     :goto_4
     return-void
 .end method
+
+.method private getFaceManager()Z
+    .locals 3
+
+    .line 166
+    const-string v0, "BSS_FaceEnrollActivity"
+
+    const-string v1, "getFaceManager"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 167
+    iget-boolean v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mIsFaceManagerBinded:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    .line 168
+    return v2
+
+    .line 170
+    :cond_0
+    invoke-static {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    .line 171
+    if-nez v1, :cond_1
+
+    .line 172
+    const-string v1, "getFaceManager() : mFaceManager == null"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 173
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mIsFaceManagerBinded:Z
+
+    .line 174
+    return v0
+
+    .line 176
+    :cond_1
+    iput-boolean v2, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mIsFaceManagerBinded:Z
+
+    .line 177
+    return v2
+.end method
+
 
 .method public final onStop()V
     .locals 2
@@ -3857,8 +3874,9 @@
     return-void
 .end method
 
-.method public final startEnrollment()V
-    .locals 11
+.method public final startEnrollment(Landroid/view/View;)V
+    .locals 14
+    .param p1, "faceView"    # Landroid/view/View;
 
     .line 1
     sget-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DUAL_DISPLAY:Z
@@ -3945,11 +3963,11 @@
 
     .line 43
     .line 44
-    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 45
     .line 46
-    invoke-virtual {v0}, Landroid/hardware/face/FaceManager;->semPauseEnroll()V
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->requestEnrollPause()V
 
     .line 47
     .line 48
@@ -4012,7 +4030,7 @@
 
     .line 75
     :goto_1
-    iget-object v2, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v2, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 76
     .line 77
@@ -4028,27 +4046,15 @@
 
     .line 82
     .line 83
-    iget-object v6, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mEnrollmentCallback:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6;
+    iget-object v6, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mEnrollmentCallback:Lcom/samsung/android/bio/face/SemBioFaceManager$EnrollmentCallback;
 
-    .line 84
-    .line 85
-    const/4 p0, 0x0
+    
+    const/4 v9, 0x0
+    new-array v7, v9, [I
 
-    .line 86
-    new-array v7, p0, [I
-
-    .line 87
-    .line 88
-    new-instance p0, Landroid/hardware/face/FaceEnrollOptions$Builder;
-
-    .line 89
-    .line 90
-    invoke-direct {p0}, Landroid/hardware/face/FaceEnrollOptions$Builder;-><init>()V
-
-    .line 91
-    .line 92
-    .line 93
-    invoke-virtual {p0}, Landroid/hardware/face/FaceEnrollOptions$Builder;->build()Landroid/hardware/face/FaceEnrollOptions;
+    new-instance v10, Landroid/hardware/face/FaceEnrollOptions$Builder;
+    invoke-direct {v10}, Landroid/hardware/face/FaceEnrollOptions$Builder;-><init>()V
+    invoke-virtual {v10}, Landroid/hardware/face/FaceEnrollOptions$Builder;->build()Landroid/hardware/face/FaceEnrollOptions;
 
     .line 94
     .line 95
@@ -4059,7 +4065,21 @@
     const/4 v9, 0x1
 
     .line 98
-    invoke-virtual/range {v2 .. v10}, Landroid/hardware/face/FaceManager;->enroll(I[BLandroid/os/CancellationSignal;Landroid/hardware/face/FaceManager$EnrollmentCallback;[ILandroid/view/Surface;ZLandroid/hardware/face/FaceEnrollOptions;)V
+    move-object v0, v2    # mFaceManager
+    move-object v1, v4    # token
+    move-object v2, v5    # cancellation
+    move v3, v3           # userId (int → move)
+    move-object v4, v6    # callback
+    move-object v5, p1    # texture
+
+    invoke-virtual/range {v0 .. v5}, 
+    Lcom/samsung/android/bio/face/SemBioFaceManager;->enroll(
+        [B
+        Landroid/os/CancellationSignal;
+        I
+        Lcom/samsung/android/bio/face/SemBioFaceManager$EnrollmentCallback;
+        Landroid/view/View;
+    )V
 
     .line 99
     .line 100

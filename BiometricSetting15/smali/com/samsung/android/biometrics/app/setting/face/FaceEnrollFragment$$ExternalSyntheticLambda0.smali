@@ -9,6 +9,8 @@
 # instance fields
 .field public final synthetic f$0:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;
 
+.field private mFacePreview:Landroid/view/View;
+
 
 # direct methods
 .method public synthetic constructor <init>(Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;)V
@@ -30,10 +32,50 @@
 
 # virtual methods
 .method public final run()V
-    .locals 8
+    .locals 9
 
     .line 1
+    move-object v8, p0
+
     iget-object p0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;
+
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
+    const-string v2, "BSS_FaceEnrollFragment"
+
+    const-wide/16 v3, 0x64
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v5
+
+    if-gtz v5, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    if-gtz v0, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-nez v0, :cond_b
+
+    goto :goto_5
+
+    :cond_b
 
     .line 2
     .line 3
@@ -592,8 +634,9 @@
     if-eqz v0, :cond_6
 
     .line 282
-    .line 283
-    invoke-virtual {v0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment()V
+    iget-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment(Landroid/view/View;)V
 
     .line 284
     .line 285
@@ -613,5 +656,20 @@
     .line 293
     :cond_6
     :goto_4
+    return-void
+
+    :cond_7
+    :goto_5
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mHandler:Landroid/os/Handler;
+
+    if-eqz v0, :cond_a
+
+    const-string v5, "Face preview not ready; retrying startEnrollment"
+
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v0, v8, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_a
     return-void
 .end method

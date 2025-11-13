@@ -10,6 +10,9 @@
 
 .field public mHandler:Landroid/os/Handler;
 
+.field public mFacePreview:Landroid/view/View;
+
+
 .field public mPunchHoleVIView:Lcom/samsung/android/biometrics/app/setting/face/PunchHoleVIView;
 
 
@@ -35,6 +38,9 @@
     .line 8
     .line 9
     iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mHandler:Landroid/os/Handler;
+
+    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
 
     .line 10
     .line 11
@@ -111,7 +117,7 @@
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 6
+    .locals 11
 
     .line 1
     const-string v0, "BSS_FaceEnrollFragment"
@@ -192,6 +198,10 @@
     .line 36
     .line 37
     iget-object p2, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mActivity:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;
+    const/4 v9, 0x0
+
+    iget-object v9, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
 
     .line 38
     .line 39
@@ -488,31 +498,53 @@
 
     .line 188
     .line 189
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_5a
+
+    const v9, 0x7f0a00ca
+
+    goto :goto_face_preview
+
+    :cond_5a
+    const v9, 0x7f0a007a
+
+    :goto_face_preview
+    invoke-virtual {v2, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     .line 190
     .line 191
-    const p2, 0x7f0a007a
-
     .line 192
-    .line 193
-    .line 194
-    invoke-virtual {v2, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v9
 
+    .line 193
+    iput-object v9, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
+    .line 194
     .line 195
     .line 196
+    if-eqz p2, :cond_6
+
     .line 197
-    move-result-object p2
+    const p2, 0x7f0a007a
 
     .line 198
-    check-cast p2, Landroid/widget/ImageView;
-
     .line 199
     .line 200
-    iput-object p2, p1, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mCameraPreview:Landroid/widget/ImageView;
+    invoke-virtual {v2, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     .line 201
     .line 202
+    .line 203
+    move-result-object p2
+
+    .line 204
+    check-cast p2, Landroid/widget/ImageView;
+
+    .line 205
+    .line 206
+    iput-object p2, p1, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mCameraPreview:Landroid/widget/ImageView;
+
+    .line 207
+    .line 208
     invoke-virtual {p2, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 203

@@ -198,7 +198,7 @@
 
     .line 76
     .line 77
-    invoke-virtual {p0, v0, v1}, Landroid/hardware/face/FaceManager$EnrollmentCallback;->onEnrollmentHelp(ILjava/lang/CharSequence;)V
+    invoke-virtual {p0, v0, v1}, Lcom/samsung/android/bio/face/SemBioFaceManager$EnrollmentCallback;->onEnrollmentHelp(ILjava/lang/CharSequence;)V
 
     .line 78
     .line 79

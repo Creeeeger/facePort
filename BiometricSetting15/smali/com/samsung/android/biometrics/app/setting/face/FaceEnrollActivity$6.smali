@@ -1,5 +1,5 @@
 .class public final Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6;
-.super Landroid/hardware/face/FaceManager$EnrollmentCallback;
+.super Lcom/samsung/android/bio/face/SemBioFaceManager$EnrollmentCallback;
 .source "qb/99320575 d56624c1bb715a84cea9c0c1dda8efd1b9707127cfd9652e1a6ad0bfbdc507b8"
 
 
@@ -16,7 +16,7 @@
 
     .line 2
     .line 3
-    invoke-direct {p0}, Landroid/hardware/face/FaceManager$EnrollmentCallback;-><init>()V
+    invoke-direct {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager$EnrollmentCallback;-><init>()V
 
     .line 4
     .line 5
