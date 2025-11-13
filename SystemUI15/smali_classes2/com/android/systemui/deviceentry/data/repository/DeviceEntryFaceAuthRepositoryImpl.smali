@@ -54,6 +54,8 @@
 
 .field public final faceManager:Landroid/hardware/face/FaceManager;
 
+.field public final semBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
 .field public halErrorRetryJob:Lkotlinx/coroutines/Job;
 
 .field public final isAuthenticated:Lkotlinx/coroutines/flow/StateFlowImpl;
@@ -129,6 +131,17 @@
 
     iput-object v1, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->faceManager:Landroid/hardware/face/FaceManager;
 
+    sget-object v13, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->sFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-nez v13, :cond_sem_manager
+
+    invoke-static/range {p1 .. p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    move-result-object v13
+
+:cond_sem_manager
+    iput-object v13, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->semBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
     iput-object v2, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->userRepository:Lcom/android/systemui/user/data/repository/UserRepository;
 
     iput-object v3, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->keyguardBypassController:Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
@@ -199,13 +212,24 @@
 
     iput-object v15, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->isLockedOut:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    if-eqz v1, :cond_0
+    iget-object v13, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->semBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-eqz v13, :cond_face_detection
+
+    invoke-virtual {v13}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
+
+    move-result v1
+
+    goto :goto_detection_supported
+
+    :cond_face_detection
+    if-eqz v1, :cond_no_detection
 
     invoke-virtual/range {p2 .. p2}, Landroid/hardware/face/FaceManager;->getSensorPropertiesInternal()Ljava/util/List;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_no_detection
 
     invoke-static {v1}, Lkotlin/collections/CollectionsKt___CollectionsKt;->firstOrNull(Ljava/util/List;)Ljava/lang/Object;
 
@@ -213,16 +237,16 @@
 
     check-cast v1, Landroid/hardware/face/FaceSensorPropertiesInternal;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_no_detection
 
     iget-boolean v1, v1, Landroid/hardware/face/FaceSensorPropertiesInternal;->supportsFaceDetection:Z
 
-    goto :goto_0
+    goto :goto_detection_supported
 
-    :cond_0
+    :cond_no_detection
     const/4 v1, 0x0
 
-    :goto_0
+    :goto_detection_supported
     iput-boolean v1, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->isDetectionSupported:Z
 
     invoke-static {v14}, Lkotlinx/coroutines/flow/StateFlowKt;->MutableStateFlow(Ljava/lang/Object;)Lkotlinx/coroutines/flow/StateFlowImpl;
@@ -670,11 +694,13 @@
 
     invoke-direct {v2, v0, v8}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$processPendingAuthRequests$1;-><init>(Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;Lkotlin/coroutines/Continuation;)V
 
-    move-object/from16 v7, p2
+    iget-object v6, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->pendingAuthenticateRequest:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    move-object/from16 v6, p10
+    iget-object v7, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->_isAuthRunning:Lkotlinx/coroutines/flow/StateFlowImpl;
 
-    invoke-static {v6, v1, v3, v7, v2}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$2;
+    iget-object v12, v0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->cancellationInProgress:Lkotlinx/coroutines/flow/StateFlowImpl;
+
+    invoke-static {v6, v7, v1, v12, v2}, Lkotlinx/coroutines/flow/FlowKt;->combine(Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/Flow;Lkotlin/jvm/functions/Function5;)Lkotlinx/coroutines/flow/FlowKt__ZipKt$combine$$inlined$combineUnsafe$FlowKt__ZipKt$2;
 
     move-result-object v1
 
@@ -1003,6 +1029,46 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    iget-object v2, p0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->semBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "    semBioFaceManager: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->semBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-eqz v2, :cond_sem_bio_absent
+
+    invoke-virtual {v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    const-string v0, "    semBioHardwareDetected: "
+
+    invoke-static {v0, v2, p1}, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/Object;Ljava/io/PrintWriter;)V
+
+    goto :goto_after_sem_bio
+
+:cond_sem_bio_absent
+    const-string v0, "    semBioHardwareDetected: null"
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+:goto_after_sem_bio
     iget-object p2, p0, Lcom/android/systemui/deviceentry/data/repository/DeviceEntryFaceAuthRepositoryImpl;->faceManager:Landroid/hardware/face/FaceManager;
 
     const/4 v0, 0x0

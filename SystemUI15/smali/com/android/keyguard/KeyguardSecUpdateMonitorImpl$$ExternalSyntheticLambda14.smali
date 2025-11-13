@@ -97,6 +97,16 @@
 
     if-eqz v0, :cond_1
 
+    sget-object v0, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->sFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-eqz v0, :cond_face_session_open_fallback
+
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->requestSessionOpen()V
+
+    goto :cond_1
+
+    :cond_face_session_open_fallback
+
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->mFaceManager:Landroid/hardware/face/FaceManager;
 
     if-eqz p0, :cond_1
@@ -130,19 +140,29 @@
 
     invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->setFaceAuthenticated(Z)V
 
+    sget-object v0, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->sFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    const-string v1, "KeyguardFace"
+
+    const-string v2, "requestSessionClose()"
+
+    if-eqz v0, :cond_face_session_close_fallback
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->requestSessionClose()V
+
+    goto :cond_3
+
+    :cond_face_session_close_fallback
+
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->mFaceManager:Landroid/hardware/face/FaceManager;
 
     if-eqz v0, :cond_3
 
-    const-string v0, "KeyguardFace"
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "requestSessionClose()"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->mFaceManager:Landroid/hardware/face/FaceManager;
-
-    invoke-virtual {p0}, Landroid/hardware/face/FaceManager;->semSessionClose()V
+    invoke-virtual {v0}, Landroid/hardware/face/FaceManager;->semSessionClose()V
 
     :cond_3
     return-void

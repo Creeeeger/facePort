@@ -104,6 +104,8 @@
 
 .field public final mFaceManager:Landroid/hardware/face/FaceManager;
 
+.field public final mSemBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
 .field public mFaceRunningState:I
 
 .field public mFaceSensorProperties:Ljava/util/List;
@@ -719,6 +721,12 @@
     move-object v3, p1
 
     iput-object v3, v0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceManager:Landroid/hardware/face/FaceManager;
+
+    invoke-static {p2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mSemBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4573,21 +4581,41 @@
 
     invoke-virtual {p0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->stopListeningForFace(Lcom/android/systemui/deviceentry/shared/FaceAuthUiEvent;)V
 
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceSensorProperties:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/face/FaceSensorPropertiesInternal;
+
+    iget v2, v1, Landroid/hardware/face/FaceSensorPropertiesInternal;->sensorId:I
+
     iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceManager:Landroid/hardware/face/FaceManager;
 
-    iget-object v2, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceSensorProperties:Ljava/util/List;
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/hardware/face/FaceSensorPropertiesInternal;
-
-    iget v2, v2, Landroid/hardware/face/FaceSensorPropertiesInternal;->sensorId:I
+    if-eqz v1, :cond_1a
 
     invoke-virtual {v1, v2, p1}, Landroid/hardware/face/FaceManager;->getLockoutModeForUser(II)I
 
     move-result v1
+
+    goto :goto_1
+
+    :cond_1a
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mSemBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-eqz v1, :cond_1b
+
+    invoke-virtual {v1, v2, p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getLockoutModeForUser(II)I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_1b
+    const/4 v1, 0x0
+
+    :goto_1
 
     invoke-virtual {p0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->handleFaceLockoutReset(I)V
 
@@ -4867,16 +4895,39 @@
     return v0
 .end method
 
+
 .method public isFaceClass3()Z
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceManager:Landroid/hardware/face/FaceManager;
+
+    if-eqz v0, :cond_no_face_manager
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/hardware/face/FaceManager;->semGetSecurityLevel(Z)I
 
     move-result v0
+
+    goto :cond_security_level_ready
+
+    :cond_no_face_manager
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mSemBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-eqz v0, :cond_default_security
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getSecurityLevel(Landroid/content/Context;)I
+
+    move-result v0
+
+    goto :cond_security_level_ready
+
+    :cond_default_security
+    const/4 v0, 0x0
+
+    :cond_security_level_ready
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4896,19 +4947,22 @@
 
     invoke-virtual {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isFaceSupported()Z
 
-    move-result p0
+    move-result v2
 
-    if-eqz p0, :cond_0
+    if-eqz v2, :cond_return_false
 
-    if-ne v0, v1, :cond_0
+    const/4 v1, 0x1
 
-    goto :goto_0
+    if-ne v0, v1, :cond_return_false
 
-    :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
-    :goto_0
-    return v1
+    return v0
+
+    :cond_return_false
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public final isFaceDetectionRunning()Z
@@ -4960,26 +5014,39 @@
 .method public final isFaceSupported()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceSensorProperties:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceSensorProperties:Ljava/util/List;
+    const/4 p0, 0x0
 
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+    return p0
 
-    move-result p0
+    :cond_0
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mSemBioFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
-    if-nez p0, :cond_0
+    if-eqz v0, :cond_1
 
     const/4 p0, 0x1
 
-    goto :goto_0
+    return p0
 
-    :cond_0
+    :cond_1
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardUpdateMonitor;->mFaceManager:Landroid/hardware/face/FaceManager;
+
+    if-eqz p0, :cond_2
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
     const/4 p0, 0x0
 
-    :goto_0
     return p0
 .end method
 

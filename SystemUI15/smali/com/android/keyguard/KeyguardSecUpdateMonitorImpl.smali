@@ -3027,12 +3027,31 @@
 
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    sget-object v4, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->sFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-eqz v4, :cond_8a
+
+    invoke-virtual {v4}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
+
+    move-result v4
+
+    goto :goto_face_detection
+
+    :cond_8a
     iget-object v4, v0, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->mFaceManager:Landroid/hardware/face/FaceManager;
+
+    if-eqz v4, :cond_8b
 
     invoke-virtual {v4}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
 
     move-result v4
 
+    goto :goto_face_detection
+
+    :cond_8b
+    const/4 v4, 0x0
+
+    :goto_face_detection
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -6361,6 +6380,15 @@
 
     if-eqz p1, :cond_6
 
+    sget-object p1, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->sFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    if-eqz p1, :cond_5a
+
+    invoke-virtual {p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->resetAuthenticationTimeout()Z
+
+    goto :cond_6
+
+    :cond_5a
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecUpdateMonitorImpl;->mFaceManager:Landroid/hardware/face/FaceManager;
 
     if-eqz p1, :cond_6
