@@ -1,0 +1,545 @@
+.class public Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;
+.super Lcom/android/settings/core/InstrumentedPreferenceFragment;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lcom/android/settings/biometrics/BiometricEnrollSidecar$Listener;
+
+
+# instance fields
+.field public mAnimationDrawable:Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;
+
+.field public final mAnimationListener:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$1;
+
+.field public mCameraDevice:Landroid/hardware/camera2/CameraDevice;
+
+.field public mCameraId:Ljava/lang/String;
+
+.field public mCameraManager:Landroid/hardware/camera2/CameraManager;
+
+.field public final mCameraStateCallback:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$3;
+
+.field public mCaptureSession:Landroid/hardware/camera2/CameraCaptureSession;
+
+.field public mCircleView:Landroid/widget/ImageView;
+
+.field public final mHandler:Landroid/os/Handler;
+
+.field public mListener:Lcom/android/settings/biometrics/face/ParticleCollection$Listener;
+
+.field public mPreviewRequest:Landroid/hardware/camera2/CaptureRequest;
+
+.field public mPreviewRequestBuilder:Landroid/hardware/camera2/CaptureRequest$Builder;
+
+.field public mPreviewSize:Landroid/util/Size;
+
+.field public final mSurfaceTextureListener:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$2;
+
+.field public mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;-><init>()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mHandler:Landroid/os/Handler;
+
+    new-instance v0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$1;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$1;-><init>(Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;)V
+
+    iput-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mAnimationListener:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$1;
+
+    new-instance v0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$2;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$2;-><init>(Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;)V
+
+    iput-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mSurfaceTextureListener:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$2;
+
+    new-instance v0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$3;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$3;-><init>(Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;)V
+
+    iput-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraStateCallback:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$3;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final configureTransform(II)V
+    .locals 6
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    int-to-float p1, p1
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mPreviewSize:Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr p1, v0
+
+    int-to-float p2, p2
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mPreviewSize:Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr p2, v0
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
+
+    move-result v0
+
+    div-float/2addr p1, v0
+
+    div-float/2addr p2, v0
+
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    new-instance v1, Landroid/util/TypedValue;
+
+    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
+
+    new-instance v2, Landroid/util/TypedValue;
+
+    invoke-direct {v2}, Landroid/util/TypedValue;-><init>()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f0703b7
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v3, v4, v0, v5}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f0703b8
+
+    invoke-virtual {v3, v4, v1, v5}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f0703b6
+
+    invoke-virtual {v3, v4, v2, v5}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    new-instance v3, Landroid/graphics/Matrix;
+
+    invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
+
+    iget-object v4, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    invoke-virtual {v4, v3}, Landroid/view/TextureView;->getTransform(Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
+
+    invoke-virtual {v2}, Landroid/util/TypedValue;->getFloat()F
+
+    move-result v4
+
+    mul-float/2addr v4, p1
+
+    invoke-virtual {v2}, Landroid/util/TypedValue;->getFloat()F
+
+    move-result p1
+
+    mul-float/2addr p1, p2
+
+    invoke-virtual {v3, v4, p1}, Landroid/graphics/Matrix;->setScale(FF)V
+
+    invoke-virtual {v0}, Landroid/util/TypedValue;->getFloat()F
+
+    move-result p1
+
+    invoke-virtual {v1}, Landroid/util/TypedValue;->getFloat()F
+
+    move-result p2
+
+    invoke-virtual {v3, p1, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    invoke-virtual {p0, v3}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method public final getMetricsCategory()I
+    .locals 0
+
+    const/16 p0, 0x612
+
+    return p0
+.end method
+
+.method public final onCreate(Landroid/os/Bundle;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    const v0, 0x7f0a100e
+
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    iput-object p1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    const v0, 0x7f0a037b
+
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    iput-object p1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCircleView:Landroid/widget/ImageView;
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/widget/ImageView;->setLayerType(ILandroid/graphics/Paint;)V
+
+    new-instance p1, Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mAnimationListener:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$1;
+
+    invoke-direct {p1, v0, v1}, Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;-><init>(Landroid/content/Context;Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$1;)V
+
+    iput-object p1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mAnimationDrawable:Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCircleView:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const-string v0, "camera"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/hardware/camera2/CameraManager;
+
+    iput-object p1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraManager:Landroid/hardware/camera2/CameraManager;
+
+    return-void
+.end method
+
+.method public final onEnrollmentError(ILjava/lang/CharSequence;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mAnimationDrawable:Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;->onEnrollmentError(ILjava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final onEnrollmentHelp(ILjava/lang/CharSequence;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mAnimationDrawable:Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;->onEnrollmentHelp(ILjava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final onEnrollmentProgressChange(II)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mAnimationDrawable:Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings/biometrics/face/FaceEnrollAnimationDrawable;->onEnrollmentProgressChange(II)V
+
+    return-void
+.end method
+
+.method public final onPause()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->onPause()V
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCaptureSession:Landroid/hardware/camera2/CameraCaptureSession;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraCaptureSession;->close()V
+
+    iput-object v1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCaptureSession:Landroid/hardware/camera2/CameraCaptureSession;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraDevice;->close()V
+
+    iput-object v1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onResume()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->onResume()V
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    invoke-virtual {v0}, Landroid/view/TextureView;->isAvailable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    invoke-virtual {v0}, Landroid/view/TextureView;->getWidth()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    invoke-virtual {v1}, Landroid/view/TextureView;->getHeight()I
+
+    move-result v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->openCamera(II)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mTextureView:Lcom/android/settings/biometrics/face/FaceSquareTextureView;
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mSurfaceTextureListener:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$2;
+
+    invoke-virtual {v0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public final openCamera(II)V
+    .locals 4
+
+    :try_start_0
+    invoke-virtual {p0}, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->setUpCameraOutputs()V
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraManager:Landroid/hardware/camera2/CameraManager;
+
+    iget-object v1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraId:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraStateCallback:Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment$3;
+
+    iget-object v3, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Landroid/hardware/camera2/CameraDevice$StateCallback;Landroid/os/Handler;)V
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->configureTransform(II)V
+    :try_end_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "FaceEnrollPreviewFragment"
+
+    const-string p2, "Unable to open camera"
+
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
+    return-void
+.end method
+
+.method public final setUpCameraOutputs()V
+    .locals 8
+
+    const-string v0, "FaceEnrollPreviewFragment"
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraManager:Landroid/hardware/camera2/CameraManager;
+
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    if-ge v4, v2, :cond_4
+
+    aget-object v5, v1, v4
+
+    iget-object v6, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraManager:Landroid/hardware/camera2/CameraManager;
+
+    invoke-virtual {v6, v5}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+
+    move-result-object v6
+
+    sget-object v7, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {v6, v7}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Integer;
+
+    if-eqz v7, :cond_3
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    iput-object v5, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mCameraId:Ljava/lang/String;
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_STREAM_CONFIGURATION_MAP:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {v6, v1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/StreamConfigurationMap;
+
+    const-class v2, Landroid/graphics/SurfaceTexture;
+
+    invoke-virtual {v1, v2}, Landroid/hardware/camera2/params/StreamConfigurationMap;->getOutputSizes(Ljava/lang/Class;)[Landroid/util/Size;
+
+    move-result-object v1
+
+    move v2, v3
+
+    :goto_1
+    array-length v4, v1
+
+    if-ge v2, v4, :cond_2
+
+    aget-object v4, v1, v2
+
+    invoke-virtual {v4}, Landroid/util/Size;->getHeight()I
+
+    move-result v4
+
+    const/16 v5, 0x438
+
+    if-ne v4, v5, :cond_1
+
+    aget-object v4, v1, v2
+
+    invoke-virtual {v4}, Landroid/util/Size;->getWidth()I
+
+    move-result v4
+
+    const/16 v5, 0x780
+
+    if-ne v4, v5, :cond_1
+
+    aget-object v1, v1, v2
+
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const-string v2, "Unable to find a good resolution"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    aget-object v1, v1, v3
+
+    :goto_2
+    iput-object v1, p0, Lcom/android/settings/biometrics/face/FaceEnrollPreviewFragment;->mPreviewSize:Landroid/util/Size;
+    :try_end_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_5
+
+    :catch_0
+    move-exception p0
+
+    goto :goto_4
+
+    :cond_3
+    :goto_3
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :goto_4
+    const-string v1, "Unable to access camera"
+
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_4
+    :goto_5
+    return-void
+.end method

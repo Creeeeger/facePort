@@ -1,0 +1,13 @@
+.class public final Landroidx/recyclerview/widget/RecyclerView$LayoutManager$Properties;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# instance fields
+.field public orientation:I
+
+.field public reverseLayout:Z
+
+.field public spanCount:I
+
+.field public stackFromEnd:Z

@@ -1,0 +1,53 @@
+.class Lcom/android/settingslib/widget/AdaptiveIcon$AdaptiveConstantState;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public mColor:I
+
+.field public final mContext:Landroid/content/Context;
+
+.field public final mDrawable:Landroid/graphics/drawable/Drawable;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+
+    iput-object p1, p0, Lcom/android/settingslib/widget/AdaptiveIcon$AdaptiveConstantState;->mContext:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/android/settingslib/widget/AdaptiveIcon$AdaptiveConstantState;->mDrawable:Landroid/graphics/drawable/Drawable;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getChangingConfigurations()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 3
+
+    new-instance v0, Lcom/android/settingslib/widget/AdaptiveIcon;
+
+    iget-object v1, p0, Lcom/android/settingslib/widget/AdaptiveIcon$AdaptiveConstantState;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/settingslib/widget/AdaptiveIcon$AdaptiveConstantState;->mDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-direct {v0, v1, v2}, Lcom/android/settingslib/widget/AdaptiveIcon;-><init>(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)V
+
+    iget p0, p0, Lcom/android/settingslib/widget/AdaptiveIcon$AdaptiveConstantState;->mColor:I
+
+    invoke-virtual {v0, p0}, Lcom/android/settingslib/widget/AdaptiveIcon;->setBackgroundColor(I)V
+
+    return-object v0
+.end method

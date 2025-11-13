@@ -1,0 +1,69 @@
+.class Lcom/android/systemui/keyguard/KeyguardSliceProvider$2;
+.super Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/android/systemui/keyguard/KeyguardSliceProvider;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/systemui/keyguard/KeyguardSliceProvider;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/keyguard/KeyguardSliceProvider$2;->this$0:Lcom/android/systemui/keyguard/KeyguardSliceProvider;
+
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onTimeChanged()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardSliceProvider$2;->this$0:Lcom/android/systemui/keyguard/KeyguardSliceProvider;
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardSliceProvider;->updateClockLocked()V
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public final onTimeZoneChanged(Ljava/util/TimeZone;)V
+    .locals 0
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object p1, p0, Lcom/android/systemui/keyguard/KeyguardSliceProvider$2;->this$0:Lcom/android/systemui/keyguard/KeyguardSliceProvider;
+
+    invoke-virtual {p1}, Lcom/android/systemui/keyguard/KeyguardSliceProvider;->cleanDateFormatLocked()V
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method

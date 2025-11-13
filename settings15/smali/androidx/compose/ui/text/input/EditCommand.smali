@@ -1,0 +1,8 @@
+.class public interface abstract Landroidx/compose/ui/text/input/EditCommand;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# virtual methods
+.method public abstract applyTo(Landroidx/compose/ui/text/input/EditingBuffer;)V
+.end method

@@ -1,0 +1,93 @@
+.class public Lcom/samsung/android/settings/inputmethod/AppShortcutsSettings;
+.super Lcom/android/settings/dashboard/DashboardFragment;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# static fields
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/samsung/android/settings/inputmethod/AppShortcutsSettings$1;
+
+    const v1, 0x7f170147
+
+    invoke-direct {v0, v1}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>(I)V
+
+    sput-object v0, Lcom/samsung/android/settings/inputmethod/AppShortcutsSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/dashboard/DashboardFragment;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final createPreferenceControllers(Landroid/content/Context;)Ljava/util/List;
+    .locals 2
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v0, Lcom/samsung/android/settings/inputmethod/AppShortcutsPreferenceController;
+
+    const-string v1, "app_shortcuts_settings"
+
+    invoke-direct {v0, p1, v1}, Lcom/samsung/android/settings/inputmethod/AppShortcutsPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-object p0
+.end method
+
+.method public final getLogTag()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "AppShortcutsSettings"
+
+    return-object p0
+.end method
+
+.method public final getMetricsCategory()I
+    .locals 0
+
+    const/16 p0, 0x7a9
+
+    return p0
+.end method
+
+.method public final getPreferenceScreenResId()I
+    .locals 0
+
+    const p0, 0x7f170147
+
+    return p0
+.end method
+
+.method public final onAttach(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->onAttach(Landroid/content/Context;)V
+
+    const-class p1, Lcom/samsung/android/settings/inputmethod/AppShortcutsPreferenceController;
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->use(Ljava/lang/Class;)Lcom/android/settingslib/core/AbstractPreferenceController;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/samsung/android/settings/inputmethod/AppShortcutsPreferenceController;
+
+    invoke-virtual {p1, p0}, Lcom/samsung/android/settings/inputmethod/AppShortcutsPreferenceController;->setFragment(Landroidx/fragment/app/Fragment;)V
+
+    return-void
+.end method

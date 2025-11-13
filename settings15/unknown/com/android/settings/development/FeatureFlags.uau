@@ -1,0 +1,3 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lcom/android/settings/development/FeatureFlags;->a2dpOffloadCodecExtensibilitySettings()Z,out/soong/.intermediates/packages/apps/Settings/aconfig/development_settings_flag_lib/android_common/29c8c31bebfa7797fd49f37992177c8a/javac/srcjars/com/android/settings/development/FeatureFlags.java,9,5,9,25,
+Lcom/android/settings/development/FeatureFlags;->deprecateListActivity()Z,out/soong/.intermediates/packages/apps/Settings/aconfig/development_settings_flag_lib/android_common/29c8c31bebfa7797fd49f37992177c8a/javac/srcjars/com/android/settings/development/FeatureFlags.java,13,5,13,25,

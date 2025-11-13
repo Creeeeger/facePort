@@ -1,0 +1,514 @@
+.class public final Landroidx/slice/widget/RowStyle;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final mActionDividerHeight:I
+
+.field public final mBottomDividerEndPadding:I
+
+.field public final mBottomDividerStartPadding:I
+
+.field public final mContentEndPadding:I
+
+.field public final mContentStartPadding:I
+
+.field public final mDisableRecyclerViewItemAnimator:Z
+
+.field public final mEndItemEndPadding:I
+
+.field public final mEndItemStartPadding:I
+
+.field public final mIconSize:I
+
+.field public final mImageSize:I
+
+.field public final mProgressBarEndPadding:I
+
+.field public final mProgressBarInlineWidth:I
+
+.field public final mProgressBarStartPadding:I
+
+.field public final mSeekBarInlineWidth:I
+
+.field public final mSliceStyle:Landroidx/slice/widget/SliceStyle;
+
+.field public final mSubContentEndPadding:I
+
+.field public final mSubContentStartPadding:I
+
+.field public final mSubtitleColor:Ljava/lang/Integer;
+
+.field public final mTextActionPadding:I
+
+.field public final mTintColor:Ljava/lang/Integer;
+
+.field public final mTitleColor:Ljava/lang/Integer;
+
+.field public final mTitleEndPadding:I
+
+.field public final mTitleItemEndPadding:I
+
+.field public final mTitleItemStartPadding:I
+
+.field public final mTitleStartPadding:I
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;ILandroidx/slice/widget/SliceStyle;)V
+    .locals 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleItemStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleItemEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mContentStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mContentEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mSubContentStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mSubContentEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mEndItemStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mEndItemEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mBottomDividerStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mBottomDividerEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mActionDividerHeight:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mSeekBarInlineWidth:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mProgressBarInlineWidth:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mProgressBarStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mProgressBarEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTextActionPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mIconSize:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroidx/slice/widget/RowStyle;->mDisableRecyclerViewItemAnimator:Z
+
+    iput-object p3, p0, Landroidx/slice/widget/RowStyle;->mSliceStyle:Landroidx/slice/widget/SliceStyle;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p3
+
+    sget-object v1, Landroidx/slice/view/R$styleable;->RowStyle:[I
+
+    invoke-virtual {p3, p2, v1}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
+    move-result-object p2
+
+    const/16 p3, 0x16
+
+    const/high16 v1, -0x40800000    # -1.0f
+
+    :try_start_0
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mTitleItemStartPadding:I
+
+    const/16 p3, 0x15
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mTitleItemEndPadding:I
+
+    const/4 p3, 0x4
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mContentStartPadding:I
+
+    const/4 p3, 0x3
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mContentEndPadding:I
+
+    const/16 p3, 0x17
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mTitleStartPadding:I
+
+    const/16 p3, 0x14
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mTitleEndPadding:I
+
+    const/16 p3, 0xf
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mSubContentStartPadding:I
+
+    const/16 p3, 0xe
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mSubContentEndPadding:I
+
+    const/4 p3, 0x7
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mEndItemStartPadding:I
+
+    const/4 p3, 0x6
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mEndItemEndPadding:I
+
+    const/4 p3, 0x2
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mBottomDividerStartPadding:I
+
+    const/4 p3, 0x1
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mBottomDividerEndPadding:I
+
+    invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mActionDividerHeight:I
+
+    const/16 p3, 0xd
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mSeekBarInlineWidth:I
+
+    const/16 p3, 0xb
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mProgressBarInlineWidth:I
+
+    const/16 p3, 0xc
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mProgressBarStartPadding:I
+
+    const/16 p3, 0xa
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mProgressBarEndPadding:I
+
+    const/high16 p3, 0x41200000    # 10.0f
+
+    const/16 v2, 0x11
+
+    invoke-virtual {p2, v2, p3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mTextActionPadding:I
+
+    const/16 p3, 0x8
+
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    iput p3, p0, Landroidx/slice/widget/RowStyle;->mIconSize:I
+
+    const/4 p3, 0x5
+
+    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p3
+
+    iput-boolean p3, p0, Landroidx/slice/widget/RowStyle;->mDisableRecyclerViewItemAnimator:Z
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p3, 0x7f070028
+
+    invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    const/16 p3, 0x9
+
+    invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    iput p1, p0, Landroidx/slice/widget/RowStyle;->mImageSize:I
+
+    const/16 p1, 0x12
+
+    invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result p3
+
+    const/4 v1, 0x0
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v1
+
+    :goto_0
+    iput-object p1, p0, Landroidx/slice/widget/RowStyle;->mTintColor:Ljava/lang/Integer;
+
+    const/16 p1, 0x13
+
+    invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    move-object p1, v1
+
+    :goto_1
+    iput-object p1, p0, Landroidx/slice/widget/RowStyle;->mTitleColor:Ljava/lang/Integer;
+
+    const/16 p1, 0x10
+
+    invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_2
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    :cond_2
+    iput-object v1, p0, Landroidx/slice/widget/RowStyle;->mSubtitleColor:Ljava/lang/Integer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
+
+    throw p0
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroidx/slice/widget/SliceStyle;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleItemStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleItemEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mContentStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mContentEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTitleEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mSubContentStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mSubContentEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mEndItemStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mEndItemEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mBottomDividerStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mBottomDividerEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mActionDividerHeight:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mSeekBarInlineWidth:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mProgressBarInlineWidth:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mProgressBarStartPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mProgressBarEndPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mTextActionPadding:I
+
+    iput v0, p0, Landroidx/slice/widget/RowStyle;->mIconSize:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroidx/slice/widget/RowStyle;->mDisableRecyclerViewItemAnimator:Z
+
+    iput-object p2, p0, Landroidx/slice/widget/RowStyle;->mSliceStyle:Landroidx/slice/widget/SliceStyle;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f070028
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Landroidx/slice/widget/RowStyle;->mImageSize:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getSubtitleColor()I
+    .locals 1
+
+    iget-object v0, p0, Landroidx/slice/widget/RowStyle;->mSubtitleColor:Ljava/lang/Integer;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Landroidx/slice/widget/RowStyle;->mSliceStyle:Landroidx/slice/widget/SliceStyle;
+
+    iget p0, p0, Landroidx/slice/widget/SliceStyle;->mSubtitleColor:I
+
+    :goto_0
+    return p0
+.end method

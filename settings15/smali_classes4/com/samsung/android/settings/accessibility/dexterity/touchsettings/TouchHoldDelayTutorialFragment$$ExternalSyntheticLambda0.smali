@@ -1,0 +1,44 @@
+.class public final synthetic Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayTutorialFragment$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayTutorialFragment;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayTutorialFragment;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayTutorialFragment$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayTutorialFragment;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    iget-object p0, p0, Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayTutorialFragment$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayTutorialFragment;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-class p1, Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchHoldDelayPickerFragment;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const v0, 0x7f142f4e
+
+    invoke-virtual {p0, v0, p1}, Lcom/samsung/android/settings/accessibility/dexterity/touchsettings/TouchSettingsTutorialFragment;->launchFragment$1(ILjava/lang/String;)V
+
+    return-void
+.end method

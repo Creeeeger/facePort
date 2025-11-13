@@ -1,0 +1,17 @@
+.class public interface abstract Lkotlin/reflect/jvm/internal/impl/descriptors/ClassifierDescriptor;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lkotlin/reflect/jvm/internal/impl/descriptors/DeclarationDescriptorNonRoot;
+
+
+# virtual methods
+.method public abstract getDefaultType()Lkotlin/reflect/jvm/internal/impl/types/SimpleType;
+.end method
+
+.method public abstract getOriginal()Lkotlin/reflect/jvm/internal/impl/descriptors/ClassifierDescriptor;
+.end method
+
+.method public abstract getTypeConstructor()Lkotlin/reflect/jvm/internal/impl/types/TypeConstructor;
+.end method

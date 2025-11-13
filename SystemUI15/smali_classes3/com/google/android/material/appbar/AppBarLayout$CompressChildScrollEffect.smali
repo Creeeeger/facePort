@@ -1,0 +1,149 @@
+.class public final Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;
+.super Lcom/google/android/material/appbar/AppBarLayout$ChildScrollEffect;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final ghostRect:Landroid/graphics/Rect;
+
+.field public final relativeRect:Landroid/graphics/Rect;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/google/android/material/appbar/AppBarLayout$ChildScrollEffect;-><init>()V
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->relativeRect:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->ghostRect:Landroid/graphics/Rect;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onOffsetChanged(Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;F)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->relativeRect:Landroid/graphics/Rect;
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->getDrawingRect(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p1, p2, v0}, Landroid/widget/LinearLayout;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V
+
+    invoke-virtual {p1}, Lcom/google/android/material/appbar/AppBarLayout;->getTopInset()I
+
+    move-result p1
+
+    neg-int p1, p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Landroid/graphics/Rect;->offset(II)V
+
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->relativeRect:Landroid/graphics/Rect;
+
+    iget p1, p1, Landroid/graphics/Rect;->top:I
+
+    int-to-float p1, p1
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
+
+    move-result p3
+
+    sub-float/2addr p1, p3
+
+    const/4 p3, 0x0
+
+    cmpg-float v0, p1, p3
+
+    if-gtz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->relativeRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float v0, p1, v0
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-static {v0, p3, v2}, Landroidx/core/math/MathUtils;->clamp(FFF)F
+
+    move-result p3
+
+    neg-float p1, p1
+
+    sub-float p3, v2, p3
+
+    mul-float/2addr p3, p3
+
+    sub-float/2addr v2, p3
+
+    iget-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->relativeRect:Landroid/graphics/Rect;
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    const v0, 0x3e99999a    # 0.3f
+
+    mul-float/2addr p3, v0
+
+    mul-float/2addr p3, v2
+
+    sub-float/2addr p1, p3
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    iget-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->ghostRect:Landroid/graphics/Rect;
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->getDrawingRect(Landroid/graphics/Rect;)V
+
+    iget-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->ghostRect:Landroid/graphics/Rect;
+
+    neg-float p1, p1
+
+    float-to-int p1, p1
+
+    invoke-virtual {p3, v1, p1}, Landroid/graphics/Rect;->offset(II)V
+
+    iget-object p0, p0, Lcom/google/android/material/appbar/AppBarLayout$CompressChildScrollEffect;->ghostRect:Landroid/graphics/Rect;
+
+    sget-object p1, Landroidx/core/view/ViewCompat;->sViewPropertyAnimatorMap:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p0, Landroidx/core/view/ViewCompat;->sViewPropertyAnimatorMap:Ljava/util/WeakHashMap;
+
+    const/4 p0, 0x0
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->setTranslationY(F)V
+
+    :goto_0
+    return-void
+.end method

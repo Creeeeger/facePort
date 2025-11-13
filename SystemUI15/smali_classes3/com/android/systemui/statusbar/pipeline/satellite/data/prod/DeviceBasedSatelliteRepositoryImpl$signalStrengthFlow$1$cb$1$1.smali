@@ -1,0 +1,53 @@
+.class final Lcom/android/systemui/statusbar/pipeline/satellite/data/prod/DeviceBasedSatelliteRepositoryImpl$signalStrengthFlow$1$cb$1$1;
+.super Lkotlin/jvm/internal/Lambda;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function1;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic $signalStrength:Landroid/telephony/satellite/NtnSignalStrength;
+
+
+# direct methods
+.method public constructor <init>(Landroid/telephony/satellite/NtnSignalStrength;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/pipeline/satellite/data/prod/DeviceBasedSatelliteRepositoryImpl$signalStrengthFlow$1$cb$1$1;->$signalStrength:Landroid/telephony/satellite/NtnSignalStrength;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lcom/android/systemui/log/core/LogMessage;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/pipeline/satellite/data/prod/DeviceBasedSatelliteRepositoryImpl$signalStrengthFlow$1$cb$1$1;->$signalStrength:Landroid/telephony/satellite/NtnSignalStrength;
+
+    invoke-virtual {p0}, Landroid/telephony/satellite/NtnSignalStrength;->getLevel()I
+
+    move-result p0
+
+    invoke-interface {p1, p0}, Lcom/android/systemui/log/core/LogMessage;->setInt1(I)V
+
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method

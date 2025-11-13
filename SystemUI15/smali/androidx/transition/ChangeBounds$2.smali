@@ -1,0 +1,80 @@
+.class public final Landroidx/transition/ChangeBounds$2;
+.super Landroid/util/Property;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Landroidx/transition/ChangeBounds$ViewBounds;
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final set(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p1, Landroidx/transition/ChangeBounds$ViewBounds;
+
+    check-cast p2, Landroid/graphics/PointF;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget p0, p2, Landroid/graphics/PointF;->x:F
+
+    invoke-static {p0}, Ljava/lang/Math;->round(F)I
+
+    move-result p0
+
+    iput p0, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mRight:I
+
+    iget p0, p2, Landroid/graphics/PointF;->y:F
+
+    invoke-static {p0}, Ljava/lang/Math;->round(F)I
+
+    move-result p0
+
+    iput p0, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mBottom:I
+
+    iget p2, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
+
+    add-int/lit8 p2, p2, 0x1
+
+    iput p2, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
+
+    iget v0, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mTopLeftCalls:I
+
+    if-ne v0, p2, :cond_0
+
+    iget-object p2, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mView:Landroid/view/View;
+
+    iget v0, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mLeft:I
+
+    iget v1, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mTop:I
+
+    iget v2, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mRight:I
+
+    invoke-static {p2, v0, v1, v2, p0}, Landroidx/transition/ViewUtils;->setLeftTopRightBottom(Landroid/view/View;IIII)V
+
+    const/4 p0, 0x0
+
+    iput p0, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mTopLeftCalls:I
+
+    iput p0, p1, Landroidx/transition/ChangeBounds$ViewBounds;->mBottomRightCalls:I
+
+    :cond_0
+    return-void
+.end method

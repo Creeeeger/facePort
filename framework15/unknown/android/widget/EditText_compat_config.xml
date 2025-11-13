@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change description="" enableSinceTargetSdk="35" id="303326708" name="LINE_HEIGHT_FOR_LOCALE"><meta-data definedIn="android.widget.EditText" sourcePosition="frameworks/base/core/java/android/widget/EditText.java:95"/></compat-change></config>

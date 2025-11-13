@@ -1,0 +1,615 @@
+.class public final Lcom/google/protobuf/UnknownFieldSetLite;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# static fields
+.field public static final DEFAULT_INSTANCE:Lcom/google/protobuf/UnknownFieldSetLite;
+
+
+# instance fields
+.field public count:I
+
+.field public isMutable:Z
+
+.field public memoizedSerializedSize:I
+
+.field public objects:[Ljava/lang/Object;
+
+.field public tags:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lcom/google/protobuf/UnknownFieldSetLite;
+
+    const/4 v1, 0x0
+
+    new-array v2, v1, [I
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    invoke-direct {v0, v1, v2, v3, v1}, Lcom/google/protobuf/UnknownFieldSetLite;-><init>(I[I[Ljava/lang/Object;Z)V
+
+    sput-object v0, Lcom/google/protobuf/UnknownFieldSetLite;->DEFAULT_INSTANCE:Lcom/google/protobuf/UnknownFieldSetLite;
+
+    return-void
+.end method
+
+.method public constructor <init>(I[I[Ljava/lang/Object;Z)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->memoizedSerializedSize:I
+
+    iput p1, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    iput-object p2, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    iput-object p3, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    iput-boolean p4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->isMutable:Z
+
+    return-void
+.end method
+
+.method public static newInstance()Lcom/google/protobuf/UnknownFieldSetLite;
+    .locals 5
+
+    new-instance v0, Lcom/google/protobuf/UnknownFieldSetLite;
+
+    const/16 v1, 0x8
+
+    new-array v2, v1, [I
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v4, v2, v1, v3}, Lcom/google/protobuf/UnknownFieldSetLite;-><init>(I[I[Ljava/lang/Object;Z)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final ensureCapacity(I)V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    array-length v1, v0
+
+    if-le p1, v1, :cond_2
+
+    iget v1, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    div-int/lit8 v2, v1, 0x2
+
+    add-int/2addr v2, v1
+
+    if-ge v2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v2
+
+    :goto_0
+    const/16 v1, 0x8
+
+    if-ge p1, v1, :cond_1
+
+    move p1, v1
+
+    :cond_1
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    iget-object v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    :cond_2
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 8
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_1
+
+    return v1
+
+    :cond_1
+    instance-of v2, p1, Lcom/google/protobuf/UnknownFieldSetLite;
+
+    if-nez v2, :cond_2
+
+    return v1
+
+    :cond_2
+    check-cast p1, Lcom/google/protobuf/UnknownFieldSetLite;
+
+    iget v2, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    iget v3, p1, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    if-ne v2, v3, :cond_7
+
+    iget-object v3, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    iget-object v4, p1, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    move v5, v1
+
+    :goto_0
+    if-ge v5, v2, :cond_4
+
+    aget v6, v3, v5
+
+    aget v7, v4, v5
+
+    if-eq v6, v7, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v2, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    iget-object p1, p1, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    iget p0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    move v3, v1
+
+    :goto_1
+    if-ge v3, p0, :cond_6
+
+    aget-object v4, v2, v3
+
+    aget-object v5, p1, v3
+
+    invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    return v0
+
+    :cond_7
+    :goto_2
+    return v1
+.end method
+
+.method public final getSerializedSize()I
+    .locals 8
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x3
+
+    iget v2, p0, Lcom/google/protobuf/UnknownFieldSetLite;->memoizedSerializedSize:I
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_0
+
+    return v2
+
+    :cond_0
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    iget v4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    if-ge v2, v4, :cond_6
+
+    iget-object v4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    aget v4, v4, v2
+
+    ushr-int/lit8 v5, v4, 0x3
+
+    and-int/lit8 v4, v4, 0x7
+
+    if-eqz v4, :cond_5
+
+    if-eq v4, v0, :cond_4
+
+    const/4 v6, 0x2
+
+    if-eq v4, v6, :cond_3
+
+    if-eq v4, v1, :cond_2
+
+    const/4 v6, 0x5
+
+    if-ne v4, v6, :cond_1
+
+    iget-object v4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    aget-object v4, v4, v2
+
+    check-cast v4, Ljava/lang/Integer;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed32Size(I)I
+
+    move-result v4
+
+    :goto_1
+    add-int/2addr v4, v3
+
+    move v3, v4
+
+    goto :goto_3
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    sget v0, Lcom/google/protobuf/InvalidProtocolBufferException;->$r8$clinit:I
+
+    new-instance v0, Lcom/google/protobuf/InvalidProtocolBufferException$InvalidWireTypeException;
+
+    const-string v1, "Protocol message tag had invalid wire type."
+
+    invoke-direct {v0, v1}, Lcom/google/protobuf/InvalidProtocolBufferException$InvalidWireTypeException;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p0
+
+    :cond_2
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
+
+    move-result v4
+
+    mul-int/2addr v4, v6
+
+    iget-object v5, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    aget-object v5, v5, v2
+
+    check-cast v5, Lcom/google/protobuf/UnknownFieldSetLite;
+
+    invoke-virtual {v5}, Lcom/google/protobuf/UnknownFieldSetLite;->getSerializedSize()I
+
+    move-result v5
+
+    :goto_2
+    add-int/2addr v5, v4
+
+    add-int/2addr v5, v3
+
+    move v3, v5
+
+    goto :goto_3
+
+    :cond_3
+    iget-object v4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    aget-object v4, v4, v2
+
+    check-cast v4, Lcom/google/protobuf/ByteString;
+
+    invoke-static {v5, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
+
+    move-result v4
+
+    goto :goto_1
+
+    :cond_4
+    iget-object v4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    aget-object v4, v4, v2
+
+    check-cast v4, Ljava/lang/Long;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeFixed64Size(I)I
+
+    move-result v4
+
+    goto :goto_1
+
+    :cond_5
+    iget-object v4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    aget-object v4, v4, v2
+
+    check-cast v4, Ljava/lang/Long;
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    invoke-static {v5}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeTagSize(I)I
+
+    move-result v4
+
+    invoke-static {v6, v7}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt64SizeNoTag(J)I
+
+    move-result v5
+
+    goto :goto_2
+
+    :goto_3
+    add-int/2addr v2, v0
+
+    goto :goto_0
+
+    :cond_6
+    iput v3, p0, Lcom/google/protobuf/UnknownFieldSetLite;->memoizedSerializedSize:I
+
+    return v3
+.end method
+
+.method public final hashCode()I
+    .locals 8
+
+    iget v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    const/16 v1, 0x20f
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0x11
+
+    move v5, v3
+
+    move v6, v4
+
+    :goto_0
+    if-ge v5, v0, :cond_0
+
+    mul-int/lit8 v6, v6, 0x1f
+
+    aget v7, v2, v5
+
+    add-int/2addr v6, v7
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    add-int/2addr v1, v6
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    iget p0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    :goto_1
+    if-ge v3, p0, :cond_1
+
+    mul-int/lit8 v4, v4, 0x1f
+
+    aget-object v2, v0, v3
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v4, v2
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/2addr v1, v4
+
+    return v1
+.end method
+
+.method public final storeField(ILjava/lang/Object;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->isMutable:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/google/protobuf/UnknownFieldSetLite;->ensureCapacity(I)V
+
+    iget-object v0, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    iget v1, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    aput p1, v0, v1
+
+    iget-object p1, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    aput-object p2, p1, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final writeTo(Lcom/google/protobuf/CodedOutputStreamWriter;)V
+    .locals 8
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x3
+
+    iget v2, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    if-nez v2, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    :goto_0
+    iget v3, p0, Lcom/google/protobuf/UnknownFieldSetLite;->count:I
+
+    if-ge v2, v3, :cond_6
+
+    iget-object v3, p0, Lcom/google/protobuf/UnknownFieldSetLite;->tags:[I
+
+    aget v3, v3, v2
+
+    iget-object v4, p0, Lcom/google/protobuf/UnknownFieldSetLite;->objects:[Ljava/lang/Object;
+
+    aget-object v4, v4, v2
+
+    ushr-int/lit8 v5, v3, 0x3
+
+    and-int/lit8 v3, v3, 0x7
+
+    iget-object v6, p1, Lcom/google/protobuf/CodedOutputStreamWriter;->output:Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
+
+    if-eqz v3, :cond_5
+
+    if-eq v3, v0, :cond_4
+
+    const/4 v7, 0x2
+
+    if-eq v3, v7, :cond_3
+
+    if-eq v3, v1, :cond_2
+
+    const/4 v7, 0x5
+
+    if-ne v3, v7, :cond_1
+
+    check-cast v4, Ljava/lang/Integer;
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-virtual {v6, v5, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed32(II)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    sget p1, Lcom/google/protobuf/InvalidProtocolBufferException;->$r8$clinit:I
+
+    new-instance p1, Lcom/google/protobuf/InvalidProtocolBufferException$InvalidWireTypeException;
+
+    const-string v0, "Protocol message tag had invalid wire type."
+
+    invoke-direct {p1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException$InvalidWireTypeException;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p0
+
+    :cond_2
+    invoke-virtual {v6, v5, v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
+
+    check-cast v4, Lcom/google/protobuf/UnknownFieldSetLite;
+
+    invoke-virtual {v4, p1}, Lcom/google/protobuf/UnknownFieldSetLite;->writeTo(Lcom/google/protobuf/CodedOutputStreamWriter;)V
+
+    const/4 v3, 0x4
+
+    invoke-virtual {v6, v5, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
+
+    goto :goto_1
+
+    :cond_3
+    check-cast v4, Lcom/google/protobuf/ByteString;
+
+    invoke-virtual {p1, v5, v4}, Lcom/google/protobuf/CodedOutputStreamWriter;->writeBytes(ILcom/google/protobuf/ByteString;)V
+
+    goto :goto_1
+
+    :cond_4
+    check-cast v4, Ljava/lang/Long;
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    invoke-virtual {v6, v5, v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeFixed64(IJ)V
+
+    goto :goto_1
+
+    :cond_5
+    check-cast v4, Ljava/lang/Long;
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    invoke-virtual {v6, v5, v3, v4}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64(IJ)V
+
+    :goto_1
+    add-int/2addr v2, v0
+
+    goto :goto_0
+
+    :cond_6
+    return-void
+.end method

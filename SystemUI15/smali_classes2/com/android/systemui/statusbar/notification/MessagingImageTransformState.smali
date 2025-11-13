@@ -1,0 +1,293 @@
+.class public final Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;
+.super Lcom/android/systemui/statusbar/notification/ImageTransformState;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# static fields
+.field public static final START_ACTUAL_HEIGHT:I
+
+.field public static final START_ACTUAL_WIDTH:I
+
+.field public static final sInstancePool:Landroid/util/Pools$SimplePool;
+
+
+# instance fields
+.field public mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroid/util/Pools$SimplePool;
+
+    const/16 v1, 0x28
+
+    invoke-direct {v0, v1}, Landroid/util/Pools$SimplePool;-><init>(I)V
+
+    sput-object v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->sInstancePool:Landroid/util/Pools$SimplePool;
+
+    const v0, 0x7f0a0d76
+
+    sput v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->START_ACTUAL_WIDTH:I
+
+    const v0, 0x7f0a0d75
+
+    sput v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->START_ACTUAL_HEIGHT:I
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/notification/ImageTransformState;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final initFrom(Landroid/view/View;Lcom/android/systemui/statusbar/ViewTransformationHelper;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lcom/android/systemui/statusbar/notification/ImageTransformState;->initFrom(Landroid/view/View;Lcom/android/systemui/statusbar/ViewTransformationHelper;)V
+
+    check-cast p1, Lcom/android/internal/widget/MessagingImageMessage;
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    return-void
+.end method
+
+.method public final recycle()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/android/systemui/statusbar/notification/ImageTransformState;->recycle()V
+
+    sget-object v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->sInstancePool:Landroid/util/Pools$SimplePool;
+
+    invoke-virtual {v0, p0}, Landroid/util/Pools$SimplePool;->release(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final reset()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/android/systemui/statusbar/notification/ImageTransformState;->reset()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    return-void
+.end method
+
+.method public final resetTransformedView()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/systemui/statusbar/notification/TransformState;->resetTransformedView()V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    invoke-virtual {v0}, Lcom/android/internal/widget/MessagingImageMessage;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/widget/MessagingImageMessage;->setActualWidth(I)V
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    invoke-virtual {p0}, Lcom/android/internal/widget/MessagingImageMessage;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/widget/MessagingImageMessage;->setActualHeight(I)V
+
+    return-void
+.end method
+
+.method public final sameAs(Lcom/android/systemui/statusbar/notification/TransformState;)Z
+    .locals 1
+
+    invoke-super {p0, p1}, Lcom/android/systemui/statusbar/notification/ImageTransformState;->sameAs(Lcom/android/systemui/statusbar/notification/TransformState;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    instance-of v0, p1, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    invoke-virtual {p0, p1}, Lcom/android/internal/widget/MessagingImageMessage;->sameAs(Lcom/android/internal/widget/MessagingMessage;)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final transformScale(Lcom/android/systemui/statusbar/notification/TransformState;)Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final transformViewFrom(Lcom/android/systemui/statusbar/notification/TransformState;ILcom/android/systemui/statusbar/ViewTransformationHelper$CustomTransformation;F)V
+    .locals 2
+
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/android/systemui/statusbar/notification/TransformState;->transformViewFrom(Lcom/android/systemui/statusbar/notification/TransformState;ILcom/android/systemui/statusbar/ViewTransformationHelper$CustomTransformation;F)V
+
+    iget-object p2, p0, Lcom/android/systemui/statusbar/notification/TransformState;->mDefaultInterpolator:Landroid/view/animation/Interpolator;
+
+    invoke-interface {p2, p4}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
+
+    move-result p2
+
+    instance-of p3, p1, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;
+
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->sameAs(Lcom/android/systemui/statusbar/notification/TransformState;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_3
+
+    check-cast p1, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;
+
+    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    const/4 p3, 0x0
+
+    cmpl-float p3, p4, p3
+
+    sget p4, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->START_ACTUAL_HEIGHT:I
+
+    sget v0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->START_ACTUAL_WIDTH:I
+
+    if-nez p3, :cond_0
+
+    invoke-virtual {p1}, Lcom/android/internal/widget/MessagingImageMessage;->getActualWidth()I
+
+    move-result p3
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/TransformState;->mTransformedView:Landroid/view/View;
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p3
+
+    invoke-virtual {v1, v0, p3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    invoke-virtual {p1}, Lcom/android/internal/widget/MessagingImageMessage;->getActualHeight()I
+
+    move-result p1
+
+    iget-object p3, p0, Lcom/android/systemui/statusbar/notification/TransformState;->mTransformedView:Landroid/view/View;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p4, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    :cond_0
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/TransformState;->mTransformedView:Landroid/view/View;
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const/4 p3, -0x1
+
+    if-nez p1, :cond_1
+
+    move p1, p3
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    :goto_0
+    int-to-float p1, p1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    invoke-virtual {v0}, Lcom/android/internal/widget/MessagingImageMessage;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-static {p1, v1, p2}, Lcom/android/systemui/statusbar/notification/NotificationUtils;->interpolate(FFF)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    invoke-virtual {v0, p1}, Lcom/android/internal/widget/MessagingImageMessage;->setActualWidth(I)V
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/notification/TransformState;->mTransformedView:Landroid/view/View;
+
+    invoke-virtual {p1, p4}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p3
+
+    :goto_1
+    int-to-float p1, p3
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/MessagingImageTransformState;->mImageMessage:Lcom/android/internal/widget/MessagingImageMessage;
+
+    invoke-virtual {p0}, Lcom/android/internal/widget/MessagingImageMessage;->getHeight()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    invoke-static {p1, p3, p2}, Lcom/android/systemui/statusbar/notification/NotificationUtils;->interpolate(FFF)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    invoke-virtual {p0, p1}, Lcom/android/internal/widget/MessagingImageMessage;->setActualHeight(I)V
+
+    :cond_3
+    return-void
+.end method

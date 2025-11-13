@@ -1,0 +1,153 @@
+.class public Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;
+.super Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/util/BaseAlgorithmParameterGeneratorSpi;
+.source "AlgorithmParameterGeneratorSpi.java"
+
+
+# instance fields
+.field private blacklist l:I
+
+.field protected blacklist random:Ljava/security/SecureRandom;
+
+.field protected blacklist strength:I
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/util/BaseAlgorithmParameterGeneratorSpi;-><init>()V
+
+    const/16 v0, 0x800
+
+    iput v0, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->strength:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->l:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected whitelist test-api engineGenerateParameters()Ljava/security/AlgorithmParameters;
+    .locals 8
+
+    new-instance v0, Lcom/android/internal/org/bouncycastle/crypto/generators/DHParametersGenerator;
+
+    invoke-direct {v0}, Lcom/android/internal/org/bouncycastle/crypto/generators/DHParametersGenerator;-><init>()V
+
+    iget v1, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->strength:I
+
+    invoke-static {v1}, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/util/PrimeCertaintyCalculator;->getDefaultCertainty(I)I
+
+    move-result v1
+
+    iget v2, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->strength:I
+
+    iget-object v3, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->random:Ljava/security/SecureRandom;
+
+    invoke-static {v3}, Lcom/android/internal/org/bouncycastle/crypto/CryptoServicesRegistrar;->getSecureRandom(Ljava/security/SecureRandom;)Ljava/security/SecureRandom;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v1, v3}, Lcom/android/internal/org/bouncycastle/crypto/generators/DHParametersGenerator;->init(IILjava/security/SecureRandom;)V
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/crypto/generators/DHParametersGenerator;->generateParameters()Lcom/android/internal/org/bouncycastle/crypto/params/DHParameters;
+
+    move-result-object v2
+
+    :try_start_0
+    const-string v3, "DH"
+
+    invoke-virtual {p0, v3}, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->createParametersInstance(Ljava/lang/String;)Ljava/security/AlgorithmParameters;
+
+    move-result-object v3
+
+    new-instance v4, Ljavax/crypto/spec/DHParameterSpec;
+
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/crypto/params/DHParameters;->getP()Ljava/math/BigInteger;
+
+    move-result-object v5
+
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/crypto/params/DHParameters;->getG()Ljava/math/BigInteger;
+
+    move-result-object v6
+
+    iget v7, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->l:I
+
+    invoke-direct {v4, v5, v6, v7}, Ljavax/crypto/spec/DHParameterSpec;-><init>(Ljava/math/BigInteger;Ljava/math/BigInteger;I)V
+
+    invoke-virtual {v3, v4}, Ljava/security/AlgorithmParameters;->init(Ljava/security/spec/AlgorithmParameterSpec;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    nop
+
+    return-object v3
+
+    :catch_0
+    move-exception v3
+
+    new-instance v4, Ljava/lang/RuntimeException;
+
+    invoke-virtual {v3}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v4
+.end method
+
+.method protected whitelist test-api engineInit(ILjava/security/SecureRandom;)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->strength:I
+
+    iput-object p2, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->random:Ljava/security/SecureRandom;
+
+    return-void
+.end method
+
+.method protected whitelist test-api engineInit(Ljava/security/spec/AlgorithmParameterSpec;Ljava/security/SecureRandom;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/InvalidAlgorithmParameterException;
+        }
+    .end annotation
+
+    instance-of v0, p1, Ljavax/crypto/spec/DHGenParameterSpec;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Ljavax/crypto/spec/DHGenParameterSpec;
+
+    invoke-virtual {v0}, Ljavax/crypto/spec/DHGenParameterSpec;->getPrimeSize()I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->strength:I
+
+    invoke-virtual {v0}, Ljavax/crypto/spec/DHGenParameterSpec;->getExponentSize()I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->l:I
+
+    iput-object p2, p0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/dh/AlgorithmParameterGeneratorSpi;->random:Ljava/security/SecureRandom;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
+
+    const-string v1, "DH parameter generator requires a DHGenParameterSpec for initialisation"
+
+    invoke-direct {v0, v1}, Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method

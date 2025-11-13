@@ -1,0 +1,976 @@
+.class public Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;
+.super Lcom/android/settings/SettingsPreferenceFragment;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lcom/samsung/android/wifitrackerlib/SavedScannedTracker$SavedScannedTrackerCallback;
+
+
+# instance fields
+.field public mConnectedAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/DiagnosisConnectedWifiEntryListAdapter;
+
+.field public mConnectedCategory:Landroid/widget/TextView;
+
+.field public mConnectedView:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public mConnectivityManager:Landroid/net/ConnectivityManager;
+
+.field public mContext:Landroid/content/Context;
+
+.field public mDadTest:Landroid/widget/Button;
+
+.field public mEmptyView:Landroid/widget/TextView;
+
+.field public final mHandler:Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$3;
+
+.field public final mIntentFilter:Landroid/content/IntentFilter;
+
+.field public mLaunchConnectivityTest:Landroid/widget/Button;
+
+.field public mLaunchDnsTest:Landroid/widget/Button;
+
+.field public final mReceiver:Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$1;
+
+.field public mSavedScannedTracker:Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;
+
+.field public mStepView:Landroid/widget/TextView;
+
+.field public mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+.field public mTestInfoCategory:Landroid/widget/TextView;
+
+.field public mTestInformation:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public mWifiManager:Landroid/net/wifi/WifiManager;
+
+.field public mWorkerThread:Landroid/os/HandlerThread;
+
+.field public result:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    iput-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mIntentFilter:Landroid/content/IntentFilter;
+
+    new-instance v0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$1;
+
+    invoke-direct {v0, p0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$1;-><init>(Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;)V
+
+    iput-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mReceiver:Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$1;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->result:Ljava/lang/String;
+
+    new-instance v0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$3;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$3;-><init>(Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mHandler:Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$3;
+
+    return-void
+.end method
+
+.method public static getHttpUrl(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const-string v1, ""
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    const-string v0, "https://"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    const-string v3, "http://"
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0, v0, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_1
+    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {v3, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_2
+    :try_start_0
+    new-instance v0, Ljava/net/URL;
+
+    invoke-direct {v0, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/net/URL;->toURI()Ljava/net/URI;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    return-object v1
+.end method
+
+
+# virtual methods
+.method public final getCurrentWifiNetwork()Landroid/net/Network;
+    .locals 6
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getAllNetworks()[Landroid/net/Network;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    iget-object v4, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v4, v3}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v4, v5}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    return-object v3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final getMetricsCategory()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final onCreate(Landroid/os/Bundle;)V
+    .locals 11
+
+    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mContext:Landroid/content/Context;
+
+    new-instance p1, Landroid/os/HandlerThread;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NetworkDiagnosisSettings{"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0xa
+
+    invoke-direct {p1, v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
+
+    iput-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mWorkerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
+
+    new-instance v9, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$2;
+
+    sget-object p1, Ljava/time/ZoneOffset;->UTC:Ljava/time/ZoneOffset;
+
+    invoke-direct {v9, p1}, Landroid/os/SimpleClock;-><init>(Ljava/time/ZoneId;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    const-string/jumbo v0, "wifi"
+
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/net/wifi/WifiManager;
+
+    iput-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    const-class v0, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/net/ConnectivityManager;
+
+    iput-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    new-instance p1, Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;
+
+    invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mContext:Landroid/content/Context;
+
+    iget-object v5, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+
+    iget-object v6, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectivityManager:Landroid/net/ConnectivityManager;
+
+    new-instance v7, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {v7, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mWorkerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
+
+    move-result-object v8
+
+    move-object v2, p1
+
+    move-object v10, p0
+
+    invoke-direct/range {v2 .. v10}, Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;-><init>(Lcom/android/settingslib/core/lifecycle/Lifecycle;Landroid/content/Context;Landroid/net/wifi/WifiManager;Landroid/net/ConnectivityManager;Landroid/os/Handler;Landroid/os/Handler;Ljava/time/Clock;Lcom/samsung/android/wifitrackerlib/SavedScannedTracker$SavedScannedTrackerCallback;)V
+
+    iput-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mSavedScannedTracker:Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;
+
+    iget-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mIntentFilter:Landroid/content/IntentFilter;
+
+    const-string v0, "android.net.wifi.STATE_CHANGE"
+
+    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mIntentFilter:Landroid/content/IntentFilter;
+
+    const-string v0, "android.net.wifi.CONFIGURED_NETWORKS_CHANGE"
+
+    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mIntentFilter:Landroid/content/IntentFilter;
+
+    const-string v0, "android.net.wifi.supplicant.STATE_CHANGE"
+
+    invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mSavedScannedTracker:Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;
+
+    invoke-virtual {p0}, Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;->getConnectedWifiEntry()Lcom/android/wifitrackerlib/WifiEntry;
+
+    return-void
+.end method
+
+.method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 4
+
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    const p3, 0x7f0d0a57
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    const p2, 0x7f0a03f8
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedCategory:Landroid/widget/TextView;
+
+    const p2, 0x7f0a03f7
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedView:Landroidx/recyclerview/widget/RecyclerView;
+
+    new-instance p2, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/DiagnosisConnectedWifiEntryListAdapter;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p3
+
+    invoke-direct {p2, p3}, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/DiagnosisConnectedWifiEntryListAdapter;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/DiagnosisConnectedWifiEntryListAdapter;
+
+    const p2, 0x7f0a0fdf
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoCategory:Landroid/widget/TextView;
+
+    const p2, 0x7f0a0fde
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInformation:Landroidx/recyclerview/widget/RecyclerView;
+
+    new-instance p2, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p3
+
+    invoke-direct {p2, p3}, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    iget-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedView:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object p3, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/DiagnosisConnectedWifiEntryListAdapter;
+
+    new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(I)V
+
+    invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+
+    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    invoke-virtual {p2, v1}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    const v0, 0x7f060738
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p3
+
+    const/16 v2, 0xf
+
+    invoke-virtual {p2, v2, p3}, Landroid/view/ViewGroup;->semSetRoundedCornerColor(II)V
+
+    invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->semSetRoundedCorners(I)V
+
+    iget-object p3, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p3
+
+    invoke-virtual {p2, v2, p3}, Landroid/view/ViewGroup;->semSetRoundedCornerColor(II)V
+
+    iget-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInformation:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object p3, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    new-instance v3, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    invoke-direct {v3, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(I)V
+
+    invoke-virtual {p2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+
+    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    invoke-virtual {p2, v1}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p3
+
+    invoke-virtual {p2, v2, p3}, Landroid/view/ViewGroup;->semSetRoundedCornerColor(II)V
+
+    invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->semSetRoundedCorners(I)V
+
+    iget-object p3, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p3
+
+    invoke-virtual {p2, v2, p3}, Landroid/view/ViewGroup;->semSetRoundedCornerColor(II)V
+
+    const p2, 0x7f0a087f
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/Button;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mLaunchConnectivityTest:Landroid/widget/Button;
+
+    new-instance p3, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$$ExternalSyntheticLambda0;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p0, v0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;I)V
+
+    invoke-virtual {p2, p3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const p2, 0x7f0a0880
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/Button;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mLaunchDnsTest:Landroid/widget/Button;
+
+    new-instance p3, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$$ExternalSyntheticLambda0;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p3, p0, v0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;I)V
+
+    invoke-virtual {p2, p3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const p2, 0x7f0a0305
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/Button;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mDadTest:Landroid/widget/Button;
+
+    new-instance p3, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$$ExternalSyntheticLambda0;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p3, p0, v0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;I)V
+
+    invoke-virtual {p2, p3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const p2, 0x7f0a0a8c
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mEmptyView:Landroid/widget/TextView;
+
+    const p2, 0x7f0a0f07
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mStepView:Landroid/widget/TextView;
+
+    new-instance p3, Landroid/text/method/ScrollingMovementMethod;
+
+    invoke-direct {p3}, Landroid/text/method/ScrollingMovementMethod;-><init>()V
+
+    invoke-virtual {p2, p3}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    invoke-virtual {p0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->updateWifiEntries$2()V
+
+    return-object p1
+.end method
+
+.method public final onDestroy()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onDestroy()V
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mWorkerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {p0}, Landroid/os/HandlerThread;->quit()Z
+
+    return-void
+.end method
+
+.method public final onPause()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->onPause()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mReceiver:Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$1;
+
+    invoke-virtual {v0, p0}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    return-void
+.end method
+
+.method public final onResume()V
+    .locals 3
+
+    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mReceiver:Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings$1;
+
+    iget-object v2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mIntentFilter:Landroid/content/IntentFilter;
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mStepView:Landroid/widget/TextView;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->updateWifiEntries$2()V
+
+    return-void
+.end method
+
+.method public final onSavedWifiEntriesChanged()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->updateWifiEntries$2()V
+
+    return-void
+.end method
+
+.method public final onSubscriptionWifiEntriesChanged()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->updateWifiEntries$2()V
+
+    return-void
+.end method
+
+.method public final onWifiStateChanged()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->updateWifiEntries$2()V
+
+    return-void
+.end method
+
+.method public final setButtonEnabled$1(Z)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mLaunchConnectivityTest:Landroid/widget/Button;
+
+    invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mLaunchConnectivityTest:Landroid/widget/Button;
+
+    const v1, 0x3ecccccd    # 0.4f
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    if-eqz p1, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v1
+
+    :goto_0
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setAlpha(F)V
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mLaunchDnsTest:Landroid/widget/Button;
+
+    invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mLaunchDnsTest:Landroid/widget/Button;
+
+    if-eqz p1, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v1
+
+    :goto_1
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setAlpha(F)V
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mDadTest:Landroid/widget/Button;
+
+    invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mDadTest:Landroid/widget/Button;
+
+    if-eqz p1, :cond_2
+
+    move v1, v2
+
+    :cond_2
+    invoke-virtual {p0, v1}, Landroid/widget/Button;->setAlpha(F)V
+
+    return-void
+.end method
+
+.method public final setConnectedVisibility(Z)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedCategory:Landroid/widget/TextView;
+
+    const/16 v1, 0x8
+
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v1
+
+    :goto_0
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoCategory:Landroid/widget/TextView;
+
+    if-eqz p1, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v1
+
+    :goto_1
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedView:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz p1, :cond_2
+
+    move v3, v2
+
+    goto :goto_2
+
+    :cond_2
+    move v3, v1
+
+    :goto_2
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInformation:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz p1, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public final updateWifiEntries$2()V
+    .locals 7
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mSavedScannedTracker:Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;
+
+    invoke-virtual {v0}, Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;->getSavedWifiEntries()Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Get new WifiEntries "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "NetworkDiagnosisSettings"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v1, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mSavedScannedTracker:Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;
+
+    invoke-virtual {v1}, Lcom/samsung/android/wifitrackerlib/SavedScannedTracker;->getConnectedWifiEntry()Lcom/android/wifitrackerlib/WifiEntry;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_0
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "connected network "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lcom/android/wifitrackerlib/WifiEntry;->getTitle()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0, v4}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->setConnectedVisibility(Z)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mConnectedAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/DiagnosisConnectedWifiEntryListAdapter;
+
+    iput-object v1, v0, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/DiagnosisConnectedWifiEntryListAdapter;->mWifiEntry:Lcom/android/wifitrackerlib/WifiEntry;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
+
+    invoke-virtual {p0, v4}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->setButtonEnabled$1(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, v3}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->setConnectedVisibility(Z)V
+
+    invoke-virtual {p0, v3}, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->setButtonEnabled$1(Z)V
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    move v0, v4
+
+    goto :goto_1
+
+    :cond_1
+    move v0, v3
+
+    :goto_1
+    iget-object v2, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mEmptyView:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_2
+
+    const/16 v0, 0x8
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v3
+
+    :goto_2
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setVisibility(I)V
+
+    if-nez v1, :cond_3
+
+    return-void
+
+    :cond_3
+    invoke-virtual {v1}, Lcom/android/wifitrackerlib/WifiEntry;->canSignIn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    iget-object v0, v0, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;->infoList:[Ljava/lang/String;
+
+    const-string v1, "Captive Portal network. Sign in required"
+
+    aput-object v1, v0, v3
+
+    :cond_4
+    iget-object v0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mContext:Landroid/content/Context;
+
+    const-string/jumbo v1, "sem_wifi"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/samsung/android/wifi/SemWifiManager;
+
+    invoke-virtual {v0}, Lcom/samsung/android/wifi/SemWifiManager;->getCurrentStatusMode()I
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    if-eq v0, v4, :cond_6
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_6
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_5
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;->infoList:[Ljava/lang/String;
+
+    const-string v0, "Connected"
+
+    aput-object v0, p0, v3
+
+    goto :goto_3
+
+    :cond_5
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;->infoList:[Ljava/lang/String;
+
+    const-string v0, "The current network provides internet connectivity.However, the device is using mobile data because the internet is slow or unstable."
+
+    aput-object v0, p0, v3
+
+    goto :goto_3
+
+    :cond_6
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;->infoList:[Ljava/lang/String;
+
+    const-string v0, "The current network doesn\'t provide internet connectivity"
+
+    aput-object v0, p0, v3
+
+    goto :goto_3
+
+    :cond_7
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/NetworkDiagnosisSettings;->mTestInfoAdapter:Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;
+
+    iget-object p0, p0, Lcom/samsung/android/settings/wifi/develop/diagnosis/accesspoints/NetworkDiagnosisInformationAdapter;->infoList:[Ljava/lang/String;
+
+    const-string v0, "The current network provides internet connectivity"
+
+    aput-object v0, p0, v3
+
+    :goto_3
+    return-void
+.end method

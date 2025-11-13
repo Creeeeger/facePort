@@ -1,0 +1,62 @@
+.class public final Lcom/android/systemui/battery/BatteryMeterViewController$SettingObserver;
+.super Landroid/database/ContentObserver;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/android/systemui/battery/BatteryMeterViewController;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/systemui/battery/BatteryMeterViewController;Landroid/os/Handler;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/battery/BatteryMeterViewController$SettingObserver;->this$0:Lcom/android/systemui/battery/BatteryMeterViewController;
+
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onChange(ZLandroid/net/Uri;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
+
+    iget-object p1, p0, Lcom/android/systemui/battery/BatteryMeterViewController$SettingObserver;->this$0:Lcom/android/systemui/battery/BatteryMeterViewController;
+
+    invoke-static {p1}, Lcom/android/systemui/battery/BatteryMeterViewController;->access$1400(Lcom/android/systemui/battery/BatteryMeterViewController;)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/systemui/battery/BatteryMeterView;
+
+    invoke-virtual {p1}, Lcom/android/systemui/battery/BatteryMeterView;->updateShowPercent()V
+
+    invoke-virtual {p2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "battery_estimates_last_update_time"
+
+    invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/systemui/battery/BatteryMeterViewController$SettingObserver;->this$0:Lcom/android/systemui/battery/BatteryMeterViewController;
+
+    invoke-static {p0}, Lcom/android/systemui/battery/BatteryMeterViewController;->access$1500(Lcom/android/systemui/battery/BatteryMeterViewController;)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/systemui/battery/BatteryMeterView;
+
+    invoke-virtual {p0}, Lcom/android/systemui/battery/BatteryMeterView;->updatePercentText()V
+
+    :cond_0
+    return-void
+.end method

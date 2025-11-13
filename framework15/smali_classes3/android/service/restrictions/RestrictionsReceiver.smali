@@ -1,0 +1,85 @@
+.class public abstract Landroid/service/restrictions/RestrictionsReceiver;
+.super Landroid/content/BroadcastReceiver;
+.source "RestrictionsReceiver.java"
+
+
+# static fields
+.field private static final greylist-max-o TAG:Ljava/lang/String; = "RestrictionsReceiver"
+
+
+# direct methods
+.method public constructor whitelist <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 11
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "android.content.action.REQUEST_PERMISSION"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "android.content.extra.PACKAGE_NAME"
+
+    invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "android.content.extra.REQUEST_TYPE"
+
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v2, "android.content.extra.REQUEST_ID"
+
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    const-class v2, Landroid/os/PersistableBundle;
+
+    const-string v3, "android.content.extra.REQUEST_BUNDLE"
+
+    invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v10, v2
+
+    check-cast v10, Landroid/os/PersistableBundle;
+
+    move-object v2, p0
+
+    move-object v3, p1
+
+    move-object v4, v1
+
+    move-object v5, v8
+
+    move-object v6, v9
+
+    move-object v7, v10
+
+    invoke-virtual/range {v2 .. v7}, Landroid/service/restrictions/RestrictionsReceiver;->onRequestPermission(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/PersistableBundle;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public abstract whitelist onRequestPermission(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/PersistableBundle;)V
+.end method

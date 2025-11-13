@@ -1,0 +1,166 @@
+.class public Landroid/text/style/EasyEditSpan;
+.super Ljava/lang/Object;
+.source "EasyEditSpan.java"
+
+# interfaces
+.implements Landroid/text/ParcelableSpan;
+
+
+# static fields
+.field public static final whitelist EXTRA_TEXT_CHANGED_TYPE:Ljava/lang/String; = "android.text.style.EXTRA_TEXT_CHANGED_TYPE"
+
+.field public static final whitelist TEXT_DELETED:I = 0x1
+
+.field public static final whitelist TEXT_MODIFIED:I = 0x2
+
+
+# instance fields
+.field private greylist-max-o mDeleteEnabled:Z
+
+.field private final greylist-max-o mPendingIntent:Landroid/app/PendingIntent;
+
+
+# direct methods
+.method public constructor whitelist <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/text/style/EasyEditSpan;->mPendingIntent:Landroid/app/PendingIntent;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/text/style/EasyEditSpan;->mDeleteEnabled:Z
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Landroid/app/PendingIntent;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/text/style/EasyEditSpan;->mPendingIntent:Landroid/app/PendingIntent;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/text/style/EasyEditSpan;->mDeleteEnabled:Z
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const-class v1, Landroid/app/PendingIntent;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/PendingIntent;
+
+    iput-object v0, p0, Landroid/text/style/EasyEditSpan;->mPendingIntent:Landroid/app/PendingIntent;
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iput-boolean v1, p0, Landroid/text/style/EasyEditSpan;->mDeleteEnabled:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public greylist-max-r getPendingIntent()Landroid/app/PendingIntent;
+    .locals 1
+
+    iget-object v0, p0, Landroid/text/style/EasyEditSpan;->mPendingIntent:Landroid/app/PendingIntent;
+
+    return-object v0
+.end method
+
+.method public whitelist getSpanTypeId()I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/text/style/EasyEditSpan;->getSpanTypeIdInternal()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public greylist-max-o getSpanTypeIdInternal()I
+    .locals 1
+
+    const/16 v0, 0x16
+
+    return v0
+.end method
+
+.method public greylist-max-r isDeleteEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/text/style/EasyEditSpan;->mDeleteEnabled:Z
+
+    return v0
+.end method
+
+.method public greylist-max-r setDeleteEnabled(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Landroid/text/style/EasyEditSpan;->mDeleteEnabled:Z
+
+    return-void
+.end method
+
+.method public whitelist writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/text/style/EasyEditSpan;->writeToParcelInternal(Landroid/os/Parcel;I)V
+
+    return-void
+.end method
+
+.method public greylist-max-o writeToParcelInternal(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-object v0, p0, Landroid/text/style/EasyEditSpan;->mPendingIntent:Landroid/app/PendingIntent;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-boolean v0, p0, Landroid/text/style/EasyEditSpan;->mDeleteEnabled:Z
+
+    int-to-byte v0, v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    return-void
+.end method

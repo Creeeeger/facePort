@@ -1,0 +1,68 @@
+.class public final Lcom/android/systemui/volume/view/standard/VolumePanelView$startDismissAnimation$dismissRunnable$1;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/android/systemui/volume/view/standard/VolumePanelView;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/systemui/volume/view/standard/VolumePanelView;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/volume/view/standard/VolumePanelView$startDismissAnimation$dismissRunnable$1;->this$0:Lcom/android/systemui/volume/view/standard/VolumePanelView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    sget-boolean v0, Lcom/android/systemui/BasicRune;->VOLUME_PARTIAL_BLUR:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/systemui/volume/view/standard/VolumePanelView$startDismissAnimation$dismissRunnable$1;->this$0:Lcom/android/systemui/volume/view/standard/VolumePanelView;
+
+    iget-object v2, v0, Lcom/android/systemui/volume/view/standard/VolumePanelView;->blurView:Landroid/widget/ImageView;
+
+    if-eqz v2, :cond_1
+
+    iget-object v0, v0, Lcom/android/systemui/volume/view/standard/VolumePanelView;->blurEffect:Lcom/android/systemui/volume/util/BlurEffect;
+
+    if-nez v0, :cond_0
+
+    move-object v0, v1
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Lcom/android/systemui/volume/util/BlurEffect;->hideBlur(Landroid/view/View;)V
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/systemui/volume/view/standard/VolumePanelView$startDismissAnimation$dismissRunnable$1;->this$0:Lcom/android/systemui/volume/view/standard/VolumePanelView;
+
+    iget-object p0, p0, Lcom/android/systemui/volume/view/standard/VolumePanelView;->dialog:Landroid/app/Dialog;
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object v1, p0
+
+    :goto_0
+    invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
+
+    return-void
+.end method

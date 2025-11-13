@@ -1,0 +1,95 @@
+.class public final Lcom/samsung/android/settings/notification/SecAssistantCapabilityPreferenceController$1;
+.super Lcom/samsung/android/settings/logging/status/BaseStatusLoggingProvider;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# virtual methods
+.method public final getStatusLoggingData(Landroid/content/Context;)Ljava/util/List;
+    .locals 2
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    :try_start_0
+    sget-object v0, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Landroid/app/INotificationManager;->getAllowedAssistantAdjustments(Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "AssistantCapabilityPreferenceController"
+
+    const-string v1, "Error calling NoMan"
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_2
+
+    const-string v0, "key_contextual_actions"
+
+    invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "key_text_replies"
+
+    invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_1
+    const v0, 0x8e37
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "1"
+
+    goto :goto_2
+
+    :cond_1
+    const-string p1, "0"
+
+    :goto_2
+    new-instance v1, Lcom/samsung/android/settings/logging/status/StatusData;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v1, Lcom/samsung/android/settings/logging/status/StatusData;->mStatusValue:Ljava/lang/String;
+
+    iput-object v0, v1, Lcom/samsung/android/settings/logging/status/StatusData;->mStatusKey:Ljava/lang/String;
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    return-object p0
+.end method

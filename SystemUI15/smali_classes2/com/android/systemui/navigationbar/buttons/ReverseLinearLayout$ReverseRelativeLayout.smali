@@ -1,0 +1,24 @@
+.class public final Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$ReverseRelativeLayout;
+.super Landroid/widget/RelativeLayout;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$Reversable;
+
+
+# instance fields
+.field public mDefaultGravity:I
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/android/systemui/navigationbar/buttons/ReverseLinearLayout$ReverseRelativeLayout;->mDefaultGravity:I
+
+    return-void
+.end method

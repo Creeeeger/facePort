@@ -1,0 +1,11 @@
+.class public interface abstract Lkotlin/reflect/jvm/internal/impl/descriptors/ValueDescriptor;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lkotlin/reflect/jvm/internal/impl/descriptors/CallableDescriptor;
+
+
+# virtual methods
+.method public abstract getType()Lkotlin/reflect/jvm/internal/impl/types/KotlinType;
+.end method

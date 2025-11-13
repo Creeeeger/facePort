@@ -1,0 +1,27 @@
+.class public final Landroidx/compose/ui/platform/ViewLayerContainer;
+.super Landroidx/compose/ui/platform/DrawChildContainer;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroidx/compose/ui/platform/DrawChildContainer;-><init>(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final dispatchDraw(Landroid/graphics/Canvas;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final dispatchGetDisplayList()V
+    .locals 0
+
+    return-void
+.end method

@@ -1,0 +1,134 @@
+.class public final synthetic Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic $r8$classId:I
+
+.field public final synthetic f$0:Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment;I)V
+    .locals 0
+
+    iput p2, p0, Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment$$ExternalSyntheticLambda0;->$r8$classId:I
+
+    iput-object p1, p0, Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment$$ExternalSyntheticLambda0;->f$0:Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
+
+    iget p1, p0, Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment$$ExternalSyntheticLambda0;->$r8$classId:I
+
+    iget-object p0, p0, Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment$$ExternalSyntheticLambda0;->f$0:Lcom/android/settings/privatespace/PrivateSpaceSetLockFragment;
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lcom/android/settings/core/InstrumentedFragment;->mMetricsFeatureProvider:Lcom/android/settings/core/instrumentation/SettingsMetricsFeatureProvider;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Landroid/util/Pair;
+
+    const/16 v2, 0x763
+
+    invoke-virtual {p1, v0, v2, v1}, Lcom/android/settings/core/instrumentation/SettingsMetricsFeatureProvider;->action(Landroid/content/Context;I[Landroid/util/Pair;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/android/settings/privatespace/PrivateSpaceMaintainer;->getInstance(Landroid/content/Context;)Lcom/android/settings/privatespace/PrivateSpaceMaintainer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/settings/privatespace/PrivateSpaceMaintainer;->getPrivateProfileHandle()Landroid/os/UserHandle;
+
+    move-result-object p1
+
+    const-string v0, "PrivateSpaceSetLockFrag"
+
+    if-eqz p1, :cond_0
+
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-class v3, Lcom/android/settings/privatespace/PrivateProfileContextHelperActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v2, "action_type"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v2, "Start separate lock setup for private profile"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1, v3, p1}, Landroid/app/Activity;->startActivityForResultAsUser(Landroid/content/Intent;ILandroid/os/UserHandle;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "Private profile user handle is null"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lcom/android/settings/core/InstrumentedFragment;->mMetricsFeatureProvider:Lcom/android/settings/core/instrumentation/SettingsMetricsFeatureProvider;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Landroid/util/Pair;
+
+    const/16 v2, 0x764
+
+    invoke-virtual {p1, v0, v2, v1}, Lcom/android/settings/core/instrumentation/SettingsMetricsFeatureProvider;->action(Landroid/content/Context;I[Landroid/util/Pair;)V
+
+    invoke-static {p0}, Landroidx/navigation/fragment/NavHostFragment$Companion;->findNavController(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
+
+    move-result-object p0
+
+    const p1, 0x7f0a008a
+
+    invoke-virtual {p0, p1}, Landroidx/navigation/NavController;->navigate(I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

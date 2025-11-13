@@ -1,0 +1,20 @@
+.class public final Lcom/google/android/material/chip/SeslChipGroup$2;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Landroid/animation/LayoutTransition$TransitionListener;
+
+
+# virtual methods
+.method public final endTransition(Landroid/animation/LayoutTransition;Landroid/view/ViewGroup;Landroid/view/View;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final startTransition(Landroid/animation/LayoutTransition;Landroid/view/ViewGroup;Landroid/view/View;I)V
+    .locals 0
+
+    return-void
+.end method

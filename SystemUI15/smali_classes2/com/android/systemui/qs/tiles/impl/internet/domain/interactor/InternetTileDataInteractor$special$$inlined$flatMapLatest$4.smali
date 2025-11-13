@@ -1,0 +1,214 @@
+.class public final Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;
+.super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function3;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
+        "Lkotlin/jvm/functions/Function3;"
+    }
+.end annotation
+
+
+# instance fields
+.field private synthetic L$0:Ljava/lang/Object;
+
+.field synthetic L$1:Ljava/lang/Object;
+
+.field label:I
+
+.field final synthetic this$0:Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;)V
+    .locals 0
+
+    iput-object p2, p0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->this$0:Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;
+
+    const/4 p2, 0x3
+
+    invoke-direct {p0, p2, p1}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Lkotlinx/coroutines/flow/FlowCollector;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->this$0:Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;
+
+    invoke-direct {v0, p3, p0}, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;-><init>(Lkotlin/coroutines/Continuation;Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;)V
+
+    iput-object p1, v0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->L$0:Ljava/lang/Object;
+
+    iput-object p2, v0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->L$1:Ljava/lang/Object;
+
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    invoke-virtual {v0, p0}, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v1, p0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->label:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->L$0:Ljava/lang/Object;
+
+    check-cast p1, Lkotlinx/coroutines/flow/FlowCollector;
+
+    iget-object v1, p0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->L$1:Ljava/lang/Object;
+
+    check-cast v1, Lcom/android/systemui/common/shared/model/Icon$Resource;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->this$0:Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;
+
+    iget-object v1, v1, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;->notConnectedFlow:Lkotlinx/coroutines/flow/ReadonlyStateFlow;
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v12, Lcom/android/systemui/qs/tiles/impl/internet/domain/model/InternetTileModel$Active;
+
+    iget-object v9, v1, Lcom/android/systemui/common/shared/model/Icon$Resource;->contentDescription:Lcom/android/systemui/common/shared/model/ContentDescription;
+
+    if-eqz v9, :cond_5
+
+    sget-object v3, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor;->Companion:Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$Companion;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    instance-of v3, v9, Lcom/android/systemui/common/shared/model/ContentDescription$Loaded;
+
+    if-eqz v3, :cond_3
+
+    new-instance v3, Lcom/android/systemui/common/shared/model/Text$Loaded;
+
+    move-object v4, v9
+
+    check-cast v4, Lcom/android/systemui/common/shared/model/ContentDescription$Loaded;
+
+    iget-object v4, v4, Lcom/android/systemui/common/shared/model/ContentDescription$Loaded;->description:Ljava/lang/String;
+
+    invoke-direct {v3, v4}, Lcom/android/systemui/common/shared/model/Text$Loaded;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    instance-of v3, v9, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
+
+    if-eqz v3, :cond_4
+
+    new-instance v3, Lcom/android/systemui/common/shared/model/Text$Resource;
+
+    move-object v4, v9
+
+    check-cast v4, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;
+
+    iget v4, v4, Lcom/android/systemui/common/shared/model/ContentDescription$Resource;->res:I
+
+    invoke-direct {v3, v4}, Lcom/android/systemui/common/shared/model/Text$Resource;-><init>(I)V
+
+    :goto_0
+    move-object v5, v3
+
+    goto :goto_1
+
+    :cond_4
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
+
+    :cond_5
+    const/4 v3, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    new-instance v6, Ljava/lang/Integer;
+
+    iget v1, v1, Lcom/android/systemui/common/shared/model/Icon$Resource;->res:I
+
+    invoke-direct {v6, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v4, 0x0
+
+    const/16 v10, 0x9
+
+    const/4 v11, 0x0
+
+    move-object v3, v12
+
+    invoke-direct/range {v3 .. v11}, Lcom/android/systemui/qs/tiles/impl/internet/domain/model/InternetTileModel$Active;-><init>(Ljava/lang/CharSequence;Lcom/android/systemui/common/shared/model/Text;Ljava/lang/Integer;Lcom/android/systemui/common/shared/model/Icon;Lcom/android/systemui/common/shared/model/ContentDescription;Lcom/android/systemui/common/shared/model/ContentDescription;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    new-instance v1, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;
+
+    invoke-direct {v1, v12}, Lkotlinx/coroutines/flow/FlowKt__BuildersKt$flowOf$$inlined$unsafeFlow$2;-><init>(Ljava/lang/Object;)V
+
+    :goto_2
+    iput v2, p0, Lcom/android/systemui/qs/tiles/impl/internet/domain/interactor/InternetTileDataInteractor$special$$inlined$flatMapLatest$4;->label:I
+
+    invoke-static {p0, v1, p1}, Lkotlinx/coroutines/flow/FlowKt;->emitAll(Lkotlin/coroutines/Continuation;Lkotlinx/coroutines/flow/Flow;Lkotlinx/coroutines/flow/FlowCollector;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v0, :cond_6
+
+    return-object v0
+
+    :cond_6
+    :goto_3
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method

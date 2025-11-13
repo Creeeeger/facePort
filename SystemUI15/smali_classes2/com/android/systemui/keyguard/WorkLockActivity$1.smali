@@ -1,0 +1,58 @@
+.class public final Lcom/android/systemui/keyguard/WorkLockActivity$1;
+.super Landroid/content/BroadcastReceiver;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/android/systemui/keyguard/WorkLockActivity;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/systemui/keyguard/WorkLockActivity;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/keyguard/WorkLockActivity$1;->this$0:Lcom/android/systemui/keyguard/WorkLockActivity;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/android/systemui/keyguard/WorkLockActivity$1;->this$0:Lcom/android/systemui/keyguard/WorkLockActivity;
+
+    invoke-virtual {p1}, Lcom/android/systemui/keyguard/WorkLockActivity;->getTargetUserId()I
+
+    move-result p1
+
+    const-string v0, "android.intent.extra.user_handle"
+
+    invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result p2
+
+    if-ne p2, p1, :cond_0
+
+    iget-object p2, p0, Lcom/android/systemui/keyguard/WorkLockActivity$1;->this$0:Lcom/android/systemui/keyguard/WorkLockActivity;
+
+    invoke-virtual {p2}, Lcom/android/systemui/keyguard/WorkLockActivity;->getKeyguardManager()Landroid/app/KeyguardManager;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroid/app/KeyguardManager;->isDeviceLocked(I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/systemui/keyguard/WorkLockActivity$1;->this$0:Lcom/android/systemui/keyguard/WorkLockActivity;
+
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+
+    :cond_0
+    return-void
+.end method

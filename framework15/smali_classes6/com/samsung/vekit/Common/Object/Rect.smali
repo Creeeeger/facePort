@@ -1,0 +1,398 @@
+.class public Lcom/samsung/vekit/Common/Object/Rect;
+.super Ljava/lang/Object;
+.source "Rect.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final blacklist HEIGHT:I
+
+.field private final blacklist WIDTH:I
+
+.field private final blacklist X:I
+
+.field private final blacklist Y:I
+
+.field blacklist data:Ljava/util/Vector;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Vector<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor blacklist <init>(Lcom/samsung/vekit/Common/Object/Rect;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/samsung/vekit/Common/Object/Rect<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->X:I
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->Y:I
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->WIDTH:I
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->HEIGHT:I
+
+    new-instance v0, Ljava/util/Vector;
+
+    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
+
+    iput-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {p1}, Lcom/samsung/vekit/Common/Object/Rect;->getX()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/samsung/vekit/Common/Object/Rect;->getY()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/samsung/vekit/Common/Object/Rect;->getWidth()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcom/samsung/vekit/Common/Object/Rect;->getHeight()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/samsung/vekit/Common/Object/Rect;->set(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;TT;TT;TT;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->X:I
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->Y:I
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->WIDTH:I
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->HEIGHT:I
+
+    new-instance v0, Ljava/util/Vector;
+
+    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
+
+    iput-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p3}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>([Ljava/lang/Object;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([TT;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->X:I
+
+    const/4 v1, 0x1
+
+    iput v1, p0, Lcom/samsung/vekit/Common/Object/Rect;->Y:I
+
+    const/4 v2, 0x2
+
+    iput v2, p0, Lcom/samsung/vekit/Common/Object/Rect;->WIDTH:I
+
+    const/4 v3, 0x3
+
+    iput v3, p0, Lcom/samsung/vekit/Common/Object/Rect;->HEIGHT:I
+
+    new-instance v4, Ljava/util/Vector;
+
+    invoke-direct {v4}, Ljava/util/Vector;-><init>()V
+
+    iput-object v4, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    iget-object v4, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    aget-object v0, p1, v0
+
+    invoke-virtual {v4, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    aget-object v1, p1, v1
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    aget-object v1, p1, v2
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    aget-object v1, p1, v3
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist getHeight()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public blacklist getWidth()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public blacklist getX()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public blacklist getY()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public blacklist set(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;TT;TT;TT;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0}, Ljava/util/Vector;->clear()V
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p3}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0, p4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public blacklist setHeight(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/Vector;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public blacklist setWidth(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/Vector;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public blacklist setX(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/Vector;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public blacklist setY(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/Vector;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public blacklist toArray()[Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()[TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/samsung/vekit/Common/Object/Rect;->data:Ljava/util/Vector;
+
+    invoke-virtual {v0}, Ljava/util/Vector;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/stream/Stream;->toArray()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method

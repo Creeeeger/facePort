@@ -1,0 +1,56 @@
+.class public final Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView$2;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# instance fields
+.field public mCancelled:Z
+
+.field public final synthetic this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView$2;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView$2;->mCancelled:Z
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget-object p1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView$2;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
+
+    iget-boolean p0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView$2;->mCancelled:Z
+
+    if-nez p0, :cond_0
+
+    iget-object p0, p1, Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView;->mStartPhaseRunnable:Lcom/android/settings/biometrics/fingerprint/FingerprintLocationAnimationView$5;
+
+    const-wide/16 v0, 0x3e8
+
+    invoke-virtual {p1, p0, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
+    return-void
+.end method

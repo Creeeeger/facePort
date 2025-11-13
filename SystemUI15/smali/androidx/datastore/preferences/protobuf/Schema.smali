@@ -1,0 +1,32 @@
+.class public interface abstract Landroidx/datastore/preferences/protobuf/Schema;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# virtual methods
+.method public abstract equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+.end method
+
+.method public abstract getSerializedSize(Ljava/lang/Object;)I
+.end method
+
+.method public abstract hashCode(Ljava/lang/Object;)I
+.end method
+
+.method public abstract isInitialized(Ljava/lang/Object;)Z
+.end method
+
+.method public abstract makeImmutable(Ljava/lang/Object;)V
+.end method
+
+.method public abstract mergeFrom(Ljava/lang/Object;Landroidx/datastore/preferences/protobuf/CodedInputStreamReader;Landroidx/datastore/preferences/protobuf/ExtensionRegistryLite;)V
+.end method
+
+.method public abstract mergeFrom(Ljava/lang/Object;Ljava/lang/Object;)V
+.end method
+
+.method public abstract newInstance()Landroidx/datastore/preferences/protobuf/GeneratedMessageLite;
+.end method
+
+.method public abstract writeTo(Ljava/lang/Object;Landroidx/datastore/preferences/protobuf/CodedOutputStreamWriter;)V
+.end method

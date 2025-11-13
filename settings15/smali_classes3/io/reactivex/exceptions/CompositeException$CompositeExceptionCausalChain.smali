@@ -1,0 +1,38 @@
+.class final Lio/reactivex/exceptions/CompositeException$CompositeExceptionCausalChain;
+.super Ljava/lang/RuntimeException;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/reactivex/exceptions/CompositeException;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "CompositeExceptionCausalChain"
+.end annotation
+
+
+# static fields
+.field private static final serialVersionUID:J = 0x35c7853e403cebd2L
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getMessage()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "Chain of Causes for CompositeException In Order Received =>"
+
+    return-object p0
+.end method

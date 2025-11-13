@@ -1,0 +1,166 @@
+.class public Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;
+.super Landroid/media/tv/tuner/frontend/FrontendSettings;
+.source "IsdbsFrontendSettings.java"
+
+
+# annotations
+.annotation runtime Landroid/annotation/SystemApi;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$Builder;,
+        Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$Rolloff;,
+        Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$CodeRate;,
+        Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$Modulation;,
+        Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$StreamIdType;
+    }
+.end annotation
+
+
+# static fields
+.field public static final whitelist CODERATE_1_2:I = 0x2
+
+.field public static final whitelist CODERATE_2_3:I = 0x4
+
+.field public static final whitelist CODERATE_3_4:I = 0x8
+
+.field public static final whitelist CODERATE_5_6:I = 0x10
+
+.field public static final whitelist CODERATE_7_8:I = 0x20
+
+.field public static final whitelist CODERATE_AUTO:I = 0x1
+
+.field public static final whitelist CODERATE_UNDEFINED:I = 0x0
+
+.field public static final whitelist MODULATION_AUTO:I = 0x1
+
+.field public static final whitelist MODULATION_MOD_BPSK:I = 0x2
+
+.field public static final whitelist MODULATION_MOD_QPSK:I = 0x4
+
+.field public static final whitelist MODULATION_MOD_TC8PSK:I = 0x8
+
+.field public static final whitelist MODULATION_UNDEFINED:I = 0x0
+
+.field public static final whitelist ROLLOFF_0_35:I = 0x1
+
+.field public static final whitelist ROLLOFF_UNDEFINED:I = 0x0
+
+.field public static final whitelist STREAM_ID_TYPE_ID:I = 0x0
+
+.field public static final whitelist STREAM_ID_TYPE_RELATIVE_NUMBER:I = 0x1
+
+
+# instance fields
+.field private final blacklist mCodeRate:I
+
+.field private final blacklist mModulation:I
+
+.field private final blacklist mRolloff:I
+
+.field private final blacklist mStreamId:I
+
+.field private final blacklist mStreamIdType:I
+
+.field private final blacklist mSymbolRate:I
+
+
+# direct methods
+.method private constructor blacklist <init>(JIIIIII)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroid/media/tv/tuner/frontend/FrontendSettings;-><init>(J)V
+
+    iput p3, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mStreamId:I
+
+    iput p4, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mStreamIdType:I
+
+    iput p5, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mModulation:I
+
+    iput p6, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mCodeRate:I
+
+    iput p7, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mSymbolRate:I
+
+    iput p8, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mRolloff:I
+
+    return-void
+.end method
+
+.method synthetic constructor blacklist <init>(JIIIIIILandroid/media/tv/tuner/frontend/IsdbsFrontendSettings-IA;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p8}, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;-><init>(JIIIIII)V
+
+    return-void
+.end method
+
+.method public static whitelist builder()Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$Builder;
+    .locals 2
+
+    new-instance v0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$Builder;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$Builder;-><init>(Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings$Builder-IA;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public whitelist getCodeRate()I
+    .locals 1
+
+    iget v0, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mCodeRate:I
+
+    return v0
+.end method
+
+.method public whitelist getModulation()I
+    .locals 1
+
+    iget v0, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mModulation:I
+
+    return v0
+.end method
+
+.method public whitelist getRolloff()I
+    .locals 1
+
+    iget v0, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mRolloff:I
+
+    return v0
+.end method
+
+.method public whitelist getStreamId()I
+    .locals 1
+
+    iget v0, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mStreamId:I
+
+    return v0
+.end method
+
+.method public whitelist getStreamIdType()I
+    .locals 1
+
+    iget v0, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mStreamIdType:I
+
+    return v0
+.end method
+
+.method public whitelist getSymbolRate()I
+    .locals 1
+
+    iget v0, p0, Landroid/media/tv/tuner/frontend/IsdbsFrontendSettings;->mSymbolRate:I
+
+    return v0
+.end method
+
+.method public whitelist getType()I
+    .locals 1
+
+    const/4 v0, 0x7
+
+    return v0
+.end method

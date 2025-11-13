@@ -1,0 +1,40 @@
+.class public final Lcom/android/systemui/haptics/slider/HapticSliderViewBinder;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/android/systemui/haptics/slider/HapticSliderViewBinder;
+
+    invoke-direct {v0}, Lcom/android/systemui/haptics/slider/HapticSliderViewBinder;-><init>()V
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static final bind(Landroid/view/View;Lcom/android/systemui/haptics/slider/SeekbarHapticPlugin;)V
+    .locals 2
+
+    if-eqz p0, :cond_0
+
+    new-instance v0, Lcom/android/systemui/haptics/slider/HapticSliderViewBinder$bind$1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lcom/android/systemui/haptics/slider/HapticSliderViewBinder$bind$1;-><init>(Lcom/android/systemui/haptics/slider/SeekbarHapticPlugin;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p0, v0}, Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt;->repeatWhenAttached$default(Landroid/view/View;Lkotlin/jvm/functions/Function3;)Lcom/android/systemui/lifecycle/RepeatWhenAttachedKt$repeatWhenAttached$1;
+
+    :cond_0
+    return-void
+.end method

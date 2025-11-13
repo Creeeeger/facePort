@@ -1,0 +1,41 @@
+.class public final Landroidx/dynamicanimation/animation/DynamicAnimation$15;
+.super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# instance fields
+.field public final synthetic val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getValue(Ljava/lang/Object;)F
+    .locals 0
+
+    iget-object p0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+    iget p0, p0, Landroidx/dynamicanimation/animation/FloatValueHolder;->mValue:F
+
+    return p0
+.end method
+
+.method public final setValue(Ljava/lang/Object;F)V
+    .locals 0
+
+    iget-object p0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+    iput p2, p0, Landroidx/dynamicanimation/animation/FloatValueHolder;->mValue:F
+
+    return-void
+.end method

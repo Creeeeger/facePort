@@ -1,0 +1,82 @@
+.class public final Lcom/android/systemui/controls/management/WindowTransition;
+.super Landroid/transition/Transition;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final animator:Lkotlin/jvm/functions/Function1;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/jvm/functions/Function1;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function1;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
+
+    iput-object p1, p0, Lcom/android/systemui/controls/management/WindowTransition;->animator:Lkotlin/jvm/functions/Function1;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final captureEndValues(Landroid/transition/TransitionValues;)V
+    .locals 1
+
+    iget-object p0, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    const-string v0, "item"
+
+    invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final captureStartValues(Landroid/transition/TransitionValues;)V
+    .locals 1
+
+    iget-object p0, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    const-string v0, "item"
+
+    invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/controls/management/WindowTransition;->animator:Lkotlin/jvm/functions/Function1;
+
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+
+    invoke-interface {p0, p1}, Lkotlin/jvm/functions/Function1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/animation/Animator;
+
+    return-object p0
+.end method

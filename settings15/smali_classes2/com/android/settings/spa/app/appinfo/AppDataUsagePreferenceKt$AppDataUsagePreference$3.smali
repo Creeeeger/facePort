@@ -1,0 +1,124 @@
+.class public final Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lcom/android/settingslib/spa/widget/preference/PreferenceModel;
+
+
+# instance fields
+.field public final enabled:Lkotlin/jvm/functions/Function0;
+
+.field public final onClick:Lkotlin/reflect/KFunction;
+
+.field public final summary:Lkotlin/jvm/functions/Function0;
+
+.field public final title:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/settings/spa/app/appinfo/AppDataUsagePresenter;Landroidx/compose/runtime/Composer;Landroidx/compose/runtime/MutableState;)V
+    .locals 7
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const v0, 0x7f142e0a
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    iget-object v2, p1, Lcom/android/settings/spa/app/appinfo/AppDataUsagePresenter;->titleResIdFlow:Lcom/android/settings/spa/app/appinfo/AppDataUsagePresenter$special$$inlined$map$1;
+
+    invoke-static {v2, v0, p2, v1}, Landroidx/lifecycle/compose/FlowExtKt;->collectAsStateWithLifecycle(Lkotlinx/coroutines/flow/Flow;Ljava/lang/Object;Landroidx/compose/runtime/Composer;I)Landroidx/compose/runtime/MutableState;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    invoke-static {p2, v0}, Landroidx/compose/ui/res/StringResources_androidKt;->stringResource(Landroidx/compose/runtime/Composer;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->title:Ljava/lang/String;
+
+    new-instance p2, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3$summary$1;
+
+    invoke-direct {p2, p3}, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3$summary$1;-><init>(Landroidx/compose/runtime/MutableState;)V
+
+    iput-object p2, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->summary:Lkotlin/jvm/functions/Function0;
+
+    new-instance p2, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3$enabled$1;
+
+    invoke-direct {p2, p1}, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3$enabled$1;-><init>(Lcom/android/settings/spa/app/appinfo/AppDataUsagePresenter;)V
+
+    iput-object p2, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->enabled:Lkotlin/jvm/functions/Function0;
+
+    new-instance p2, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3$onClick$1;
+
+    const-class v3, Lcom/android/settings/spa/app/appinfo/AppDataUsagePresenter;
+
+    const-string v4, "startActivity"
+
+    const/4 v1, 0x0
+
+    const-string v5, "startActivity()V"
+
+    const/4 v6, 0x0
+
+    move-object v0, p2
+
+    move-object v2, p1
+
+    invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    iput-object p2, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->onClick:Lkotlin/reflect/KFunction;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getEnabled()Lkotlin/jvm/functions/Function0;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->enabled:Lkotlin/jvm/functions/Function0;
+
+    return-object p0
+.end method
+
+.method public final getOnClick()Lkotlin/jvm/functions/Function0;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->onClick:Lkotlin/reflect/KFunction;
+
+    check-cast p0, Lkotlin/jvm/functions/Function0;
+
+    return-object p0
+.end method
+
+.method public final getSummary()Lkotlin/jvm/functions/Function0;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->summary:Lkotlin/jvm/functions/Function0;
+
+    return-object p0
+.end method
+
+.method public final getTitle()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/spa/app/appinfo/AppDataUsagePreferenceKt$AppDataUsagePreference$3;->title:Ljava/lang/String;
+
+    return-object p0
+.end method

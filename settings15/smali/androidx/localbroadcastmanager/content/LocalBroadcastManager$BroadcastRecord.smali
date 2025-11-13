@@ -1,0 +1,23 @@
+.class public final Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# instance fields
+.field public final intent:Landroid/content/Intent;
+
+.field public final receivers:Ljava/util/ArrayList;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;->intent:Landroid/content/Intent;
+
+    iput-object p2, p0, Landroidx/localbroadcastmanager/content/LocalBroadcastManager$BroadcastRecord;->receivers:Ljava/util/ArrayList;
+
+    return-void
+.end method

@@ -1,0 +1,57 @@
+.class public Landroid/telephony/mbms/StreamingServiceCallback;
+.super Ljava/lang/Object;
+.source "StreamingServiceCallback.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/telephony/mbms/StreamingServiceCallback$StreamingServiceError;
+    }
+.end annotation
+
+
+# static fields
+.field public static final whitelist SIGNAL_STRENGTH_UNAVAILABLE:I = -0x1
+
+
+# direct methods
+.method public constructor whitelist <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist onBroadcastSignalStrengthUpdated(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public whitelist onError(ILjava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public whitelist onMediaDescriptionUpdated()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public whitelist onStreamMethodUpdated(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public whitelist onStreamStateUpdated(II)V
+    .locals 0
+
+    return-void
+.end method

@@ -1,0 +1,198 @@
+.class public final Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lkotlinx/coroutines/flow/FlowCollector;
+
+
+# instance fields
+.field public final synthetic $this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+
+.field public final synthetic this$0:Lcom/android/settings/spa/notification/AppNotificationRepository;
+
+
+# direct methods
+.method public constructor <init>(Lkotlinx/coroutines/flow/FlowCollector;Lcom/android/settings/spa/notification/AppNotificationRepository;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+
+    iput-object p2, p0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2;->this$0:Lcom/android/settings/spa/notification/AppNotificationRepository;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 11
+
+    instance-of v0, p2, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;
+
+    iget v1, v0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;->label:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;->label:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;
+
+    invoke-direct {v0, p0, p2}, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;-><init>(Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2;Lkotlin/coroutines/Continuation;)V
+
+    :goto_0
+    iget-object p2, v0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;->result:Ljava/lang/Object;
+
+    sget-object v1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v2, v0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;->label:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_2
+
+    if-ne v2, v3, :cond_1
+
+    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result v9
+
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iget-object p2, p0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2;->this$0:Lcom/android/settings/spa/notification/AppNotificationRepository;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v7
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v4, 0x7
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v4
+
+    sub-long v5, v7, v4
+
+    :try_start_0
+    iget-object v4, p2, Lcom/android/settings/spa/notification/AppNotificationRepository;->usageStatsManager:Landroid/app/usage/IUsageStatsManager;
+
+    iget-object p2, p2, Lcom/android/settings/spa/notification/AppNotificationRepository;->context:Landroid/content/Context;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-interface/range {v4 .. v10}, Landroid/app/usage/IUsageStatsManager;->queryEventsForUser(JJILjava/lang/String;)Landroid/app/usage/UsageEvents;
+
+    move-result-object p2
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p2
+
+    const-string v2, "AppNotificationsRepo"
+
+    const-string v4, "Failed IUsageStatsManager.queryEventsForUser(): "
+
+    invoke-static {v2, v4, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/4 p2, 0x0
+
+    :goto_1
+    new-instance v2, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$1$1;
+
+    invoke-direct {v2, p1}, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$1$1;-><init>(Ljava/util/Map;)V
+
+    if-nez p2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    new-instance v4, Landroid/app/usage/UsageEvents$Event;
+
+    invoke-direct {v4}, Landroid/app/usage/UsageEvents$Event;-><init>()V
+
+    :cond_4
+    :goto_2
+    invoke-virtual {p2, v4}, Landroid/app/usage/UsageEvents;->getNextEvent(Landroid/app/usage/UsageEvents$Event;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    invoke-virtual {v4}, Landroid/app/usage/UsageEvents$Event;->getEventType()I
+
+    move-result v5
+
+    const/16 v6, 0xc
+
+    if-ne v5, v6, :cond_4
+
+    invoke-virtual {v2, v4}, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$1$1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :cond_5
+    :goto_3
+    iput v3, v0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2$1;->label:I
+
+    iget-object p0, p0, Lcom/android/settings/spa/notification/AppNotificationRepository$getAggregatedUsageEvents$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+
+    invoke-interface {p0, p1, v0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v1, :cond_6
+
+    return-object v1
+
+    :cond_6
+    :goto_4
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method

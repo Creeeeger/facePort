@@ -1,0 +1,23 @@
+.class public interface abstract Landroid/content/ServiceConnection;
+.super Ljava/lang/Object;
+.source "ServiceConnection.java"
+
+
+# virtual methods
+.method public whitelist onBindingDied(Landroid/content/ComponentName;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public whitelist onNullBinding(Landroid/content/ComponentName;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract whitelist onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+.end method
+
+.method public abstract whitelist onServiceDisconnected(Landroid/content/ComponentName;)V
+.end method

@@ -1,0 +1,120 @@
+.class public Lcom/android/systemui/shared/rotation/FloatingRotationButtonView;
+.super Landroid/widget/ImageView;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final mLastConfiguration:Landroid/content/res/Configuration;
+
+.field public final mOvalBgPaint:Landroid/graphics/Paint;
+
+.field public mRipple:Lcom/android/systemui/shared/navigationbar/KeyButtonRipple;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/systemui/shared/rotation/FloatingRotationButtonView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    new-instance p1, Landroid/graphics/Paint;
+
+    const/4 p2, 0x3
+
+    invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object p1, p0, Lcom/android/systemui/shared/rotation/FloatingRotationButtonView;->mOvalBgPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/systemui/shared/rotation/FloatingRotationButtonView;->mLastConfiguration:Landroid/content/res/Configuration;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setClickable(Z)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setWillNotDraw(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->forceHasOverlappingRendering(Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/shared/rotation/FloatingRotationButtonView;->mLastConfiguration:Landroid/content/res/Configuration;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
+
+    move-result p1
+
+    and-int/lit16 v0, p1, 0x400
+
+    if-nez v0, :cond_0
+
+    and-int/lit16 p1, p1, 0x1000
+
+    if-eqz p1, :cond_1
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/systemui/shared/rotation/FloatingRotationButtonView;->mRipple:Lcom/android/systemui/shared/navigationbar/KeyButtonRipple;
+
+    if-eqz p0, :cond_1
+
+    iget-object p1, p0, Lcom/android/systemui/shared/navigationbar/KeyButtonRipple;->mTargetView:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    iget v0, p0, Lcom/android/systemui/shared/navigationbar/KeyButtonRipple;->mMaxWidthResource:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/shared/navigationbar/KeyButtonRipple;->mMaxWidth:I
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onWindowVisibilityChanged(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->onWindowVisibilityChanged(I)V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->jumpDrawablesToCurrentState()V
+
+    :cond_0
+    return-void
+.end method

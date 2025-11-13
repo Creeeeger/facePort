@@ -1,0 +1,11 @@
+.class public interface abstract Lcom/android/systemui/controls/ui/Behavior;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# virtual methods
+.method public abstract bind(Lcom/android/systemui/controls/ui/ControlWithState;I)V
+.end method
+
+.method public abstract initialize(Lcom/android/systemui/controls/ui/ControlViewHolder;)V
+.end method

@@ -1,0 +1,11 @@
+.class public abstract Landroidx/compose/foundation/text/selection/HandleImageCache;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# static fields
+.field public static canvas:Landroidx/compose/ui/graphics/Canvas;
+
+.field public static canvasDrawScope:Landroidx/compose/ui/graphics/drawscope/CanvasDrawScope;
+
+.field public static imageBitmap:Landroidx/compose/ui/graphics/ImageBitmap;

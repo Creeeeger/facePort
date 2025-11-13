@@ -1,0 +1,280 @@
+.class public Lcom/android/settings/notification/PulseNotificationPreferenceController;
+.super Lcom/android/settings/core/TogglePreferenceController;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnResume;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnPause;
+
+
+# static fields
+.field private static final OFF:I = 0x0
+
+.field private static final ON:I = 0x1
+
+
+# instance fields
+.field private mSettingObserver:Lcom/android/settings/notification/PulseNotificationPreferenceController$SettingObserver;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/settings/core/TogglePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public displayPreference(Landroidx/preference/PreferenceScreen;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lcom/android/settings/core/TogglePreferenceController;->displayPreference(Landroidx/preference/PreferenceScreen;)V
+
+    invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->getPreferenceKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    new-instance v0, Lcom/android/settings/notification/PulseNotificationPreferenceController$SettingObserver;
+
+    invoke-direct {v0, p0, p1}, Lcom/android/settings/notification/PulseNotificationPreferenceController$SettingObserver;-><init>(Lcom/android/settings/notification/PulseNotificationPreferenceController;Landroidx/preference/Preference;)V
+
+    iput-object v0, p0, Lcom/android/settings/notification/PulseNotificationPreferenceController;->mSettingObserver:Lcom/android/settings/notification/PulseNotificationPreferenceController$SettingObserver;
+
+    :cond_0
+    return-void
+.end method
+
+.method public getAvailabilityStatus()I
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v0, 0x11101b9
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x3
+
+    :goto_0
+    return p0
+.end method
+
+.method public bridge synthetic getBackgroundWorkerClass()Ljava/lang/Class;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getBackupKeys()Ljava/util/List;
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settings/core/TogglePreferenceController;->getBackupKeys()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getIntentFilter()Landroid/content/IntentFilter;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getLaunchIntent()Landroid/content/Intent;
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settings/core/TogglePreferenceController;->getLaunchIntent()Landroid/content/Intent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getSliceHighlightMenuRes()I
+    .locals 0
+
+    const p0, 0x7f1417ca
+
+    return p0
+.end method
+
+.method public bridge synthetic getStatusText()Ljava/lang/String;
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settings/core/TogglePreferenceController;->getStatusText()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic hasAsyncUpdate()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic ignoreUserInteraction()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settings/core/TogglePreferenceController;->ignoreUserInteraction()V
+
+    return-void
+.end method
+
+.method public isChecked()Z
+    .locals 2
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "notification_light_pulse"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    return v1
+.end method
+
+.method public bridge synthetic isControllable()Z
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settings/core/TogglePreferenceController;->isControllable()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public bridge synthetic needUserInteraction(Ljava/lang/Object;)Lcom/samsung/android/settings/cube/Controllable$ControllableType;
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/android/settings/core/TogglePreferenceController;->needUserInteraction(Ljava/lang/Object;)Lcom/samsung/android/settings/cube/Controllable$ControllableType;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public onPause()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/settings/notification/PulseNotificationPreferenceController;->mSettingObserver:Lcom/android/settings/notification/PulseNotificationPreferenceController$SettingObserver;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0, v0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/settings/notification/PulseNotificationPreferenceController;->mSettingObserver:Lcom/android/settings/notification/PulseNotificationPreferenceController$SettingObserver;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    iget-object v1, v0, Lcom/android/settings/notification/PulseNotificationPreferenceController$SettingObserver;->NOTIFICATION_LIGHT_PULSE_URI:Landroid/net/Uri;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v1, v2, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public bridge synthetic runDefaultAction()Z
+    .locals 0
+
+    invoke-super {p0}, Lcom/android/settings/core/TogglePreferenceController;->runDefaultAction()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public setChecked(Z)Z
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "notification_light_pulse"
+
+    invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public bridge synthetic useDynamicSliceSummary()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method

@@ -1,0 +1,54 @@
+.class public final Lcom/android/systemui/screenshot/ActionExecutor$createWindowTransition$callbacks$1;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Landroid/app/ExitTransitionCoordinator$ExitTransitionCallbacks;
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/android/systemui/screenshot/ActionExecutor;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/systemui/screenshot/ActionExecutor;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/screenshot/ActionExecutor$createWindowTransition$callbacks$1;->this$0:Lcom/android/systemui/screenshot/ActionExecutor;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final hideSharedElements()V
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/systemui/screenshot/ActionExecutor$createWindowTransition$callbacks$1;->this$0:Lcom/android/systemui/screenshot/ActionExecutor;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/systemui/screenshot/ActionExecutor;->isPendingSharedTransition:Z
+
+    iget-object p0, p0, Lcom/android/systemui/screenshot/ActionExecutor;->finishDismiss:Lkotlin/jvm/functions/Function0;
+
+    invoke-interface {p0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final isReturnTransitionAllowed()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final onFinish()V
+    .locals 0
+
+    return-void
+.end method

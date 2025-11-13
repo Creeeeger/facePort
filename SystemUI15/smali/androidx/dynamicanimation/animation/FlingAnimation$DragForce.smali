@@ -1,0 +1,31 @@
+.class public final Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public mFriction:F
+
+.field public final mMassState:Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;
+
+.field public mVelocityThreshold:F
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const v0, -0x3f79999a    # -4.2f
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->mFriction:F
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;
+
+    invoke-direct {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;-><init>()V
+
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/FlingAnimation$DragForce;->mMassState:Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;
+
+    return-void
+.end method

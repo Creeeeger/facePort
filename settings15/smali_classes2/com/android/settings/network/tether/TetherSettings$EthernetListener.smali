@@ -1,0 +1,65 @@
+.class public final Lcom/android/settings/network/tether/TetherSettings$EthernetListener;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Landroid/net/EthernetManager$InterfaceStateListener;
+
+
+# instance fields
+.field public final mTetherSettings:Ljava/lang/ref/WeakReference;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/settings/network/tether/TetherSettings;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/android/settings/network/tether/TetherSettings$EthernetListener;->mTetherSettings:Ljava/lang/ref/WeakReference;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onInterfaceStateChanged(Ljava/lang/String;IILandroid/net/IpConfiguration;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/network/tether/TetherSettings$EthernetListener;->mTetherSettings:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/settings/network/tether/TetherSettings;
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 p3, 0x2
+
+    if-ne p2, p3, :cond_1
+
+    iget-object p2, p0, Lcom/android/settings/network/tether/TetherSettings;->mAvailableInterfaces:Ljava/util/HashSet;
+
+    invoke-virtual {p2, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p2, p0, Lcom/android/settings/network/tether/TetherSettings;->mAvailableInterfaces:Ljava/util/HashSet;
+
+    invoke-virtual {p2, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    :goto_0
+    invoke-virtual {p0}, Lcom/android/settings/network/tether/TetherSettings;->updateBluetoothAndEthernetState()V
+
+    return-void
+.end method

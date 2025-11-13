@@ -1,0 +1,49 @@
+.class public final Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$2;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Landroidx/core/view/accessibility/AccessibilityViewCommand;
+
+
+# instance fields
+.field public final synthetic this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$2;->this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final perform(Landroid/view/View;)Z
+    .locals 2
+
+    check-cast p1, Landroidx/viewpager2/widget/ViewPager2;
+
+    iget p1, p1, Landroidx/viewpager2/widget/ViewPager2;->mCurrentItem:I
+
+    const/4 v0, 0x1
+
+    sub-int/2addr p1, v0
+
+    iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$2;->this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
+
+    iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;->this$0:Landroidx/viewpager2/widget/ViewPager2;
+
+    iget-boolean v1, p0, Landroidx/viewpager2/widget/ViewPager2;->mUserInputEnabled:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, p1}, Landroidx/viewpager2/widget/ViewPager2;->setCurrentItemInternal(I)V
+
+    :cond_0
+    return v0
+.end method

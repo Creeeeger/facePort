@@ -1,0 +1,80 @@
+.class public final Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;
+.super Ljava/lang/Record;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Record;
+    componentAnnotationVisibilities = {
+        {},
+        {}
+    }
+    componentAnnotations = {
+        {},
+        {}
+    }
+    componentNames = {
+        "resId",
+        "description"
+    }
+    componentSignatures = {
+        null,
+        null
+    }
+    componentTypes = {
+        I,
+        Ljava/lang/String;
+    }
+.end annotation
+
+
+# instance fields
+.field public final description:Ljava/lang/String;
+
+.field public final resId:I
+
+
+# direct methods
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Record;-><init>()V
+
+    iput p1, p0, Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->resId:I
+
+    iput-object p2, p0, Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->description:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-custom {p0, p1}, call_site_1("equals", (Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;Ljava/lang/Object;)Z, Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;, "resId;description", instance-get@Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->resId:I, instance-get@Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->description:Ljava/lang/String;)@Ljava/lang/runtime/ObjectMethods;->bootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    invoke-custom {p0}, call_site_0("hashCode", (Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;)I, Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;, "resId;description", instance-get@Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->resId:I, instance-get@Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->description:Ljava/lang/String;)@Ljava/lang/runtime/ObjectMethods;->bootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    invoke-custom {p0}, call_site_2("toString", (Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;)Ljava/lang/String;, Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;, "resId;description", instance-get@Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->resId:I, instance-get@Lcom/android/settings/notification/modes/IconOptionsProvider$IconInfo;->description:Ljava/lang/String;)@Ljava/lang/runtime/ObjectMethods;->bootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/TypeDescriptor;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/invoke/MethodHandle;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method

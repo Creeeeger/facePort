@@ -1,0 +1,123 @@
+.class final Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;
+.super Lkotlin/jvm/internal/Lambda;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function2;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic $colors:Landroidx/compose/material3/TextFieldColors;
+
+.field final synthetic $enabled:Z
+
+.field final synthetic $interactionSource:Landroidx/compose/foundation/interaction/InteractionSource;
+
+.field final synthetic $isError:Z
+
+.field final synthetic $shape:Landroidx/compose/ui/graphics/Shape;
+
+
+# direct methods
+.method public constructor <init>(ZZLandroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/material3/TextFieldColors;Landroidx/compose/ui/graphics/Shape;)V
+    .locals 0
+
+    iput-boolean p1, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$enabled:Z
+
+    iput-boolean p2, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$isError:Z
+
+    iput-object p3, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$interactionSource:Landroidx/compose/foundation/interaction/InteractionSource;
+
+    iput-object p4, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$colors:Landroidx/compose/material3/TextFieldColors;
+
+    iput-object p5, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$shape:Landroidx/compose/ui/graphics/Shape;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    move-object v9, p1
+
+    check-cast v9, Landroidx/compose/runtime/Composer;
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    and-int/lit8 p1, p1, 0x3
+
+    const/4 p2, 0x2
+
+    if-ne p1, p2, :cond_1
+
+    move-object p1, v9
+
+    check-cast p1, Landroidx/compose/runtime/ComposerImpl;
+
+    invoke-virtual {p1}, Landroidx/compose/runtime/ComposerImpl;->getSkipping()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroidx/compose/runtime/ComposerImpl;->skipToGroupEnd()V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    sget-object p1, Landroidx/compose/runtime/ComposerKt;->invocation:Landroidx/compose/runtime/OpaqueKey;
+
+    sget-object v0, Landroidx/compose/material3/TextFieldDefaults;->INSTANCE:Landroidx/compose/material3/TextFieldDefaults;
+
+    iget-boolean v1, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$enabled:Z
+
+    iget-boolean v2, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$isError:Z
+
+    iget-object v3, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$interactionSource:Landroidx/compose/foundation/interaction/InteractionSource;
+
+    sget-object v4, Landroidx/compose/ui/Modifier;->Companion:Landroidx/compose/ui/Modifier$Companion;
+
+    iget-object v5, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$colors:Landroidx/compose/material3/TextFieldColors;
+
+    iget-object v6, p0, Landroidx/compose/material3/TextFieldDefaults$DecorationBox$1;->$shape:Landroidx/compose/ui/graphics/Shape;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget v7, Landroidx/compose/material3/TextFieldDefaults;->FocusedIndicatorThickness:F
+
+    sget v8, Landroidx/compose/material3/TextFieldDefaults;->UnfocusedIndicatorThickness:F
+
+    const v10, 0x6d80c00
+
+    const/4 v11, 0x0
+
+    invoke-virtual/range {v0 .. v11}, Landroidx/compose/material3/TextFieldDefaults;->Container-4EFweAY(ZZLandroidx/compose/foundation/interaction/InteractionSource;Landroidx/compose/ui/Modifier;Landroidx/compose/material3/TextFieldColors;Landroidx/compose/ui/graphics/Shape;FFLandroidx/compose/runtime/Composer;II)V
+
+    :goto_1
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method

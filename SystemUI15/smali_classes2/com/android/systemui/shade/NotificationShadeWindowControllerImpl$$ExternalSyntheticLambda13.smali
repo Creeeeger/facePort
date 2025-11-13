@@ -1,0 +1,20 @@
+.class public final synthetic Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl$$ExternalSyntheticLambda13;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
+
+
+# virtual methods
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Lcom/android/systemui/statusbar/phone/StatusBarWindowCallback;
+
+    invoke-static {p1}, Ljava/util/Objects;->nonNull(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method

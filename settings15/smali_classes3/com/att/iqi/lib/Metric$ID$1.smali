@@ -1,0 +1,68 @@
+.class Lcom/att/iqi/lib/Metric$ID$1;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/att/iqi/lib/Metric$ID;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator<",
+        "Lcom/att/iqi/lib/Metric$ID;",
+        ">;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric$ID;
+    .locals 1
+
+    new-instance p0, Lcom/att/iqi/lib/Metric$ID;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, p1}, Lcom/att/iqi/lib/Metric$ID;-><init>(ILandroid/os/Parcel;)V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/att/iqi/lib/Metric$ID$1;->createFromParcel(Landroid/os/Parcel;)Lcom/att/iqi/lib/Metric$ID;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public newArray(I)[Lcom/att/iqi/lib/Metric$ID;
+    .locals 0
+
+    new-array p0, p1, [Lcom/att/iqi/lib/Metric$ID;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcom/att/iqi/lib/Metric$ID$1;->newArray(I)[Lcom/att/iqi/lib/Metric$ID;
+
+    move-result-object p0
+
+    return-object p0
+.end method

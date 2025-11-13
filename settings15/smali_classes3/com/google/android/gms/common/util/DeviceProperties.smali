@@ -1,0 +1,13 @@
+.class public abstract Lcom/google/android/gms/common/util/DeviceProperties;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# static fields
+.field public static zzd:Ljava/lang/Boolean;
+
+.field public static zze:Ljava/lang/Boolean;
+
+.field public static zzg:Ljava/lang/Boolean;
+
+.field public static zzi:Ljava/lang/Boolean;

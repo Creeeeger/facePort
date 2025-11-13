@@ -1,0 +1,128 @@
+.class Lcom/samsung/android/sdk/scs/ai/translation/LanguageIdentificationRunnable;
+.super Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final fallbackLanguage:Ljava/lang/String;
+
+.field public final neuralTranslationServiceExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationServiceExecutor;
+
+.field public final text:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationServiceExecutor;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;-><init>()V
+
+    iput-object p1, p0, Lcom/samsung/android/sdk/scs/ai/translation/LanguageIdentificationRunnable;->neuralTranslationServiceExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationServiceExecutor;
+
+    iput-object p2, p0, Lcom/samsung/android/sdk/scs/ai/translation/LanguageIdentificationRunnable;->text:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/samsung/android/sdk/scs/ai/translation/LanguageIdentificationRunnable;->fallbackLanguage:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final execute()V
+    .locals 5
+
+    const-string v0, "ScsApi@NeuralTranslator"
+
+    const-string v1, "LanguageIdentificationRunnable -- identified language: "
+
+    :try_start_0
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    const-string v3, "text"
+
+    iget-object v4, p0, Lcom/samsung/android/sdk/scs/ai/translation/LanguageIdentificationRunnable;->text:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v3, "fallbackLanguage"
+
+    iget-object v4, p0, Lcom/samsung/android/sdk/scs/ai/translation/LanguageIdentificationRunnable;->fallbackLanguage:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/samsung/android/sdk/scs/ai/translation/LanguageIdentificationRunnable;->neuralTranslationServiceExecutor:Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationServiceExecutor;
+
+    iget-object v3, v3, Lcom/samsung/android/sdk/scs/ai/translation/NeuralTranslationServiceExecutor;->translationService:Lcom/samsung/android/sivs/ai/sdkcommon/translation/INeuralTranslationService;
+
+    check-cast v3, Lcom/samsung/android/sivs/ai/sdkcommon/translation/INeuralTranslationService$Stub$Proxy;
+
+    invoke-virtual {v3, v2}, Lcom/samsung/android/sivs/ai/sdkcommon/translation/INeuralTranslationService$Stub$Proxy;->identifyLanguage(Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/samsung/android/sdk/scs/base/utils/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->mSource:Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;
+
+    iget-object v1, v1, Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;->task:Lcom/samsung/android/sdk/scs/base/tasks/TaskImpl;
+
+    invoke-virtual {v1, v2}, Lcom/samsung/android/sdk/scs/base/tasks/TaskImpl;->setResult(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "LanguageIdentificationRunnable -- Exception: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/samsung/android/sdk/scs/base/utils/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
+
+    iget-object p0, p0, Lcom/samsung/android/sdk/scs/base/tasks/TaskRunnable;->mSource:Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;
+
+    invoke-virtual {p0, v1}, Lcom/samsung/android/sdk/scs/base/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public final getFeatureName()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "FEATURE_NEURAL_TRANSLATION"
+
+    return-object p0
+.end method

@@ -1,0 +1,1773 @@
+.class public abstract Landroid/net/IVpnManager$Stub;
+.super Landroid/os/Binder;
+.source "IVpnManager.java"
+
+# interfaces
+.implements Landroid/net/IVpnManager;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/net/IVpnManager;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "Stub"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/net/IVpnManager$Stub$Proxy;
+    }
+.end annotation
+
+
+# static fields
+.field static final blacklist TRANSACTION_addVpnAddress:I = 0x4
+
+.field static final blacklist TRANSACTION_applyBlockingRulesToUidRange:I = 0x28
+
+.field static final blacklist TRANSACTION_checkIfLocalProxyPortExists:I = 0x22
+
+.field static final blacklist TRANSACTION_checkIfUidIsExempted:I = 0x23
+
+.field static final blacklist TRANSACTION_createEnterpriseVpnInstance:I = 0x2d
+
+.field static final blacklist TRANSACTION_deleteVpnProfile:I = 0x8
+
+.field static final blacklist TRANSACTION_disconnectKnoxVpn:I = 0x2a
+
+.field static final blacklist TRANSACTION_establishVpn:I = 0x3
+
+.field static final blacklist TRANSACTION_factoryReset:I = 0x1d
+
+.field static final blacklist TRANSACTION_getActiveDefaultInterface:I = 0x36
+
+.field static final blacklist TRANSACTION_getActiveDefaultNetwork:I = 0x35
+
+.field static final blacklist TRANSACTION_getAlwaysOnVpnPackage:I = 0x10
+
+.field static final blacklist TRANSACTION_getAppExclusionList:I = 0xd
+
+.field static final blacklist TRANSACTION_getChainingEnabledForProfile:I = 0x1e
+
+.field static final blacklist TRANSACTION_getDnsServerListForInterface:I = 0x24
+
+.field static final blacklist TRANSACTION_getFromVpnProfileStore:I = 0x18
+
+.field static final blacklist TRANSACTION_getKnoxNwFilterHttpProxyPort:I = 0x37
+
+.field static final blacklist TRANSACTION_getKnoxVpnZtnaProxyInfoForUid:I = 0x20
+
+.field static final blacklist TRANSACTION_getLegacyVpnInfo:I = 0x16
+
+.field static final blacklist TRANSACTION_getNetIdforActiveDefaultInterface:I = 0x34
+
+.field static final blacklist TRANSACTION_getProvisionedVpnProfileState:I = 0xb
+
+.field static final blacklist TRANSACTION_getProxyInfoForUid:I = 0x21
+
+.field static final blacklist TRANSACTION_getVpnConfig:I = 0x1c
+
+.field static final blacklist TRANSACTION_getVpnLockdownAllowlist:I = 0x12
+
+.field static final blacklist TRANSACTION_isAlwaysOnVpnPackageSupported:I = 0xe
+
+.field static final blacklist TRANSACTION_isCallerCurrentAlwaysOnVpnApp:I = 0x13
+
+.field static final blacklist TRANSACTION_isCallerCurrentAlwaysOnVpnLockdownApp:I = 0x14
+
+.field static final blacklist TRANSACTION_isDoEnabled:I = 0x39
+
+.field static final blacklist TRANSACTION_isProxyConfiguredForKnoxVpn:I = 0x25
+
+.field static final blacklist TRANSACTION_isVpnConfigured:I = 0x38
+
+.field static final blacklist TRANSACTION_isVpnLockdownEnabled:I = 0x11
+
+.field static final blacklist TRANSACTION_knoxVpnProfileType:I = 0x1f
+
+.field static final blacklist TRANSACTION_listFromVpnProfileStore:I = 0x1b
+
+.field static final blacklist TRANSACTION_prepareEnterpriseVpnExt:I = 0x29
+
+.field static final blacklist TRANSACTION_prepareVpn:I = 0x1
+
+.field static final blacklist TRANSACTION_provisionVpnProfile:I = 0x7
+
+.field static final blacklist TRANSACTION_putIntoVpnProfileStore:I = 0x19
+
+.field static final blacklist TRANSACTION_registerSystemDefaultNetworkCallback:I = 0x32
+
+.field static final blacklist TRANSACTION_removeEnterpriseVpnInstance:I = 0x2e
+
+.field static final blacklist TRANSACTION_removeFromVpnProfileStore:I = 0x1a
+
+.field static final blacklist TRANSACTION_removeVpnAddress:I = 0x5
+
+.field static final blacklist TRANSACTION_resetUidListInNetworkCapabilities:I = 0x26
+
+.field static final blacklist TRANSACTION_setAlwaysOnVpnPackage:I = 0xf
+
+.field static final blacklist TRANSACTION_setAppExclusionList:I = 0xc
+
+.field static final blacklist TRANSACTION_setUnderlyingNetworksForVpn:I = 0x6
+
+.field static final blacklist TRANSACTION_setVpnPackageAuthorization:I = 0x2
+
+.field static final blacklist TRANSACTION_startLegacyVpn:I = 0x15
+
+.field static final blacklist TRANSACTION_startVpnProfile:I = 0x9
+
+.field static final blacklist TRANSACTION_stopVpnProfile:I = 0xa
+
+.field static final blacklist TRANSACTION_unregisterSystemDefaultNetworkCallback:I = 0x33
+
+.field static final blacklist TRANSACTION_updateEnterpriseVpn:I = 0x2b
+
+.field static final blacklist TRANSACTION_updateLocalProxyInfo:I = 0x27
+
+.field static final blacklist TRANSACTION_updateLockdownVpn:I = 0x17
+
+.field static final blacklist TRANSACTION_updateNotificationIcon:I = 0x2c
+
+.field static final blacklist TRANSACTION_updateUidRangesToPerAppVpn:I = 0x2f
+
+.field static final blacklist TRANSACTION_updateUidRangesToUserVpn:I = 0x30
+
+.field static final blacklist TRANSACTION_updateUidRangesToUserVpnWithBlackList:I = 0x31
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+
+    const-string v0, "android.net.IVpnManager"
+
+    invoke-virtual {p0, p0, v0}, Landroid/net/IVpnManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static blacklist asInterface(Landroid/os/IBinder;)Landroid/net/IVpnManager;
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    const-string v0, "android.net.IVpnManager"
+
+    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    instance-of v1, v0, Landroid/net/IVpnManager;
+
+    if-eqz v1, :cond_1
+
+    move-object v1, v0
+
+    check-cast v1, Landroid/net/IVpnManager;
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Landroid/net/IVpnManager$Stub$Proxy;
+
+    invoke-direct {v1, p0}, Landroid/net/IVpnManager$Stub$Proxy;-><init>(Landroid/os/IBinder;)V
+
+    return-object v1
+.end method
+
+.method public static blacklist getDefaultTransactionName(I)Ljava/lang/String;
+    .locals 1
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_0
+    const-string/jumbo v0, "isDoEnabled"
+
+    return-object v0
+
+    :pswitch_1
+    const-string/jumbo v0, "isVpnConfigured"
+
+    return-object v0
+
+    :pswitch_2
+    const-string v0, "getKnoxNwFilterHttpProxyPort"
+
+    return-object v0
+
+    :pswitch_3
+    const-string v0, "getActiveDefaultInterface"
+
+    return-object v0
+
+    :pswitch_4
+    const-string v0, "getActiveDefaultNetwork"
+
+    return-object v0
+
+    :pswitch_5
+    const-string v0, "getNetIdforActiveDefaultInterface"
+
+    return-object v0
+
+    :pswitch_6
+    const-string/jumbo v0, "unregisterSystemDefaultNetworkCallback"
+
+    return-object v0
+
+    :pswitch_7
+    const-string/jumbo v0, "registerSystemDefaultNetworkCallback"
+
+    return-object v0
+
+    :pswitch_8
+    const-string/jumbo v0, "updateUidRangesToUserVpnWithBlackList"
+
+    return-object v0
+
+    :pswitch_9
+    const-string/jumbo v0, "updateUidRangesToUserVpn"
+
+    return-object v0
+
+    :pswitch_a
+    const-string/jumbo v0, "updateUidRangesToPerAppVpn"
+
+    return-object v0
+
+    :pswitch_b
+    const-string/jumbo v0, "removeEnterpriseVpnInstance"
+
+    return-object v0
+
+    :pswitch_c
+    const-string v0, "createEnterpriseVpnInstance"
+
+    return-object v0
+
+    :pswitch_d
+    const-string/jumbo v0, "updateNotificationIcon"
+
+    return-object v0
+
+    :pswitch_e
+    const-string/jumbo v0, "updateEnterpriseVpn"
+
+    return-object v0
+
+    :pswitch_f
+    const-string v0, "disconnectKnoxVpn"
+
+    return-object v0
+
+    :pswitch_10
+    const-string/jumbo v0, "prepareEnterpriseVpnExt"
+
+    return-object v0
+
+    :pswitch_11
+    const-string v0, "applyBlockingRulesToUidRange"
+
+    return-object v0
+
+    :pswitch_12
+    const-string/jumbo v0, "updateLocalProxyInfo"
+
+    return-object v0
+
+    :pswitch_13
+    const-string/jumbo v0, "resetUidListInNetworkCapabilities"
+
+    return-object v0
+
+    :pswitch_14
+    const-string/jumbo v0, "isProxyConfiguredForKnoxVpn"
+
+    return-object v0
+
+    :pswitch_15
+    const-string v0, "getDnsServerListForInterface"
+
+    return-object v0
+
+    :pswitch_16
+    const-string v0, "checkIfUidIsExempted"
+
+    return-object v0
+
+    :pswitch_17
+    const-string v0, "checkIfLocalProxyPortExists"
+
+    return-object v0
+
+    :pswitch_18
+    const-string v0, "getProxyInfoForUid"
+
+    return-object v0
+
+    :pswitch_19
+    const-string v0, "getKnoxVpnZtnaProxyInfoForUid"
+
+    return-object v0
+
+    :pswitch_1a
+    const-string/jumbo v0, "knoxVpnProfileType"
+
+    return-object v0
+
+    :pswitch_1b
+    const-string v0, "getChainingEnabledForProfile"
+
+    return-object v0
+
+    :pswitch_1c
+    const-string v0, "factoryReset"
+
+    return-object v0
+
+    :pswitch_1d
+    const-string v0, "getVpnConfig"
+
+    return-object v0
+
+    :pswitch_1e
+    const-string/jumbo v0, "listFromVpnProfileStore"
+
+    return-object v0
+
+    :pswitch_1f
+    const-string/jumbo v0, "removeFromVpnProfileStore"
+
+    return-object v0
+
+    :pswitch_20
+    const-string/jumbo v0, "putIntoVpnProfileStore"
+
+    return-object v0
+
+    :pswitch_21
+    const-string v0, "getFromVpnProfileStore"
+
+    return-object v0
+
+    :pswitch_22
+    const-string/jumbo v0, "updateLockdownVpn"
+
+    return-object v0
+
+    :pswitch_23
+    const-string v0, "getLegacyVpnInfo"
+
+    return-object v0
+
+    :pswitch_24
+    const-string/jumbo v0, "startLegacyVpn"
+
+    return-object v0
+
+    :pswitch_25
+    const-string/jumbo v0, "isCallerCurrentAlwaysOnVpnLockdownApp"
+
+    return-object v0
+
+    :pswitch_26
+    const-string/jumbo v0, "isCallerCurrentAlwaysOnVpnApp"
+
+    return-object v0
+
+    :pswitch_27
+    const-string v0, "getVpnLockdownAllowlist"
+
+    return-object v0
+
+    :pswitch_28
+    const-string/jumbo v0, "isVpnLockdownEnabled"
+
+    return-object v0
+
+    :pswitch_29
+    const-string v0, "getAlwaysOnVpnPackage"
+
+    return-object v0
+
+    :pswitch_2a
+    const-string/jumbo v0, "setAlwaysOnVpnPackage"
+
+    return-object v0
+
+    :pswitch_2b
+    const-string/jumbo v0, "isAlwaysOnVpnPackageSupported"
+
+    return-object v0
+
+    :pswitch_2c
+    const-string v0, "getAppExclusionList"
+
+    return-object v0
+
+    :pswitch_2d
+    const-string/jumbo v0, "setAppExclusionList"
+
+    return-object v0
+
+    :pswitch_2e
+    const-string v0, "getProvisionedVpnProfileState"
+
+    return-object v0
+
+    :pswitch_2f
+    const-string/jumbo v0, "stopVpnProfile"
+
+    return-object v0
+
+    :pswitch_30
+    const-string/jumbo v0, "startVpnProfile"
+
+    return-object v0
+
+    :pswitch_31
+    const-string v0, "deleteVpnProfile"
+
+    return-object v0
+
+    :pswitch_32
+    const-string/jumbo v0, "provisionVpnProfile"
+
+    return-object v0
+
+    :pswitch_33
+    const-string/jumbo v0, "setUnderlyingNetworksForVpn"
+
+    return-object v0
+
+    :pswitch_34
+    const-string/jumbo v0, "removeVpnAddress"
+
+    return-object v0
+
+    :pswitch_35
+    const-string v0, "addVpnAddress"
+
+    return-object v0
+
+    :pswitch_36
+    const-string v0, "establishVpn"
+
+    return-object v0
+
+    :pswitch_37
+    const-string/jumbo v0, "setVpnPackageAuthorization"
+
+    return-object v0
+
+    :pswitch_38
+    const-string/jumbo v0, "prepareVpn"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_38
+        :pswitch_37
+        :pswitch_36
+        :pswitch_35
+        :pswitch_34
+        :pswitch_33
+        :pswitch_32
+        :pswitch_31
+        :pswitch_30
+        :pswitch_2f
+        :pswitch_2e
+        :pswitch_2d
+        :pswitch_2c
+        :pswitch_2b
+        :pswitch_2a
+        :pswitch_29
+        :pswitch_28
+        :pswitch_27
+        :pswitch_26
+        :pswitch_25
+        :pswitch_24
+        :pswitch_23
+        :pswitch_22
+        :pswitch_21
+        :pswitch_20
+        :pswitch_1f
+        :pswitch_1e
+        :pswitch_1d
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public whitelist asBinder()Landroid/os/IBinder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public blacklist getMaxTransactionId()I
+    .locals 1
+
+    const/16 v0, 0x38
+
+    return v0
+.end method
+
+.method public blacklist getTransactionName(I)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p1}, Landroid/net/IVpnManager$Stub;->getDefaultTransactionName(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public whitelist onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 17
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    move-object/from16 v6, p0
+
+    move/from16 v7, p1
+
+    move-object/from16 v8, p2
+
+    move-object/from16 v9, p3
+
+    const-string v10, "android.net.IVpnManager"
+
+    const/4 v11, 0x1
+
+    if-lt v7, v11, :cond_0
+
+    const v0, 0xffffff
+
+    if-gt v7, v0, :cond_0
+
+    invoke-virtual {v8, v10}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    :cond_0
+    const v0, 0x5f4e5446
+
+    if-ne v7, v0, :cond_1
+
+    invoke-virtual {v9, v10}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v11
+
+    :cond_1
+    packed-switch v7, :pswitch_data_0
+
+    invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->isDoEnabled(I)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_1
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->isVpnConfigured(I)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_2
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->getKnoxNwFilterHttpProxyPort(ILjava/lang/String;)I
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    :pswitch_3
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->getActiveDefaultInterface()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :pswitch_4
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->getActiveDefaultNetwork()Landroid/net/Network;
+
+    move-result-object v0
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v0, v11}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
+
+    goto/16 :goto_0
+
+    :pswitch_5
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->getNetIdforActiveDefaultInterface()I
+
+    move-result v0
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    :pswitch_6
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->unregisterSystemDefaultNetworkCallback()V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_7
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->registerSystemDefaultNetworkCallback()V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_8
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v13
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v14
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v15
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    move-object/from16 v0, p0
+
+    move-object v1, v12
+
+    move v2, v13
+
+    move v3, v14
+
+    move-object v4, v15
+
+    move-object/from16 v5, v16
+
+    invoke-virtual/range {v0 .. v5}, Landroid/net/IVpnManager$Stub;->updateUidRangesToUserVpnWithBlackList(Ljava/lang/String;II[ILjava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_9
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v13
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+
+    move-result v14
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v15
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    move-object/from16 v0, p0
+
+    move-object v1, v12
+
+    move v2, v13
+
+    move v3, v14
+
+    move v4, v15
+
+    move-object/from16 v5, v16
+
+    invoke-virtual/range {v0 .. v5}, Landroid/net/IVpnManager$Stub;->updateUidRangesToUserVpn(Ljava/lang/String;IZILjava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_a
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v13
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+
+    move-result v14
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v15
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    move-object/from16 v0, p0
+
+    move-object v1, v12
+
+    move v2, v13
+
+    move v3, v14
+
+    move-object v4, v15
+
+    move-object/from16 v5, v16
+
+    invoke-virtual/range {v0 .. v5}, Landroid/net/IVpnManager$Stub;->updateUidRangesToPerAppVpn(Ljava/lang/String;IZ[ILjava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_b
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2}, Landroid/net/IVpnManager$Stub;->removeEnterpriseVpnInstance(Ljava/lang/String;Ljava/lang/String;I)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_c
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2, v3}, Landroid/net/IVpnManager$Stub;->createEnterpriseVpnInstance(Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_d
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->updateNotificationIcon(I)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_e
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2}, Landroid/net/IVpnManager$Stub;->updateEnterpriseVpn(Ljava/lang/String;IZ)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_f
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->disconnectKnoxVpn(Ljava/lang/String;I)Z
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_10
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->prepareEnterpriseVpnExt(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_11
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2, v3}, Landroid/net/IVpnManager$Stub;->applyBlockingRulesToUidRange(Ljava/lang/String;IZLjava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_12
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v3, Landroid/net/ProxyInfo;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {v8, v3}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/net/ProxyInfo;
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2, v3}, Landroid/net/IVpnManager$Stub;->updateLocalProxyInfo(Ljava/lang/String;ILjava/lang/String;Landroid/net/ProxyInfo;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_13
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2}, Landroid/net/IVpnManager$Stub;->resetUidListInNetworkCapabilities(Ljava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_14
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->isProxyConfiguredForKnoxVpn(I)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_15
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getDnsServerListForInterface(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :pswitch_16
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->checkIfUidIsExempted(I)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_17
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->checkIfLocalProxyPortExists(I)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_18
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getProxyInfoForUid(I)[Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :pswitch_19
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->getKnoxVpnZtnaProxyInfoForUid(ILjava/lang/String;)[I
+
+    move-result-object v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    goto/16 :goto_0
+
+    :pswitch_1a
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->knoxVpnProfileType(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
+    :pswitch_1b
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getChainingEnabledForProfile(I)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_1c
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->factoryReset()V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_1d
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getVpnConfig(I)Lcom/android/internal/net/VpnConfig;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1, v11}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
+
+    goto/16 :goto_0
+
+    :pswitch_1e
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->listFromVpnProfileStore(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :pswitch_1f
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->removeFromVpnProfileStore(Ljava/lang/String;)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_20
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->putIntoVpnProfileStore(Ljava/lang/String;[B)Z
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_21
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getFromVpnProfileStore(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    goto/16 :goto_0
+
+    :pswitch_22
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->updateLockdownVpn()Z
+
+    move-result v0
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_23
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getLegacyVpnInfo(I)Lcom/android/internal/net/LegacyVpnInfo;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1, v11}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
+
+    goto/16 :goto_0
+
+    :pswitch_24
+    sget-object v0, Lcom/android/internal/net/VpnProfile;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {v8, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/internal/net/VpnProfile;
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->startLegacyVpn(Lcom/android/internal/net/VpnProfile;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_25
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->isCallerCurrentAlwaysOnVpnLockdownApp()Z
+
+    move-result v0
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_26
+    invoke-virtual/range {p0 .. p0}, Landroid/net/IVpnManager$Stub;->isCallerCurrentAlwaysOnVpnApp()Z
+
+    move-result v0
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_27
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getVpnLockdownAllowlist(I)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    goto/16 :goto_0
+
+    :pswitch_28
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->isVpnLockdownEnabled(I)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_29
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getAlwaysOnVpnPackage(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :pswitch_2a
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2, v3}, Landroid/net/IVpnManager$Stub;->setAlwaysOnVpnPackage(ILjava/lang/String;ZLjava/util/List;)Z
+
+    move-result v4
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v4}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_2b
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->isAlwaysOnVpnPackageSupported(ILjava/lang/String;)Z
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_2c
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->getAppExclusionList(ILjava/lang/String;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    goto/16 :goto_0
+
+    :pswitch_2d
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2}, Landroid/net/IVpnManager$Stub;->setAppExclusionList(ILjava/lang/String;Ljava/util/List;)Z
+
+    move-result v3
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v3}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_2e
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->getProvisionedVpnProfileState(Ljava/lang/String;)Landroid/net/VpnProfileState;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1, v11}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
+
+    goto/16 :goto_0
+
+    :pswitch_2f
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->stopVpnProfile(Ljava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_30
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->startVpnProfile(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :pswitch_31
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->deleteVpnProfile(Ljava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto/16 :goto_0
+
+    :pswitch_32
+    sget-object v0, Lcom/android/internal/net/VpnProfile;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {v8, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/internal/net/VpnProfile;
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->provisionVpnProfile(Lcom/android/internal/net/VpnProfile;Ljava/lang/String;)Z
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    :pswitch_33
+    sget-object v0, Landroid/net/Network;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {v8, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/net/Network;
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->setUnderlyingNetworksForVpn([Landroid/net/Network;)Z
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto :goto_0
+
+    :pswitch_34
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->removeVpnAddress(Ljava/lang/String;I)Z
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto :goto_0
+
+    :pswitch_35
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1}, Landroid/net/IVpnManager$Stub;->addVpnAddress(Ljava/lang/String;I)Z
+
+    move-result v2
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto :goto_0
+
+    :pswitch_36
+    sget-object v0, Lcom/android/internal/net/VpnConfig;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {v8, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/internal/net/VpnConfig;
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0}, Landroid/net/IVpnManager$Stub;->establishVpn(Lcom/android/internal/net/VpnConfig;)Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v1, v11}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
+
+    goto :goto_0
+
+    :pswitch_37
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2}, Landroid/net/IVpnManager$Stub;->setVpnPackageAuthorization(Ljava/lang/String;II)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_0
+
+    :pswitch_38
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    invoke-virtual {v6, v0, v1, v2}, Landroid/net/IVpnManager$Stub;->prepareVpn(Ljava/lang/String;Ljava/lang/String;I)Z
+
+    move-result v3
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {v9, v3}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    nop
+
+    :goto_0
+    return v11
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_38
+        :pswitch_37
+        :pswitch_36
+        :pswitch_35
+        :pswitch_34
+        :pswitch_33
+        :pswitch_32
+        :pswitch_31
+        :pswitch_30
+        :pswitch_2f
+        :pswitch_2e
+        :pswitch_2d
+        :pswitch_2c
+        :pswitch_2b
+        :pswitch_2a
+        :pswitch_29
+        :pswitch_28
+        :pswitch_27
+        :pswitch_26
+        :pswitch_25
+        :pswitch_24
+        :pswitch_23
+        :pswitch_22
+        :pswitch_21
+        :pswitch_20
+        :pswitch_1f
+        :pswitch_1e
+        :pswitch_1d
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

@@ -1,0 +1,349 @@
+.class public Lcom/android/settings/display/NightDisplayAutoModePreferenceController;
+.super Lcom/android/settings/core/BasePreferenceController;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Landroidx/preference/Preference$OnPreferenceChangeListener;
+
+
+# instance fields
+.field private mColorDisplayManager:Landroid/hardware/display/ColorDisplayManager;
+
+.field private final mLocationManager:Landroid/location/LocationManager;
+
+.field private mPreference:Landroidx/preference/DropDownPreference;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/settings/core/BasePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    const-class p2, Landroid/hardware/display/ColorDisplayManager;
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/hardware/display/ColorDisplayManager;
+
+    iput-object p2, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mColorDisplayManager:Landroid/hardware/display/ColorDisplayManager;
+
+    const-class p2, Landroid/location/LocationManager;
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/location/LocationManager;
+
+    iput-object p1, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mLocationManager:Landroid/location/LocationManager;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public displayPreference(Landroidx/preference/PreferenceScreen;)V
+    .locals 6
+
+    invoke-super {p0, p1}, Lcom/android/settings/core/BasePreferenceController;->displayPreference(Landroidx/preference/PreferenceScreen;)V
+
+    invoke-virtual {p0}, Lcom/android/settings/core/BasePreferenceController;->getPreferenceKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/preference/DropDownPreference;
+
+    iput-object p1, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mPreference:Landroidx/preference/DropDownPreference;
+
+    const/4 v0, 0x3
+
+    new-array v1, v0, [Ljava/lang/CharSequence;
+
+    iget-object v2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    const v3, 0x7f141a0d
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    iget-object v2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    const v4, 0x7f141a0c
+
+    invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    aput-object v2, v1, v4
+
+    iget-object v2, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    const v5, 0x7f141a0f
+
+    invoke-virtual {v2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v5, 0x2
+
+    aput-object v2, v1, v5
+
+    invoke-virtual {p1, v1}, Landroidx/preference/DropDownPreference;->setEntries([Ljava/lang/CharSequence;)V
+
+    iget-object p0, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mPreference:Landroidx/preference/DropDownPreference;
+
+    new-array p1, v0, [Ljava/lang/CharSequence;
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p1, v3
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p1, v4
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p1, v5
+
+    iput-object p1, p0, Landroidx/preference/ListPreference;->mEntryValues:[Ljava/lang/CharSequence;
+
+    return-void
+.end method
+
+.method public getAvailabilityStatus()I
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Landroid/hardware/display/ColorDisplayManager;->isNightDisplayAvailable(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x3
+
+    :goto_0
+    return p0
+.end method
+
+.method public bridge synthetic getBackgroundWorkerClass()Ljava/lang/Class;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public getBackupKeys()Ljava/util/List;
+    .locals 0
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getIntentFilter()Landroid/content/IntentFilter;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getLaunchIntent()Landroid/content/Intent;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getSliceHighlightMenuRes()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic getStatusText()Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getValue()Lcom/samsung/android/settings/cube/ControlValue;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic hasAsyncUpdate()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic ignoreUserInteraction()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public bridge synthetic isControllable()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic isPublicSlice()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic isSliceable()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic needUserInteraction(Ljava/lang/Object;)Lcom/samsung/android/settings/cube/Controllable$ControllableType;
+    .locals 0
+
+    sget-object p0, Lcom/samsung/android/settings/cube/Controllable$ControllableType;->NO_INTERACTION:Lcom/samsung/android/settings/cube/Controllable$ControllableType;
+
+    return-object p0
+.end method
+
+.method public final onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mLocationManager:Landroid/location/LocationManager;
+
+    invoke-virtual {p1}, Landroid/location/LocationManager;->isLocationEnabled()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/android/settings/display/TwilightLocationDialog;->show(Landroid/content/Context;)V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mColorDisplayManager:Landroid/hardware/display/ColorDisplayManager;
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/hardware/display/ColorDisplayManager;->setNightDisplayAutoMode(I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public bridge synthetic runDefaultAction()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic setValue(Lcom/samsung/android/settings/cube/ControlValue;)Lcom/samsung/android/settings/cube/ControlResult;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final updateState(Landroidx/preference/Preference;)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mPreference:Landroidx/preference/DropDownPreference;
+
+    iget-object p0, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mColorDisplayManager:Landroid/hardware/display/ColorDisplayManager;
+
+    invoke-virtual {p0}, Landroid/hardware/display/ColorDisplayManager;->getNightDisplayAutoMode()I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroidx/preference/ListPreference;->setValue(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic useDynamicSliceSummary()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method

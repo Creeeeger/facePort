@@ -1,0 +1,45 @@
+.class public final Landroidx/collection/ArrayMap$KeyIterator;
+.super Landroidx/collection/IndexBasedArrayIterator;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# instance fields
+.field public final synthetic this$0:Landroidx/collection/ArrayMap;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/collection/ArrayMap;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/collection/ArrayMap$KeyIterator;->this$0:Landroidx/collection/ArrayMap;
+
+    iget p1, p1, Landroidx/collection/SimpleArrayMap;->size:I
+
+    invoke-direct {p0, p1}, Landroidx/collection/IndexBasedArrayIterator;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final elementAt(I)Ljava/lang/Object;
+    .locals 0
+
+    iget-object p0, p0, Landroidx/collection/ArrayMap$KeyIterator;->this$0:Landroidx/collection/ArrayMap;
+
+    invoke-virtual {p0, p1}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final removeAt(I)V
+    .locals 0
+
+    iget-object p0, p0, Landroidx/collection/ArrayMap$KeyIterator;->this$0:Landroidx/collection/ArrayMap;
+
+    invoke-virtual {p0, p1}, Landroidx/collection/SimpleArrayMap;->removeAt(I)Ljava/lang/Object;
+
+    return-void
+.end method

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" android:sharedUserId="android.uid.system" package="com.samsung.android.biometrics.app.setting" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <protected-broadcast android:name="com.samsung.android.intent.action.UPDATE_UDFPS_ICON_VISIBILITY"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.SET_BIOMETRIC_DIALOG_ADVANCED"/>
+    <uses-permission android:name="android.permission.USER_ACTIVITY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.MANAGE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.MANAGE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SET_PROCESS_LIMIT"/>
+    <uses-permission android:name="com.sec.spp.permission.TOKEN_a67e044fd2e317f44a274058068d8657a67bcfdf9cf3151bc5b64a328f781215961db2de76a1264a2ca484b3d9a9f1d9dff8256be964d4018ada56dbb257eccd750ac77cfc5f6ae95bed92286347d946ecea819801b3ab3bc1e8eec67f42daf46c12a163f3cd2aeb2439686e6f9daa5d60f08de71973feaa8d13a4c96cfadee2"/>
+    <permission android:name="com.samsung.android.biometrics.app.setting.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.samsung.android.biometrics.app.setting.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:directBootAware="true" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:label="@string/application_name" android:name="com.samsung.android.biometrics.app.setting.BssApplication" android:supportsRtl="true" android:usesNonSdkApi="true">
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.samsung.android.biometrics.app.setting.face.FaceEnrollActivity" android:permission="com.samsung.android.bio.face.permission.MANAGE_FACE" android:screenOrientation="@integer/sec_face_enroll_activity_orientation" android:stateNotNeeded="true" android:theme="@style/FaceTranslucentStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.samsung.android.biometrics.app.setting.face.FaceEnrollActivity"/>
+            </intent-filter>
+            <meta-data android:name="com.samsung.android.foldable.keep_screen_when_folding" android:value="true"/>
+            <meta-data android:name="com.samsung.android.supports_pop_over" android:value="false"/>
+        </activity>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:excludeFromRecents="true" android:exported="false" android:label="@string/sec_fingerprint_enroll_title" android:launchMode="singleTop" android:name="com.samsung.android.biometrics.app.setting.fingerprint.enroll.FingerprintEnrollActivity" android:permission="android.permission.MANAGE_FINGERPRINT" android:screenOrientation="@integer/sec_fingerprint_enroll_activity_orientation" android:theme="@style/SecFingerprintEnrollStyle" android:uiOptions="none">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="com.samsung.android.edge.hide_edge_screen_handle" android:value="true"/>
+            <meta-data android:name="com.samsung.android.foldable.keep_screen_when_folding" android:value="true"/>
+            <meta-data android:name="com.samsung.android.supports_pop_over" android:value="false"/>
+        </activity>
+        <service android:exported="true" android:name="com.samsung.android.biometrics.app.setting.BiometricsUIService" android:permission="android.permission.MANAGE_BIOMETRIC"/>
+        <receiver android:exported="true" android:name="com.samsung.android.biometrics.app.setting.fingerprint.UdfpsUiCustom$LockstarResourceReceiver" android:permission="android.permission.MANAGE_FINGERPRINT">
+            <intent-filter>
+                <action android:name="com.samsung.lockstar.fingerprint.vi.update"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="knoxsdk" android:required="true"/>
+        <provider android:authorities="com.samsung.android.biometrics.app.setting.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

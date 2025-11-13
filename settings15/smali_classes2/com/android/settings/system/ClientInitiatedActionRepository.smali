@@ -1,0 +1,37 @@
+.class public final Lcom/android/settings/system/ClientInitiatedActionRepository;
+.super Ljava/lang/Object;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# instance fields
+.field public final configManager:Landroid/telephony/CarrierConfigManager;
+
+.field public final context:Landroid/content/Context;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/settings/system/ClientInitiatedActionRepository;->context:Landroid/content/Context;
+
+    const-class v0, Landroid/telephony/CarrierConfigManager;
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    check-cast p1, Landroid/telephony/CarrierConfigManager;
+
+    iput-object p1, p0, Lcom/android/settings/system/ClientInitiatedActionRepository;->configManager:Landroid/telephony/CarrierConfigManager;
+
+    return-void
+.end method

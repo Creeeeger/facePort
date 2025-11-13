@@ -1,0 +1,770 @@
+.class public final Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;
+.super Landroid/graphics/drawable/Drawable;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+
+# static fields
+.field public static final $stable:I = 0x8
+
+
+# instance fields
+.field private active:Z
+
+.field private highlightColor:I
+
+.field private paint:Landroid/graphics/Paint;
+
+.field private pressed:Z
+
+.field private rippleAnimation:Landroid/animation/Animator;
+
+.field private final rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+.field private themeAttrs:[I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 9
+
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    new-instance v8, Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v0, v8
+
+    invoke-direct/range {v0 .. v7}, Lcom/android/systemui/media/controls/ui/drawable/RippleData;-><init>(FFFFFFF)V
+
+    iput-object v8, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->paint:Landroid/graphics/Paint;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->highlightColor:I
+
+    return-void
+.end method
+
+.method public static final synthetic access$getRippleData$p(Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;)Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$setRippleAnimation$p(Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;Landroid/animation/Animator;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleAnimation:Landroid/animation/Animator;
+
+    return-void
+.end method
+
+.method private final illuminate()V
+    .locals 11
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    iput v4, v3, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->alpha:F
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    iget-object v3, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleAnimation:Landroid/animation/Animator;
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Landroid/animation/Animator;->cancel()V
+
+    :cond_0
+    new-instance v3, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
+
+    new-array v5, v2, [Landroid/animation/Animator;
+
+    new-array v6, v2, [F
+
+    fill-array-data v6, :array_0
+
+    invoke-static {v6}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v6
+
+    const-wide/16 v7, 0x85
+
+    invoke-virtual {v6, v7, v8}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
+
+    invoke-virtual {v6}, Landroid/animation/ValueAnimator;->getStartDelay()J
+
+    move-result-wide v7
+
+    const-wide/16 v9, 0x320
+
+    sub-long v7, v9, v7
+
+    invoke-virtual {v6, v7, v8}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    sget-object v7, Lcom/android/app/animation/Interpolators;->LINEAR_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {v6, v7}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v8, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$illuminate$1$1$1;
+
+    invoke-direct {v8, p0}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$illuminate$1$1$1;-><init>(Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;)V
+
+    invoke-virtual {v6, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    aput-object v6, v5, v1
+
+    iget-object v6, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget v6, v6, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->progress:F
+
+    new-array v2, v2, [F
+
+    aput v6, v2, v1
+
+    aput v4, v2, v0
+
+    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v9, v10}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v1, v7}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v2, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$illuminate$1$2$1;
+
+    invoke-direct {v2, p0}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$illuminate$1$2$1;-><init>(Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;)V
+
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    aput-object v1, v5, v0
+
+    invoke-virtual {v3, v5}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+
+    new-instance v0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$illuminate$1$3;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$illuminate$1$3;-><init>(Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;)V
+
+    invoke-virtual {v3, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {v3}, Landroid/animation/AnimatorSet;->start()V
+
+    iput-object v3, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleAnimation:Landroid/animation/Animator;
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x0
+    .end array-data
+.end method
+
+.method private final setActive(Z)V
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->active:Z
+
+    if-ne p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-boolean p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->active:Z
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleAnimation:Landroid/animation/Animator;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Landroid/animation/Animator;->cancel()V
+
+    :cond_1
+    iget-object p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p1, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->alpha:F
+
+    const v0, 0x3d4ccccd    # 0.05f
+
+    iput v0, p1, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->progress:F
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleAnimation:Landroid/animation/Animator;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Landroid/animation/Animator;->cancel()V
+
+    :cond_3
+    iget-object p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget p1, p1, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->alpha:F
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
+
+    const/4 v1, 0x0
+
+    aput p1, v0, v1
+
+    const/4 p1, 0x0
+
+    const/4 v1, 0x1
+
+    aput p1, v0, v1
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    const-wide/16 v0, 0xc8
+
+    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    sget-object v0, Lcom/android/app/animation/Interpolators;->LINEAR_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$active$1$1;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$active$1$1;-><init>(Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;)V
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$active$1$2;
+
+    invoke-direct {v0, p0}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable$active$1$2;-><init>(Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;)V
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
+
+    iput-object p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleAnimation:Landroid/animation/Animator;
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method private final updateStateFromTypedArray(Landroid/content/res/TypedArray;)V
+    .locals 3
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->minSize:F
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->maxSize:F
+
+    :cond_1
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object p0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getInteger(II)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    div-float/2addr p1, v0
+
+    iput p1, p0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->highlight:F
+
+    :cond_2
+    return-void
+.end method
+
+
+# virtual methods
+.method public applyTheme(Landroid/content/res/Resources$Theme;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
+
+    iget-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->themeAttrs:[I
+
+    if-eqz v0, :cond_0
+
+    sget-object v1, Lcom/android/systemui/res/R$styleable;->IlluminationDrawable:[I
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources$Theme;->resolveAttributes([I[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->updateStateFromTypedArray(Landroid/content/res/TypedArray;)V
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public canApplyTheme()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->themeAttrs:[I
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    array-length v0, v0
+
+    if-gtz v0, :cond_1
+
+    :cond_0
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    :cond_1
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public draw(Landroid/graphics/Canvas;)V
+    .locals 11
+
+    iget-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget v1, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->minSize:F
+
+    iget v2, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->maxSize:F
+
+    iget v0, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->progress:F
+
+    invoke-static {v1, v2, v0}, Landroid/util/MathUtils;->lerp(FFF)F
+
+    move-result v0
+
+    iget v1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->highlightColor:I
+
+    iget-object v2, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget v2, v2, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->alpha:F
+
+    const/16 v3, 0xff
+
+    int-to-float v3, v3
+
+    mul-float/2addr v2, v3
+
+    float-to-int v2, v2
+
+    invoke-static {v1, v2}, Lcom/android/internal/graphics/ColorUtils;->setAlphaComponent(II)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->paint:Landroid/graphics/Paint;
+
+    new-instance v10, Landroid/graphics/RadialGradient;
+
+    iget-object v3, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget v4, v3, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->x:F
+
+    iget v5, v3, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->y:F
+
+    const/4 v3, 0x0
+
+    filled-new-array {v1, v3}, [I
+
+    move-result-object v7
+
+    sget-object v8, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawableKt;->GRADIENT_STOPS:[F
+
+    sget-object v9, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    move-object v3, v10
+
+    move v6, v0
+
+    invoke-direct/range {v3 .. v9}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    invoke-virtual {v2, v10}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    iget-object v1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget v2, v1, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->x:F
+
+    iget v1, v1, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->y:F
+
+    iget-object p0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v2, v1, v0, p0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public getDirtyBounds()Landroid/graphics/Rect;
+    .locals 6
+
+    iget-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget v1, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->minSize:F
+
+    iget v2, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->maxSize:F
+
+    iget v0, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->progress:F
+
+    invoke-static {v1, v2, v0}, Landroid/util/MathUtils;->lerp(FFF)F
+
+    move-result v0
+
+    new-instance v1, Landroid/graphics/Rect;
+
+    iget-object v2, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iget v3, v2, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->x:F
+
+    sub-float v4, v3, v0
+
+    float-to-int v4, v4
+
+    iget v2, v2, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->y:F
+
+    sub-float v5, v2, v0
+
+    float-to-int v5, v5
+
+    add-float/2addr v3, v0
+
+    float-to-int v3, v3
+
+    add-float/2addr v2, v0
+
+    float-to-int v0, v2
+
+    invoke-direct {v1, v4, v5, v3, v0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getDirtyBounds()Landroid/graphics/Rect;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Landroid/graphics/Rect;->union(Landroid/graphics/Rect;)V
+
+    return-object v1
+.end method
+
+.method public final getHighlightColor()I
+    .locals 0
+
+    iget p0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->highlightColor:I
+
+    return p0
+.end method
+
+.method public getOpacity()I
+    .locals 0
+
+    const/4 p0, -0x2
+
+    return p0
+.end method
+
+.method public getOutline(Landroid/graphics/Outline;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public hasFocusStateSpecified()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
+    .locals 0
+
+    sget-object p2, Lcom/android/systemui/res/R$styleable;->IlluminationDrawable:[I
+
+    invoke-static {p1, p4, p3, p2}, Landroid/graphics/drawable/Drawable;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->extractThemeAttrs()[I
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->themeAttrs:[I
+
+    invoke-direct {p0, p1}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->updateStateFromTypedArray(Landroid/content/res/TypedArray;)V
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
+.end method
+
+.method public isProjected()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public isStateful()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public onStateChange([I)Z
+    .locals 10
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onStateChange([I)Z
+
+    move-result v0
+
+    iget-boolean v1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->pressed:Z
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->pressed:Z
+
+    array-length v3, p1
+
+    move v4, v2
+
+    move v5, v4
+
+    move v6, v5
+
+    move v7, v6
+
+    :goto_0
+    const/4 v8, 0x1
+
+    if-ge v4, v3, :cond_0
+
+    aget v9, p1, v4
+
+    sparse-switch v9, :sswitch_data_0
+
+    goto :goto_1
+
+    :sswitch_0
+    move v7, v8
+
+    goto :goto_1
+
+    :sswitch_1
+    iput-boolean v8, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->pressed:Z
+
+    goto :goto_1
+
+    :sswitch_2
+    move v5, v8
+
+    goto :goto_1
+
+    :sswitch_3
+    move v6, v8
+
+    :goto_1
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz v5, :cond_2
+
+    iget-boolean p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->pressed:Z
+
+    if-nez p1, :cond_1
+
+    if-nez v6, :cond_1
+
+    if-eqz v7, :cond_2
+
+    :cond_1
+    move v2, v8
+
+    :cond_2
+    invoke-direct {p0, v2}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->setActive(Z)V
+
+    if-eqz v1, :cond_3
+
+    iget-boolean p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->pressed:Z
+
+    if-nez p1, :cond_3
+
+    invoke-direct {p0}, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->illuminate()V
+
+    :cond_3
+    return v0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x101009c -> :sswitch_3
+        0x101009e -> :sswitch_2
+        0x10100a7 -> :sswitch_1
+        0x1010367 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public setAlpha(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Color filters are not supported"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final setHighlightColor(I)V
+    .locals 1
+
+    iget v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->highlightColor:I
+
+    if-ne v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iput p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->highlightColor:I
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public setHotspot(FF)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->rippleData:Lcom/android/systemui/media/controls/ui/drawable/RippleData;
+
+    iput p1, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->x:F
+
+    iput p2, v0, Lcom/android/systemui/media/controls/ui/drawable/RippleData;->y:F
+
+    iget-boolean p1, p0, Lcom/android/systemui/media/controls/ui/drawable/LightSourceDrawable;->active:Z
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_0
+    return-void
+.end method

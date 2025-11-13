@@ -1,0 +1,99 @@
+.class public Lcom/android/internal/telephony/EncodeException;
+.super Ljava/lang/Exception;
+.source "EncodeException.java"
+
+
+# static fields
+.field public static final blacklist ERROR_EXCEED_SIZE:I = 0x1
+
+.field public static final blacklist ERROR_UNENCODABLE:I
+
+
+# instance fields
+.field private blacklist mError:I
+
+
+# direct methods
+.method public constructor greylist-max-o <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/internal/telephony/EncodeException;->mError:I
+
+    return-void
+.end method
+
+.method public constructor greylist <init>(C)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Unencodable char: \'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/internal/telephony/EncodeException;->mError:I
+
+    return-void
+.end method
+
+.method public constructor greylist <init>(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/internal/telephony/EncodeException;->mError:I
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>(Ljava/lang/String;I)V
+    .locals 1
+
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/internal/telephony/EncodeException;->mError:I
+
+    iput p2, p0, Lcom/android/internal/telephony/EncodeException;->mError:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist getError()I
+    .locals 1
+
+    iget v0, p0, Lcom/android/internal/telephony/EncodeException;->mError:I
+
+    return v0
+.end method

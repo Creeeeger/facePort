@@ -1,0 +1,2 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lcom/android/settings/factory_reset/FeatureFlagsImpl;->enableFactoryResetWizard()Z,out/soong/.intermediates/packages/apps/Settings/aconfig/factory_reset_flags_lib/android_common/29c8c31bebfa7797fd49f37992177c8a/javac/srcjars/com/android/settings/factory_reset/FeatureFlagsImpl.java,8,5,8,25,

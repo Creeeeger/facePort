@@ -1,0 +1,13 @@
+.class public Lcom/android/internal/org/bouncycastle/crypto/OutputLengthException;
+.super Lcom/android/internal/org/bouncycastle/crypto/DataLengthException;
+.source "OutputLengthException.java"
+
+
+# direct methods
+.method public constructor blacklist <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/internal/org/bouncycastle/crypto/DataLengthException;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method

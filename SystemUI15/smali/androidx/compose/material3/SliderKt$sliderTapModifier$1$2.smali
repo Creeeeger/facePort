@@ -1,0 +1,61 @@
+.class final Landroidx/compose/material3/SliderKt$sliderTapModifier$1$2;
+.super Lkotlin/jvm/internal/Lambda;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function1;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic $state:Landroidx/compose/material3/SliderState;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/compose/material3/SliderState;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/compose/material3/SliderKt$sliderTapModifier$1$2;->$state:Landroidx/compose/material3/SliderState;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Landroidx/compose/ui/geometry/Offset;
+
+    iget-wide v0, p1, Landroidx/compose/ui/geometry/Offset;->packedValue:J
+
+    iget-object p1, p0, Landroidx/compose/material3/SliderKt$sliderTapModifier$1$2;->$state:Landroidx/compose/material3/SliderState;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroidx/compose/material3/SliderState;->dispatchRawDelta(F)V
+
+    iget-object p0, p0, Landroidx/compose/material3/SliderKt$sliderTapModifier$1$2;->$state:Landroidx/compose/material3/SliderState;
+
+    iget-object p0, p0, Landroidx/compose/material3/SliderState;->gestureEndAction:Lkotlin/jvm/functions/Function0;
+
+    check-cast p0, Landroidx/compose/material3/SliderState$gestureEndAction$1;
+
+    invoke-virtual {p0}, Landroidx/compose/material3/SliderState$gestureEndAction$1;->invoke()Ljava/lang/Object;
+
+    sget-object p0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    return-object p0
+.end method

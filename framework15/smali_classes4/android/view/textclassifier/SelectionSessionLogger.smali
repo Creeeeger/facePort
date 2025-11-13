@@ -1,0 +1,43 @@
+.class public final Landroid/view/textclassifier/SelectionSessionLogger;
+.super Ljava/lang/Object;
+.source "SelectionSessionLogger.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/view/textclassifier/SelectionSessionLogger$SignatureParser;
+    }
+.end annotation
+
+
+# static fields
+.field private static final greylist-max-o CLASSIFIER_ID:Ljava/lang/String; = "androidtc"
+
+
+# direct methods
+.method public constructor greylist-max-o <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static blacklist isPlatformLocalTextClassifierSmartSelection(Ljava/lang/String;)Z
+    .locals 2
+
+    nop
+
+    invoke-static {p0}, Landroid/view/textclassifier/SelectionSessionLogger$SignatureParser;->getClassifierId(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "androidtc"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method

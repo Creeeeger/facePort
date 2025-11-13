@@ -1,0 +1,80 @@
+.class public final Lcom/android/systemui/controls/ui/StatusBehavior$showSecNotFoundDialog$builder$1$1;
+.super Ljava/lang/Object;
+.source "qb/98004394 e985489769f0d3fc3b6595d9479b367efde92149910ac9ddea5a627f1f479e50"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field public final synthetic $cvh:Lcom/android/systemui/controls/ui/ControlViewHolder;
+
+.field public final synthetic $cws:Lcom/android/systemui/controls/ui/ControlWithState;
+
+.field public final synthetic $this_apply:Landroid/app/AlertDialog$Builder;
+
+
+# direct methods
+.method public constructor <init>(Lcom/android/systemui/controls/ui/ControlWithState;Landroid/app/AlertDialog$Builder;Lcom/android/systemui/controls/ui/ControlViewHolder;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/controls/ui/StatusBehavior$showSecNotFoundDialog$builder$1$1;->$cws:Lcom/android/systemui/controls/ui/ControlWithState;
+
+    iput-object p2, p0, Lcom/android/systemui/controls/ui/StatusBehavior$showSecNotFoundDialog$builder$1$1;->$this_apply:Landroid/app/AlertDialog$Builder;
+
+    iput-object p3, p0, Lcom/android/systemui/controls/ui/StatusBehavior$showSecNotFoundDialog$builder$1$1;->$cvh:Lcom/android/systemui/controls/ui/ControlViewHolder;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
+
+    :try_start_0
+    iget-object p2, p0, Lcom/android/systemui/controls/ui/StatusBehavior$showSecNotFoundDialog$builder$1$1;->$cws:Lcom/android/systemui/controls/ui/ControlWithState;
+
+    iget-object p2, p2, Lcom/android/systemui/controls/ui/ControlWithState;->control:Landroid/service/controls/Control;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Landroid/service/controls/Control;->getAppIntent()Landroid/app/PendingIntent;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Landroid/app/PendingIntent;->send()V
+
+    :cond_0
+    iget-object p2, p0, Lcom/android/systemui/controls/ui/StatusBehavior$showSecNotFoundDialog$builder$1$1;->$this_apply:Landroid/app/AlertDialog$Builder;
+
+    invoke-virtual {p2}, Landroid/app/AlertDialog$Builder;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    iget-object p0, p0, Lcom/android/systemui/controls/ui/StatusBehavior$showSecNotFoundDialog$builder$1$1;->$cvh:Lcom/android/systemui/controls/ui/ControlViewHolder;
+
+    invoke-virtual {p0}, Lcom/android/systemui/controls/ui/ControlViewHolder;->setErrorStatus()V
+
+    :goto_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    return-void
+.end method

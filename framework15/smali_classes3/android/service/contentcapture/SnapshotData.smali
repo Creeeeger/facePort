@@ -1,0 +1,147 @@
+.class public final Landroid/service/contentcapture/SnapshotData;
+.super Ljava/lang/Object;
+.source "SnapshotData.java"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# annotations
+.annotation runtime Landroid/annotation/SystemApi;
+.end annotation
+
+
+# static fields
+.field public static final whitelist CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Landroid/service/contentcapture/SnapshotData;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field private final blacklist mAssistContent:Landroid/app/assist/AssistContent;
+
+.field private final blacklist mAssistData:Landroid/os/Bundle;
+
+.field private final blacklist mAssistStructure:Landroid/app/assist/AssistStructure;
+
+
+# direct methods
+.method static constructor blacklist <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroid/service/contentcapture/SnapshotData$1;
+
+    invoke-direct {v0}, Landroid/service/contentcapture/SnapshotData$1;-><init>()V
+
+    sput-object v0, Landroid/service/contentcapture/SnapshotData;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>(Landroid/os/Bundle;Landroid/app/assist/AssistStructure;Landroid/app/assist/AssistContent;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/service/contentcapture/SnapshotData;->mAssistData:Landroid/os/Bundle;
+
+    iput-object p2, p0, Landroid/service/contentcapture/SnapshotData;->mAssistStructure:Landroid/app/assist/AssistStructure;
+
+    iput-object p3, p0, Landroid/service/contentcapture/SnapshotData;->mAssistContent:Landroid/app/assist/AssistContent;
+
+    return-void
+.end method
+
+.method constructor blacklist <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistData:Landroid/os/Bundle;
+
+    const-class v0, Landroid/app/assist/AssistStructure;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/assist/AssistStructure;
+
+    iput-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistStructure:Landroid/app/assist/AssistStructure;
+
+    const-class v0, Landroid/app/assist/AssistContent;
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/assist/AssistContent;
+
+    iput-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistContent:Landroid/app/assist/AssistContent;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public whitelist getAssistContent()Landroid/app/assist/AssistContent;
+    .locals 1
+
+    iget-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistContent:Landroid/app/assist/AssistContent;
+
+    return-object v0
+.end method
+
+.method public whitelist getAssistData()Landroid/os/Bundle;
+    .locals 1
+
+    iget-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistData:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method public whitelist getAssistStructure()Landroid/app/assist/AssistStructure;
+    .locals 1
+
+    iget-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistStructure:Landroid/app/assist/AssistStructure;
+
+    return-object v0
+.end method
+
+.method public whitelist writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistData:Landroid/os/Bundle;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
+    iget-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistStructure:Landroid/app/assist/AssistStructure;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Landroid/service/contentcapture/SnapshotData;->mAssistContent:Landroid/app/assist/AssistContent;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
+.end method

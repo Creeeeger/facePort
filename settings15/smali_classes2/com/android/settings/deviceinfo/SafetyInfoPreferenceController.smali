@@ -1,0 +1,123 @@
+.class public final Lcom/android/settings/deviceinfo/SafetyInfoPreferenceController;
+.super Lcom/android/settingslib/core/AbstractPreferenceController;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+# interfaces
+.implements Lcom/android/settings/core/PreferenceControllerMixin;
+
+
+# static fields
+.field public static final INTENT_PROBE:Landroid/content/Intent;
+
+
+# instance fields
+.field public final mPackageManager:Landroid/content/pm/PackageManager;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.settings.SHOW_SAFETY_AND_REGULATORY_INFO"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "com.android.safetyregulatoryinfo"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/settings/deviceinfo/SafetyInfoPreferenceController;->INTENT_PROBE:Landroid/content/Intent;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;-><init>(Landroid/content/Context;)V
+
+    iget-object p1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/settings/deviceinfo/SafetyInfoPreferenceController;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getPreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "safety_info"
+
+    return-object p0
+.end method
+
+.method public final handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
+    .locals 1
+
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "safety_info"
+
+    invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    new-instance p1, Landroid/content/Intent;
+
+    sget-object v0, Lcom/android/settings/deviceinfo/SafetyInfoPreferenceController;->INTENT_PROBE:Landroid/content/Intent;
+
+    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    const/high16 v0, 0x10000000
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final isAvailable()Z
+    .locals 2
+
+    iget-object p0, p0, Lcom/android/settings/deviceinfo/SafetyInfoPreferenceController;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    sget-object v0, Lcom/android/settings/deviceinfo/SafetyInfoPreferenceController;->INTENT_PROBE:Landroid/content/Intent;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method

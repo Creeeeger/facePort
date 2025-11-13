@@ -1,0 +1,109 @@
+.class public Lcom/android/settings/biometrics/combination/CombinedBiometricProfileSettings;
+.super Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;
+.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+
+
+# static fields
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcom/android/settings/biometrics/combination/CombinedBiometricSearchIndexProvider;
+
+    const v1, 0x7f170246
+
+    invoke-direct {v0, v1}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>(I)V
+
+    sput-object v0, Lcom/android/settings/biometrics/combination/CombinedBiometricProfileSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getFacePreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "biometric_face_settings_profile"
+
+    return-object p0
+.end method
+
+.method public final getFingerprintPreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "biometric_fingerprint_settings_profile"
+
+    return-object p0
+.end method
+
+.method public final getLogTag()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "BiometricProfileSetting"
+
+    return-object p0
+.end method
+
+.method public final getMetricsCategory()I
+    .locals 0
+
+    const/16 p0, 0x757
+
+    return p0
+.end method
+
+.method public final getPreferenceScreenResId()I
+    .locals 0
+
+    const p0, 0x7f170246
+
+    return p0
+.end method
+
+.method public final getUnlockPhonePreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "biometric_settings_biometric_keyguard_profile"
+
+    return-object p0
+.end method
+
+.method public final getUseInAppsPreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "biometric_settings_biometric_app_profile"
+
+    return-object p0
+.end method
+
+.method public final onAttach(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->onAttach(Landroid/content/Context;)V
+
+    const-class p1, Lcom/android/settings/biometrics/combination/BiometricSettingsAppPreferenceController;
+
+    invoke-virtual {p0, p1}, Lcom/android/settings/dashboard/DashboardFragment;->use(Ljava/lang/Class;)Lcom/android/settingslib/core/AbstractPreferenceController;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/settings/biometrics/combination/BiometricSettingsAppPreferenceController;
+
+    iget p0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mUserId:I
+
+    invoke-virtual {p1, p0}, Lcom/android/settings/biometrics/combination/BiometricSettingsAppPreferenceController;->setUserId(I)V
+
+    return-void
+.end method
