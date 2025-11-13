@@ -1,0 +1,8 @@
+.class public interface abstract Lcom/android/settings/homepage/SplitLayoutListener;
+.super Ljava/lang/Object;
+.source "SplitLayoutListener.java"
+
+
+# virtual methods
+.method public abstract onSplitLayoutChanged(Z)V
+.end method

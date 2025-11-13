@@ -1,0 +1,36 @@
+.class public final synthetic Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/util/function/Supplier;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter$$ExternalSyntheticLambda0;->f$0:Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter$$ExternalSyntheticLambda0;->f$0:Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter;
+
+    invoke-static {p0}, Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter;->$r8$lambda$3fEgcEfYAJjdPQd9Yp2BM__h6f8(Lcom/android/settings/TrustedCredentialsSettings$GroupAdapter;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

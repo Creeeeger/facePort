@@ -1,0 +1,202 @@
+{
+  "com.android.settings": [
+    {
+      "com.samsung.android.settings.intelligence.TAG_INITIAL": [
+        "software_update_screen",
+        "smartswitch_preference",
+        "24 hour",
+        "unlock_set_or_change",
+        "ringtone",
+        "ds_ring_tone",
+        "sound_effect",
+        "screen_timeout",
+        "my_device_info_pref_screen"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_INITIAL_CUSTOM": [
+        "sec_font_size",
+        "editor_always_on_screen",
+        "screen_mode",
+        "subscreen_clockstyle",
+        "subscreen_widget"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_EMERGENCY": [
+        "master_switch_preference_key",
+        "key_find_my_mobile",
+        "medical_info",
+        "emergency_contacts",
+        "key_emergency_sos"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_SECURE": [
+        "sec_biometrics_preference",
+        "key_find_my_mobile",
+        "unlock_set_or_change",
+        "power_off_lock",
+        "key_emergency_sos"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_EYE_PROTECTION": [
+        "dark_mode",
+        "auto_brightness",
+        "blue_light_filter",
+        "sec_font_size"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_ADVANCED": [
+        "sec_high_refresh_rate",
+        "hdr_settings",
+        "vtcamera_setting",
+        "dual_app",
+        "simcard_management",
+        "labs_settings"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_RECOMMENDED": [
+        "sec_high_refresh_rate",
+        "editor_always_on_screen",
+        "dark_mode",
+        "finger_scanner",
+        "key_notification_icons_on_status_bar"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_NOTIFICATIONS": [
+        "enable_now",
+        "brief_popup_main_settings",
+        "floating_icons",
+        "notification_sound",
+        "ds_notification_sound"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_MUSIC_HOLIC": [
+        "multi_sound",
+        "key_bluetooth_cast"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_BUTTON_CONTROL": [
+        "function_key_setting",
+        "navigation_Bar",
+        "volume_key_control",
+        "key_emergency_sos"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_ETIQUETTE": [
+        "enable_now",
+        "sound_mode",
+        "temporary_mute"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_BRAND_NEW": [
+        "uwb_settings",
+        "apps_language",
+        "key_emergency_sos",
+        "master_switch_preference_key",
+        "security_and_privacy_settings_screen",
+        "lock_editor_preview_preference",
+        "multi_devices_screen"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_PERFORMANCE": [
+        "battery_info",
+        "screen_resolution"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_FOR_PRIVACY": [
+        "auto_factory_reset",
+        "privacy_view_all",
+        "secure_folder",
+        "privacy_manage_perms",
+        "key_find_my_mobile",
+        "private_share"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_BACKUP": [
+        "smartswitch_preference",
+        "external_storage_transfer"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_NIGHT": [
+        "dark_mode",
+        "auto_brightness",
+        "enable_now",
+        "blue_light_filter"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_BATTERY_TROUBLE": [
+        "show_battery_percent",
+        "wifi_adps"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_FOR_GAMING": [
+        "game_launcher",
+        "onehand_operation_settings"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_FOR_HEALTH": [
+        "blue_light_filter",
+        "sound_effect",
+        "maximum_volume"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_HEARING": [
+        "sound_effect",
+        "volume_limiter"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_PUBLIC_AREA": [
+        "secure_wifi"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_ONE_HANDED": [
+        "onehand_operation_settings"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_VIDEO": [
+        "hdr_settings"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_PREVENT_LOST_DEVICE": [
+        "key_find_my_mobile",
+        "lock_network_and_security",
+        "auto_factory_reset",
+        "pref_backUp",
+        "unlock_set_or_change",
+        "google_backup_settings",
+        "lock_screen_menu_owner_infomation"
+      ]
+    },
+    {
+      "com.samsung.android.settings.intelligence.TAG_DEVICE_TROUBLE": [
+        "device_info_contact_us",
+        "reset_preference",
+        "top_level_tips_for_search",
+        "top_level_user_manual",
+        "customer_services"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+.class public Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;
+.super Lcom/android/settings/dashboard/DashboardFragment;
+.source "UsbDetailsFragment.java"
+
+
+# static fields
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+
+.field private static final TAG:Ljava/lang/String;
+
+
+# instance fields
+.field private mControllers:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/android/settings/connecteddevice/usb/UsbDetailsController;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mUsbBackend:Lcom/android/settings/connecteddevice/usb/UsbBackend;
+
+.field private mUsbConnectionListener:Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver$UsbConnectionListener;
+
+.field mUsbReceiver:Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;
+
+
+# direct methods
+.method public static synthetic $r8$lambda$dMKmLjiha0MWm46rWNecFtKXUdM(Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;ZJIIZ)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p6}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->lambda$new$0(ZJIIZ)V
+
+    return-void
+.end method
+
+.method static bridge synthetic -$$Nest$smcreateControllerList(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbBackend;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;)Ljava/util/List;
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->createControllerList(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbBackend;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 47
+    const-class v0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->TAG:Ljava/lang/String;
+
+    .line 126
+    new-instance v0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment$1;
+
+    sget v1, Lcom/android/settings/R$xml;->usb_details_fragment:I
+
+    invoke-direct {v0, v1}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment$1;-><init>(I)V
+
+    sput-object v0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 46
+    invoke-direct {p0}, Lcom/android/settings/dashboard/DashboardFragment;-><init>()V
+
+    .line 55
+    new-instance v0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment$$ExternalSyntheticLambda0;
+
+    invoke-direct {v0, p0}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment$$ExternalSyntheticLambda0;-><init>(Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;)V
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mUsbConnectionListener:Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver$UsbConnectionListener;
+
+    return-void
+.end method
+
+.method private static createControllerList(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbBackend;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Lcom/android/settings/connecteddevice/usb/UsbBackend;",
+            "Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;",
+            ")",
+            "Ljava/util/List<",
+            "Lcom/android/settings/connecteddevice/usb/UsbDetailsController;",
+            ">;"
+        }
+    .end annotation
+
+    .line 112
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 116
+    new-instance v1, Lcom/android/settings/connecteddevice/usb/UsbDetailsDataRoleController;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/android/settings/connecteddevice/usb/UsbDetailsDataRoleController;-><init>(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;Lcom/android/settings/connecteddevice/usb/UsbBackend;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 117
+    new-instance v1, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFunctionsController;-><init>(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;Lcom/android/settings/connecteddevice/usb/UsbBackend;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 118
+    new-instance v1, Lcom/android/settings/connecteddevice/usb/UsbDetailsPowerRoleController;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/android/settings/connecteddevice/usb/UsbDetailsPowerRoleController;-><init>(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;Lcom/android/settings/connecteddevice/usb/UsbBackend;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 119
+    new-instance v1, Lcom/android/settings/connecteddevice/usb/UsbDetailsTranscodeMtpController;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/android/settings/connecteddevice/usb/UsbDetailsTranscodeMtpController;-><init>(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;Lcom/android/settings/connecteddevice/usb/UsbBackend;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-object v0
+.end method
+
+.method private synthetic lambda$new$0(ZJIIZ)V
+    .locals 6
+
+    .line 57
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mControllers:Ljava/util/List;
+
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p6
+
+    if-eqz p6, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p6
+
+    move-object v0, p6
+
+    check-cast v0, Lcom/android/settings/connecteddevice/usb/UsbDetailsController;
+
+    .line 59
+    sget-object p6, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "controller.refresh : connected : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " functions : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, " powerRole : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " dataRole : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p6, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v1, p1
+
+    move-wide v2, p2
+
+    move v4, p4
+
+    move v5, p5
+
+    .line 61
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/connecteddevice/usb/UsbDetailsController;->refresh(ZJII)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method protected createPreferenceControllers(Landroid/content/Context;)Ljava/util/List;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/List<",
+            "Lcom/android/settingslib/core/AbstractPreferenceController;",
+            ">;"
+        }
+    .end annotation
+
+    .line 99
+    sget-object v0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->TAG:Ljava/lang/String;
+
+    const-string v1, "createPreferenceControllers"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 101
+    new-instance v0, Lcom/android/settings/connecteddevice/usb/UsbBackend;
+
+    invoke-direct {v0, p1}, Lcom/android/settings/connecteddevice/usb/UsbBackend;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mUsbBackend:Lcom/android/settings/connecteddevice/usb/UsbBackend;
+
+    .line 102
+    invoke-static {p1, v0, p0}, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->createControllerList(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbBackend;Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mControllers:Ljava/util/List;
+
+    .line 103
+    new-instance v0, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;
+
+    iget-object v1, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mUsbConnectionListener:Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver$UsbConnectionListener;
+
+    iget-object v2, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mUsbBackend:Lcom/android/settings/connecteddevice/usb/UsbBackend;
+
+    invoke-direct {v0, p1, v1, v2}, Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;-><init>(Landroid/content/Context;Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver$UsbConnectionListener;Lcom/android/settings/connecteddevice/usb/UsbBackend;)V
+
+    iput-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mUsbReceiver:Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;
+
+    .line 105
+    invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mUsbReceiver:Lcom/android/settings/connecteddevice/usb/UsbConnectionBroadcastReceiver;
+
+    invoke-virtual {p1, v0}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    .line 107
+    new-instance p1, Ljava/util/ArrayList;
+
+    iget-object p0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->mControllers:Ljava/util/List;
+
+    invoke-direct {p1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    return-object p1
+.end method
+
+.method protected getLogTag()Ljava/lang/String;
+    .locals 0
+
+    .line 88
+    sget-object p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsFragment;->TAG:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public getMetricsCategory()I
+    .locals 0
+
+    const/16 p0, 0x50b
+
+    return p0
+.end method
+
+.method protected getPreferenceScreenResId()I
+    .locals 0
+
+    .line 93
+    sget p0, Lcom/android/settings/R$xml;->usb_details_fragment:I
+
+    return p0
+.end method
+
+.method public onActivityCreated(Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 74
+    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+
+    .line 75
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 76
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->seslSetLastRoundedCorner(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 67
+    invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+
+    .line 68
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
+
+    move-result-object p2
+
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p0
+
+    invoke-static {p1, p2, p0}, Lcom/android/settings/Utils;->setActionBarShadowAnimation(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle;Landroid/view/View;)V
+
+    return-void
+.end method

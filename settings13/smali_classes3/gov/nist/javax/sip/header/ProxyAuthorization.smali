@@ -1,0 +1,20 @@
+.class public Lgov/nist/javax/sip/header/ProxyAuthorization;
+.super Lgov/nist/javax/sip/header/AuthenticationHeader;
+.source "ProxyAuthorization.java"
+
+
+# static fields
+.field private static final serialVersionUID:J = -0x58786e9fcf4e2b3aL
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    const-string v0, "Proxy-Authorization"
+
+    .line 56
+    invoke-direct {p0, v0}, Lgov/nist/javax/sip/header/AuthenticationHeader;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
