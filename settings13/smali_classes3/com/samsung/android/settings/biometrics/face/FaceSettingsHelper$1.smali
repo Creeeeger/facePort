@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 612
+    .line 599
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 
     const-string p1, "onFail"
 
-    .line 620
+    .line 607
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -49,7 +49,7 @@
 
     const-string v0, "onSuccess"
 
-    .line 615
+    .line 602
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

@@ -46,13 +46,20 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    const-string p0, "extra_show_multi_pane_layout"
+
+    const/4 v1, 0x0
+
+    .line 59
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     return-object v0
 .end method
 
 .method protected isValidFragment(Ljava/lang/String;)Z
     .locals 0
 
-    .line 69
+    .line 70
     const-class p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -73,15 +80,15 @@
 
     const-string v1, "onBackPressed"
 
-    .line 74
+    .line 75
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 75
-    invoke-static {v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->-$$Nest$smsetFinishValue(Z)V
-
     .line 76
+    invoke-static {v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->access$000(Z)V
+
+    .line 77
     invoke-super {p0}, Lcom/samsung/android/settings/core/SecSettingsBaseActivity;->onBackPressed()V
 
     return-void
@@ -94,20 +101,20 @@
 
     const-string v0, "onClickContinue"
 
-    .line 80
+    .line 81
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x1
 
-    .line 81
-    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->-$$Nest$smsetFinishValue(Z)V
+    .line 82
+    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->access$000(Z)V
 
     const/4 p1, -0x1
 
-    .line 82
+    .line 83
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
 
-    .line 83
+    .line 84
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
@@ -116,7 +123,7 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 64
+    .line 65
     invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     return-void

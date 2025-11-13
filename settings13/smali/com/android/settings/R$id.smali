@@ -1176,6 +1176,8 @@
 
 .field public static final face_recognize_with_mask:I = 0x7f0a03f7
 
+.field public static final face_stay_on_lock_screen_desc:I = 0x7f0a03f8
+
 .field public static final face_stay_on_lock_screen_image:I = 0x7f0a03f9
 
 .field public static final face_stay_on_lock_screen_image_container:I = 0x7f0a03fa

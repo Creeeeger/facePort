@@ -10,7 +10,7 @@
 
 
 # instance fields
-.field private final mFaceSettingsPreferenceController:Lcom/samsung/android/settings/biometrics/face/FaceSettingsPreferenceController;
+.field private final mFaceSettingsPreferenceController:Lcom/samsung/android/settings/security/FaceSettingsPreferenceController;
 
 .field private final mFingerprintSettingsPreferenceController:Lcom/samsung/android/settings/biometrics/fingerprint/FingerprintSettingsPreferenceController;
 
@@ -34,11 +34,11 @@
     invoke-direct {p0, p1, p2}, Lcom/android/settings/core/BasePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 29
-    new-instance p2, Lcom/samsung/android/settings/biometrics/face/FaceSettingsPreferenceController;
+    new-instance p2, Lcom/samsung/android/settings/security/FaceSettingsPreferenceController;
 
-    invoke-direct {p2, p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsPreferenceController;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/samsung/android/settings/security/FaceSettingsPreferenceController;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/samsung/android/settings/security/BiometricsSettingsPreferenceController;->mFaceSettingsPreferenceController:Lcom/samsung/android/settings/biometrics/face/FaceSettingsPreferenceController;
+    iput-object p2, p0, Lcom/samsung/android/settings/security/BiometricsSettingsPreferenceController;->mFaceSettingsPreferenceController:Lcom/samsung/android/settings/security/FaceSettingsPreferenceController;
 
     .line 30
     new-instance p2, Lcom/samsung/android/settings/biometrics/fingerprint/FingerprintSettingsPreferenceController;
@@ -77,7 +77,7 @@
 
     .line 41
     :cond_0
-    iget-object v0, p0, Lcom/samsung/android/settings/security/BiometricsSettingsPreferenceController;->mFaceSettingsPreferenceController:Lcom/samsung/android/settings/biometrics/face/FaceSettingsPreferenceController;
+    iget-object v0, p0, Lcom/samsung/android/settings/security/BiometricsSettingsPreferenceController;->mFaceSettingsPreferenceController:Lcom/samsung/android/settings/security/FaceSettingsPreferenceController;
 
     invoke-virtual {v0}, Lcom/android/settings/core/BasePreferenceController;->isAvailable()Z
 

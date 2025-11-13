@@ -1,9 +1,8 @@
 .class public final synthetic Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -23,12 +22,12 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public final onClick(Landroid/view/View;)V
     .locals 0
 
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature$$ExternalSyntheticLambda2;->f$0:Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;
 
-    invoke-static {p0, p1, p2}, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->$r8$lambda$tMcKpUELnfFGjgYFI3i_2Vx5cKM(Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;Landroid/widget/CompoundButton;Z)V
+    invoke-static {p0, p1}, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->$r8$lambda$Z5LpMZb47SlPJwACrdVXcUTla5I(Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;Landroid/view/View;)V
 
     return-void
 .end method

@@ -1,6 +1,5 @@
 .class public final synthetic Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -28,7 +27,7 @@
 
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature$$ExternalSyntheticLambda1;->f$0:Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;
 
-    invoke-static {p0, p1}, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->$r8$lambda$njQBgT7BYy5hRVu_rEagwMQBUcs(Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->$r8$lambda$Jy_CWnTYAHcDPZiW26CxnYgw8Do(Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;Landroid/view/View;)V
 
     return-void
 .end method

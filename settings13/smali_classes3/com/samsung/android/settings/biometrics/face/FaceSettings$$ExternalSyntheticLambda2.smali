@@ -1,9 +1,8 @@
 .class public final synthetic Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda2;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
@@ -23,12 +22,12 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
+.method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 0
 
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda2;->f$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
-    invoke-static {p0, p1, p2}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->$r8$lambda$8ER4QCHNi6oYvA80unHHQQ5hbtw(Lcom/samsung/android/settings/biometrics/face/FaceSettings;Landroid/content/DialogInterface;I)V
+    invoke-static {p0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->$r8$lambda$aVHvWh9s5pz5ArXB6S3klbcRmi8(Lcom/samsung/android/settings/biometrics/face/FaceSettings;Landroid/content/DialogInterface;)V
 
     return-void
 .end method

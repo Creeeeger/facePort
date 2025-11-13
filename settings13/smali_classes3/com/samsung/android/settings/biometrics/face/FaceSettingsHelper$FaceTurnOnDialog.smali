@@ -50,12 +50,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 136
+    .line 130
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 134
+    .line 128
     iput-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mNeedRegistration:Z
 
     return-void
@@ -64,7 +64,7 @@
 .method private synthetic lambda$onCreateDialog$0(Lcom/android/internal/widget/LockPatternUtils;Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 171
+    .line 165
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,25 +85,25 @@
 
     invoke-static {p3, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
+    .line 166
     iget-boolean p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mNeedRegistration:Z
 
     if-nez p2, :cond_0
 
-    .line 173
+    .line 167
     iget-object p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mContext:Landroid/content/Context;
 
     iget p3, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mUserId:I
 
     invoke-static {p2, p1, p3}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->setFaceLock(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;I)V
 
-    .line 176
+    .line 170
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mListener:Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$FaceTurnOnDialogFragmentListener;
 
     if-eqz p0, :cond_1
 
-    .line 177
+    .line 171
     invoke-interface {p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$FaceTurnOnDialogFragmentListener;->turnOnFaceLock()V
 
     :cond_1
@@ -113,12 +113,12 @@
 .method private synthetic lambda$onCreateDialog$1(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 183
+    .line 177
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mListener:Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$FaceTurnOnDialogFragmentListener;
 
     if-eqz p0, :cond_0
 
-    .line 184
+    .line 178
     invoke-interface {p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$FaceTurnOnDialogFragmentListener;->turnOffFaceLock()V
 
     :cond_0
@@ -134,15 +134,15 @@
 
     const-string v0, "onCancel!!"
 
-    .line 196
+    .line 190
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
+    .line 191
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mListener:Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$FaceTurnOnDialogFragmentListener;
 
     if-eqz p0, :cond_0
 
-    .line 198
+    .line 192
     invoke-interface {p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$FaceTurnOnDialogFragmentListener;->turnOffFaceLock()V
 
     :cond_0
@@ -152,10 +152,10 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 157
+    .line 151
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 158
+    .line 152
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -172,17 +172,17 @@
 
     const-string v0, "onCreateDialog"
 
-    .line 163
+    .line 157
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
+    .line 159
     new-instance p1, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mContext:Landroid/content/Context;
 
     invoke-direct {p1, v0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 166
+    .line 160
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;->mContext:Landroid/content/Context;
@@ -193,7 +193,7 @@
 
     move-result-object v0
 
-    .line 169
+    .line 163
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -204,16 +204,16 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda0;
+    new-instance v2, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda1;
 
-    invoke-direct {v2, p0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;Lcom/android/internal/widget/LockPatternUtils;)V
+    invoke-direct {v2, p0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda1;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;Lcom/android/internal/widget/LockPatternUtils;)V
 
     const/4 p1, -0x1
 
-    .line 168
+    .line 162
     invoke-virtual {v0, p1, v1, v2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 181
+    .line 175
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -224,13 +224,13 @@
 
     move-result-object p1
 
-    new-instance v1, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda1;
+    new-instance v1, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda0;
 
-    invoke-direct {v1, p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda1;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;)V
+    invoke-direct {v1, p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper$FaceTurnOnDialog;)V
 
     const/4 p0, -0x2
 
-    .line 180
+    .line 174
     invoke-virtual {v0, p0, p1, v1}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     return-object v0
@@ -243,10 +243,10 @@
 
     const-string v1, "onDestroyView"
 
-    .line 203
+    .line 197
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
+    .line 198
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
 
     return-void

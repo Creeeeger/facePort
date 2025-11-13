@@ -100,10 +100,9 @@
 
     check-cast p1, Landroid/app/Activity;
 
-    sget p3, Lcom/android/settings/R$string;->sec_face_error_message_sensor_error:I
+    invoke-static {p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->getFaceSensorErrorMessage(Landroid/content/Context;)Ljava/lang/String;
 
     .line 94
-    invoke-virtual {p0, p3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 

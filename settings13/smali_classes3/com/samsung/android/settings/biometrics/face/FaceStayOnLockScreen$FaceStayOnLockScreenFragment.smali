@@ -30,7 +30,7 @@
 
 .field private final MAX_BUTTON_SIZE_TABLET:D
 
-.field private mDisplay:Landroid/view/Display;
+.field private display:Landroid/view/Display;
 
 .field private mFromSettingsPreference:Z
 
@@ -51,6 +51,8 @@
 .field private mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
 .field private mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
+
+.field private mTextView:Landroid/view/View;
 
 .field private mUserId:I
 
@@ -74,40 +76,6 @@
     return-void
 .end method
 
-.method static bridge synthetic -$$Nest$fgetmStayOnLockScreenOffVI(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)Lcom/airbnb/lottie/LottieAnimationView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
-
-    return-object p0
-.end method
-
-.method static bridge synthetic -$$Nest$fgetmStayOnLockScreenVI(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)Lcom/airbnb/lottie/LottieAnimationView;
-    .locals 0
-
-    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
-
-    return-object p0
-.end method
-
-.method static bridge synthetic -$$Nest$mgetAnimationDescription(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;Z)Ljava/lang/String;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->getAnimationDescription(Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static bridge synthetic -$$Nest$smsetFinishValue(Z)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setFinishValue(Z)V
-
-    return-void
-.end method
-
 .method static constructor <clinit>()V
     .locals 0
 
@@ -117,49 +85,87 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 86
+    .line 87
     invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
 
     const-wide/high16 v0, 0x3fe8000000000000L    # 0.75
 
-    .line 88
+    .line 89
     iput-wide v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->MAX_BUTTON_SIZE:D
 
     const-wide v0, 0x3fe3333333333333L    # 0.6
 
-    .line 89
+    .line 90
     iput-wide v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->MAX_BUTTON_SIZE_TABLET:D
 
     const-wide v0, 0x3fceb851eb851eb8L    # 0.24
 
-    .line 90
+    .line 91
     iput-wide v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->ButtonAreaHeightRate:D
 
     const v0, 0x3fa66666    # 1.3f
 
-    .line 91
+    .line 92
     iput v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->MAX_BUTTON_FONT_SCALE:F
 
     const/4 v0, 0x0
 
-    .line 95
+    .line 96
     iput v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mUserId:I
 
-    .line 97
+    .line 98
     iput-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsStayOnLockScreenEnabled:Z
 
-    .line 98
+    .line 99
     iput-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mFromSettingsPreference:Z
 
-    .line 99
+    .line 100
     iput-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNeedFaceUseFulFeature:Z
 
     const/4 v0, 0x0
 
-    .line 102
+    .line 103
     iput-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mView:Landroid/view/View;
 
     return-void
+.end method
+
+.method static synthetic access$000(Z)V
+    .locals 0
+
+    .line 87
+    invoke-static {p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setFinishValue(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$100(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)Lcom/airbnb/lottie/LottieAnimationView;
+    .locals 0
+
+    .line 87
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;Z)Ljava/lang/String;
+    .locals 0
+
+    .line 87
+    invoke-direct {p0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->getAnimationDescription(Z)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)Lcom/airbnb/lottie/LottieAnimationView;
+    .locals 0
+
+    .line 87
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
+
+    return-object p0
 .end method
 
 .method private adjustFontScale()V
@@ -169,10 +175,10 @@
 
     const-string v1, "adjustFontScale"
 
-    .line 305
+    .line 330
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
+    .line 332
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -181,7 +187,7 @@
 
     move-result-object v0
 
-    .line 308
+    .line 333
     iget v0, v0, Landroid/content/res/Configuration;->fontScale:F
 
     const v1, 0x3fa66666    # 1.3f
@@ -190,14 +196,14 @@
 
     move-result v0
 
-    .line 310
+    .line 335
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
 
     if-eqz p0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 311
+    .line 336
     invoke-virtual {p0}, Landroid/widget/Button;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -219,25 +225,25 @@
 .end method
 
 .method private createStayOnLockScreenView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
+    .locals 2
 
     const-string v0, "FcstFaceStayOnLockScreen"
 
     const-string v1, "createStayOnLockScreenView"
 
-    .line 154
+    .line 156
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p2, :cond_0
 
-    .line 157
+    .line 159
     invoke-virtual {p2}, Landroid/view/ViewGroup;->removeAllViewsInLayout()V
 
-    .line 160
+    .line 162
     :cond_0
-    sget v1, Lcom/android/settings/R$layout;->sec_face_stay_on_lock_screen:I
+    sget v0, Lcom/android/settings/R$layout;->sec_face_stay_on_lock_screen:I
 
-    invoke-virtual {p1, v1, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p1, v0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
@@ -245,56 +251,56 @@
 
     const/16 p2, 0xf
 
-    .line 161
+    .line 163
     invoke-virtual {p1, p2}, Landroid/view/View;->semSetRoundedCorners(I)V
 
-    .line 162
+    .line 164
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mView:Landroid/view/View;
-
-    .line 163
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/android/settings/R$color;->sec_widget_round_and_bgcolor:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    .line 162
-    invoke-virtual {p1, p2, v1}, Landroid/view/View;->semSetRoundedCornerColor(II)V
 
     .line 165
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/settings/R$color;->sec_widget_round_and_bgcolor:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    .line 164
+    invoke-virtual {p1, p2, v0}, Landroid/view/View;->semSetRoundedCornerColor(II)V
+
+    .line 167
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mView:Landroid/view/View;
 
-    sget v1, Lcom/android/settings/R$id;->face_stay_on_lock_screen_image_container:I
+    sget v0, Lcom/android/settings/R$id;->face_stay_on_lock_screen_image_container:I
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mImageContainerView:Landroid/view/View;
 
-    .line 166
+    .line 168
     invoke-virtual {p1, p2}, Landroid/view/View;->semSetRoundedCorners(I)V
 
-    .line 167
+    .line 169
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mImageContainerView:Landroid/view/View;
 
-    .line 168
+    .line 170
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
-    move-result v1
-
-    .line 167
-    invoke-virtual {p1, p2, v1}, Landroid/view/View;->semSetRoundedCornerColor(II)V
+    move-result v0
 
     .line 169
+    invoke-virtual {p1, p2, v0}, Landroid/view/View;->semSetRoundedCornerColor(II)V
+
+    .line 171
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mImageContainerView:Landroid/view/View;
 
     sget p2, Lcom/android/settings/R$id;->face_stay_on_lock_screen_image:I
@@ -307,7 +313,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
-    .line 170
+    .line 172
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mImageContainerView:Landroid/view/View;
 
     sget p2, Lcom/android/settings/R$id;->face_stay_on_lock_screen_off_image:I
@@ -320,7 +326,7 @@
 
     iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
-    .line 172
+    .line 174
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -331,37 +337,37 @@
 
     if-eqz p1, :cond_1
 
-    .line 173
+    .line 175
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     const/4 p2, 0x1
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    .line 174
+    .line 176
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
-    new-instance v1, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$1;
+    new-instance v0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$1;
 
-    invoke-direct {v1, p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$1;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)V
+    invoke-direct {v0, p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$1;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)V
 
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
 
-    .line 183
+    .line 185
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
-    new-instance v1, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$$ExternalSyntheticLambda0;
+    new-instance v0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$$ExternalSyntheticLambda0;
 
-    invoke-direct {v1, p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)V
+    invoke-direct {v0, p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;)V
 
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 193
+    .line 195
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    .line 194
+    .line 196
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     new-instance p2, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$2;
@@ -370,7 +376,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
 
-    .line 203
+    .line 205
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     new-instance p2, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$$ExternalSyntheticLambda1;
@@ -379,60 +385,32 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 214
+    .line 216
     :cond_1
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mView:Landroid/view/View;
 
-    sget p2, Lcom/android/settings/R$id;->nextButtonContainer:I
+    sget p2, Lcom/android/settings/R$id;->face_stay_on_lock_screen_desc:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/LinearLayout;
-
-    iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButtonContainer:Landroid/widget/LinearLayout;
-
-    .line 215
-    iget-boolean p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mFromSettingsPreference:Z
-
-    if-eqz p2, :cond_2
-
-    const/16 p2, 0x8
-
-    .line 216
-    invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_2
-    const-string p1, "onViewCreated : Remove action bar button"
+    iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mTextView:Landroid/view/View;
 
     .line 218
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mView:Landroid/view/View;
 
-    .line 219
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    sget p2, Lcom/android/settings/R$id;->continue_button:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    check-cast p1, Landroidx/appcompat/app/AppCompatActivity;
+    check-cast p1, Landroid/widget/Button;
+
+    iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
 
     .line 220
-    invoke-virtual {p1}, Landroidx/appcompat/app/AppCompatActivity;->getSupportActionBar()Landroidx/appcompat/app/ActionBar;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    .line 221
-    invoke-virtual {p1, p2}, Landroidx/appcompat/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
-
-    .line 223
-    invoke-direct {p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setNextButtonGUI()V
-
-    .line 226
-    :goto_0
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mView:Landroid/view/View;
 
     return-object p0
@@ -445,18 +423,18 @@
 
     const-string v1, "finishFaceStayOnLockScreen"
 
-    .line 392
+    .line 415
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 393
+    .line 416
     invoke-static {v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setFinishValue(Z)V
 
-    .line 394
+    .line 417
     invoke-virtual {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->setResult(I)V
 
-    .line 395
+    .line 418
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
     return-void
@@ -465,7 +443,7 @@
 .method private getAnimationDescription(Z)Ljava/lang/String;
     .locals 2
 
-    .line 424
+    .line 447
     new-instance v0, Ljava/lang/StringBuilder;
 
     sget v1, Lcom/android/settings/R$string;->sec_biometrics_common_option_stay_on_lock_screen_animation:I
@@ -478,7 +456,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 425
+    .line 448
     sget p1, Lcom/android/settings/R$string;->sec_biometrics_common_stop:I
 
     goto :goto_0
@@ -489,7 +467,7 @@
     :goto_0
     const-string v1, ", "
 
-    .line 426
+    .line 449
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -498,7 +476,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 427
+    .line 450
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -511,7 +489,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 412
+    .line 435
     sget p1, Lcom/android/settings/R$string;->sec_biometrics_common_on:I
 
     goto :goto_0
@@ -519,7 +497,7 @@
     :cond_0
     sget p1, Lcom/android/settings/R$string;->sec_biometrics_common_off:I
 
-    .line 413
+    .line 436
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -529,14 +507,14 @@
 
     invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 414
+    .line 437
     iget-boolean p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mFromSettingsPreference:Z
 
     const-string v1, ", "
 
     if-eqz p1, :cond_1
 
-    .line 415
+    .line 438
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     sget p1, Lcom/android/settings/R$string;->sec_biometrics_common_option_title_stay_on_lock_screen:I
@@ -549,7 +527,7 @@
 
     goto :goto_1
 
-    .line 417
+    .line 440
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -561,7 +539,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 419
+    .line 442
     :goto_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -579,7 +557,7 @@
 .method private isLandscapeMode()Z
     .locals 2
 
-    .line 404
+    .line 427
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -600,7 +578,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 405
+    .line 428
     iget p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mOrientation:I
 
     const/4 v0, 0x1
@@ -626,7 +604,7 @@
 .method private synthetic lambda$createStayOnLockScreenView$0(Landroid/view/View;)V
     .locals 1
 
-    .line 184
+    .line 186
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->isAnimating()Z
@@ -635,12 +613,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 185
+    .line 187
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->pauseAnimation()V
 
-    .line 186
+    .line 188
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     sget v0, Lcom/android/settings/R$string;->sec_biometrics_common_stopped:I
@@ -653,13 +631,13 @@
 
     goto :goto_0
 
-    .line 188
+    .line 190
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
 
-    .line 189
+    .line 191
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     sget v0, Lcom/android/settings/R$string;->sec_biometrics_common_playing:I
@@ -677,7 +655,7 @@
 .method private synthetic lambda$createStayOnLockScreenView$1(Landroid/view/View;)V
     .locals 1
 
-    .line 204
+    .line 206
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->isAnimating()Z
@@ -686,12 +664,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 205
+    .line 207
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->pauseAnimation()V
 
-    .line 206
+    .line 208
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     sget v0, Lcom/android/settings/R$string;->sec_biometrics_common_stopped:I
@@ -704,13 +682,13 @@
 
     goto :goto_0
 
-    .line 208
+    .line 210
     :cond_0
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
 
-    .line 209
+    .line 211
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     sget v0, Lcom/android/settings/R$string;->sec_biometrics_common_playing:I
@@ -728,7 +706,7 @@
 .method private static setFinishValue(Z)V
     .locals 2
 
-    .line 399
+    .line 422
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -747,7 +725,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
+    .line 423
     sput-boolean p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsFinished:Z
 
     return-void
@@ -756,7 +734,7 @@
 .method private setLottieAnimationView(Z)V
     .locals 4
 
-    .line 316
+    .line 341
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -775,7 +753,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
+    .line 343
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     if-eqz v0, :cond_1
@@ -790,41 +768,41 @@
 
     if-eqz p1, :cond_0
 
-    .line 320
+    .line 345
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 321
+    .line 346
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->pauseAnimation()V
 
-    .line 322
+    .line 347
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 323
+    .line 348
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
 
     goto :goto_0
 
-    .line 325
+    .line 350
     :cond_0
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 326
+    .line 351
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->pauseAnimation()V
 
-    .line 327
+    .line 352
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 328
+    .line 353
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
@@ -835,119 +813,92 @@
 .end method
 
 .method private setNextButtonGUI()V
-    .locals 6
+    .locals 7
 
     const-string v0, "FcstFaceStayOnLockScreen"
 
     const-string v1, "setNextButtonGUI"
 
-    .line 334
+    .line 359
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 336
-    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mView:Landroid/view/View;
-
-    sget v2, Lcom/android/settings/R$id;->continue_button:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/Button;
-
-    iput-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
-
-    if-eqz v1, :cond_2
-
-    .line 338
+    .line 361
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-static {v1}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->getScreenWidth(Landroid/content/Context;)I
 
-    move-result-object v1
+    move-result v1
 
-    iget-boolean v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNeedFaceUseFulFeature:Z
+    .line 362
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 339
-    sget v2, Lcom/android/settings/R$string;->sec_face_stay_on_lock_screen_button_next_text:I
+    const-string v3, "mScreenWidth : "
 
-    goto :goto_0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 340
-    :cond_0
-    sget v2, Lcom/android/settings/R$string;->sec_face_stay_on_lock_screen_button_done_text:I
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 338
-    :goto_0
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    .line 341
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 364
     iget-object v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
 
-    invoke-virtual {v2, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    if-eqz v2, :cond_1
 
-    .line 342
-    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
-
+    .line 365
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v3
 
-    sget v3, Lcom/android/settings/R$dimen;->sec_biometrics_guide_common_continue_button_width:I
+    sget v4, Lcom/android/settings/R$dimen;->sec_biometrics_guide_common_continue_button_width:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v2
+    move-result v3
 
-    float-to-int v2, v2
+    float-to-int v3, v3
 
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setMinimumWidth(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/Button;->setMinimumWidth(I)V
 
-    .line 343
-    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
+    .line 366
+    iget-object v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->getScreenWidth(Landroid/content/Context;)I
-
-    move-result v2
-
-    int-to-double v2, v2
+    int-to-double v3, v1
 
     invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
 
-    move-result v4
+    move-result v1
 
-    if-eqz v4, :cond_1
+    if-eqz v1, :cond_0
 
-    const-wide v4, 0x3fe3333333333333L    # 0.6
+    const-wide v5, 0x3fe3333333333333L    # 0.6
 
-    goto :goto_1
+    goto :goto_0
 
+    :cond_0
+    const-wide/high16 v5, 0x3fe8000000000000L    # 0.75
+
+    :goto_0
+    mul-double/2addr v3, v5
+
+    double-to-int v1, v3
+
+    invoke-virtual {v2, v1}, Landroid/widget/Button;->setMaxWidth(I)V
+
+    .line 370
     :cond_1
-    const-wide/high16 v4, 0x3fe8000000000000L    # 0.75
-
-    :goto_1
-    mul-double/2addr v2, v4
-
-    double-to-int v2, v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/Button;->setMaxWidth(I)V
-
-    .line 347
-    :cond_2
     iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButtonContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -956,14 +907,14 @@
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 348
+    .line 371
     invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
-    .line 349
+    .line 372
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -982,7 +933,7 @@
 
     iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 350
+    .line 373
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1001,17 +952,17 @@
 
     iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
-    goto :goto_3
+    goto :goto_2
 
-    .line 352
-    :cond_3
+    .line 375
+    :cond_2
     invoke-direct {p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->isLandscapeMode()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_3
 
-    .line 353
+    .line 376
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -1030,10 +981,10 @@
 
     iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    goto :goto_2
+    goto :goto_1
 
-    .line 355
-    :cond_4
+    .line 378
+    :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -1052,8 +1003,8 @@
 
     iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 357
-    :goto_2
+    .line 380
+    :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1072,8 +1023,8 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
-    :goto_3
+    .line 382
+    :goto_2
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButtonContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -1098,10 +1049,10 @@
 
     const-string v1, "onActivityCreated"
 
-    .line 286
+    .line 283
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
+    .line 284
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1116,28 +1067,31 @@
 
     if-eqz v0, :cond_0
 
-    .line 289
+    .line 286
     invoke-virtual {v0, p0}, Lcom/samsung/android/settings/widget/SecMainSwitchBar;->addOnSwitchChangeListener(Lcom/android/settingslib/widget/OnMainSwitchChangeListener;)V
 
-    .line 290
+    .line 287
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
 
     iget-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsStayOnLockScreenEnabled:Z
 
     invoke-virtual {v0, v1}, Lcom/android/settings/widget/SettingsMainSwitchBar;->setChecked(Z)V
 
-    .line 291
+    .line 288
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
 
     invoke-virtual {v0}, Lcom/samsung/android/settings/widget/SecMainSwitchBar;->show()V
 
-    .line 292
+    .line 290
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
 
     invoke-virtual {v0}, Lcom/samsung/android/settings/widget/SecMainSwitchBar;->getSwitch()Landroid/widget/Switch;
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    .line 292
     iget-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsStayOnLockScreenEnabled:Z
 
     invoke-direct {p0, v1}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->getSwitchDescription(Z)Ljava/lang/StringBuilder;
@@ -1146,7 +1100,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 294
+    .line 295
     :cond_0
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
@@ -1156,26 +1110,17 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 231
+    .line 225
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     const-string p1, "FcstFaceStayOnLockScreen"
 
     const-string v0, "onConfigurationChanged"
 
-    .line 232
+    .line 226
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mDisplay:Landroid/view/Display;
-
-    invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mOrientation:I
-
-    .line 234
+    .line 227
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1184,6 +1129,7 @@
 
     move-result-object p1
 
+    .line 228
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -1198,10 +1144,10 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 117
+    .line 119
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 119
+    .line 121
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -1214,15 +1160,15 @@
 
     const-string p1, "intent is null"
 
-    .line 121
+    .line 123
     invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
+    .line 124
     invoke-direct {p0, v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->finishFaceStayOnLockScreen(I)V
 
     return-void
 
-    .line 126
+    .line 128
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -1240,16 +1186,16 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mDisplay:Landroid/view/Display;
+    iput-object v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->display:Landroid/view/Display;
 
-    .line 127
+    .line 129
     invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
 
     move-result v2
 
     iput v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mOrientation:I
 
-    .line 128
+    .line 130
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1268,7 +1214,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
+    .line 132
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v2
@@ -1283,7 +1229,7 @@
 
     const-string v2, "fromSettingsPreference"
 
-    .line 131
+    .line 133
     invoke-virtual {p1, v2, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -1292,14 +1238,14 @@
 
     const-string v2, "needFaceUseFulFeature"
 
-    .line 132
+    .line 134
     invoke-virtual {p1, v2, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNeedFaceUseFulFeature:Z
 
-    .line 133
+    .line 135
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1312,7 +1258,7 @@
 
     iput-boolean p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsStayOnLockScreenEnabled:Z
 
-    .line 135
+    .line 137
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1331,7 +1277,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 136
+    .line 138
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1350,7 +1296,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
+    .line 140
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1363,12 +1309,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 139
+    .line 141
     invoke-direct {p0, v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->finishFaceStayOnLockScreen(I)V
 
     return-void
 
-    .line 143
+    .line 145
     :cond_1
     iget-boolean p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mFromSettingsPreference:Z
 
@@ -1384,7 +1330,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 144
+    .line 146
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
@@ -1402,7 +1348,7 @@
 
     const/4 p2, 0x0
 
-    .line 150
+    .line 152
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->createStayOnLockScreenView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p0
@@ -1417,15 +1363,15 @@
 
     const-string v1, "onDestroy"
 
-    .line 299
+    .line 324
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 300
+    .line 325
     invoke-static {v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setFinishValue(Z)V
 
-    .line 301
+    .line 326
     invoke-super {p0}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onDestroy()V
 
     return-void
@@ -1438,16 +1384,16 @@
 
     const-string v1, "onDestroyView"
 
-    .line 279
+    .line 276
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 280
+    .line 277
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
 
     invoke-virtual {v0}, Lcom/samsung/android/settings/widget/SecMainSwitchBar;->hide()V
 
-    .line 281
-    invoke-super {p0}, Landroidx/preference/PreferenceFragmentCompat;->onDestroyView()V
+    .line 278
+    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
 
     return-void
 .end method
@@ -1455,7 +1401,7 @@
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .line 381
+    .line 404
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -1468,15 +1414,15 @@
 
     const-string v1, "ActionBar clicked"
 
-    .line 384
+    .line 407
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, -0x1
 
-    .line 385
+    .line 408
     invoke-direct {p0, v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->finishFaceStayOnLockScreen(I)V
 
-    .line 388
+    .line 411
     :cond_0
     invoke-super {p0, p1}, Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
@@ -1486,9 +1432,9 @@
 .end method
 
 .method public onPause()V
-    .locals 7
+    .locals 10
 
-    .line 249
+    .line 243
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1509,43 +1455,58 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
+    .line 245
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     if-eqz v0, :cond_0
 
-    .line 252
+    .line 246
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->pauseAnimation()V
 
-    .line 254
+    .line 248
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mStayOnLockScreenOffVI:Lcom/airbnb/lottie/LottieAnimationView;
 
     if-eqz v0, :cond_1
 
-    .line 255
+    .line 249
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->pauseAnimation()V
 
-    .line 257
+    .line 252
     :cond_1
-    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
+    iget v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mOrientation:I
 
-    if-eqz v0, :cond_2
+    iget-object v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->display:Landroid/view/Display;
 
-    .line 258
-    invoke-virtual {v0, p0}, Lcom/samsung/android/settings/widget/SecMainSwitchBar;->removeOnSwitchChangeListener(Lcom/android/settingslib/widget/OnMainSwitchChangeListener;)V
+    invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
 
-    .line 261
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-eq v0, v2, :cond_2
+
+    const-string v0, "Orientation changed"
+
+    .line 253
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 254
+    sput-boolean v3, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsFinished:Z
+
+    goto :goto_1
+
+    .line 256
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v4
 
-    const/16 v2, 0x20f7
+    const/16 v5, 0x20f7
 
-    const/16 v3, 0x2105
+    const/16 v6, 0x2105
 
-    .line 264
+    .line 259
     iget-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsStayOnLockScreenEnabled:Z
 
     if-eqz v0, :cond_3
@@ -1558,50 +1519,44 @@
     const-string v0, "0"
 
     :goto_0
-    move-object v4, v0
+    move-object v7, v0
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v8, 0x0
 
-    .line 261
-    invoke-static/range {v1 .. v6}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->insertSaLog(Landroid/content/Context;IILjava/lang/String;J)V
+    .line 256
+    invoke-static/range {v4 .. v9}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->insertSaLog(Landroid/content/Context;IILjava/lang/String;J)V
 
-    .line 267
+    .line 263
+    :goto_1
     sget-boolean v0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsFinished:Z
 
     if-nez v0, :cond_4
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->hasWindowFocus()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    .line 268
+    .line 264
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    const/4 v1, 0x1
+    const-string v1, "biometrics_settings_destroy"
 
-    const-string v2, "biometrics_settings_destroy"
-
-    .line 269
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    .line 265
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const/4 v1, 0x0
 
-    .line 270
+    .line 266
     invoke-virtual {p0, v1, v0}, Lcom/android/settings/SettingsPreferenceFragment;->setResult(ILandroid/content/Intent;)V
 
-    .line 271
+    .line 267
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
-    .line 274
+    .line 269
     :cond_4
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
+
+    invoke-virtual {v0, p0}, Lcom/samsung/android/settings/widget/SecMainSwitchBar;->removeOnSwitchChangeListener(Lcom/android/settingslib/widget/OnMainSwitchChangeListener;)V
+
+    .line 271
     invoke-super {p0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->onPause()V
 
     return-void
@@ -1614,18 +1569,18 @@
 
     const-string v1, "onResume"
 
-    .line 239
+    .line 233
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
+    .line 234
     invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
 
-    .line 242
+    .line 236
     iget-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsStayOnLockScreenEnabled:Z
 
     invoke-direct {p0, v0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setLottieAnimationView(Z)V
 
-    .line 244
+    .line 238
     invoke-direct {p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->adjustFontScale()V
 
     return-void
@@ -1634,7 +1589,7 @@
 .method public onSwitchChanged(Landroid/widget/Switch;Z)V
     .locals 7
 
-    .line 364
+    .line 387
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1653,7 +1608,7 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
+    .line 388
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1662,10 +1617,10 @@
 
     invoke-static {p1, p2, v0}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->setFaceStayOnLockScreen(Landroid/content/Context;ZI)V
 
-    .line 367
+    .line 390
     iput-boolean p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mIsStayOnLockScreenEnabled:Z
 
-    .line 368
+    .line 391
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mSwitchBar:Lcom/android/settings/widget/SettingsMainSwitchBar;
 
     invoke-direct {p0, p2}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->getSwitchDescription(Z)Ljava/lang/StringBuilder;
@@ -1674,10 +1629,10 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 370
+    .line 393
     invoke-direct {p0, p2}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setLottieAnimationView(Z)V
 
-    .line 372
+    .line 395
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1702,5 +1657,107 @@
 
     invoke-static/range {v1 .. v6}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->insertSaLog(Landroid/content/Context;IILjava/lang/String;J)V
 
+    return-void
+.end method
+
+.method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    .locals 2
+
+    .line 300
+    invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+
+    const-string p2, "FcstFaceStayOnLockScreen"
+
+    const-string v0, "onViewCreated"
+
+    .line 301
+    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 303
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNeedFaceUseFulFeature:Z
+
+    if-eqz v1, :cond_0
+
+    sget v1, Lcom/android/settings/R$string;->sec_face_stay_on_lock_screen_button_next_text:I
+
+    goto :goto_0
+
+    :cond_0
+    sget v1, Lcom/android/settings/R$string;->sec_face_stay_on_lock_screen_button_done_text:I
+
+    :goto_0
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 305
+    sget v1, Lcom/android/settings/R$id;->nextButtonContainer:I
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/LinearLayout;
+
+    iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButtonContainer:Landroid/widget/LinearLayout;
+
+    .line 306
+    iget-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mFromSettingsPreference:Z
+
+    if-eqz v1, :cond_1
+
+    const/16 v1, 0x8
+
+    .line 307
+    invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    goto :goto_1
+
+    .line 309
+    :cond_1
+    invoke-direct {p0}, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->setNextButtonGUI()V
+
+    .line 312
+    :goto_1
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mNextButton:Landroid/widget/Button;
+
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 314
+    iget-boolean p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment;->mFromSettingsPreference:Z
+
+    if-nez p1, :cond_2
+
+    const-string p1, "onViewCreated : Remove action bar button"
+
+    .line 315
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 316
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/appcompat/app/AppCompatActivity;
+
+    .line 317
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getSupportActionBar()Landroidx/appcompat/app/ActionBar;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    .line 318
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+
+    :cond_2
     return-void
 .end method

@@ -10,7 +10,7 @@
 
 .field private deviceId:Ljava/lang/String;
 
-.field private enableAutoDeviceId:Z
+.field public enableAutoDeviceId:Z
 
 .field private enableFastReady:Z
 

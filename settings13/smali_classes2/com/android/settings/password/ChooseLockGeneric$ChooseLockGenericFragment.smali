@@ -2941,7 +2941,7 @@
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1286
-    sget p1, Lcom/android/settings/R$string;->sec_face_error_message_sensor_error:I
+    invoke-static {p3}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->getFaceSensorErrorMessage(Landroid/content/Context;)Ljava/lang/String;
 
     const/4 p2, 0x1
 
@@ -5002,7 +5002,6 @@
     const-string/jumbo p1, "unlockMethodToSet"
 
     .line 1570
-    invoke-virtual {p3, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

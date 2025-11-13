@@ -4,6 +4,14 @@
 
 
 # direct methods
+.method public static isSupportMultiPane(Landroid/app/Activity;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method private static convertSubDisplaySaLogId(I)Ljava/lang/String;
     .locals 1
 

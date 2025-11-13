@@ -1,6 +1,5 @@
 .class public final synthetic Lcom/samsung/android/settings/biometrics/face/FaceStayOnLockScreen$FaceStayOnLockScreenFragment$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;

@@ -1,6 +1,5 @@
 .class public final synthetic Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature$$ExternalSyntheticLambda4;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
 
 # interfaces
 .implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
@@ -28,7 +27,7 @@
 
     iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature$$ExternalSyntheticLambda4;->f$0:Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;
 
-    invoke-static {p0, p1, p2}, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->$r8$lambda$fTZGOczFyqeBYQs0KR6OIRsAd-s(Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;Landroid/widget/CompoundButton;Z)V
+    invoke-static {p0, p1, p2}, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->$r8$lambda$bGjvhKfIGMf98rEryHR_DCppi80(Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;Landroid/widget/CompoundButton;Z)V
 
     return-void
 .end method

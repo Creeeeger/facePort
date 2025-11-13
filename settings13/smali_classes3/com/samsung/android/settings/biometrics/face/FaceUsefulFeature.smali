@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 45
+    .line 47
     invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
 
     return-void
@@ -26,7 +26,7 @@
 .method public getIntent()Landroid/content/Intent;
     .locals 2
 
-    .line 50
+    .line 52
     new-instance v0, Landroid/content/Intent;
 
     invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
@@ -35,7 +35,7 @@
 
     invoke-direct {v0, p0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 51
+    .line 53
     const-class p0, Lcom/samsung/android/settings/biometrics/face/FaceUsefulFeature$FaceUsefulFeatureFragment;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -46,13 +46,20 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    const-string p0, "extra_show_multi_pane_layout"
+
+    const/4 v1, 0x0
+
+    .line 54
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     return-object v0
 .end method
 
 .method protected isValidFragment(Ljava/lang/String;)Z
     .locals 0
 
-    .line 68
+    .line 71
     const-class p0, Lcom/samsung/android/settings/biometrics/face/FaceUsefulFeature$FaceUsefulFeatureFragment;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -73,15 +80,15 @@
 
     const-string v1, "onBackPressed"
 
-    .line 73
+    .line 76
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 74
-    invoke-static {v0}, Lcom/samsung/android/settings/biometrics/face/FaceUsefulFeature$FaceUsefulFeatureFragment;->-$$Nest$smsetFinishValue(Z)V
+    .line 77
+    invoke-static {v0}, Lcom/samsung/android/settings/biometrics/face/FaceUsefulFeature$FaceUsefulFeatureFragment;->access$000(Z)V
 
-    .line 75
+    .line 78
     invoke-super {p0}, Lcom/samsung/android/settings/core/SecSettingsBaseActivity;->onBackPressed()V
 
     return-void
@@ -90,12 +97,12 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 57
+    .line 60
     invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     const/16 p0, 0x20e8
 
-    .line 58
+    .line 61
     invoke-static {p0}, Lcom/samsung/android/settings/logging/LoggingHelper;->insertFlowLogging(I)V
 
     return-void
@@ -104,8 +111,8 @@
 .method protected onDestroy()V
     .locals 0
 
-    .line 63
-    invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onDestroy()V
+    .line 66
+    invoke-super {p0}, Lcom/samsung/android/settings/core/SecMultiPaneActivity;->onDestroy()V
 
     return-void
 .end method
