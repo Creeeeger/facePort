@@ -120,6 +120,8 @@
 
 .field static final blacklist TRANSACTION_semGetIconBottomMargin:I = 0x43
 
+.field static final blacklist TRANSACTION_semGetInDisplaySensorInfo:I = 0x56
+
 .field static final blacklist TRANSACTION_semGetMaxEnrollmentNumber:I = 0x2d
 
 .field static final blacklist TRANSACTION_semGetRemainingLockoutTime:I = 0x51
@@ -388,6 +390,11 @@
 
     :pswitch_12
     const-string v0, "semGetIconBottomMargin"
+
+    return-object v0
+
+    :pswitch_55
+    const-string v0, "semGetInDisplaySensorInfo"
 
     return-object v0
 
@@ -808,6 +815,7 @@
         :pswitch_2
         :pswitch_1
         :pswitch_0
+        :pswitch_55
     .end packed-switch
 .end method
 
@@ -1147,7 +1155,7 @@
 .method public blacklist getMaxTransactionId()I
     .locals 1
 
-    const/16 v0, 0x54
+    const/16 v0, 0x56
 
     return v0
 .end method
@@ -1869,6 +1877,39 @@
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
     invoke-virtual {v14, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v12, 0x1
+
+    goto/16 :goto_3
+
+    :pswitch_55
+    .catch Ljava/lang/AbstractMethodError; {:try_start_sem_info .. :try_end_sem_info} :catch_sem_info
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    :try_start_sem_info
+    invoke-virtual {v11, v0}, Landroid/hardware/fingerprint/IFingerprintService$Stub;->semGetInDisplaySensorInfo(Landroid/os/Bundle;)V
+    :try_end_sem_info
+    goto :goto_after_sem_info
+
+    :catch_sem_info
+    move-exception v2
+
+    const-string v3, "IFingerprintService"
+
+    const-string v4, "semGetInDisplaySensorInfo not implemented by service"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_after_sem_info
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v14, v0, v1}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
 
     const/4 v12, 0x1
 
@@ -3610,6 +3651,7 @@
         :pswitch_2
         :pswitch_1
         :pswitch_0
+        :pswitch_55
     .end packed-switch
 .end method
 

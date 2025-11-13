@@ -1,0 +1,22 @@
+?audio/qcelp ?qcp
+?audio/eac3 ?ec3
+?audio/x-ape ?ape
+?audio/x-dsf ?dsf
+?audio/x-dff ?dff
+?audio/dsd ?dsd
+?audio/evrc ?evc
+?video/mp2ts ?tp ?trp
+?audio/mp3 ?mp3
+?audio/mpeg3 ?mp3
+?application/vnd.oma.drm.content ?dm ?dcf
+?audio/midi ?midi ?mid
+?application/memo ?memo
+?application/scc ?scc
+?application/sdoc ?sdoc ?sdocx
+?application/snb ?snb
+?application/vnd.samsung.android.memo ?memo
+?application/vnd.samsung.scc ?scc
+?application/vnd.samsung.scc.pinall ?scc
+?application/vnd.samsung.scc.storyalbum ?scc ?sff
+?application/sstudiom ?sstudiom
+?application/vnd.samsung.routines ?rtn

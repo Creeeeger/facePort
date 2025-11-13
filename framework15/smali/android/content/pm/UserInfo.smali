@@ -49,9 +49,13 @@
 
 .field public static final greylist-max-o FLAG_ADMIN:I = 0x2
 
+.field public static final blacklist FLAG_BBC_CONTAINER:I = 0x4000000
+
 .field public static final blacklist FLAG_BMODE:I = 0x8000000
 
 .field public static final blacklist FLAG_BMODE_LEGACY:I = 0x10000
+
+.field public static final blacklist FLAG_CL_CONTAINER:I = 0x400000
 
 .field public static final greylist-max-o FLAG_DEMO:I = 0x200
     .annotation runtime Ljava/lang/Deprecated;
@@ -72,11 +76,18 @@
 
 .field public static final blacklist FLAG_EPHEMERAL_ON_CREATE:I = 0x2000
 
+
 .field public static final blacklist FLAG_FIRST_CONTAINER:I = 0x100000
 
 .field public static final blacklist FLAG_FOR_TESTING:I = 0x8000
 
 .field public static final blacklist FLAG_FULL:I = 0x400
+
+.field public static final blacklist FLAG_KIOSK_MODE:I = 0x8000000
+
+.field public static final blacklist FLAG_LIGHT_WEIGHT_CONTAINER:I = 0x1000000
+
+.field public static final blacklist FLAG_MY_KNOX:I = 0x2000000
 
 .field public static final greylist-max-o FLAG_GUEST:I = 0x4
     .annotation runtime Ljava/lang/Deprecated;
@@ -91,6 +102,7 @@
 
 .field public static final blacklist FLAG_MAIN:I = 0x4000
 
+
 .field public static final blacklist FLAG_MAINTENANCE_MODE:I = 0x80000
 
 .field public static final greylist-max-o FLAG_MANAGED_PROFILE:I = 0x20
@@ -103,7 +115,10 @@
     .end annotation
 .end field
 
+
 .field public static final blacklist FLAG_PROFILE:I = 0x1000
+
+.field public static final blacklist FLAG_SECOND_CONTAINER:I = 0x200000
 
 .field public static final greylist-max-o FLAG_QUIET_MODE:I = 0x80
 
@@ -114,17 +129,30 @@
 
 .field public static final blacklist FLAG_SDP_NOT_SUPPORTED_SECURE_FOLDER:I = 0x40000
 
+
 .field public static final blacklist FLAG_SECURE_FOLDER:I = 0x20000
+
+.field public static final blacklist FLAG_THIRD_CONTAINER:I = 0x800000
 
 .field public static final blacklist FLAG_SYSTEM:I = 0x800
 
 .field public static final blacklist FLAG_VIRTUAL_USER:I = -0x80000000
 
+.field public static final blacklist MAINTENANCE_MODE_USER_ID:I = 0x4d
+
 .field public static final greylist-max-o NO_PROFILE_GROUP_ID:I = -0x2710
+
+.field public static final blacklist REPAIR_MODE_USER_ID:I = 0x4d
+
+.field public static final blacklist VOLT_LEGACY_RESET_CREDENTIAL_REQUESTED:I = 0x1
+
+.field public static final blacklist VOLT_NONE:I
 
 
 # instance fields
 .field private blacklist attributes:I
+
+.field private blacklist volatiles:I
 
 .field public blacklist convertedFromPreCreated:Z
 
@@ -239,6 +267,8 @@
 
     iput v0, p0, Landroid/content/pm/UserInfo;->attributes:I
 
+    iput v0, p0, Landroid/content/pm/UserInfo;->volatiles:I
+
     return-void
 .end method
 
@@ -314,6 +344,10 @@
     iget v0, p1, Landroid/content/pm/UserInfo;->attributes:I
 
     iput v0, p0, Landroid/content/pm/UserInfo;->attributes:I
+
+    iget v0, p1, Landroid/content/pm/UserInfo;->volatiles:I
+
+    iput v0, p0, Landroid/content/pm/UserInfo;->volatiles:I
 
     return-void
 .end method
@@ -418,6 +452,12 @@
     move-result v0
 
     iput v0, p0, Landroid/content/pm/UserInfo;->attributes:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Landroid/content/pm/UserInfo;->volatiles:I
 
     return-void
 .end method
@@ -597,6 +637,28 @@
     .end sparse-switch
 .end method
 
+.method public static greylist-max-o isSystemOnly(I)Z
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    invoke-static {}, Landroid/os/UserManager;->isSplitSystemUser()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 
 # virtual methods
 .method public greylist-max-o canHaveProfile()Z
@@ -648,6 +710,14 @@
     .locals 1
 
     iget v0, p0, Landroid/content/pm/UserInfo;->attributes:I
+
+    return v0
+.end method
+
+.method public blacklist getVolatiles()I
+    .locals 1
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->volatiles:I
 
     return v0
 .end method
@@ -737,6 +807,28 @@
     const/4 v0, 0x1
 
     :goto_1
+    return v0
+.end method
+
+.method public blacklist isCLContainer()Z
+    .locals 2
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x400000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
@@ -992,6 +1084,34 @@
     return v0
 .end method
 
+.method public blacklist isKioskModeEnabled()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public blacklist isLegacyResetCredentialRequested()Z
+    .locals 2
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->volatiles:I
+
+    const/4 v1, 0x1
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
+.end method
+
 .method public blacklist isKnoxWorkspace()Z
     .locals 1
 
@@ -1010,6 +1130,28 @@
     and-int/lit8 v0, v0, 0x10
 
     if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public blacklist isLightWeightContainer()Z
+    .locals 2
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x1000000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
@@ -1044,6 +1186,34 @@
     return v0
 .end method
 
+.method public blacklist isMaintenanceMode()Z
+    .locals 2
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x80000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->id:I
+
+    const/16 v1, 0x4d
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public greylist isManagedProfile()Z
     .locals 1
 
@@ -1053,6 +1223,28 @@
 
     move-result v0
 
+    return v0
+.end method
+
+.method public blacklist isMyKnox()Z
+    .locals 2
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x2000000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
@@ -1188,12 +1380,56 @@
     return v0
 .end method
 
+.method public blacklist isSecondContainer()Z
+    .locals 2
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x200000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public blacklist isSecureFolder()Z
     .locals 2
 
     iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
 
     const/high16 v1, 0x20000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public blacklist isThirdContainer()Z
+    .locals 2
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x800000
 
     and-int/2addr v0, v1
 
@@ -1255,6 +1491,18 @@
     return v1
 .end method
 
+.method public greylist-max-o isSystemOnly()Z
+    .locals 1
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->id:I
+
+    invoke-static {v0}, Landroid/content/pm/UserInfo;->isSystemOnly(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public blacklist isUserTypeAppSeparation()Z
     .locals 2
 
@@ -1300,7 +1548,7 @@
 .end method
 
 .method public blacklist needSetupCredential()Z
-    .locals 2
+    .locals 3
 
     iget v0, p0, Landroid/content/pm/UserInfo;->attributes:I
 
@@ -1308,23 +1556,38 @@
 
     and-int/2addr v0, v1
 
-    if-ne v0, v1, :cond_0
+    const/4 v2, 0x1
 
-    const/4 v0, 0x1
+    if-eq v0, v1, :cond_1
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->volatiles:I
+
+    and-int/2addr v0, v2
+
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
+    :cond_1
     :goto_0
-    return v0
+    return v2
 .end method
 
 .method public blacklist setAttributes(I)V
     .locals 0
 
     iput p1, p0, Landroid/content/pm/UserInfo;->attributes:I
+
+    return-void
+.end method
+
+.method public blacklist setVolatiles(I)V
+    .locals 0
+
+    iput p1, p0, Landroid/content/pm/UserInfo;->volatiles:I
 
     return-void
 .end method
@@ -1628,6 +1891,10 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     iget v0, p0, Landroid/content/pm/UserInfo;->attributes:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Landroid/content/pm/UserInfo;->volatiles:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

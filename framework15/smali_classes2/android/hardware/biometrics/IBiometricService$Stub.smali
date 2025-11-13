@@ -60,6 +60,7 @@
 
 .field static final blacklist TRANSACTION_semGetPromptInfo:I = 0x12
 
+.field static final blacklist TRANSACTION_semGetPromptInfo:I = 0x10
 
 # instance fields
 .field private final blacklist mEnforcer:Landroid/os/PermissionEnforcer;

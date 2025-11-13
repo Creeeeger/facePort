@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Landroid/hardware/biometrics/BiometricAuthenticator;
-.implements Landroid/hardware/biometrics/BiometricFaceConstants;
 
 
 # annotations

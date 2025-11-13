@@ -415,6 +415,14 @@
     .end annotation
 .end method
 
+.method public abstract blacklist semGetInDisplaySensorInfo(Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract blacklist semGetMaxEnrollmentNumber()I
     .annotation system Ldalvik/annotation/Throws;
         value = {

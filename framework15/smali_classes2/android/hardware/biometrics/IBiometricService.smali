@@ -159,6 +159,30 @@
     .end annotation
 .end method
 
+.method public abstract blacklist semAddFailedAttempt(II)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public blacklist semGetFailedAttempts(I)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .locals 1
+    .param p1, "userId"    # I
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+
 .method public abstract blacklist resetLockoutTimeBound(Landroid/os/IBinder;Ljava/lang/String;II[B)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -168,6 +192,14 @@
 .end method
 
 .method public abstract blacklist semGetPromptInfo(I)Landroid/hardware/biometrics/PromptInfo;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist semResetFailedAttempts(II)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

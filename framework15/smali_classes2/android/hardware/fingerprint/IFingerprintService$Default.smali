@@ -618,6 +618,18 @@
     return v0
 .end method
 
+.method public blacklist semGetInDisplaySensorInfo(Landroid/os/Bundle;)V
+    .locals 0
+    .param p1, "bundle"    # Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
 .method public blacklist semGetMaxEnrollmentNumber()I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;

@@ -1971,6 +1971,28 @@
     return-void
 .end method
 
+.method public blacklist enroll([BLandroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;I)V
+    .locals 7
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-object v4, p4
+
+    move v5, p5
+
+    const/4 v6, 0x0
+
+    invoke-virtual/range {v0 .. v6}, Landroid/hardware/fingerprint/FingerprintManager;->enroll([BLandroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;ILandroid/hardware/fingerprint/FingerprintEnrollOptions;)V
+
+    return-void
+.end method
+
 .method public blacklist enroll([BLandroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager$EnrollmentCallback;ILandroid/hardware/fingerprint/FingerprintEnrollOptions;)V
     .locals 15
 
@@ -2063,6 +2085,21 @@
 
     move/from16 v10, p5
 
+    move-object/from16 v11, p6
+
+    if-nez v11, :cond_7
+
+    new-instance v11, Landroid/hardware/fingerprint/FingerprintEnrollOptions$Builder;
+
+    invoke-direct {v11}, Landroid/hardware/fingerprint/FingerprintEnrollOptions$Builder;-><init>()V
+
+    invoke-virtual {v11}, Landroid/hardware/fingerprint/FingerprintEnrollOptions$Builder;->build()Landroid/hardware/fingerprint/FingerprintEnrollOptions;
+
+    move-result-object v11
+
+    move-object/from16 p6, v11
+
+    :cond_7
     move-object/from16 v11, p6
 
     invoke-interface/range {v4 .. v11}, Landroid/hardware/fingerprint/IFingerprintService;->enroll(Landroid/os/IBinder;[BILandroid/hardware/fingerprint/IFingerprintServiceReceiver;Ljava/lang/String;ILandroid/hardware/fingerprint/FingerprintEnrollOptions;)J

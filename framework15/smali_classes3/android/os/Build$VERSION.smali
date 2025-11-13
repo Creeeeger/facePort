@@ -76,6 +76,8 @@
 
 .field public static final whitelist SEM_FIRST_SDK_INT:I
 
+.field public static final blacklist FIRST_SDK_INT:I
+
 .field public static final whitelist SEM_INT:I
 
 .field public static final whitelist SEM_PLATFORM_INT:I
@@ -192,6 +194,8 @@
     sget v0, Landroid/os/Build$VERSION;->DEVICE_INITIAL_SDK_INT:I
 
     sput v0, Landroid/os/Build$VERSION;->SEM_FIRST_SDK_INT:I
+
+    sput v0, Landroid/os/Build$VERSION;->FIRST_SDK_INT:I
 
     const-string/jumbo v0, "ro.build.version.preview_sdk"
 
