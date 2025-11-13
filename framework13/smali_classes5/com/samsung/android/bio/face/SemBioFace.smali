@@ -118,9 +118,12 @@
     return-void
 .end method
 
-.method synthetic constructor blacklist <init>(Landroid/os/Parcel;Lcom/samsung/android/bio/face/SemBioFace-IA;)V
+.method synthetic constructor blacklist <init>(Landroid/os/Parcel;Lcom/samsung/android/bio/face/SemBioFace$1;)V
     .locals 0
+    .param p1, "x0"    # Landroid/os/Parcel;
+    .param p2, "x1"    # Lcom/samsung/android/bio/face/SemBioFace$1;
 
+    .line 26
     invoke-direct {p0, p1}, Lcom/samsung/android/bio/face/SemBioFace;-><init>(Landroid/os/Parcel;)V
 
     return-void

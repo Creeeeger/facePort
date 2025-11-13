@@ -30,16 +30,16 @@
     .param p1, "crypto"    # Lcom/samsung/android/bio/face/SemBioFaceManager$CryptoObject;
     .param p2, "face"    # Lcom/samsung/android/bio/face/SemBioFace;
 
-    .line 513
+    .line 601
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 514
+    .line 602
     iput-object p1, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mCryptoObject:Lcom/samsung/android/bio/face/SemBioFaceManager$CryptoObject;
 
-    .line 515
+    .line 603
     iput-object p2, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mFace:Lcom/samsung/android/bio/face/SemBioFace;
 
-    .line 516
+    .line 604
     return-void
 .end method
 
@@ -50,22 +50,22 @@
     .param p3, "userId"    # I
     .param p4, "isStrongBiometric"    # Z
 
-    .line 499
+    .line 587
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 500
+    .line 588
     iput-object p1, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mCryptoObject:Lcom/samsung/android/bio/face/SemBioFaceManager$CryptoObject;
 
-    .line 501
+    .line 589
     iput-object p2, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mFace:Lcom/samsung/android/bio/face/SemBioFace;
 
-    .line 502
+    .line 590
     iput p3, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mUserId:I
 
-    .line 503
+    .line 591
     iput-boolean p4, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mIsStrongBiometric:Z
 
-    .line 504
+    .line 592
     return-void
 .end method
 
@@ -74,7 +74,7 @@
 .method public whitelist getCryptoObject()Lcom/samsung/android/bio/face/SemBioFaceManager$CryptoObject;
     .locals 1
 
-    .line 526
+    .line 613
     iget-object v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mCryptoObject:Lcom/samsung/android/bio/face/SemBioFaceManager$CryptoObject;
 
     return-object v0
@@ -83,7 +83,7 @@
 .method public blacklist getFace()Lcom/samsung/android/bio/face/SemBioFace;
     .locals 1
 
-    .line 535
+    .line 622
     iget-object v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mFace:Lcom/samsung/android/bio/face/SemBioFace;
 
     return-object v0
@@ -92,7 +92,7 @@
 .method public blacklist getUserId()I
     .locals 1
 
-    .line 543
+    .line 630
     iget v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mUserId:I
 
     return v0
@@ -101,14 +101,14 @@
 .method public blacklist isStrongBiometric()Z
     .locals 2
 
-    .line 551
-    invoke-static {}, Lcom/samsung/android/bio/face/SemBioFaceManager;->-$$Nest$sfgetDEBUG()Z
+    .line 638
+    invoke-static {}, Lcom/samsung/android/bio/face/SemBioFaceManager;->access$700()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 552
+    .line 639
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -117,13 +117,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
-
     iget-boolean v1, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mIsStrongBiometric:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -133,7 +129,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
+    .line 641
     :cond_0
     iget-boolean v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;->mIsStrongBiometric:Z
 

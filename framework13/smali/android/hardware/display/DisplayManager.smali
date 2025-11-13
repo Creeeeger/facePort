@@ -1046,6 +1046,18 @@
     return-void
 .end method
 
+.method public blacklist convertToBacklight(F)I
+    .locals 1
+    .param p1, "nits"    # F
+
+    .line 2979
+    invoke-virtual {p0, p1}, Landroid/hardware/display/DisplayManager;->convertToBrightness(F)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public blacklist convertToBrightness(F)I
     .locals 1
     .param p1, "nits"    # F

@@ -149,6 +149,15 @@
     return-object v1
 .end method
 
+.method public static blacklist getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+    .locals 1
+
+    .line 1606
+    sget-object v0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->sDefaultImpl:Lcom/samsung/android/bio/face/IFaceService;
+
+    return-object v0
+.end method
+
 .method public static blacklist getDefaultTransactionName(I)Ljava/lang/String;
     .locals 1
     .param p0, "transactionCode"    # I
@@ -187,7 +196,7 @@
 
     .line 305
     :pswitch_4
-    const-string/jumbo v0, "prepareForAuthentication"
+    const-string v0, "prepareForAuthentication"
 
     return-object v0
 
@@ -211,19 +220,19 @@
 
     .line 289
     :pswitch_8
-    const-string/jumbo v0, "requestEnrollResume"
+    const-string v0, "requestEnrollResume"
 
     return-object v0
 
     .line 285
     :pswitch_9
-    const-string/jumbo v0, "requestEnrollPause"
+    const-string v0, "requestEnrollPause"
 
     return-object v0
 
     .line 281
     :pswitch_a
-    const-string/jumbo v0, "resetAuthenticationTimeout"
+    const-string v0, "resetAuthenticationTimeout"
 
     return-object v0
 
@@ -247,25 +256,25 @@
 
     .line 265
     :pswitch_e
-    const-string/jumbo v0, "requestSessionClose"
+    const-string v0, "requestSessionClose"
 
     return-object v0
 
     .line 261
     :pswitch_f
-    const-string/jumbo v0, "requestSessionOpen"
+    const-string v0, "requestSessionOpen"
 
     return-object v0
 
     .line 257
     :pswitch_10
-    const-string/jumbo v0, "setActiveUser"
+    const-string v0, "setActiveUser"
 
     return-object v0
 
     .line 253
     :pswitch_11
-    const-string/jumbo v0, "resetTimeout"
+    const-string v0, "resetTimeout"
 
     return-object v0
 
@@ -295,13 +304,13 @@
 
     .line 233
     :pswitch_16
-    const-string/jumbo v0, "postEnroll"
+    const-string v0, "postEnroll"
 
     return-object v0
 
     .line 229
     :pswitch_17
-    const-string/jumbo v0, "preEnroll"
+    const-string v0, "preEnroll"
 
     return-object v0
 
@@ -319,13 +328,13 @@
 
     .line 217
     :pswitch_1a
-    const-string/jumbo v0, "rename"
+    const-string v0, "rename"
 
     return-object v0
 
     .line 213
     :pswitch_1b
-    const-string/jumbo v0, "remove"
+    const-string v0, "remove"
 
     return-object v0
 
@@ -392,6 +401,43 @@
     .end packed-switch
 .end method
 
+.method public static blacklist setDefaultImpl(Lcom/samsung/android/bio/face/IFaceService;)Z
+    .locals 2
+    .param p0, "impl"    # Lcom/samsung/android/bio/face/IFaceService;
+
+    .line 1596
+    sget-object v0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->sDefaultImpl:Lcom/samsung/android/bio/face/IFaceService;
+
+    if-nez v0, :cond_1
+
+    .line 1599
+    if-eqz p0, :cond_0
+
+    .line 1600
+    sput-object p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->sDefaultImpl:Lcom/samsung/android/bio/face/IFaceService;
+
+    .line 1601
+    const/4 v0, 0x1
+
+    return v0
+
+    .line 1603
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 1597
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "setDefaultImpl() called twice"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
 
 # virtual methods
 .method public whitelist asBinder()Landroid/os/IBinder;
@@ -399,15 +445,6 @@
 
     .line 188
     return-object p0
-.end method
-
-.method public blacklist getMaxTransactionId()I
-    .locals 1
-
-    .line 1381
-    const/16 v0, 0x1f
-
-    return v0
 .end method
 
 .method public blacklist getTransactionName(I)Ljava/lang/String;
@@ -437,323 +474,327 @@
     .line 336
     move-object/from16 v15, p0
 
-    move/from16 v14, p1
+    move-object/from16 v14, p2
 
-    move-object/from16 v13, p2
+    move-object/from16 v13, p3
 
-    move-object/from16 v12, p3
-
-    const-string v11, "com.samsung.android.bio.face.IFaceService"
+    const-string v12, "com.samsung.android.bio.face.IFaceService"
 
     .line 337
-    .local v11, "descriptor":Ljava/lang/String;
-    const/4 v10, 0x1
+    .local v12, "descriptor":Ljava/lang/String;
+    const/16 v16, 0x1
 
-    if-lt v14, v10, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    const v0, 0xffffff
+    .line 345
+    const/4 v0, 0x0
 
-    if-gt v14, v0, :cond_0
+    packed-switch p1, :pswitch_data_1
 
-    .line 338
-    invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 340
-    :cond_0
-    packed-switch v14, :pswitch_data_0
-
-    .line 348
-    packed-switch v14, :pswitch_data_1
-
-    .line 726
+    .line 746
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
 
     return v0
 
-    .line 344
+    .line 341
     :pswitch_0
-    invoke-virtual {v12, v11}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {v13, v12}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 345
-    return v10
+    .line 342
+    return v16
 
-    .line 717
+    .line 736
     :pswitch_1
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 738
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 718
+    .line 739
     .local v0, "_arg0":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 719
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getRemainingLockoutTime(I)I
 
     move-result v1
 
-    .line 720
+    .line 740
     .local v1, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 721
-    invoke-virtual {v12, v1}, Landroid/os/Parcel;->writeInt(I)V
+    .line 741
+    invoke-virtual {v13, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 722
-    move/from16 v28, v10
+    .line 742
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 707
+    .line 726
     .end local v0    # "_arg0":I
     .end local v1    # "_result":I
     :pswitch_2
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 728
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 708
+    .line 729
     .restart local v0    # "_arg0":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 709
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getLockoutModeForUser(I)I
 
     move-result v1
 
-    .line 710
+    .line 730
     .restart local v1    # "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 711
-    invoke-virtual {v12, v1}, Landroid/os/Parcel;->writeInt(I)V
+    .line 731
+    invoke-virtual {v13, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 712
-    move/from16 v28, v10
+    .line 732
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 694
+    .line 713
     .end local v0    # "_arg0":I
     .end local v1    # "_result":I
     :pswitch_3
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 715
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    .line 696
-    .local v0, "_arg0":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 698
-    .local v1, "_arg1":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+    .line 717
+    .local v1, "_arg0":Landroid/os/IBinder;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result v2
+    move-result-object v2
 
-    .line 699
-    .local v2, "_arg2":Z
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+    .line 719
+    .local v2, "_arg1":Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    .line 700
-    invoke-virtual {v15, v0, v1, v2}, Lcom/samsung/android/bio/face/IFaceService$Stub;->cancelAuthenticationFromService(Landroid/os/IBinder;Ljava/lang/String;Z)V
+    move-result v3
 
-    .line 701
+    if-eqz v3, :cond_0
+
+    move/from16 v0, v16
+
+    .line 720
+    .local v0, "_arg2":Z
+    :cond_0
+    invoke-virtual {v15, v1, v2, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->cancelAuthenticationFromService(Landroid/os/IBinder;Ljava/lang/String;Z)V
+
+    .line 721
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 702
-    move/from16 v28, v10
+    .line 722
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 685
-    .end local v0    # "_arg0":Landroid/os/IBinder;
-    .end local v1    # "_arg1":Ljava/lang/String;
-    .end local v2    # "_arg2":Z
+    .line 704
+    .end local v0    # "_arg2":Z
+    .end local v1    # "_arg0":Landroid/os/IBinder;
+    .end local v2    # "_arg1":Ljava/lang/String;
     :pswitch_4
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 706
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 686
+    .line 707
     .local v0, "_arg0":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 687
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->startPreparedClient(I)V
 
-    .line 688
+    .line 708
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 689
-    move/from16 v28, v10
+    .line 709
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 662
+    .line 676
     .end local v0    # "_arg0":I
     :pswitch_5
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    move-result v16
-
-    .line 664
-    .local v16, "_arg0":Z
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v17
-
-    .line 666
-    .local v17, "_arg1":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v18
-
-    .line 668
-    .local v18, "_arg2":J
+    .line 678
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v20
+    move-result v1
 
-    .line 670
-    .local v20, "_arg3":I
+    if-eqz v1, :cond_1
+
+    move/from16 v1, v16
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v0
+
+    .line 680
+    .local v1, "_arg0":Z
+    :goto_0
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v10
+
+    .line 682
+    .local v10, "_arg1":Landroid/os/IBinder;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v17
+
+    .line 684
+    .local v17, "_arg2":J
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v11
+
+    .line 686
+    .local v11, "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/hardware/biometrics/IBiometricSensorReceiver$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/biometrics/IBiometricSensorReceiver;
 
-    move-result-object v21
+    move-result-object v19
 
-    .line 672
-    .local v21, "_arg4":Landroid/hardware/biometrics/IBiometricSensorReceiver;
+    .line 688
+    .local v19, "_arg4":Landroid/hardware/biometrics/IBiometricSensorReceiver;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v22
+    move-result-object v20
 
-    .line 674
-    .local v22, "_arg5":Ljava/lang/String;
+    .line 690
+    .local v20, "_arg5":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v23
+    move-result v21
 
-    .line 676
-    .local v23, "_arg6":I
-    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-virtual {v13, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object/from16 v24, v0
-
-    check-cast v24, Landroid/os/Bundle;
-
-    .line 677
-    .local v24, "_arg7":Landroid/os/Bundle;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 678
-    move-object/from16 v0, p0
-
-    move/from16 v1, v16
-
-    move-object/from16 v2, v17
-
-    move-wide/from16 v3, v18
-
-    move/from16 v5, v20
-
-    move-object/from16 v6, v21
-
-    move-object/from16 v7, v22
-
-    move/from16 v8, v23
-
-    move-object/from16 v9, v24
-
-    invoke-virtual/range {v0 .. v9}, Lcom/samsung/android/bio/face/IFaceService$Stub;->prepareForAuthentication(ZLandroid/os/IBinder;JILandroid/hardware/biometrics/IBiometricSensorReceiver;Ljava/lang/String;ILandroid/os/Bundle;)V
-
-    .line 679
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 680
-    move/from16 v28, v10
-
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 652
-    .end local v16    # "_arg0":Z
-    .end local v17    # "_arg1":Landroid/os/IBinder;
-    .end local v18    # "_arg2":J
-    .end local v20    # "_arg3":I
-    .end local v21    # "_arg4":Landroid/hardware/biometrics/IBiometricSensorReceiver;
-    .end local v22    # "_arg5":Ljava/lang/String;
-    .end local v23    # "_arg6":I
-    .end local v24    # "_arg7":Landroid/os/Bundle;
-    :pswitch_6
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readBoolean()Z
+    .line 692
+    .local v21, "_arg6":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 653
-    .local v0, "_arg0":Z
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+    if-eqz v0, :cond_2
 
-    .line 654
+    .line 693
+    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, v14}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Bundle;
+
+    move-object/from16 v22, v0
+
+    .local v0, "_arg7":Landroid/os/Bundle;
+    goto :goto_1
+
+    .line 696
+    .end local v0    # "_arg7":Landroid/os/Bundle;
+    :cond_2
+    const/4 v0, 0x0
+
+    move-object/from16 v22, v0
+
+    .line 698
+    .local v22, "_arg7":Landroid/os/Bundle;
+    :goto_1
+    move-object/from16 v0, p0
+
+    move-object v2, v10
+
+    move-wide/from16 v3, v17
+
+    move v5, v11
+
+    move-object/from16 v6, v19
+
+    move-object/from16 v7, v20
+
+    move/from16 v8, v21
+
+    move-object/from16 v9, v22
+
+    invoke-virtual/range {v0 .. v9}, Lcom/samsung/android/bio/face/IFaceService$Stub;->prepareForAuthentication(ZLandroid/os/IBinder;JILandroid/hardware/biometrics/IBiometricSensorReceiver;Ljava/lang/String;ILandroid/os/Bundle;)V
+
+    .line 699
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 700
+    return v16
+
+    .line 666
+    .end local v1    # "_arg0":Z
+    .end local v10    # "_arg1":Landroid/os/IBinder;
+    .end local v11    # "_arg3":I
+    .end local v17    # "_arg2":J
+    .end local v19    # "_arg4":Landroid/hardware/biometrics/IBiometricSensorReceiver;
+    .end local v20    # "_arg5":Ljava/lang/String;
+    .end local v21    # "_arg6":I
+    .end local v22    # "_arg7":Landroid/os/Bundle;
+    :pswitch_6
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 668
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    move/from16 v0, v16
+
+    .line 669
+    .local v0, "_arg0":Z
+    :cond_3
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getSecurityLevel(Z)I
 
     move-result v1
 
-    .line 655
+    .line 670
     .local v1, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 656
-    invoke-virtual {v12, v1}, Landroid/os/Parcel;->writeInt(I)V
+    .line 671
+    invoke-virtual {v13, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 657
-    move/from16 v28, v10
+    .line 672
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 635
+    .line 649
     .end local v0    # "_arg0":Z
     .end local v1    # "_result":I
     :pswitch_7
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 651
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v6
 
-    .line 637
+    .line 653
     .local v6, "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 639
+    .line 655
     .local v7, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 641
+    .line 657
     .local v8, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -763,17 +804,14 @@
 
     move-result-object v9
 
-    .line 643
+    .line 659
     .local v9, "_arg3":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v16
+    move-result-object v10
 
-    .line 644
-    .local v16, "_arg4":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 645
+    .line 660
+    .local v10, "_arg4":Ljava/lang/String;
     move-object/from16 v0, p0
 
     move-object v1, v6
@@ -784,583 +822,526 @@
 
     move-object v4, v9
 
-    move-object/from16 v5, v16
+    move-object v5, v10
 
     invoke-virtual/range {v0 .. v5}, Lcom/samsung/android/bio/face/IFaceService$Stub;->updateTrustApp(Landroid/os/IBinder;Ljava/lang/String;ILcom/samsung/android/bio/face/IFaceServiceReceiver;Ljava/lang/String;)V
 
-    .line 646
+    .line 661
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 647
-    move/from16 v28, v10
+    .line 662
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 627
+    .line 641
     .end local v6    # "_arg0":Landroid/os/IBinder;
     .end local v7    # "_arg1":Ljava/lang/String;
     .end local v8    # "_arg2":I
     .end local v9    # "_arg3":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
-    .end local v16    # "_arg4":Ljava/lang/String;
+    .end local v10    # "_arg4":Ljava/lang/String;
     :pswitch_8
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 642
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getTrustAppVersion()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 628
+    .line 643
     .local v0, "_result":Ljava/lang/String;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 629
-    invoke-virtual {v12, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    .line 644
+    invoke-virtual {v13, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 630
-    move/from16 v28, v10
+    .line 645
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 621
+    .line 634
     .end local v0    # "_result":Ljava/lang/String;
     :pswitch_9
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 635
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->requestEnrollResume()V
 
-    .line 622
+    .line 636
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 623
-    move/from16 v28, v10
+    .line 637
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 615
+    .line 627
     :pswitch_a
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 628
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->requestEnrollPause()V
 
-    .line 616
+    .line 629
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 617
-    move/from16 v28, v10
+    .line 630
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 608
+    .line 619
     :pswitch_b
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 620
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->resetAuthenticationTimeout()Z
 
     move-result v0
 
-    .line 609
+    .line 621
     .local v0, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 610
-    invoke-virtual {v12, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 622
+    invoke-virtual {v13, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 611
-    move/from16 v28, v10
+    .line 623
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 599
+    .line 609
     .end local v0    # "_result":Z
     :pswitch_c
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 611
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 600
+    .line 612
     .local v0, "_arg0":[B
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 601
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->updateSecureID([B)Z
 
     move-result v1
 
-    .line 602
+    .line 613
     .local v1, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 603
-    invoke-virtual {v12, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 614
+    invoke-virtual {v13, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 604
-    move/from16 v28, v10
+    .line 615
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 589
+    .line 599
     .end local v0    # "_arg0":[B
     .end local v1    # "_result":Z
     :pswitch_d
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 601
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 590
+    .line 602
     .restart local v0    # "_arg0":[B
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 591
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->updateSecureUserID([B)Z
 
     move-result v1
 
-    .line 592
+    .line 603
     .restart local v1    # "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 593
-    invoke-virtual {v12, v1}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 604
+    invoke-virtual {v13, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 594
-    move/from16 v28, v10
+    .line 605
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 581
+    .line 591
     .end local v0    # "_arg0":[B
     .end local v1    # "_result":Z
     :pswitch_e
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 592
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->isSessionClosed()Z
 
     move-result v0
 
-    .line 582
+    .line 593
     .local v0, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 583
-    invoke-virtual {v12, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 594
+    invoke-virtual {v13, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 595
+    return v16
 
     .line 584
-    move/from16 v28, v10
-
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 575
     .end local v0    # "_result":Z
     :pswitch_f
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 585
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->requestSessionClose()V
 
-    .line 576
+    .line 586
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 587
+    return v16
 
     .line 577
-    move/from16 v28, v10
-
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 569
     :pswitch_10
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 578
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->requestSessionOpen()V
 
-    .line 570
+    .line 579
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 571
-    move/from16 v28, v10
+    .line 580
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 561
+    .line 568
     :pswitch_11
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 570
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 562
+    .line 571
     .local v0, "_arg0":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 563
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->setActiveUser(I)V
 
-    .line 564
+    .line 572
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 565
-    move/from16 v28, v10
+    .line 573
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 552
+    .line 559
     .end local v0    # "_arg0":I
     :pswitch_12
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 561
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 553
+    .line 562
     .local v0, "_arg0":[B
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 554
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->resetTimeout([B)V
 
-    .line 555
+    .line 563
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 556
-    move/from16 v28, v10
+    .line 564
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 544
+    .line 551
     .end local v0    # "_arg0":[B
     :pswitch_13
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 552
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->isEnrollSession()Z
 
     move-result v0
 
-    .line 545
+    .line 553
     .local v0, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 546
-    invoke-virtual {v12, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 554
+    invoke-virtual {v13, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 547
-    move/from16 v28, v10
+    .line 555
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 535
+    .line 541
     .end local v0    # "_result":Z
     :pswitch_14
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 543
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 536
+    .line 544
     .local v0, "_arg0":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 537
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getAuthenticatorId(Ljava/lang/String;)J
 
     move-result-wide v1
 
-    .line 538
+    .line 545
     .local v1, "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 539
-    invoke-virtual {v12, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
+    .line 546
+    invoke-virtual {v13, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 540
-    move/from16 v28, v10
+    .line 547
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 523
+    .line 529
     .end local v0    # "_arg0":Ljava/lang/String;
     .end local v1    # "_result":J
     :pswitch_15
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 531
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 525
+    .line 533
     .local v0, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 526
+    .line 534
     .local v1, "_arg1":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 527
     invoke-virtual {v15, v0, v1}, Lcom/samsung/android/bio/face/IFaceService$Stub;->hasDisabledFaces(ILjava/lang/String;)Z
 
     move-result v2
 
-    .line 528
+    .line 535
     .local v2, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 529
-    invoke-virtual {v12, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 536
+    invoke-virtual {v13, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 530
-    move/from16 v28, v10
+    .line 537
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 511
+    .line 517
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_result":Z
     :pswitch_16
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 519
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 513
+    .line 521
     .restart local v0    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 514
+    .line 522
     .restart local v1    # "_arg1":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 515
     invoke-virtual {v15, v0, v1}, Lcom/samsung/android/bio/face/IFaceService$Stub;->hasEnrolledFaces(ILjava/lang/String;)Z
 
     move-result v2
 
-    .line 516
+    .line 523
     .restart local v2    # "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 517
-    invoke-virtual {v12, v2}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 524
+    invoke-virtual {v13, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 518
-    move/from16 v28, v10
+    .line 525
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 501
+    .line 507
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_result":Z
     :pswitch_17
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 509
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 502
+    .line 510
     .local v0, "_arg0":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 503
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->postEnroll(Landroid/os/IBinder;)I
 
     move-result v1
 
-    .line 504
+    .line 511
     .local v1, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 505
-    invoke-virtual {v12, v1}, Landroid/os/Parcel;->writeInt(I)V
+    .line 512
+    invoke-virtual {v13, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 506
-    move/from16 v28, v10
+    .line 513
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 491
+    .line 497
     .end local v0    # "_arg0":Landroid/os/IBinder;
     .end local v1    # "_result":I
     :pswitch_18
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 499
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 492
+    .line 500
     .restart local v0    # "_arg0":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 493
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->preEnroll(Landroid/os/IBinder;)J
 
     move-result-wide v1
 
-    .line 494
+    .line 501
     .local v1, "_result":J
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 495
-    invoke-virtual {v12, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
+    .line 502
+    invoke-virtual {v13, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 496
-    move/from16 v28, v10
+    .line 503
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 479
+    .line 485
     .end local v0    # "_arg0":Landroid/os/IBinder;
     .end local v1    # "_result":J
     :pswitch_19
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 487
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 481
+    .line 489
     .local v0, "_arg0":J
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 482
+    .line 490
     .local v2, "_arg1":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 483
     invoke-virtual {v15, v0, v1, v2}, Lcom/samsung/android/bio/face/IFaceService$Stub;->isHardwareDetected(JLjava/lang/String;)Z
 
     move-result v3
 
-    .line 484
+    .line 491
     .local v3, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 485
-    invoke-virtual {v12, v3}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 492
+    invoke-virtual {v13, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 486
-    move/from16 v28, v10
+    .line 493
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 467
+    .line 473
     .end local v0    # "_arg0":J
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_result":Z
     :pswitch_1a
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 475
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 469
+    .line 477
     .local v0, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 470
+    .line 478
     .local v1, "_arg1":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 471
     invoke-virtual {v15, v0, v1}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getEnrolledFaces(ILjava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 472
+    .line 479
     .local v2, "_result":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/bio/face/SemBioFace;>;"
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 473
-    invoke-virtual {v12, v2}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
+    .line 480
+    invoke-virtual {v13, v2}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 474
-    move/from16 v28, v10
+    .line 481
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 454
+    .line 460
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":Ljava/lang/String;
     .end local v2    # "_result":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/bio/face/SemBioFace;>;"
     :pswitch_1b
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 462
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 456
+    .line 464
     .restart local v0    # "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 458
+    .line 466
     .local v1, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 459
+    .line 467
     .local v2, "_arg2":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 460
     invoke-virtual {v15, v0, v1, v2}, Lcom/samsung/android/bio/face/IFaceService$Stub;->rename(IILjava/lang/String;)V
 
-    .line 461
+    .line 468
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 462
-    move/from16 v28, v10
+    .line 469
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 437
+    .line 443
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     .end local v2    # "_arg2":Ljava/lang/String;
     :pswitch_1c
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 445
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v6
 
-    .line 439
+    .line 447
     .restart local v6    # "_arg0":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 441
+    .line 449
     .local v7, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 443
+    .line 451
     .restart local v8    # "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v9
 
-    .line 445
+    .line 453
     .local v9, "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -1368,13 +1349,10 @@
 
     invoke-static {v0}, Lcom/samsung/android/bio/face/IFaceServiceReceiver$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/bio/face/IFaceServiceReceiver;
 
-    move-result-object v16
+    move-result-object v10
 
-    .line 446
-    .local v16, "_arg4":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 447
+    .line 454
+    .local v10, "_arg4":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
     move-object/from16 v0, p0
 
     move-object v1, v6
@@ -1385,280 +1363,93 @@
 
     move v4, v9
 
-    move-object/from16 v5, v16
+    move-object v5, v10
 
     invoke-virtual/range {v0 .. v5}, Lcom/samsung/android/bio/face/IFaceService$Stub;->remove(Landroid/os/IBinder;IIILcom/samsung/android/bio/face/IFaceServiceReceiver;)V
 
-    .line 448
+    .line 455
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 449
-    move/from16 v28, v10
+    .line 456
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 428
+    .line 434
     .end local v6    # "_arg0":Landroid/os/IBinder;
     .end local v7    # "_arg1":I
     .end local v8    # "_arg2":I
     .end local v9    # "_arg3":I
-    .end local v16    # "_arg4":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
+    .end local v10    # "_arg4":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
     :pswitch_1d
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 436
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 429
+    .line 437
     .local v0, "_arg0":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 430
     invoke-virtual {v15, v0}, Lcom/samsung/android/bio/face/IFaceService$Stub;->cancelEnrollment(Landroid/os/IBinder;)V
 
-    .line 431
+    .line 438
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 432
-    move/from16 v28, v10
+    .line 439
+    return v16
 
-    move-object/from16 v29, v11
-
-    goto/16 :goto_0
-
-    .line 397
+    .line 398
     .end local v0    # "_arg0":Landroid/os/IBinder;
     :pswitch_1e
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    move-result-object v16
-
-    .line 399
-    .local v16, "_arg0":Landroid/os/IBinder;
+    .line 400
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v17
 
-    .line 401
-    .restart local v17    # "_arg1":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+    .line 402
+    .local v17, "_arg0":Landroid/os/IBinder;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    move-result v18
+    move-result-object v18
 
-    .line 403
-    .local v18, "_arg2":I
+    .line 404
+    .local v18, "_arg1":Landroid/os/IBinder;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v19
 
-    .line 405
-    .local v19, "_arg3":I
+    .line 406
+    .local v19, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v20
 
-    .line 407
-    .local v20, "_arg4":I
+    .line 408
+    .local v20, "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v21
 
-    .line 409
-    .local v21, "_arg5":I
+    .line 410
+    .local v21, "_arg4":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v22
+
+    .line 412
+    .local v22, "_arg5":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
 
-    move-result-object v22
+    move-result-object v23
 
-    .line 411
-    .local v22, "_arg6":[B
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v23
-
-    .line 413
-    .local v23, "_arg7":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/samsung/android/bio/face/IFaceServiceReceiver$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/bio/face/IFaceServiceReceiver;
-
-    move-result-object v24
-
-    .line 415
-    .local v24, "_arg8":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v25
-
-    .line 417
-    .local v25, "_arg9":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v26
-
-    .line 419
-    .local v26, "_arg10":Ljava/lang/String;
-    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-virtual {v13, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object/from16 v27, v0
-
-    check-cast v27, Landroid/os/Bundle;
-
-    .line 420
-    .local v27, "_arg11":Landroid/os/Bundle;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 421
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v2, v17
-
-    move/from16 v3, v18
-
-    move/from16 v4, v19
-
-    move/from16 v5, v20
-
-    move/from16 v6, v21
-
-    move-object/from16 v7, v22
-
-    move/from16 v8, v23
-
-    move-object/from16 v9, v24
-
-    move/from16 v28, v10
-
-    move/from16 v10, v25
-
-    move-object/from16 v29, v11
-
-    .end local v11    # "descriptor":Ljava/lang/String;
-    .local v29, "descriptor":Ljava/lang/String;
-    move-object/from16 v11, v26
-
-    move-object/from16 v12, v27
-
-    invoke-virtual/range {v0 .. v12}, Lcom/samsung/android/bio/face/IFaceService$Stub;->enroll(Landroid/os/IBinder;Landroid/os/IBinder;IIII[BILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;)V
-
-    .line 422
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 423
-    goto/16 :goto_0
-
-    .line 386
-    .end local v16    # "_arg0":Landroid/os/IBinder;
-    .end local v17    # "_arg1":Landroid/os/IBinder;
-    .end local v18    # "_arg2":I
-    .end local v19    # "_arg3":I
-    .end local v20    # "_arg4":I
-    .end local v21    # "_arg5":I
-    .end local v22    # "_arg6":[B
-    .end local v23    # "_arg7":I
-    .end local v24    # "_arg8":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
-    .end local v25    # "_arg9":I
-    .end local v26    # "_arg10":Ljava/lang/String;
-    .end local v27    # "_arg11":Landroid/os/Bundle;
-    .end local v29    # "descriptor":Ljava/lang/String;
-    .restart local v11    # "descriptor":Ljava/lang/String;
-    :pswitch_1f
-    move/from16 v28, v10
-
-    move-object/from16 v29, v11
-
-    .end local v11    # "descriptor":Ljava/lang/String;
-    .restart local v29    # "descriptor":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    .line 388
-    .restart local v0    # "_arg0":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 389
-    .local v1, "_arg1":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
-
-    .line 390
-    invoke-virtual {v15, v0, v1}, Lcom/samsung/android/bio/face/IFaceService$Stub;->cancelAuthentication(Landroid/os/IBinder;Ljava/lang/String;)V
-
-    .line 391
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 392
-    goto :goto_0
-
-    .line 353
-    .end local v0    # "_arg0":Landroid/os/IBinder;
-    .end local v1    # "_arg1":Ljava/lang/String;
-    .end local v29    # "descriptor":Ljava/lang/String;
-    .restart local v11    # "descriptor":Ljava/lang/String;
-    :pswitch_20
-    move/from16 v28, v10
-
-    move-object/from16 v29, v11
-
-    .end local v11    # "descriptor":Ljava/lang/String;
-    .restart local v29    # "descriptor":Ljava/lang/String;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v16
-
-    .line 355
-    .restart local v16    # "_arg0":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v17
-
-    .line 357
-    .restart local v17    # "_arg1":Landroid/os/IBinder;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v18
-
-    .line 359
-    .restart local v18    # "_arg2":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v19
-
-    .line 361
-    .restart local v19    # "_arg3":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v20
-
-    .line 363
-    .restart local v20    # "_arg4":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v21
-
-    .line 365
-    .restart local v21    # "_arg5":I
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v22
-
-    .line 367
-    .local v22, "_arg6":J
+    .line 414
+    .local v23, "_arg6":[B
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v24
 
-    .line 369
+    .line 416
     .local v24, "_arg7":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -1668,93 +1459,289 @@
 
     move-result-object v25
 
-    .line 371
+    .line 418
     .local v25, "_arg8":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v26
 
-    .line 373
+    .line 420
     .local v26, "_arg9":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v27
 
-    .line 375
+    .line 422
     .local v27, "_arg10":Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 423
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-virtual {v13, v0}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+    invoke-interface {v0, v14}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object/from16 v30, v0
+    check-cast v0, Landroid/os/Bundle;
 
-    check-cast v30, Landroid/os/Bundle;
+    move-object/from16 v28, v0
 
-    .line 377
-    .local v30, "_arg11":Landroid/os/Bundle;
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
+    .local v0, "_arg11":Landroid/os/Bundle;
+    goto :goto_2
 
-    move-result-object v31
+    .line 426
+    .end local v0    # "_arg11":Landroid/os/Bundle;
+    :cond_4
+    const/4 v0, 0x0
 
-    .line 378
-    .local v31, "_arg12":[B
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+    move-object/from16 v28, v0
 
-    .line 379
+    .line 428
+    .local v28, "_arg11":Landroid/os/Bundle;
+    :goto_2
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v16
+    move-object/from16 v1, v17
 
-    move-object/from16 v2, v17
+    move-object/from16 v2, v18
 
-    move/from16 v3, v18
+    move/from16 v3, v19
 
-    move/from16 v4, v19
+    move/from16 v4, v20
 
-    move/from16 v5, v20
+    move/from16 v5, v21
 
-    move/from16 v6, v21
+    move/from16 v6, v22
 
-    move-wide/from16 v7, v22
+    move-object/from16 v7, v23
 
-    move/from16 v9, v24
+    move/from16 v8, v24
 
-    move-object/from16 v10, v25
+    move-object/from16 v9, v25
 
-    move/from16 v11, v26
+    move/from16 v10, v26
 
-    move-object/from16 v12, v27
+    move-object/from16 v11, v27
 
-    move-object/from16 v13, v30
+    move-object v13, v12
 
-    move-object/from16 v14, v31
+    .end local v12    # "descriptor":Ljava/lang/String;
+    .local v13, "descriptor":Ljava/lang/String;
+    move-object/from16 v12, v28
 
-    invoke-virtual/range {v0 .. v14}, Lcom/samsung/android/bio/face/IFaceService$Stub;->authenticate(Landroid/os/IBinder;Landroid/os/IBinder;IIIIJILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;[B)V
+    invoke-virtual/range {v0 .. v12}, Lcom/samsung/android/bio/face/IFaceService$Stub;->enroll(Landroid/os/IBinder;Landroid/os/IBinder;IIII[BILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 380
+    .line 429
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 381
-    nop
+    .line 430
+    return v16
 
-    .line 729
-    .end local v16    # "_arg0":Landroid/os/IBinder;
-    .end local v17    # "_arg1":Landroid/os/IBinder;
-    .end local v18    # "_arg2":I
-    .end local v19    # "_arg3":I
-    .end local v20    # "_arg4":I
-    .end local v21    # "_arg5":I
-    .end local v22    # "_arg6":J
+    .line 387
+    .end local v13    # "descriptor":Ljava/lang/String;
+    .end local v17    # "_arg0":Landroid/os/IBinder;
+    .end local v18    # "_arg1":Landroid/os/IBinder;
+    .end local v19    # "_arg2":I
+    .end local v20    # "_arg3":I
+    .end local v21    # "_arg4":I
+    .end local v22    # "_arg5":I
+    .end local v23    # "_arg6":[B
     .end local v24    # "_arg7":I
     .end local v25    # "_arg8":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
     .end local v26    # "_arg9":I
     .end local v27    # "_arg10":Ljava/lang/String;
-    .end local v30    # "_arg11":Landroid/os/Bundle;
-    .end local v31    # "_arg12":[B
-    :goto_0
-    return v28
+    .end local v28    # "_arg11":Landroid/os/Bundle;
+    .restart local v12    # "descriptor":Ljava/lang/String;
+    :pswitch_1f
+    move-object v13, v12
+
+    .end local v12    # "descriptor":Ljava/lang/String;
+    .restart local v13    # "descriptor":Ljava/lang/String;
+    invoke-virtual {v14, v13}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 389
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    .line 391
+    .local v0, "_arg0":Landroid/os/IBinder;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 392
+    .local v1, "_arg1":Ljava/lang/String;
+    invoke-virtual {v15, v0, v1}, Lcom/samsung/android/bio/face/IFaceService$Stub;->cancelAuthentication(Landroid/os/IBinder;Ljava/lang/String;)V
+
+    .line 393
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 394
+    return v16
+
+    .line 349
+    .end local v0    # "_arg0":Landroid/os/IBinder;
+    .end local v1    # "_arg1":Ljava/lang/String;
+    .end local v13    # "descriptor":Ljava/lang/String;
+    .restart local v12    # "descriptor":Ljava/lang/String;
+    :pswitch_20
+    move-object v13, v12
+
+    .end local v12    # "descriptor":Ljava/lang/String;
+    .restart local v13    # "descriptor":Ljava/lang/String;
+    invoke-virtual {v14, v13}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 351
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v17
+
+    .line 353
+    .restart local v17    # "_arg0":Landroid/os/IBinder;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v18
+
+    .line 355
+    .restart local v18    # "_arg1":Landroid/os/IBinder;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v19
+
+    .line 357
+    .restart local v19    # "_arg2":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v20
+
+    .line 359
+    .restart local v20    # "_arg3":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v21
+
+    .line 361
+    .restart local v21    # "_arg4":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v22
+
+    .line 363
+    .restart local v22    # "_arg5":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v23
+
+    .line 365
+    .local v23, "_arg6":J
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v25
+
+    .line 367
+    .local v25, "_arg7":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/samsung/android/bio/face/IFaceServiceReceiver$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/bio/face/IFaceServiceReceiver;
+
+    move-result-object v26
+
+    .line 369
+    .local v26, "_arg8":Lcom/samsung/android/bio/face/IFaceServiceReceiver;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v27
+
+    .line 371
+    .local v27, "_arg9":I
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v28
+
+    .line 373
+    .local v28, "_arg10":Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 374
+    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, v14}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Bundle;
+
+    move-object/from16 v29, v0
+
+    .local v0, "_arg11":Landroid/os/Bundle;
+    goto :goto_3
+
+    .line 377
+    .end local v0    # "_arg11":Landroid/os/Bundle;
+    :cond_5
+    const/4 v0, 0x0
+
+    move-object/from16 v29, v0
+
+    .line 380
+    .local v29, "_arg11":Landroid/os/Bundle;
+    :goto_3
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object v30
+
+    .line 381
+    .local v30, "_arg12":[B
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v17
+
+    move-object/from16 v2, v18
+
+    move/from16 v3, v19
+
+    move/from16 v4, v20
+
+    move/from16 v5, v21
+
+    move/from16 v6, v22
+
+    move-wide/from16 v7, v23
+
+    move/from16 v9, v25
+
+    move-object/from16 v10, v26
+
+    move/from16 v11, v27
+
+    move-object/from16 v12, v28
+
+    move-object/from16 v31, v13
+
+    .end local v13    # "descriptor":Ljava/lang/String;
+    .local v31, "descriptor":Ljava/lang/String;
+    move-object/from16 v13, v29
+
+    move-object/from16 v14, v30
+
+    invoke-virtual/range {v0 .. v14}, Lcom/samsung/android/bio/face/IFaceService$Stub;->authenticate(Landroid/os/IBinder;Landroid/os/IBinder;IIIIJILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;[B)V
+
+    .line 382
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 383
+    return v16
 
     nop
 

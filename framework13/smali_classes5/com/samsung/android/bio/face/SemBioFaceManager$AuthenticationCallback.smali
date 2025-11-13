@@ -18,7 +18,7 @@
 .method public constructor whitelist <init>()V
     .locals 0
 
-    .line 566
+    .line 653
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
     .locals 0
     .param p1, "acquireInfo"    # I
 
-    .line 631
+    .line 718
     return-void
 .end method
 
@@ -39,14 +39,14 @@
     .param p1, "errorCode"    # I
     .param p2, "errString"    # Ljava/lang/CharSequence;
 
-    .line 587
+    .line 674
     return-void
 .end method
 
 .method public whitelist onAuthenticationFailed()V
     .locals 0
 
-    .line 622
+    .line 709
     return-void
 .end method
 
@@ -55,7 +55,7 @@
     .param p1, "helpCode"    # I
     .param p2, "helpString"    # Ljava/lang/CharSequence;
 
-    .line 607
+    .line 694
     return-void
 .end method
 
@@ -63,6 +63,6 @@
     .locals 0
     .param p1, "result"    # Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationResult;
 
-    .line 615
+    .line 702
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "SemBioFaceManager.java"
 
 # interfaces
-.implements Landroid/os/CancellationSignal$OnCancelListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/samsung/android/bio/face/SemBioFaceManager;->biometricPromptForDex(Lcom/samsung/android/bio/face/SemBioFaceManager$CryptoObject;Landroid/os/CancellationSignal;Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;Landroid/os/Handler;ILandroid/os/Bundle;)V
+    value = Lcom/samsung/android/bio/face/SemBioFaceManager;->authenticate(Lcom/samsung/android/bio/face/SemBioFaceManager$CryptoObject;Landroid/os/CancellationSignal;ILcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;Landroid/os/Handler;ILandroid/os/Bundle;Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,14 +20,18 @@
 # instance fields
 .field final synthetic blacklist this$0:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
+.field final synthetic blacklist val$callback:Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;
+
 
 # direct methods
-.method constructor blacklist <init>(Lcom/samsung/android/bio/face/SemBioFaceManager;)V
+.method constructor blacklist <init>(Lcom/samsung/android/bio/face/SemBioFaceManager;Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;)V
     .locals 0
     .param p1, "this$0"    # Lcom/samsung/android/bio/face/SemBioFaceManager;
 
-    .line 1494
+    .line 921
     iput-object p1, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$2;->this$0:Lcom/samsung/android/bio/face/SemBioFaceManager;
+
+    iput-object p2, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$2;->val$callback:Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,32 +40,18 @@
 
 
 # virtual methods
-.method public whitelist onCancel()V
+.method public whitelist test-api run()V
     .locals 3
 
-    .line 1497
-    iget-object v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$2;->this$0:Lcom/samsung/android/bio/face/SemBioFaceManager;
+    .line 924
+    iget-object v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$2;->val$callback:Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;
 
-    invoke-static {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->-$$Nest$fgetmAuthenticationCallback(Lcom/samsung/android/bio/face/SemBioFaceManager;)Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 1498
-    iget-object v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$2;->this$0:Lcom/samsung/android/bio/face/SemBioFaceManager;
-
-    invoke-static {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->-$$Nest$fgetmAuthenticationCallback(Lcom/samsung/android/bio/face/SemBioFaceManager;)Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;
-
-    move-result-object v0
-
-    const/16 v1, 0xa
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager$AuthenticationCallback;->onAuthenticationError(ILjava/lang/CharSequence;)V
 
-    .line 1500
-    :cond_0
+    .line 925
     return-void
 .end method

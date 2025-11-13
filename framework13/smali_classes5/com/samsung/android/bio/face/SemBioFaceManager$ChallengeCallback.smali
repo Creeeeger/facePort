@@ -18,7 +18,7 @@
 .method public constructor blacklist <init>()V
     .locals 0
 
-    .line 821
+    .line 1049
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +30,6 @@
     .locals 0
     .param p1, "hat"    # J
 
-    .line 823
+    .line 1051
     return-void
 .end method

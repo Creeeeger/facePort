@@ -3357,6 +3357,34 @@
     return-wide v1
 .end method
 
+.method public blacklist getLidState()I
+    .locals 2
+
+    .line 781
+    :try_start_0
+    iget-object v0, p0, Landroid/hardware/input/InputManager;->mIm:Landroid/hardware/input/IInputManager;
+
+    invoke-interface {v0}, Landroid/hardware/input/IInputManager;->getLidState()I
+
+    move-result v0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    .line 782
+    :catch_0
+    move-exception v0
+
+    .line 783
+    .local v0, "ex":Landroid/os/RemoteException;
+    invoke-virtual {v0}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
+
+    move-result-object v1
+
+    throw v1
+.end method
+
 .method blacklist getLightState(ILandroid/hardware/lights/Light;)Landroid/hardware/lights/LightState;
     .locals 2
     .param p1, "deviceId"    # I

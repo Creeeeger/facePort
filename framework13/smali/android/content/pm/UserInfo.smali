@@ -49,7 +49,10 @@
 
 .field public static final greylist-max-o FLAG_ADMIN:I = 0x2
 
+.field public static final blacklist FLAG_BBC_CONTAINER:I = 0x4000000
 .field public static final blacklist FLAG_BMODE:I = 0x10000
+
+.field public static final blacklist FLAG_CL_CONTAINER:I = 0x400000
 
 .field public static final greylist-max-o FLAG_DEMO:I = 0x200
     .annotation runtime Ljava/lang/Deprecated;
@@ -77,9 +80,13 @@
 
 .field public static final greylist-max-o FLAG_INITIALIZED:I = 0x10
 
+.field public static final blacklist FLAG_KIOSK_MODE:I = 0x8000000
+
 .field public static final blacklist FLAG_KNOX_APPSEPARATION:I = 0x40000000
 
 .field public static final blacklist FLAG_KNOX_WORKSPACE:I = 0x10000000
+
+.field public static final blacklist FLAG_LIGHT_WEIGHT_CONTAINER:I = 0x1000000
 
 .field public static final blacklist FLAG_MAINTENANCE_MODE:I = 0x80000
 
@@ -87,6 +94,8 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
+
+.field public static final blacklist FLAG_MY_KNOX:I = 0x2000000
 
 .field public static final greylist FLAG_PRIMARY:I = 0x1
 
@@ -101,9 +110,13 @@
 
 .field public static final blacklist FLAG_SDP_NOT_SUPPORTED_SECURE_FOLDER:I = 0x40000
 
+.field public static final blacklist FLAG_SECOND_CONTAINER:I = 0x200000
+
 .field public static final blacklist FLAG_SECURE_FOLDER:I = 0x20000
 
 .field public static final blacklist FLAG_SYSTEM:I = 0x800
+
+.field public static final blacklist FLAG_THIRD_CONTAINER:I = 0x800000
 
 .field public static final blacklist FLAG_VIRTUAL_USER:I = -0x80000000
 
@@ -864,6 +877,29 @@
     return v0
 .end method
 
+.method public blacklist isCLContainer()Z
+    .locals 2
+
+    .line 600
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x400000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public blacklist isCloneProfile()Z
     .locals 1
 
@@ -1070,6 +1106,15 @@
     return v0
 .end method
 
+.method public blacklist isKioskModeEnabled()Z
+    .locals 1
+
+    .line 605
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public blacklist isKnoxWorkspace()Z
     .locals 1
 
@@ -1123,6 +1168,29 @@
     return v0
 .end method
 
+.method public blacklist isLightWeightContainer()Z
+    .locals 2
+
+    .line 592
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x1000000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public blacklist isMaintenanceMode()Z
     .locals 2
 
@@ -1162,6 +1230,29 @@
 
     move-result v0
 
+    return v0
+.end method
+
+.method public blacklist isMyKnox()Z
+    .locals 2
+
+    .line 596
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x2000000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
@@ -1289,6 +1380,29 @@
     return v0
 .end method
 
+.method public blacklist isSecondContainer()Z
+    .locals 2
+
+    .line 617
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x200000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public blacklist isSecureFolder()Z
     .locals 2
 
@@ -1368,6 +1482,29 @@
 
     move-result v0
 
+    return v0
+.end method
+
+.method public blacklist isThirdContainer()Z
+    .locals 2
+
+    .line 621
+    iget v0, p0, Landroid/content/pm/UserInfo;->flags:I
+
+    const/high16 v1, 0x800000
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 

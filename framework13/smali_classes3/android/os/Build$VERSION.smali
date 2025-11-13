@@ -31,6 +31,8 @@
 
 .field public static final whitelist INCREMENTAL:Ljava/lang/String;
 
+.field public static final blacklist FIRST_SDK_INT:I
+
 .field public static final whitelist KNOWN_CODENAMES:Ljava/util/Set;
     .annotation runtime Landroid/annotation/SystemApi;
     .end annotation
@@ -195,6 +197,16 @@
     .line 366
     const-string/jumbo v2, "ro.product.first_api_level"
 
+    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v3
+
+    sput v3, Landroid/os/Build$VERSION;->FIRST_SDK_INT:I
+
+    .line 373
+    nop
+
+    .line 374
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v2

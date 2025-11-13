@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/samsung/android/bio/face/SemBioFace;-><init>(Landroid/os/Parcel;Lcom/samsung/android/bio/face/SemBioFace-IA;)V
+    invoke-direct {v0, p1, v1}, Lcom/samsung/android/bio/face/SemBioFace;-><init>(Landroid/os/Parcel;Lcom/samsung/android/bio/face/SemBioFace$1;)V
 
     return-object v0
 .end method

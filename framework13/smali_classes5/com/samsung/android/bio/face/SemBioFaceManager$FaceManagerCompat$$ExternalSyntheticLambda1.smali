@@ -1,6 +1,5 @@
 .class public final synthetic Lcom/samsung/android/bio/face/SemBioFaceManager$FaceManagerCompat$$ExternalSyntheticLambda1;
 .super Ljava/lang/Object;
-.source "D8$$SyntheticClass"
 
 # interfaces
 .implements Landroid/os/CancellationSignal$OnCancelListener;
@@ -28,7 +27,7 @@
 
     iget-object v0, p0, Lcom/samsung/android/bio/face/SemBioFaceManager$FaceManagerCompat$$ExternalSyntheticLambda1;->f$0:Lcom/samsung/android/bio/face/SemBioFaceManager$FaceManagerCompat;
 
-    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager$FaceManagerCompat;->lambda$hAuthenticate$0$com-samsung-android-bio-face-SemBioFaceManager$FaceManagerCompat()V
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager$FaceManagerCompat;->lambda$hEnroll$0$SemBioFaceManager$FaceManagerCompat()V
 
     return-void
 .end method

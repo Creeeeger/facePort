@@ -17,6 +17,10 @@
 .end annotation
 
 
+# static fields
+.field public static blacklist sDefaultImpl:Lcom/samsung/android/bio/face/IFaceService;
+
+
 # instance fields
 .field private blacklist mRemote:Landroid/os/IBinder;
 
@@ -26,13 +30,13 @@
     .locals 0
     .param p1, "remote"    # Landroid/os/IBinder;
 
-    .line 735
+    .line 754
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 736
+    .line 755
     iput-object p1, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 737
+    .line 756
     return-void
 .end method
 
@@ -41,14 +45,14 @@
 .method public whitelist asBinder()Landroid/os/IBinder;
     .locals 1
 
-    .line 740
+    .line 759
     iget-object v0, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
 .end method
 
 .method public blacklist authenticate(Landroid/os/IBinder;Landroid/os/IBinder;IIIIJILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;[B)V
-    .locals 16
+    .locals 18
     .param p1, "token"    # Landroid/os/IBinder;
     .param p2, "windownToken"    # Landroid/os/IBinder;
     .param p3, "x"    # I
@@ -68,243 +72,296 @@
         }
     .end annotation
 
-    .line 749
+    .line 768
+    move-object/from16 v15, p13
+
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v1
+    move-result-object v14
 
-    .line 750
-    .local v1, "_data":Landroid/os/Parcel;
+    .line 769
+    .local v14, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v2
+    move-result-object v13
 
-    .line 752
-    .local v2, "_reply":Landroid/os/Parcel;
+    .line 771
+    .local v13, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v0, "com.samsung.android.bio.face.IFaceService"
 
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 753
-    move-object/from16 v3, p1
-
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    .line 754
-    move-object/from16 v4, p2
-
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_a
-
-    .line 755
-    move/from16 v5, p3
-
-    :try_start_1
-    invoke-virtual {v1, v5}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_9
-
-    .line 756
-    move/from16 v6, p4
-
-    :try_start_2
-    invoke-virtual {v1, v6}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_8
-
-    .line 757
-    move/from16 v7, p5
-
-    :try_start_3
-    invoke-virtual {v1, v7}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_7
-
-    .line 758
-    move/from16 v8, p6
-
-    :try_start_4
-    invoke-virtual {v1, v8}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_6
-
-    .line 759
-    move-wide/from16 v9, p7
-
-    :try_start_5
-    invoke-virtual {v1, v9, v10}, Landroid/os/Parcel;->writeLong(J)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_5
-
-    .line 760
-    move/from16 v11, p9
-
-    :try_start_6
-    invoke-virtual {v1, v11}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_4
-
-    .line 761
-    move-object/from16 v12, p10
-
-    :try_start_7
-    invoke-virtual {v1, v12}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
-
-    .line 762
-    move/from16 v13, p11
-
-    :try_start_8
-    invoke-virtual {v1, v13}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_2
-
-    .line 763
-    move-object/from16 v14, p12
-
-    :try_start_9
-    invoke-virtual {v1, v14}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
-
-    .line 764
-    const/4 v0, 0x0
-
-    move-object/from16 v15, p13
-
-    :try_start_a
-    invoke-virtual {v1, v15, v0}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
-
-    .line 765
-    move-object/from16 v3, p14
-
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeByteArray([B)V
-
-    .line 766
-    move-object/from16 v3, p0
-
-    iget-object v0, v3, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v0
-
-    .line 767
-    .local v0, "_status":Z
-    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_0
-
-    .line 770
-    .end local v0    # "_status":Z
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 771
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {v14, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 772
-    nop
+    move-object/from16 v12, p1
+
+    invoke-virtual {v14, v12}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
     .line 773
-    return-void
+    move-object/from16 v11, p2
 
-    .line 770
+    invoke-virtual {v14, v11}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    .line 774
+    move/from16 v10, p3
+
+    invoke-virtual {v14, v10}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 775
+    move/from16 v8, p4
+
+    invoke-virtual {v14, v8}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 776
+    move/from16 v9, p5
+
+    invoke-virtual {v14, v9}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 777
+    move/from16 v7, p6
+
+    invoke-virtual {v14, v7}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 778
+    move-wide/from16 v5, p7
+
+    invoke-virtual {v14, v5, v6}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 779
+    move/from16 v4, p9
+
+    invoke-virtual {v14, v4}, Landroid/os/Parcel;->writeInt(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 780
+    if-eqz p10, :cond_0
+
+    :try_start_1
+    invoke-interface/range {p10 .. p10}, Lcom/samsung/android/bio/face/IFaceServiceReceiver;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    .line 801
     :catchall_0
     move-exception v0
 
-    goto :goto_9
+    move-object/from16 v16, v13
 
+    move-object/from16 v17, v14
+
+    goto/16 :goto_3
+
+    .line 780
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    :try_start_2
+    invoke-virtual {v14, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    .line 781
+    move/from16 v3, p11
+
+    invoke-virtual {v14, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 782
+    move-object/from16 v2, p12
+
+    invoke-virtual {v14, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 783
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz v15, :cond_1
+
+    .line 784
+    :try_start_3
+    invoke-virtual {v14, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 785
+    invoke-virtual {v15, v14, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_1
+
+    .line 788
+    :cond_1
+    :try_start_4
+    invoke-virtual {v14, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 790
+    :goto_1
+    move-object/from16 v1, p14
+
+    invoke-virtual {v14, v1}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    .line 791
+    move-object/from16 v15, p0
+
+    iget-object v0, v15, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v14, v13, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v0
+
+    .line 792
+    .local v0, "_status":Z
+    if-nez v0, :cond_3
+
+    .line 793
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    .line 794
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    move-object/from16 v2, p1
+
+    move-object/from16 v3, p2
+
+    move/from16 v4, p3
+
+    move/from16 v5, p4
+
+    move/from16 v6, p5
+
+    move/from16 v7, p6
+
+    move-wide/from16 v8, p7
+
+    move/from16 v10, p9
+
+    move-object/from16 v11, p10
+
+    move/from16 v12, p11
+
+    move-object/from16 v16, v13
+
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .local v16, "_reply":Landroid/os/Parcel;
+    move-object/from16 v13, p12
+
+    move-object/from16 v17, v14
+
+    .end local v14    # "_data":Landroid/os/Parcel;
+    .local v17, "_data":Landroid/os/Parcel;
+    move-object/from16 v14, p13
+
+    move-object/from16 v15, p14
+
+    :try_start_5
+    invoke-interface/range {v1 .. v15}, Lcom/samsung/android/bio/face/IFaceService;->authenticate(Landroid/os/IBinder;Landroid/os/IBinder;IIIIJILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;[B)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    .line 801
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->recycle()V
+
+    .line 802
+    invoke-virtual/range {v17 .. v17}, Landroid/os/Parcel;->recycle()V
+
+    .line 795
+    return-void
+
+    .line 793
+    .end local v16    # "_reply":Landroid/os/Parcel;
+    .end local v17    # "_data":Landroid/os/Parcel;
+    .restart local v13    # "_reply":Landroid/os/Parcel;
+    .restart local v14    # "_data":Landroid/os/Parcel;
+    :cond_2
+    move-object/from16 v16, v13
+
+    move-object/from16 v17, v14
+
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .end local v14    # "_data":Landroid/os/Parcel;
+    .restart local v16    # "_reply":Landroid/os/Parcel;
+    .restart local v17    # "_data":Landroid/os/Parcel;
+    goto :goto_2
+
+    .line 792
+    .end local v16    # "_reply":Landroid/os/Parcel;
+    .end local v17    # "_data":Landroid/os/Parcel;
+    .restart local v13    # "_reply":Landroid/os/Parcel;
+    .restart local v14    # "_data":Landroid/os/Parcel;
+    :cond_3
+    move-object/from16 v16, v13
+
+    move-object/from16 v17, v14
+
+    .line 798
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .end local v14    # "_data":Landroid/os/Parcel;
+    .restart local v16    # "_reply":Landroid/os/Parcel;
+    .restart local v17    # "_data":Landroid/os/Parcel;
+    :goto_2
+    :try_start_6
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->readException()V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    .line 801
+    .end local v0    # "_status":Z
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->recycle()V
+
+    .line 802
+    invoke-virtual/range {v17 .. v17}, Landroid/os/Parcel;->recycle()V
+
+    .line 803
+    nop
+
+    .line 804
+    return-void
+
+    .line 801
     :catchall_1
-    move-exception v0
-
-    goto :goto_8
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_7
-
-    :catchall_3
-    move-exception v0
-
-    goto :goto_6
-
-    :catchall_4
-    move-exception v0
-
-    goto :goto_5
-
-    :catchall_5
-    move-exception v0
-
-    goto :goto_4
-
-    :catchall_6
     move-exception v0
 
     goto :goto_3
 
-    :catchall_7
+    .end local v16    # "_reply":Landroid/os/Parcel;
+    .end local v17    # "_data":Landroid/os/Parcel;
+    .restart local v13    # "_reply":Landroid/os/Parcel;
+    .restart local v14    # "_data":Landroid/os/Parcel;
+    :catchall_2
     move-exception v0
 
-    goto :goto_2
+    move-object/from16 v16, v13
 
-    :catchall_8
-    move-exception v0
+    move-object/from16 v17, v14
 
-    goto :goto_1
-
-    :catchall_9
-    move-exception v0
-
-    goto :goto_0
-
-    :catchall_a
-    move-exception v0
-
-    move/from16 v5, p3
-
-    :goto_0
-    move/from16 v6, p4
-
-    :goto_1
-    move/from16 v7, p5
-
-    :goto_2
-    move/from16 v8, p6
-
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .end local v14    # "_data":Landroid/os/Parcel;
+    .restart local v16    # "_reply":Landroid/os/Parcel;
+    .restart local v17    # "_data":Landroid/os/Parcel;
     :goto_3
-    move-wide/from16 v9, p7
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->recycle()V
 
-    :goto_4
-    move/from16 v11, p9
+    .line 802
+    invoke-virtual/range {v17 .. v17}, Landroid/os/Parcel;->recycle()V
 
-    :goto_5
-    move-object/from16 v12, p10
-
-    :goto_6
-    move/from16 v13, p11
-
-    :goto_7
-    move-object/from16 v14, p12
-
-    :goto_8
-    move-object/from16 v15, p13
-
-    :goto_9
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 771
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 772
+    .line 803
     throw v0
 .end method
 
@@ -318,31 +375,31 @@
         }
     .end annotation
 
-    .line 777
+    .line 808
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 778
+    .line 809
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 780
+    .line 811
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 781
+    .line 812
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 782
+    .line 813
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 783
+    .line 814
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x2
@@ -353,35 +410,65 @@
 
     move-result v2
 
-    .line 784
+    .line 815
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 816
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 817
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1, p2}, Lcom/samsung/android/bio/face/IFaceService;->cancelAuthentication(Landroid/os/IBinder;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 787
+    .line 824
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 825
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 818
+    return-void
+
+    .line 821
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 824
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 788
+    .line 825
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 789
+    .line 826
     nop
 
-    .line 790
+    .line 827
     return-void
 
-    .line 787
+    .line 824
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 788
+    .line 825
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 789
+    .line 826
     throw v2
 .end method
 
@@ -396,73 +483,113 @@
         }
     .end annotation
 
-    .line 1294
+    .line 1491
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1295
+    .line 1492
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1297
+    .line 1494
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1298
+    .line 1495
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 1299
+    .line 1496
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1300
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 1497
+    const/4 v2, 0x0
 
-    .line 1301
-    iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    if-eqz p3, :cond_0
 
-    const/16 v3, 0x1e
+    const/4 v3, 0x1
 
-    const/4 v4, 0x0
+    goto :goto_0
 
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :cond_0
+    move v3, v2
+
+    :goto_0
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 1498
+    iget-object v3, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v4, 0x1e
+
+    invoke-interface {v3, v4, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
-    .line 1302
+    .line 1499
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_1
+
+    .line 1500
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 1501
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1, p2, p3}, Lcom/samsung/android/bio/face/IFaceService;->cancelAuthenticationFromService(Landroid/os/IBinder;Ljava/lang/String;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1305
+    .line 1508
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1509
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1502
+    return-void
+
+    .line 1505
+    :cond_1
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1508
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1306
+    .line 1509
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1307
+    .line 1510
     nop
 
-    .line 1308
+    .line 1511
     return-void
 
-    .line 1305
+    .line 1508
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1306
+    .line 1509
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1307
+    .line 1510
     throw v2
 .end method
 
@@ -475,28 +602,28 @@
         }
     .end annotation
 
-    .line 821
+    .line 870
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 822
+    .line 871
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 824
+    .line 873
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 825
+    .line 874
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 826
+    .line 875
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x4
@@ -507,40 +634,70 @@
 
     move-result v2
 
-    .line 827
+    .line 876
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 877
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 878
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->cancelEnrollment(Landroid/os/IBinder;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 830
+    .line 885
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 886
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 879
+    return-void
+
+    .line 882
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 885
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 831
+    .line 886
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 832
+    .line 887
     nop
 
-    .line 833
+    .line 888
     return-void
 
-    .line 830
+    .line 885
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 831
+    .line 886
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 832
+    .line 887
     throw v2
 .end method
 
 .method public blacklist enroll(Landroid/os/IBinder;Landroid/os/IBinder;IIII[BILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;)V
-    .locals 16
+    .locals 17
     .param p1, "token"    # Landroid/os/IBinder;
     .param p2, "windownToken"    # Landroid/os/IBinder;
     .param p3, "x"    # I
@@ -559,268 +716,263 @@
         }
     .end annotation
 
-    .line 794
+    .line 831
+    move-object/from16 v14, p12
+
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v1
+    move-result-object v15
 
-    .line 795
-    .local v1, "_data":Landroid/os/Parcel;
+    .line 832
+    .local v15, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v2
+    move-result-object v13
 
-    .line 797
-    .local v2, "_reply":Landroid/os/Parcel;
+    .line 834
+    .local v13, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v0, "com.samsung.android.bio.face.IFaceService"
 
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    invoke-virtual {v15, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 798
-    move-object/from16 v3, p1
+    .line 835
+    move-object/from16 v12, p1
 
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    invoke-virtual {v15, v12}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 799
-    move-object/from16 v4, p2
+    .line 836
+    move-object/from16 v11, p2
 
-    invoke-virtual {v1, v4}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    invoke-virtual {v15, v11}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    .line 837
+    move/from16 v10, p3
+
+    invoke-virtual {v15, v10}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 838
+    move/from16 v9, p4
+
+    invoke-virtual {v15, v9}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 839
+    move/from16 v8, p5
+
+    invoke-virtual {v15, v8}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 840
+    move/from16 v7, p6
+
+    invoke-virtual {v15, v7}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 841
+    move-object/from16 v6, p7
+
+    invoke-virtual {v15, v6}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    .line 842
+    move/from16 v5, p8
+
+    invoke-virtual {v15, v5}, Landroid/os/Parcel;->writeInt(I)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_b
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 800
-    move/from16 v5, p3
+    .line 843
+    if-eqz p9, :cond_0
 
     :try_start_1
-    invoke-virtual {v1, v5}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-interface/range {p9 .. p9}, Lcom/samsung/android/bio/face/IFaceServiceReceiver;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v0
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_a
-
-    .line 801
-    move/from16 v6, p4
-
-    :try_start_2
-    invoke-virtual {v1, v6}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_9
-
-    .line 802
-    move/from16 v7, p5
-
-    :try_start_3
-    invoke-virtual {v1, v7}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_8
-
-    .line 803
-    move/from16 v8, p6
-
-    :try_start_4
-    invoke-virtual {v1, v8}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_7
-
-    .line 804
-    move-object/from16 v9, p7
-
-    :try_start_5
-    invoke-virtual {v1, v9}, Landroid/os/Parcel;->writeByteArray([B)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_6
-
-    .line 805
-    move/from16 v10, p8
-
-    :try_start_6
-    invoke-virtual {v1, v10}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_5
-
-    .line 806
-    move-object/from16 v11, p9
-
-    :try_start_7
-    invoke-virtual {v1, v11}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_4
-
-    .line 807
-    move/from16 v12, p10
-
-    :try_start_8
-    invoke-virtual {v1, v12}, Landroid/os/Parcel;->writeInt(I)V
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_3
-
-    .line 808
-    move-object/from16 v13, p11
-
-    :try_start_9
-    invoke-virtual {v1, v13}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_2
-
-    .line 809
-    const/4 v0, 0x0
-
-    move-object/from16 v14, p12
-
-    :try_start_a
-    invoke-virtual {v1, v14, v0}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_1
-
-    .line 810
-    move-object/from16 v15, p0
-
-    :try_start_b
-    iget-object v0, v15, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x0
-
-    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v0
-
-    .line 811
-    .local v0, "_status":Z
-    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_0
-
-    .line 814
-    .end local v0    # "_status":Z
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 815
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 816
-    nop
-
-    .line 817
-    return-void
-
-    .line 814
-    :catchall_0
-    move-exception v0
-
-    goto :goto_9
-
-    :catchall_1
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_9
-
-    :catchall_2
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_8
-
-    :catchall_3
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_7
-
-    :catchall_4
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_6
-
-    :catchall_5
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_5
-
-    :catchall_6
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_4
-
-    :catchall_7
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_3
-
-    :catchall_8
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_2
-
-    :catchall_9
-    move-exception v0
-
-    move-object/from16 v15, p0
-
-    goto :goto_1
-
-    :catchall_a
-    move-exception v0
-
-    move-object/from16 v15, p0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    :catchall_b
+    .line 863
+    :catchall_0
     move-exception v0
 
-    move-object/from16 v15, p0
+    move-object/from16 v16, v13
 
-    move/from16 v5, p3
+    goto/16 :goto_3
+
+    .line 843
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    move/from16 v6, p4
+    :try_start_2
+    invoke-virtual {v15, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 844
+    move/from16 v4, p10
+
+    invoke-virtual {v15, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 845
+    move-object/from16 v3, p11
+
+    invoke-virtual {v15, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 846
+    const/4 v0, 0x0
+
+    if-eqz v14, :cond_1
+
+    .line 847
+    const/4 v1, 0x1
+
+    :try_start_3
+    invoke-virtual {v15, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 848
+    invoke-virtual {v14, v15, v0}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_1
+
+    .line 851
+    :cond_1
+    :try_start_4
+    invoke-virtual {v15, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 853
     :goto_1
-    move/from16 v7, p5
+    move-object/from16 v2, p0
 
+    iget-object v1, v2, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/4 v2, 0x3
+
+    invoke-interface {v1, v2, v15, v13, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v0
+
+    .line 854
+    .local v0, "_status":Z
+    if-nez v0, :cond_3
+
+    .line 855
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    .line 856
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    move-object/from16 v2, p1
+
+    move-object/from16 v3, p2
+
+    move/from16 v4, p3
+
+    move/from16 v5, p4
+
+    move/from16 v6, p5
+
+    move/from16 v7, p6
+
+    move-object/from16 v8, p7
+
+    move/from16 v9, p8
+
+    move-object/from16 v10, p9
+
+    move/from16 v11, p10
+
+    move-object/from16 v12, p11
+
+    move-object/from16 v16, v13
+
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .local v16, "_reply":Landroid/os/Parcel;
+    move-object/from16 v13, p12
+
+    :try_start_5
+    invoke-interface/range {v1 .. v13}, Lcom/samsung/android/bio/face/IFaceService;->enroll(Landroid/os/IBinder;Landroid/os/IBinder;IIII[BILcom/samsung/android/bio/face/IFaceServiceReceiver;ILjava/lang/String;Landroid/os/Bundle;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    .line 863
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->recycle()V
+
+    .line 864
+    invoke-virtual {v15}, Landroid/os/Parcel;->recycle()V
+
+    .line 857
+    return-void
+
+    .line 855
+    .end local v16    # "_reply":Landroid/os/Parcel;
+    .restart local v13    # "_reply":Landroid/os/Parcel;
+    :cond_2
+    move-object/from16 v16, v13
+
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .restart local v16    # "_reply":Landroid/os/Parcel;
+    goto :goto_2
+
+    .line 854
+    .end local v16    # "_reply":Landroid/os/Parcel;
+    .restart local v13    # "_reply":Landroid/os/Parcel;
+    :cond_3
+    move-object/from16 v16, v13
+
+    .line 860
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .restart local v16    # "_reply":Landroid/os/Parcel;
     :goto_2
-    move/from16 v8, p6
+    :try_start_6
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->readException()V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
+    .line 863
+    .end local v0    # "_status":Z
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->recycle()V
+
+    .line 864
+    invoke-virtual {v15}, Landroid/os/Parcel;->recycle()V
+
+    .line 865
+    nop
+
+    .line 866
+    return-void
+
+    .line 863
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    .end local v16    # "_reply":Landroid/os/Parcel;
+    .restart local v13    # "_reply":Landroid/os/Parcel;
+    :catchall_2
+    move-exception v0
+
+    move-object/from16 v16, v13
+
+    .end local v13    # "_reply":Landroid/os/Parcel;
+    .restart local v16    # "_reply":Landroid/os/Parcel;
     :goto_3
-    move-object/from16 v9, p7
+    invoke-virtual/range {v16 .. v16}, Landroid/os/Parcel;->recycle()V
 
-    :goto_4
-    move/from16 v10, p8
+    .line 864
+    invoke-virtual {v15}, Landroid/os/Parcel;->recycle()V
 
-    :goto_5
-    move-object/from16 v11, p9
-
-    :goto_6
-    move/from16 v12, p10
-
-    :goto_7
-    move-object/from16 v13, p11
-
-    :goto_8
-    move-object/from16 v14, p12
-
-    :goto_9
-    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
-
-    .line 815
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 816
+    .line 865
     throw v0
 .end method
 
@@ -833,28 +985,28 @@
         }
     .end annotation
 
-    .line 993
+    .line 1090
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 994
+    .line 1091
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 997
+    .line 1094
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 998
+    .line 1095
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 999
+    .line 1096
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xd
@@ -865,43 +1017,75 @@
 
     move-result v2
 
-    .line 1000
+    .line 1097
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1001
-    invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
+    .line 1098
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1099
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->getAuthenticatorId(Ljava/lang/String;)J
 
     move-result-wide v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1106
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1107
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1099
+    return-wide v3
+
+    .line 1102
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1103
+    invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move-wide v2, v3
 
-    .line 1004
+    .line 1106
     .local v2, "_result":J
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1005
+    .line 1107
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1006
+    .line 1108
     nop
 
-    .line 1007
+    .line 1109
     return-wide v2
 
-    .line 1004
+    .line 1106
     .end local v2    # "_result":J
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1005
+    .line 1107
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1006
+    .line 1108
     throw v2
 .end method
 
@@ -926,31 +1110,31 @@
         }
     .end annotation
 
-    .line 875
+    .line 942
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 876
+    .line 943
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 879
+    .line 946
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 880
+    .line 947
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 881
+    .line 948
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 882
+    .line 949
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x7
@@ -961,52 +1145,84 @@
 
     move-result v2
 
-    .line 883
+    .line 950
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 884
-    sget-object v3, Lcom/samsung/android/bio/face/SemBioFace;->CREATOR:Landroid/os/Parcelable$Creator;
+    .line 951
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
 
-    invoke-virtual {v1, v3}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 952
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1, p2}, Lcom/samsung/android/bio/face/IFaceService;->getEnrolledFaces(ILjava/lang/String;)Ljava/util/List;
 
     move-result-object v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 959
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 960
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 952
+    return-object v3
+
+    .line 955
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 956
+    sget-object v3, Lcom/samsung/android/bio/face/SemBioFace;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {v1, v3}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+
+    move-result-object v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move-object v2, v3
 
-    .line 887
+    .line 959
     .local v2, "_result":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/bio/face/SemBioFace;>;"
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 888
+    .line 960
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 889
+    .line 961
     nop
 
-    .line 890
+    .line 962
     return-object v2
 
-    .line 887
+    .line 959
     .end local v2    # "_result":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/bio/face/SemBioFace;>;"
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 888
+    .line 960
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 889
+    .line 961
     throw v2
 .end method
 
 .method public blacklist getInterfaceDescriptor()Ljava/lang/String;
     .locals 1
 
-    .line 744
+    .line 763
     const-string v0, "com.samsung.android.bio.face.IFaceService"
 
     return-object v0
@@ -1021,28 +1237,28 @@
         }
     .end annotation
 
-    .line 1311
+    .line 1514
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1312
+    .line 1515
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1315
+    .line 1518
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1316
+    .line 1519
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1317
+    .line 1520
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1f
@@ -1053,43 +1269,75 @@
 
     move-result v2
 
-    .line 1318
+    .line 1521
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1319
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    .line 1522
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1523
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->getLockoutModeForUser(I)I
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1530
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1531
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1523
+    return v3
+
+    .line 1526
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1527
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move v2, v3
 
-    .line 1322
+    .line 1530
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1323
+    .line 1531
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1324
+    .line 1532
     nop
 
-    .line 1325
+    .line 1533
     return v2
 
-    .line 1322
+    .line 1530
     .end local v2    # "_result":I
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1323
+    .line 1531
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1324
+    .line 1532
     throw v2
 .end method
 
@@ -1102,28 +1350,28 @@
         }
     .end annotation
 
-    .line 1329
+    .line 1537
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1330
+    .line 1538
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1333
+    .line 1541
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1334
+    .line 1542
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1335
+    .line 1543
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x20
@@ -1134,43 +1382,75 @@
 
     move-result v2
 
-    .line 1336
+    .line 1544
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1337
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    .line 1545
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1546
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->getRemainingLockoutTime(I)I
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1553
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1554
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1546
+    return v3
+
+    .line 1549
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1550
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move v2, v3
 
-    .line 1340
+    .line 1553
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1341
+    .line 1554
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1342
+    .line 1555
     nop
 
-    .line 1343
+    .line 1556
     return v2
 
-    .line 1340
+    .line 1553
     .end local v2    # "_result":I
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1341
+    .line 1554
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1342
+    .line 1555
     throw v2
 .end method
 
@@ -1183,75 +1463,117 @@
         }
     .end annotation
 
-    .line 1233
+    .line 1407
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1234
+    .line 1408
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1237
+    .line 1411
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1238
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeBoolean(Z)V
+    .line 1412
+    const/4 v2, 0x0
 
-    .line 1239
-    iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    if-eqz p1, :cond_0
 
-    const/16 v3, 0x1b
+    const/4 v3, 0x1
 
-    const/4 v4, 0x0
+    goto :goto_0
 
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :cond_0
+    move v3, v2
+
+    :goto_0
+    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 1413
+    iget-object v3, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v4, 0x1b
+
+    invoke-interface {v3, v4, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
-    .line 1240
+    .line 1414
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_1
 
-    .line 1241
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    .line 1415
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 1416
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->getSecurityLevel(Z)I
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1423
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1424
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1416
+    return v3
+
+    .line 1419
+    :cond_1
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1420
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move v2, v3
 
-    .line 1244
+    .line 1423
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1245
+    .line 1424
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1246
+    .line 1425
     nop
 
-    .line 1247
+    .line 1426
     return v2
 
-    .line 1244
+    .line 1423
     .end local v2    # "_result":I
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1245
+    .line 1424
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1246
+    .line 1425
     throw v2
 .end method
 
@@ -1263,25 +1585,25 @@
         }
     .end annotation
 
-    .line 1196
+    .line 1359
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1197
+    .line 1360
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1200
+    .line 1363
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1201
+    .line 1364
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x19
@@ -1292,43 +1614,75 @@
 
     move-result v2
 
-    .line 1202
+    .line 1365
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1203
-    invoke-virtual {v1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    .line 1366
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1367
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->getTrustAppVersion()Ljava/lang/String;
 
     move-result-object v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1374
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1375
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1367
+    return-object v3
+
+    .line 1370
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1371
+    invoke-virtual {v1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move-object v2, v3
 
-    .line 1206
+    .line 1374
     .local v2, "_result":Ljava/lang/String;
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1207
+    .line 1375
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1208
+    .line 1376
     nop
 
-    .line 1209
+    .line 1377
     return-object v2
 
-    .line 1206
+    .line 1374
     .end local v2    # "_result":Ljava/lang/String;
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1207
+    .line 1375
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1208
+    .line 1376
     throw v2
 .end method
 
@@ -1342,31 +1696,31 @@
         }
     .end annotation
 
-    .line 973
+    .line 1065
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 974
+    .line 1066
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 977
+    .line 1069
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 978
+    .line 1070
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 979
+    .line 1071
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 980
+    .line 1072
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xc
@@ -1377,43 +1731,80 @@
 
     move-result v2
 
-    .line 981
+    .line 1073
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 982
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 1074
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1075
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1, p2}, Lcom/samsung/android/bio/face/IFaceService;->hasDisabledFaces(ILjava/lang/String;)Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 1082
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 985
+    .line 1083
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1075
+    return v3
+
+    .line 1078
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1079
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 1082
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 986
+    .line 1083
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 987
+    .line 1084
     nop
 
-    .line 988
+    .line 1085
     return v2
 
-    .line 985
+    .line 1082
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 986
+    .line 1083
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 987
+    .line 1084
     throw v2
 .end method
 
@@ -1427,31 +1818,31 @@
         }
     .end annotation
 
-    .line 953
+    .line 1040
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 954
+    .line 1041
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 957
+    .line 1044
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 958
+    .line 1045
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 959
+    .line 1046
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 960
+    .line 1047
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xb
@@ -1462,43 +1853,80 @@
 
     move-result v2
 
-    .line 961
+    .line 1048
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 962
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 1049
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1050
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1, p2}, Lcom/samsung/android/bio/face/IFaceService;->hasEnrolledFaces(ILjava/lang/String;)Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 1057
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 965
+    .line 1058
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1050
+    return v3
+
+    .line 1053
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1054
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 1057
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 966
+    .line 1058
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 967
+    .line 1059
     nop
 
-    .line 968
+    .line 1060
     return v2
 
-    .line 965
+    .line 1057
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 966
+    .line 1058
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 967
+    .line 1059
     throw v2
 .end method
 
@@ -1510,25 +1938,25 @@
         }
     .end annotation
 
-    .line 1012
+    .line 1114
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1013
+    .line 1115
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1016
+    .line 1118
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1017
+    .line 1119
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xe
@@ -1539,43 +1967,80 @@
 
     move-result v2
 
-    .line 1018
+    .line 1120
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1019
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 1121
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1122
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->isEnrollSession()Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 1129
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1022
+    .line 1130
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1122
+    return v3
+
+    .line 1125
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1126
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 1129
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1023
+    .line 1130
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1024
+    .line 1131
     nop
 
-    .line 1025
+    .line 1132
     return v2
 
-    .line 1022
+    .line 1129
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1023
+    .line 1130
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1024
+    .line 1131
     throw v2
 .end method
 
@@ -1589,31 +2054,31 @@
         }
     .end annotation
 
-    .line 895
+    .line 967
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 896
+    .line 968
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 899
+    .line 971
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 900
+    .line 972
     invoke-virtual {v0, p1, p2}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 901
+    .line 973
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 902
+    .line 974
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x8
@@ -1624,43 +2089,80 @@
 
     move-result v2
 
-    .line 903
+    .line 975
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 904
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 976
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 977
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1, p2, p3}, Lcom/samsung/android/bio/face/IFaceService;->isHardwareDetected(JLjava/lang/String;)Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 984
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 907
+    .line 985
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 977
+    return v3
+
+    .line 980
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 981
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 984
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 908
+    .line 985
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 909
+    .line 986
     nop
 
-    .line 910
+    .line 987
     return v2
 
-    .line 907
+    .line 984
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 908
+    .line 985
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 909
+    .line 986
     throw v2
 .end method
 
@@ -1672,25 +2174,25 @@
         }
     .end annotation
 
-    .line 1092
+    .line 1223
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1093
+    .line 1224
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1096
+    .line 1227
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1097
+    .line 1228
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x13
@@ -1701,43 +2203,80 @@
 
     move-result v2
 
-    .line 1098
+    .line 1229
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1099
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 1230
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1231
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->isSessionClosed()Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 1238
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1102
+    .line 1239
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1231
+    return v3
+
+    .line 1234
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1235
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 1238
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1103
+    .line 1239
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1104
+    .line 1240
     nop
 
-    .line 1105
+    .line 1241
     return v2
 
-    .line 1102
+    .line 1238
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1103
+    .line 1239
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1104
+    .line 1240
     throw v2
 .end method
 
@@ -1750,28 +2289,28 @@
         }
     .end annotation
 
-    .line 934
+    .line 1016
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 935
+    .line 1017
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 938
+    .line 1020
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 939
+    .line 1021
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 940
+    .line 1022
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xa
@@ -1782,43 +2321,75 @@
 
     move-result v2
 
-    .line 941
+    .line 1023
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 942
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    .line 1024
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1025
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->postEnroll(Landroid/os/IBinder;)I
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1032
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1033
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1025
+    return v3
+
+    .line 1028
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1029
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move v2, v3
 
-    .line 945
+    .line 1032
     .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 946
+    .line 1033
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 947
+    .line 1034
     nop
 
-    .line 948
+    .line 1035
     return v2
 
-    .line 945
+    .line 1032
     .end local v2    # "_result":I
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 946
+    .line 1033
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 947
+    .line 1034
     throw v2
 .end method
 
@@ -1831,28 +2402,28 @@
         }
     .end annotation
 
-    .line 915
+    .line 992
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 916
+    .line 993
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 919
+    .line 996
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 920
+    .line 997
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 921
+    .line 998
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x9
@@ -1863,48 +2434,80 @@
 
     move-result v2
 
-    .line 922
+    .line 999
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 923
-    invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
+    .line 1000
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1001
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->preEnroll(Landroid/os/IBinder;)J
 
     move-result-wide v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 1008
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1009
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1001
+    return-wide v3
+
+    .line 1004
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1005
+    invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
     move-wide v2, v3
 
-    .line 926
+    .line 1008
     .local v2, "_result":J
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 927
+    .line 1009
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 928
+    .line 1010
     nop
 
-    .line 929
+    .line 1011
     return-wide v2
 
-    .line 926
+    .line 1008
     .end local v2    # "_result":J
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 927
+    .line 1009
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 928
+    .line 1010
     throw v2
 .end method
 
 .method public blacklist prepareForAuthentication(ZLandroid/os/IBinder;JILandroid/hardware/biometrics/IBiometricSensorReceiver;Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 5
+    .locals 16
     .param p1, "requireConfirmation"    # Z
     .param p2, "token"    # Landroid/os/IBinder;
     .param p3, "sessionId"    # J
@@ -1919,93 +2522,212 @@
         }
     .end annotation
 
-    .line 1256
+    .line 1435
+    move-object/from16 v11, p9
+
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v0
+    move-result-object v12
 
-    .line 1257
-    .local v0, "_data":Landroid/os/Parcel;
+    .line 1436
+    .local v12, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v13
+
+    .line 1438
+    .local v13, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string v0, "com.samsung.android.bio.face.IFaceService"
+
+    invoke-virtual {v12, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 1439
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    move v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    invoke-virtual {v12, v2}, Landroid/os/Parcel;->writeInt(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 1440
+    move-object/from16 v14, p2
+
+    :try_start_1
+    invoke-virtual {v12, v14}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    .line 1441
+    move-wide/from16 v9, p3
+
+    invoke-virtual {v12, v9, v10}, Landroid/os/Parcel;->writeLong(J)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 1442
+    move/from16 v15, p5
+
+    :try_start_2
+    invoke-virtual {v12, v15}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 1443
+    if-eqz p6, :cond_1
+
+    invoke-interface/range {p6 .. p6}, Landroid/hardware/biometrics/IBiometricSensorReceiver;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v2, 0x0
+
+    :goto_1
+    invoke-virtual {v12, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    .line 1444
+    move-object/from16 v8, p7
+
+    invoke-virtual {v12, v8}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    .line 1445
+    move/from16 v7, p8
+
+    invoke-virtual {v12, v7}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 1446
+    if-eqz v11, :cond_2
+
+    .line 1447
+    invoke-virtual {v12, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 1448
+    invoke-virtual {v11, v12, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+
+    goto :goto_2
+
+    .line 1451
+    :cond_2
+    invoke-virtual {v12, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 1453
+    :goto_2
+    move-object/from16 v6, p0
+
+    iget-object v0, v6, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v2, 0x1c
+
+    invoke-interface {v0, v2, v12, v13, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v0
+
+    .line 1454
+    .local v0, "_status":Z
+    if-nez v0, :cond_3
+
+    .line 1455
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
 
     move-result-object v1
 
-    .line 1259
-    .local v1, "_reply":Landroid/os/Parcel;
-    :try_start_0
-    const-string v2, "com.samsung.android.bio.face.IFaceService"
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    .line 1456
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
 
-    .line 1260
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeBoolean(Z)V
+    move-result-object v1
 
-    .line 1261
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    move/from16 v2, p1
 
-    .line 1262
-    invoke-virtual {v0, p3, p4}, Landroid/os/Parcel;->writeLong(J)V
+    move-object/from16 v3, p2
 
-    .line 1263
-    invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeInt(I)V
+    move-wide/from16 v4, p3
 
-    .line 1264
-    invoke-virtual {v0, p6}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+    move/from16 v6, p5
 
-    .line 1265
-    invoke-virtual {v0, p7}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    move-object/from16 v7, p6
 
-    .line 1266
-    invoke-virtual {v0, p8}, Landroid/os/Parcel;->writeInt(I)V
+    move-object/from16 v8, p7
 
-    .line 1267
-    const/4 v2, 0x0
+    move/from16 v9, p8
 
-    invoke-virtual {v0, p9, v2}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
+    move-object/from16 v10, p9
 
-    .line 1268
-    iget-object v3, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    invoke-interface/range {v1 .. v10}, Lcom/samsung/android/bio/face/IFaceService;->prepareForAuthentication(ZLandroid/os/IBinder;JILandroid/hardware/biometrics/IBiometricSensorReceiver;Ljava/lang/String;ILandroid/os/Bundle;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    const/16 v4, 0x1c
+    .line 1463
+    invoke-virtual {v13}, Landroid/os/Parcel;->recycle()V
 
-    invoke-interface {v3, v4, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .line 1464
+    invoke-virtual {v12}, Landroid/os/Parcel;->recycle()V
 
-    move-result v2
-
-    .line 1269
-    .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 1272
-    .end local v2    # "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 1273
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 1274
-    nop
-
-    .line 1275
+    .line 1457
     return-void
 
-    .line 1272
+    .line 1460
+    :cond_3
+    :try_start_3
+    invoke-virtual {v13}, Landroid/os/Parcel;->readException()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 1463
+    .end local v0    # "_status":Z
+    invoke-virtual {v13}, Landroid/os/Parcel;->recycle()V
+
+    .line 1464
+    invoke-virtual {v12}, Landroid/os/Parcel;->recycle()V
+
+    .line 1465
+    nop
+
+    .line 1466
+    return-void
+
+    .line 1463
     :catchall_0
-    move-exception v2
+    move-exception v0
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+    goto :goto_4
 
-    .line 1273
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    :catchall_1
+    move-exception v0
 
-    .line 1274
-    throw v2
+    goto :goto_3
+
+    :catchall_2
+    move-exception v0
+
+    move-object/from16 v14, p2
+
+    :goto_3
+    move/from16 v15, p5
+
+    :goto_4
+    invoke-virtual {v13}, Landroid/os/Parcel;->recycle()V
+
+    .line 1464
+    invoke-virtual {v12}, Landroid/os/Parcel;->recycle()V
+
+    .line 1465
+    throw v0
 .end method
 
 .method public blacklist remove(Landroid/os/IBinder;IIILcom/samsung/android/bio/face/IFaceServiceReceiver;)V
-    .locals 5
+    .locals 10
     .param p1, "token"    # Landroid/os/IBinder;
     .param p2, "faceId"    # I
     .param p3, "groupId"    # I
@@ -2017,40 +2739,52 @@
         }
     .end annotation
 
-    .line 837
+    .line 892
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 838
+    .line 893
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 840
+    .line 895
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 841
+    .line 896
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 842
+    .line 897
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 843
+    .line 898
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 844
+    .line 899
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 845
-    invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+    .line 900
+    if-eqz p5, :cond_0
 
-    .line 846
+    invoke-interface {p5}, Lcom/samsung/android/bio/face/IFaceServiceReceiver;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    .line 901
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x5
@@ -2061,35 +2795,75 @@
 
     move-result v2
 
-    .line 847
+    .line 902
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_1
+
+    .line 903
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 904
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v4
+
+    move-object v5, p1
+
+    move v6, p2
+
+    move v7, p3
+
+    move v8, p4
+
+    move-object v9, p5
+
+    invoke-interface/range {v4 .. v9}, Lcom/samsung/android/bio/face/IFaceService;->remove(Landroid/os/IBinder;IIILcom/samsung/android/bio/face/IFaceServiceReceiver;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 850
+    .line 911
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 912
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 905
+    return-void
+
+    .line 908
+    :cond_1
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 911
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 851
+    .line 912
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 852
+    .line 913
     nop
 
-    .line 853
+    .line 914
     return-void
 
-    .line 850
+    .line 911
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 851
+    .line 912
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 852
+    .line 913
     throw v2
 .end method
 
@@ -2104,34 +2878,34 @@
         }
     .end annotation
 
-    .line 857
+    .line 918
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 858
+    .line 919
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 860
+    .line 921
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 861
+    .line 922
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 862
+    .line 923
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 863
+    .line 924
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 864
+    .line 925
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x6
@@ -2142,35 +2916,65 @@
 
     move-result v2
 
-    .line 865
+    .line 926
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 927
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 928
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1, p2, p3}, Lcom/samsung/android/bio/face/IFaceService;->rename(IILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 868
+    .line 935
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 936
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 929
+    return-void
+
+    .line 932
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 935
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 869
+    .line 936
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 870
+    .line 937
     nop
 
-    .line 871
+    .line 938
     return-void
 
-    .line 868
+    .line 935
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 869
+    .line 936
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 870
+    .line 937
     throw v2
 .end method
 
@@ -2182,25 +2986,25 @@
         }
     .end annotation
 
-    .line 1166
+    .line 1317
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1167
+    .line 1318
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1169
+    .line 1320
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1170
+    .line 1321
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x17
@@ -2211,39 +3015,267 @@
 
     move-result v2
 
-    .line 1171
+    .line 1322
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 1323
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1324
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->requestEnrollPause()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1174
+    .line 1331
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1332
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1325
+    return-void
+
+    .line 1328
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1331
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1175
+    .line 1332
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1176
+    .line 1333
     nop
 
-    .line 1177
+    .line 1334
     return-void
 
-    .line 1174
+    .line 1331
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1175
+    .line 1332
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1176
+    .line 1333
     throw v2
 .end method
 
 .method public blacklist requestEnrollResume()V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1338
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 1339
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 1341
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string v2, "com.samsung.android.bio.face.IFaceService"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 1342
+    iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x18
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v2
+
+    .line 1343
+    .local v2, "_status":Z
+    if-nez v2, :cond_0
+
+    .line 1344
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1345
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->requestEnrollResume()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 1352
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1353
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1346
+    return-void
+
+    .line 1349
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1352
+    .end local v2    # "_status":Z
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1353
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1354
+    nop
+
+    .line 1355
+    return-void
+
+    .line 1352
+    :catchall_0
+    move-exception v2
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1353
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1354
+    throw v2
+.end method
+
+.method public blacklist requestSessionClose()V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1202
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 1203
+    .local v0, "_data":Landroid/os/Parcel;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    .line 1205
+    .local v1, "_reply":Landroid/os/Parcel;
+    :try_start_0
+    const-string v2, "com.samsung.android.bio.face.IFaceService"
+
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 1206
+    iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/16 v3, 0x12
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v2
+
+    .line 1207
+    .local v2, "_status":Z
+    if-nez v2, :cond_0
+
+    .line 1208
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1209
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->requestSessionClose()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 1216
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1217
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1210
+    return-void
+
+    .line 1213
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1216
+    .end local v2    # "_status":Z
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1217
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1218
+    nop
+
+    .line 1219
+    return-void
+
+    .line 1216
+    :catchall_0
+    move-exception v2
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1217
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1218
+    throw v2
+.end method
+
+.method public blacklist requestSessionOpen()V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2272,7 +3304,7 @@
     .line 1185
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/16 v3, 0x18
+    const/16 v3, 0x11
 
     const/4 v4, 0x0
 
@@ -2282,171 +3314,63 @@
 
     .line 1186
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 1187
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1188
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->requestSessionOpen()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1189
-    .end local v2    # "_status":Z
+    .line 1195
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1190
+    .line 1196
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1191
-    nop
+    .line 1189
+    return-void
 
     .line 1192
-    return-void
-
-    .line 1189
-    :catchall_0
-    move-exception v2
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 1190
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 1191
-    throw v2
-.end method
-
-.method public blacklist requestSessionClose()V
-    .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .line 1077
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    .line 1078
-    .local v0, "_data":Landroid/os/Parcel;
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 1080
-    .local v1, "_reply":Landroid/os/Parcel;
-    :try_start_0
-    const-string v2, "com.samsung.android.bio.face.IFaceService"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 1081
-    iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/16 v3, 0x12
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v2
-
-    .line 1082
-    .local v2, "_status":Z
+    :cond_0
+    :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1085
+    .line 1195
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1086
+    .line 1196
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1087
+    .line 1197
     nop
 
-    .line 1088
+    .line 1198
     return-void
 
-    .line 1085
+    .line 1195
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1086
+    .line 1196
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1087
-    throw v2
-.end method
-
-.method public blacklist requestSessionOpen()V
-    .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .line 1062
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    .line 1063
-    .local v0, "_data":Landroid/os/Parcel;
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    .line 1065
-    .local v1, "_reply":Landroid/os/Parcel;
-    :try_start_0
-    const-string v2, "com.samsung.android.bio.face.IFaceService"
-
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    .line 1066
-    iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/16 v3, 0x11
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v2
-
-    .line 1067
-    .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 1070
-    .end local v2    # "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 1071
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 1072
-    nop
-
-    .line 1073
-    return-void
-
-    .line 1070
-    :catchall_0
-    move-exception v2
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 1071
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    .line 1072
+    .line 1197
     throw v2
 .end method
 
@@ -2458,25 +3382,25 @@
         }
     .end annotation
 
-    .line 1148
+    .line 1294
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1149
+    .line 1295
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1152
+    .line 1298
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1153
+    .line 1299
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x16
@@ -2487,43 +3411,80 @@
 
     move-result v2
 
-    .line 1154
+    .line 1300
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1155
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 1301
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1302
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/samsung/android/bio/face/IFaceService;->resetAuthenticationTimeout()Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 1309
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1158
+    .line 1310
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1302
+    return v3
+
+    .line 1305
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1306
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 1309
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1159
+    .line 1310
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1160
+    .line 1311
     nop
 
-    .line 1161
+    .line 1312
     return v2
 
-    .line 1158
+    .line 1309
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1159
+    .line 1310
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1160
+    .line 1311
     throw v2
 .end method
 
@@ -2536,28 +3497,28 @@
         }
     .end annotation
 
-    .line 1030
+    .line 1137
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1031
+    .line 1138
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1033
+    .line 1140
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1034
+    .line 1141
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 1035
+    .line 1142
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xf
@@ -2568,35 +3529,65 @@
 
     move-result v2
 
-    .line 1036
+    .line 1143
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 1144
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1145
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->resetTimeout([B)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1039
+    .line 1152
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1153
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1146
+    return-void
+
+    .line 1149
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1152
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1040
+    .line 1153
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1041
+    .line 1154
     nop
 
-    .line 1042
+    .line 1155
     return-void
 
-    .line 1039
+    .line 1152
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1040
+    .line 1153
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1041
+    .line 1154
     throw v2
 .end method
 
@@ -2609,28 +3600,28 @@
         }
     .end annotation
 
-    .line 1046
+    .line 1159
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1047
+    .line 1160
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1049
+    .line 1162
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1050
+    .line 1163
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1051
+    .line 1164
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x10
@@ -2641,35 +3632,65 @@
 
     move-result v2
 
-    .line 1052
+    .line 1165
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 1166
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1167
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->setActiveUser(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1055
+    .line 1174
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1175
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1168
+    return-void
+
+    .line 1171
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1174
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1056
+    .line 1175
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1057
+    .line 1176
     nop
 
-    .line 1058
+    .line 1177
     return-void
 
-    .line 1055
+    .line 1174
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1056
+    .line 1175
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1057
+    .line 1176
     throw v2
 .end method
 
@@ -2682,28 +3703,28 @@
         }
     .end annotation
 
-    .line 1279
+    .line 1470
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1280
+    .line 1471
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1282
+    .line 1473
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1283
+    .line 1474
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1284
+    .line 1475
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1d
@@ -2714,35 +3735,65 @@
 
     move-result v2
 
-    .line 1285
+    .line 1476
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
+
+    .line 1477
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1478
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->startPreparedClient(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1288
+    .line 1485
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1486
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1479
+    return-void
+
+    .line 1482
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1485
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1289
+    .line 1486
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1290
+    .line 1487
     nop
 
-    .line 1291
+    .line 1488
     return-void
 
-    .line 1288
+    .line 1485
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1289
+    .line 1486
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1290
+    .line 1487
     throw v2
 .end method
 
@@ -2755,28 +3806,28 @@
         }
     .end annotation
 
-    .line 1129
+    .line 1270
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1130
+    .line 1271
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1133
+    .line 1274
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1134
+    .line 1275
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 1135
+    .line 1276
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x15
@@ -2787,43 +3838,80 @@
 
     move-result v2
 
-    .line 1136
+    .line 1277
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1137
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 1278
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1279
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->updateSecureID([B)Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 1286
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1140
+    .line 1287
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1279
+    return v3
+
+    .line 1282
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1283
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 1286
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1141
+    .line 1287
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1142
+    .line 1288
     nop
 
-    .line 1143
+    .line 1289
     return v2
 
-    .line 1140
+    .line 1286
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1141
+    .line 1287
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1142
+    .line 1288
     throw v2
 .end method
 
@@ -2836,28 +3924,28 @@
         }
     .end annotation
 
-    .line 1110
+    .line 1246
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1111
+    .line 1247
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1114
+    .line 1250
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1115
+    .line 1251
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 1116
+    .line 1252
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x14
@@ -2868,48 +3956,85 @@
 
     move-result v2
 
-    .line 1117
+    .line 1253
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_0
 
-    .line 1118
-    invoke-virtual {v1}, Landroid/os/Parcel;->readBoolean()Z
+    .line 1254
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 1255
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    invoke-interface {v3, p1}, Lcom/samsung/android/bio/face/IFaceService;->updateSecureUserID([B)Z
 
     move-result v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v2, v3
+    .line 1262
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1121
+    .line 1263
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1255
+    return v3
+
+    .line 1258
+    :cond_0
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+
+    .line 1259
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    :cond_1
+    move v2, v4
+
+    .line 1262
     .local v2, "_result":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1122
+    .line 1263
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1123
+    .line 1264
     nop
 
-    .line 1124
+    .line 1265
     return v2
 
-    .line 1121
+    .line 1262
     .end local v2    # "_result":Z
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1122
+    .line 1263
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1123
+    .line 1264
     throw v2
 .end method
 
 .method public blacklist updateTrustApp(Landroid/os/IBinder;Ljava/lang/String;ILcom/samsung/android/bio/face/IFaceServiceReceiver;Ljava/lang/String;)V
-    .locals 5
+    .locals 10
     .param p1, "token"    # Landroid/os/IBinder;
     .param p2, "path"    # Ljava/lang/String;
     .param p3, "userId"    # I
@@ -2921,40 +4046,52 @@
         }
     .end annotation
 
-    .line 1213
+    .line 1381
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1214
+    .line 1382
     .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 1216
+    .line 1384
     .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.samsung.android.bio.face.IFaceService"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1217
+    .line 1385
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 1218
+    .line 1386
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1219
+    .line 1387
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1220
-    invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+    .line 1388
+    if-eqz p4, :cond_0
 
-    .line 1221
+    invoke-interface {p4}, Lcom/samsung/android/bio/face/IFaceServiceReceiver;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    .line 1389
     invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1222
+    .line 1390
     iget-object v2, p0, Lcom/samsung/android/bio/face/IFaceService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x1a
@@ -2965,34 +4102,74 @@
 
     move-result v2
 
-    .line 1223
+    .line 1391
     .local v2, "_status":Z
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    if-nez v2, :cond_1
+
+    .line 1392
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 1393
+    invoke-static {}, Lcom/samsung/android/bio/face/IFaceService$Stub;->getDefaultImpl()Lcom/samsung/android/bio/face/IFaceService;
+
+    move-result-object v4
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    move v7, p3
+
+    move-object v8, p4
+
+    move-object v9, p5
+
+    invoke-interface/range {v4 .. v9}, Lcom/samsung/android/bio/face/IFaceService;->updateTrustApp(Landroid/os/IBinder;Ljava/lang/String;ILcom/samsung/android/bio/face/IFaceServiceReceiver;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1226
+    .line 1400
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    .line 1401
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 1394
+    return-void
+
+    .line 1397
+    :cond_1
+    :try_start_1
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 1400
     .end local v2    # "_status":Z
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1227
+    .line 1401
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1228
+    .line 1402
     nop
 
-    .line 1229
+    .line 1403
     return-void
 
-    .line 1226
+    .line 1400
     :catchall_0
     move-exception v2
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 1227
+    .line 1401
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 1228
+    .line 1402
     throw v2
 .end method

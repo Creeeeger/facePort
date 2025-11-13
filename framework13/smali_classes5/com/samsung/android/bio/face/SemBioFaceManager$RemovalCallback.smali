@@ -18,7 +18,7 @@
 .method public constructor whitelist <init>()V
     .locals 0
 
-    .line 683
+    .line 770
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .param p2, "errMsgId"    # I
     .param p3, "errString"    # Ljava/lang/CharSequence;
 
-    .line 693
+    .line 780
     return-void
 .end method
 
@@ -40,6 +40,6 @@
     .locals 0
     .param p1, "face"    # Lcom/samsung/android/bio/face/SemBioFace;
 
-    .line 702
+    .line 789
     return-void
 .end method
