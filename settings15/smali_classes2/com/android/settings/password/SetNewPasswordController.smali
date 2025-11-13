@@ -6,7 +6,7 @@
 # instance fields
 .field public final mDevicePolicyManager:Landroid/app/admin/DevicePolicyManager;
 
-.field public final mFaceManager:Landroid/hardware/face/FaceManager;
+.field public final mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public final mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method public constructor <init>(ILandroid/content/pm/PackageManager;Landroid/hardware/fingerprint/FingerprintManager;Landroid/hardware/face/FaceManager;Landroid/app/admin/DevicePolicyManager;Lcom/android/settings/password/SetNewPasswordController$Ui;)V
+.method public constructor <init>(ILandroid/content/pm/PackageManager;Landroid/hardware/fingerprint/FingerprintManager;Lcom/samsung/android/bio/face/SemBioFaceManager;Landroid/app/admin/DevicePolicyManager;Lcom/android/settings/password/SetNewPasswordController$Ui;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
 
     iput-object p3, p0, Lcom/android/settings/password/SetNewPasswordController;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
-    iput-object p4, p0, Lcom/android/settings/password/SetNewPasswordController;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object p4, p0, Lcom/android/settings/password/SetNewPasswordController;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     invoke-static {p5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 

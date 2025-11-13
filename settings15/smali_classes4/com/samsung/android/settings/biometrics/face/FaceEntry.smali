@@ -16,7 +16,7 @@
 
 .field public mContext:Lcom/samsung/android/settings/biometrics/face/FaceEntry;
 
-.field public mFaceManager:Landroid/hardware/face/FaceManager;
+.field public mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public mGkPwHandle:J
 
@@ -83,7 +83,7 @@
 
     iput-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mIsKnox:Z
 
-    iput-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iput-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mIsNeedFmmPopup:Z
 
@@ -252,11 +252,11 @@
     goto/16 :goto_0
 
     :cond_2
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     sget p2, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mUserId:I
 
-    invoke-virtual {p1, p2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, p2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -290,13 +290,13 @@
     goto/16 :goto_0
 
     :cond_6
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz p1, :cond_8
 
     sget p2, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mUserId:I
 
-    invoke-virtual {p1, p2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, p2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -398,11 +398,11 @@
     goto :goto_0
 
     :cond_a
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     sget p2, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mUserId:I
 
-    invoke-virtual {p1, p2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, p2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -589,17 +589,17 @@
 
     iput-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-nez v1, :cond_4
 
     iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mContext:Lcom/samsung/android/settings/biometrics/face/FaceEntry;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {v1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     :cond_4
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -687,6 +687,30 @@
 
     iput-wide v5, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mGkPwHandle:J
 
+    iget-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mIsFromFragment:Z
+
+    if-eqz v1, :cond_5a
+
+    iget-wide v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mGkPwHandle:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-nez v1, :cond_5a
+
+    invoke-static {}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->takeSharedGatekeeperHandle()J
+
+    move-result-wide v1
+
+    cmp-long v5, v1, v3
+
+    if-eqz v5, :cond_5a
+
+    iput-wide v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mGkPwHandle:J
+
+    :cond_5a
+
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v3, "mUserId : "
@@ -707,7 +731,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-nez v1, :cond_6
 
@@ -720,7 +744,7 @@
     return-void
 
     :cond_6
-    invoke-virtual {v1}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
+    invoke-virtual {v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
 
     move-result v0
 
@@ -772,11 +796,11 @@
 
     if-eqz p1, :cond_9
 
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     sget v1, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mUserId:I
 
-    invoke-virtual {p1, v1}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -837,11 +861,11 @@
     move v2, v4
 
     :goto_0
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     sget v0, Lcom/samsung/android/settings/biometrics/face/FaceEntry;->mUserId:I
 
-    invoke-virtual {p1, v0}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -1283,11 +1307,17 @@
 
     iput p1, v3, Lcom/android/settings/core/SubSettingLauncher$LaunchRequest;->mSourceMetricsCategory:I
 
-    const/4 p1, 0x0
+    iget-object v0, v1, Lcom/android/settings/core/SubSettingLauncher;->mLaunchRequest:Lcom/android/settings/core/SubSettingLauncher$LaunchRequest;
 
-    const v0, 0x7f140645
+    const/4 v4, 0x0
 
-    invoke-virtual {v1, v0, p1}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(ILjava/lang/String;)V
+    iput v4, v0, Lcom/android/settings/core/SubSettingLauncher$LaunchRequest;->mTitleResId:I
+
+    iput-object v4, v0, Lcom/android/settings/core/SubSettingLauncher$LaunchRequest;->mTitleResPackageName:Ljava/lang/String;
+
+    const-string p1, "Face recognition"
+
+    iput-object p1, v0, Lcom/android/settings/core/SubSettingLauncher$LaunchRequest;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v1}, Lcom/android/settings/core/SubSettingLauncher;->launch()V
 

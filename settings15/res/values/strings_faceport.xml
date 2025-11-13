@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sec_face_remove_face_popup_title">Remove face data?</string>
+    <string name="sec_face_remove_face_popup_message_2">Your face recognition data will be deleted.</string>
+    <string name="sec_face_remove_alternative_face_popup_title">Remove alternative appearance?</string>
+    <string name="sec_face_remove_alternative_face_popup_message">Your alternative appearance will be removed.</string>
+</resources>

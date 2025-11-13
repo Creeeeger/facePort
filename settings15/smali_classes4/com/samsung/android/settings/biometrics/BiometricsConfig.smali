@@ -4,6 +4,14 @@
 
 
 # direct methods
+.method public static isNotSupportBiometricsLockMenu(Landroid/content/Context;I)Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public static isSamsungAccountSignedIn(Landroid/content/Context;)Z
     .locals 1
 

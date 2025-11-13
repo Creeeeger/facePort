@@ -1,128 +1,112 @@
-.class public final Lcom/android/settings/biometrics/face/FaceSettings$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
-.source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
+.class Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;
+.super Lcom/samsung/android/bio/face/SemBioFaceManager$ChallengeCallback;
+.source "FaceSettings.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/samsung/android/settings/biometrics/face/FaceSettings;->onActivityResult(IILandroid/content/Intent;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
+
+.field final synthetic val$data:Landroid/content/Intent;
+
+
+# direct methods
+.method constructor <init>(Lcom/samsung/android/settings/biometrics/face/FaceSettings;Landroid/content/Intent;)V
+    .locals 0
+
+    .line 586
+    iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
+
+    iput-object p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->val$data:Landroid/content/Intent;
+
+    invoke-direct {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager$ChallengeCallback;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createPreferenceControllers(Landroid/content/Context;)Ljava/util/List;
-    .locals 0
-
-    invoke-static {p1}, Lcom/android/settings/biometrics/face/FaceSettings;->isFaceHardwareDetected(Landroid/content/Context;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p1}, Lcom/android/settings/biometrics/face/FaceSettings;->buildPreferenceControllers(Landroid/content/Context;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
+.method public onPreEnroll(J)V
     .locals 4
 
-    invoke-super {p0, p1}, Lcom/android/settings/search/BaseSearchIndexProvider;->getNonIndexableKeys(Landroid/content/Context;)Ljava/util/List;
+    .line 590
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
-    move-result-object p0
-
-    invoke-static {p1}, Lcom/android/settings/biometrics/face/FaceSettings;->isFaceHardwareDetected(Landroid/content/Context;)Z
-
-    move-result v0
-
-    const-string v1, "Get non indexable keys. isFaceHardwareDetected: "
-
-    const-string v2, ", size:"
-
-    invoke-static {v1, v2, v0}, Landroidx/slice/widget/RowView$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    move-object v2, p0
+    iget-object v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->val$data:Landroid/content/Intent;
 
-    check-cast v2, Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    invoke-static {v3}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->access$100(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)I
 
     move-result v3
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "FaceSettings"
-
-    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {v1, v2, v3, p1, p2}, Lcom/android/settings/biometrics/BiometricUtils;->requestGatekeeperHat(Landroid/content/Context;Landroid/content/Intent;IJ)[B
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    invoke-static {v0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->access$002(Lcom/samsung/android/settings/biometrics/face/FaceSettings;[B)[B
 
-    invoke-static {}, Landroid/os/UserHandle;->myUserId()I
+    .line 591
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
-    move-result v0
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    move-result-object p1
 
-    move-result p1
+    iget-object p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->val$data:Landroid/content/Intent;
 
-    goto :goto_0
+    invoke-static {p1, p2}, Lcom/android/settings/biometrics/BiometricUtils;->removeGatekeeperPasswordHandle(Landroid/content/Context;Landroid/content/Intent;)V
+
+    .line 593
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
+
+    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->access$000(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)[B
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "FcstFaceSettings"
+
+    const-string p2, "CONFIRM_REQUEST: token = NULL"
+
+    .line 594
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 595
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
+
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Activity;
+
+    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->getFaceSensorErrorMessage(Landroid/content/Context;)Ljava/lang/String;
+
+    .line 596
+
+    move-result-object v0
+
+    const/4 p2, 0x1
+
+    .line 595
+    invoke-static {p1, v0, p2}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->showFaceSensorErrorDialog(Landroid/app/Activity;Ljava/lang/String;Z)V
 
     :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    const-string p1, "security_settings_face_enroll_faces_container"
-
-    goto :goto_1
-
-    :cond_1
-    const-string p1, "security_settings_face_delete_faces_container"
-
-    :goto_1
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    sget-object p1, Lcom/android/settings/overlay/FeatureFactoryImpl;->_factory:Lcom/android/settings/overlay/FeatureFactoryImpl;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Lcom/android/settings/overlay/FeatureFactoryImpl;->getFaceFeatureProvider()Lcom/android/settings/biometrics/face/FaceFeatureProvider;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object p0
-
-    :cond_3
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "No feature factory configured"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final isPageSearchEnabled(Landroid/content/Context;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method

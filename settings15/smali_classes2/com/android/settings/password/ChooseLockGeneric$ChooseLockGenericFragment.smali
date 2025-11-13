@@ -59,7 +59,7 @@
 
 .field public mExtraLockScreenTitleResId:I
 
-.field public mFaceManager:Landroid/hardware/face/FaceManager;
+.field public mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
@@ -244,7 +244,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v0
 
@@ -307,7 +307,7 @@
 
     iget v4, v4, Landroid/content/pm/UserInfo;->id:I
 
-    invoke-virtual {v0, v4}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v0, v4}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v4
 
@@ -1191,11 +1191,11 @@
     if-nez v0, :cond_3
 
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
 
     move-result v0
 
@@ -1463,11 +1463,11 @@
     if-nez v0, :cond_2
 
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
 
     move-result v0
 
@@ -1664,13 +1664,13 @@
 .method public final hasEnrolledFaces()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v0, :cond_0
 
     iget p0, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mUserId:I
 
-    invoke-virtual {v0, p0}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v0, p0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p0
 
@@ -3376,7 +3376,7 @@
 
     if-nez v8, :cond_3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {v3}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v8
 
@@ -3386,7 +3386,7 @@
     const/4 v8, 0x0
 
     :goto_0
-    iput-object v8, v0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object v8, v0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     const-string v8, "device_policy"
 
@@ -5840,13 +5840,13 @@
     :cond_19
     if-eqz p2, :cond_1e
 
-    iget-object p2, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p2, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz p2, :cond_1d
 
     iget v1, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mUserId:I
 
-    invoke-virtual {p2, v1}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p2, v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p2
 
@@ -7317,11 +7317,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v1, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/android/settings/password/ChooseLockGeneric$ChooseLockGenericFragment;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
+    invoke-virtual {v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
 
     move-result v1
 

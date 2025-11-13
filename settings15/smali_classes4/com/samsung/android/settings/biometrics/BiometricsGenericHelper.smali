@@ -4,6 +4,7 @@
 
 
 # direct methods
+.field private static sSharedGatekeeperHandle:J
 .method public static getAppId(I)I
     .locals 2
 
@@ -133,6 +134,14 @@
     const/4 p0, 0x0
 
     return-object p0
+.end method
+
+.method public static isSupportMultiPane(Landroid/app/Activity;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public static getFmmPopupIntent()Landroid/content/Intent;
@@ -547,13 +556,13 @@
 
     if-ne p1, v6, :cond_5
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p0
 
     if-eqz p0, :cond_5
 
-    invoke-virtual {p0, v3}, Landroid/hardware/face/FaceManager;->semGetSecurityLevel(Z)I
+    invoke-virtual {p0, v3}, Lcom/samsung/android/bio/face/SemBioFaceManager;->semGetSecurityLevel(Z)I
 
     move-result p0
 
@@ -792,6 +801,30 @@
     invoke-static {p0, p2}, Lcom/samsung/android/settings/logging/LoggingHelper;->insertEventLogging(Ljava/lang/String;I)V
 
     return-void
+.end method
+
+.method public static insertSaLog(Landroid/content/Context;IIJ)V
+    .locals 0
+
+    invoke-static {p1, p2, p3, p4}, Lcom/samsung/android/settings/logging/LoggingHelper;->insertEventLogging(IIJ)V
+
+    return-void
+.end method
+
+.method public static insertSaLog(Landroid/content/Context;IILjava/lang/String;J)V
+    .locals 0
+
+    invoke-static {p1, p2, p4, p5, p3}, Lcom/samsung/android/settings/logging/LoggingHelper;->insertEventLogging(IIJLjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static isJdmModel()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public static isAvailableMemorySizeToEnroll()Z
@@ -1391,6 +1424,43 @@
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
+.end method
+
+.method public static clearSharedGatekeeperHandle()V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    sput-wide v0, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->sSharedGatekeeperHandle:J
+
+    return-void
+.end method
+
+.method public static storeSharedGatekeeperHandle(J)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
+
+    if-eqz v0, :cond_0
+
+    sput-wide p0, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->sSharedGatekeeperHandle:J
+
+    :cond_0
+    return-void
+.end method
+
+.method public static takeSharedGatekeeperHandle()J
+    .locals 4
+
+    sget-wide v0, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->sSharedGatekeeperHandle:J
+
+    const-wide/16 v2, 0x0
+
+    sput-wide v2, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->sSharedGatekeeperHandle:J
+
+    return-wide v0
 .end method
 
 .method public static removeSideMargin(Landroid/app/Activity;)V

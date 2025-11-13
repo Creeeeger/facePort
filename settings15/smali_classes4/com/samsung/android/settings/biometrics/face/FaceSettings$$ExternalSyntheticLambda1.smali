@@ -58,7 +58,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->insertSaLog(Landroid/content/Context;II)V
 
-    iget-object v0, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     const-string v1, "FcstFaceSettings"
 
@@ -66,7 +66,7 @@
 
     iget v2, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    invoke-virtual {v0, v2}, Landroid/hardware/face/FaceManager;->getEnrolledFaces(I)Ljava/util/List;
+    invoke-virtual {v0, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getEnrolledFaces(I)Ljava/util/List;
 
     move-result-object v0
 
@@ -88,19 +88,19 @@
 
     invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p2, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p2, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Landroid/hardware/face/Face;
+    check-cast p0, Lcom/samsung/android/bio/face/SemBioFace;
 
     iget v0, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
     iget-object p1, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mAlternativeRemovalCallback:Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;
 
-    invoke-virtual {p2, p0, v0, p1}, Landroid/hardware/face/FaceManager;->remove(Landroid/hardware/face/Face;ILandroid/hardware/face/FaceManager$RemovalCallback;)V
+    invoke-virtual {p2, p0, v0, p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->remove(Lcom/samsung/android/bio/face/SemBioFace;ILcom/samsung/android/bio/face/SemBioFaceManager$RemovalCallback;)V
 
     goto :goto_1
 
@@ -118,13 +118,13 @@
 
     iput-boolean p0, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mIsRemoveAndRegister:Z
 
-    iget-object p0, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p0, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iget p2, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
     iget-object p1, p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mRemovalCallback:Lcom/samsung/android/settings/biometrics/face/FaceSettings$1;
 
-    invoke-virtual {p0, p2, p1}, Landroid/hardware/face/FaceManager;->removeAll(ILandroid/hardware/face/FaceManager$RemovalCallback;)V
+    invoke-virtual {p0, p2, p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->removeAll(ILcom/samsung/android/bio/face/SemBioFaceManager$RemovalCallback;)V
 
     goto :goto_1
 

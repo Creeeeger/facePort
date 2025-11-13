@@ -334,13 +334,13 @@
 
     move-result v1
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {v0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v0, v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v2
 
@@ -350,7 +350,7 @@
 
     invoke-direct {v2, v1}, Lcom/android/settings/Utils$1;-><init>(I)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/hardware/face/FaceManager;->removeAll(ILandroid/hardware/face/FaceManager$RemovalCallback;)V
+    invoke-virtual {v0, v1, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->removeAll(ILcom/samsung/android/bio/face/SemBioFaceManager$RemovalCallback;)V
 
     :cond_1
     iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;

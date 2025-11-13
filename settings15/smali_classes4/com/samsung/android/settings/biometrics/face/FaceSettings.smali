@@ -25,7 +25,7 @@
 
 .field public mEmptyView:Landroid/view/View;
 
-.field public mFaceManager:Landroid/hardware/face/FaceManager;
+.field public mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public mFaceUnlock:Lcom/samsung/android/settings/biometrics/BiometricsRestrictedSwitchPreference;
 
@@ -102,7 +102,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iput-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mDeleteDialog:Landroidx/appcompat/app/AlertDialog;
 
@@ -200,7 +200,7 @@
     iput-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mWallet24Service:Lcom/samsung/android/settings/biometrics/Wallet24Service;
 
     :cond_1
-    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v0, :cond_2
 
@@ -216,15 +216,9 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
-    iget v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mSensorId:I
-
-    iget v2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
-
-    iget-wide v3, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mChallenge:J
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/face/FaceManager;->revokeChallenge(IIJ)V
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->postEnroll()I
 
     :cond_2
     iget-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mIsBiometricsSettingsDestroy:Z
@@ -319,7 +313,18 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SettingsPreferenceFragment;->addPreferencesFromResource(I)V
 
-    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+
+    move-result-object v4
+
+    if-eqz v4, :goto_b0
+
+    const-string v5, "Face recognition"
+
+    invoke-virtual {v4, v5}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    :goto_b0
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     const/4 v2, 0x0
 
@@ -329,7 +334,7 @@
 
     iget v4, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    invoke-virtual {v0, v4}, Landroid/hardware/face/FaceManager;->getEnrolledFaces(I)Ljava/util/List;
+    invoke-virtual {v0, v4}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getEnrolledFaces(I)Ljava/util/List;
 
     move-result-object v0
 
@@ -836,13 +841,13 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v0, :cond_1
 
     iget v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    invoke-virtual {v0, v1}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v0, v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v0
 
@@ -1007,7 +1012,11 @@
     move v2, v4
 
     :goto_1
-    invoke-virtual {v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)V
+    invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)V
 
     iget-object v2, v0, Landroidx/appcompat/app/AlertDialog$Builder;->P:Landroidx/appcompat/app/AlertController$AlertParams;
 
@@ -1023,9 +1032,9 @@
 
     invoke-direct {p2, p0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda2;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceSettings;Z)V
 
-    const p1, 0x7f1409b6
+    const-string p1, "Cancel"
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     new-instance p1, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda3;
 
@@ -1322,11 +1331,11 @@
     :cond_5
     iput-boolean v6, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mLockConfirmed:Z
 
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iget p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    invoke-virtual {p1, p2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, p2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -1379,11 +1388,11 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iget p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    invoke-virtual {p1, p2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, p2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -1528,7 +1537,7 @@
     return-void
 
     :cond_0
-    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-nez v1, :cond_1
 
@@ -1536,11 +1545,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {v1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1799,11 +1808,11 @@
 
     iput-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mGkPwProvider:Lcom/android/settings/biometrics/GatekeeperPasswordProvider;
 
-    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iget v3, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    invoke-virtual {v1, v3}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v1, v3}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v1
 
@@ -1848,6 +1857,10 @@
     cmp-long v1, v3, v7
 
     const/4 v3, 0x0
+
+    if-nez v1, :cond_9
+
+    iget-object v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mToken:[B
 
     if-nez v1, :cond_9
 
@@ -2236,11 +2249,11 @@
 
     invoke-static {v8, p1, v4, v5, v6}, Lcom/samsung/android/settings/logging/LoggingHelper;->insertEventLogging(IIJLjava/lang/String;)V
 
-    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iget v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    invoke-virtual {p1, v0}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p1, v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p1
 
@@ -2364,13 +2377,13 @@
     goto :goto_1
 
     :cond_9
-    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
-    invoke-virtual {p1}, Landroid/hardware/face/FaceManager;->semShouldRemoveTemplate()Z
+    invoke-virtual {p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->semShouldRemoveTemplate()Z
 
     move-result p1
 
@@ -2841,6 +2854,253 @@
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->updatePreferences$5()V
 
+    const-string v0, "key_facelock_unlock"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    const-string v3, "Face recognition"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Unlock your phone using face recognition."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_5
+    const-string v0, "key_facelock_stay_on_lock_screen"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    const-string v3, "Stay on Lock screen"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Remain on the Lock screen after unlocking with face recognition."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_6
+    const-string v0, "key_face_recognize_mask"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    const-string v3, "Recognize with mask"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Keep using face recognition while you're wearing a mask."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_7
+    const-string v0, "key_facelock_open_eyes"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_8
+
+    const-string v3, "Require open eyes"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Face recognition only works when your eyes are open."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_8
+    const-string v0, "key_facelock_brighten_screen"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_9
+
+    const-string v3, "Brighten screen"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Temporarily increase screen brightness for better recognition."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_9
+    const-string v0, "key_facelock_register"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_a
+
+    const-string v3, "Add face data"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Register your face so you can unlock with face recognition."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_a
+    const-string v0, "key_facelock_remove"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_b
+
+    const-string v3, "Remove face data"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Delete the face recognition data stored on this device."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_b
+    const-string v0, "key_facelock_register_alternative"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_c
+
+    const-string v3, "Add alternative appearance"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Save another look to improve recognition accuracy."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_c
+    const-string v0, "key_facelock_remove_alternative"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    const-string v3, "Remove alternative appearance"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Delete the additional appearance you registered."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+:cond_d
+    const-string v0, "key_facelock_advanced_access_control"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_e
+
+    const-string v3, "Advanced access control"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Add extra protection for sensitive content."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+:cond_e
+    const-string v0, "key_facelock_touch_dynamics_pref"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_f
+
+    const-string v3, "Touch dynamics"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Use touch dynamics with face recognition for added security."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+:cond_f
+    const-string v0, "key_face_about_biometrics_unlock"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_10
+
+    const-string v3, "About Biometrics unlock"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Learn how biometrics protect your data."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+:cond_10
+    const-string v0, "key_face_about_face_recognition"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_11
+
+    const-string v3, "About face recognition"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+    const-string v3, "Information about using face recognition on your phone."
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+:cond_11
+    const-string v0, "inset_face_biometrics_security_unlock"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_12
+
+    const-string v3, "Face recognition options"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+:cond_12
+    const-string v0, "inset_facelock_advanced_access_control"
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/core/InstrumentedPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_13
+
+    const-string v3, "Advanced access control"
+
+    invoke-virtual {v0, v3}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+
+:cond_13
     iget-boolean v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mNeedFmmPopup:Z
 
     if-eqz v0, :cond_4
@@ -2937,7 +3197,7 @@
 .method public final requestToken(Z)V
     .locals 5
 
-    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v0, :cond_0
 
@@ -2953,13 +3213,11 @@
 
     if-nez v1, :cond_0
 
-    iget v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
-
     new-instance v2, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;
 
     invoke-direct {v2, p0, p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;-><init>(Lcom/samsung/android/settings/biometrics/face/FaceSettings;Z)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/hardware/face/FaceManager;->generateChallenge(ILandroid/hardware/face/FaceManager$GenerateChallengeCallback;)V
+    invoke-virtual {v0, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->preEnroll(Lcom/samsung/android/bio/face/SemBioFaceManager$ChallengeCallback;)J
 
     :cond_0
     return-void

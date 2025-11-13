@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public mFaceManager:Landroid/hardware/face/FaceManager;
+.field public mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public mFaceUpdater:Lcom/android/settings/biometrics/face/FaceUpdater;
 
@@ -100,11 +100,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     new-instance p1, Lcom/android/settings/biometrics/face/FaceUpdater;
 
@@ -112,9 +112,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
-    invoke-direct {p1, v0, v1}, Lcom/android/settings/biometrics/face/FaceUpdater;-><init>(Landroid/content/Context;Landroid/hardware/face/FaceManager;)V
+    invoke-direct {p1, v0, v1}, Lcom/android/settings/biometrics/face/FaceUpdater;-><init>(Landroid/content/Context;Lcom/samsung/android/bio/face/SemBioFaceManager;)V
 
     iput-object p1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceUpdater:Lcom/android/settings/biometrics/face/FaceUpdater;
 
@@ -201,11 +201,11 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v0}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v1, v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v1
 
@@ -217,7 +217,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;->mFaceUpdater:Lcom/android/settings/biometrics/face/FaceUpdater;
 
-    new-instance v2, Landroid/hardware/face/Face;
+    new-instance v2, Lcom/samsung/android/bio/face/SemBioFace;
 
     const-wide/16 v3, 0x0
 
@@ -225,21 +225,21 @@
 
     const/4 v6, 0x0
 
-    invoke-direct {v2, v5, v6, v3, v4}, Landroid/hardware/face/Face;-><init>(Ljava/lang/CharSequence;IJ)V
+    invoke-direct {v2, v5, v6, v3, v4}, Lcom/samsung/android/bio/face/SemBioFace;-><init>(Ljava/lang/CharSequence;IJ)V
 
     new-instance v3, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog$1;
 
     invoke-direct {v3, p0}, Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog$1;-><init>(Lcom/android/settings/homepage/contextualcards/FaceReEnrollDialog;)V
 
-    iget-object p0, v1, Lcom/android/settings/biometrics/face/FaceUpdater;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object p0, v1, Lcom/android/settings/biometrics/face/FaceUpdater;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     new-instance v4, Lcom/android/settings/biometrics/face/FaceUpdater$NotifyingRemovalCallback;
 
     iget-object v1, v1, Lcom/android/settings/biometrics/face/FaceUpdater;->mContext:Landroid/content/Context;
 
-    invoke-direct {v4, v1, v3}, Lcom/android/settings/biometrics/face/FaceUpdater$NotifyingRemovalCallback;-><init>(Landroid/content/Context;Landroid/hardware/face/FaceManager$RemovalCallback;)V
+    invoke-direct {v4, v1, v3}, Lcom/android/settings/biometrics/face/FaceUpdater$NotifyingRemovalCallback;-><init>(Landroid/content/Context;Lcom/samsung/android/bio/face/SemBioFaceManager$RemovalCallback;)V
 
-    invoke-virtual {p0, v2, v0, v4}, Landroid/hardware/face/FaceManager;->remove(Landroid/hardware/face/Face;ILandroid/hardware/face/FaceManager$RemovalCallback;)V
+    invoke-virtual {p0, v2, v0, v4}, Lcom/samsung/android/bio/face/SemBioFaceManager;->remove(Lcom/samsung/android/bio/face/SemBioFace;ILcom/samsung/android/bio/face/SemBioFaceManager$RemovalCallback;)V
 
     return-void
 .end method

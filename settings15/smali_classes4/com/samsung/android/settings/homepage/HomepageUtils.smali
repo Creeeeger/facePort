@@ -60,6 +60,49 @@
     return-void
 .end method
 
+.method public static isShowingMultiPaneLayout(Landroid/content/Context;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+
+    const/16 v1, 0x258
+
+    if-lt p0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception p0
+
+    const-string v1, "HomepageUtils"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return v0
+.end method
+
 .method public static startActivity(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/UserHandle;)V
     .locals 2
 

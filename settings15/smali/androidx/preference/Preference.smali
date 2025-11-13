@@ -322,13 +322,13 @@
 
     const/16 p3, 0x8
 
-    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-static {p2, p3, v0, p1}, Landroidx/preference/Preference;->safeGetInt(Landroid/content/res/TypedArray;IILandroid/content/Context;)I
 
     move-result p3
 
     const/16 p4, 0x21
 
-    invoke-virtual {p2, p4, p3}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-static {p2, p4, p3, p1}, Landroidx/preference/Preference;->safeGetInt(Landroid/content/res/TypedArray;IILandroid/content/Context;)I
 
     move-result p3
 
@@ -618,6 +618,49 @@
 
     :cond_8
     return-void
+.end method
+
+.method private static safeGetInt(Landroid/content/res/TypedArray;IILandroid/content/Context;)I
+    .locals 3
+
+    :try_start_0
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v0
+
+    return v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    if-eqz p3, :cond_0
+
+    :try_start_1
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v0
+
+    return v0
+    :try_end_1
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :cond_0
+    return p2
+
+    :catch_1
+    return p2
 .end method
 
 .method public static setEnabledStateOnViews(Landroid/view/View;Z)V

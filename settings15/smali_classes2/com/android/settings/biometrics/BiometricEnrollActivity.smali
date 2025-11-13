@@ -468,7 +468,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v1
 
@@ -476,7 +476,7 @@
 
     iget v2, p0, Lcom/android/settings/biometrics/BiometricEnrollActivity;->mUserId:I
 
-    invoke-virtual {v1, v2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v1, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v1
 
@@ -1687,15 +1687,15 @@
 
     if-eqz v8, :cond_11
 
-    const-class v8, Landroid/hardware/face/FaceManager;
+    const-class v8, Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     invoke-virtual {p0, v8}, Landroid/app/Activity;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v8
 
-    check-cast v8, Landroid/hardware/face/FaceManager;
+    check-cast v8, Lcom/samsung/android/bio/face/SemBioFaceManager;
 
-    invoke-virtual {v8}, Landroid/hardware/face/FaceManager;->getSensorPropertiesInternal()Ljava/util/List;
+    invoke-virtual {v8}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getSensorPropertiesInternal()Ljava/util/List;
 
     move-result-object v10
 
@@ -1747,7 +1747,7 @@
     :goto_7
     iget v12, p0, Lcom/android/settings/biometrics/BiometricEnrollActivity;->mUserId:I
 
-    invoke-virtual {v8, v12}, Landroid/hardware/face/FaceManager;->getEnrolledFaces(I)Ljava/util/List;
+    invoke-virtual {v8, v12}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getEnrolledFaces(I)Ljava/util/List;
 
     move-result-object v8
 

@@ -1,9 +1,8 @@
 .class public final synthetic Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;
-.super Ljava/lang/Object;
+.super Lcom/samsung/android/bio/face/SemBioFaceManager$ChallengeCallback;
 .source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
 
 # interfaces
-.implements Landroid/hardware/face/FaceManager$GenerateChallengeCallback;
 
 
 # instance fields
@@ -16,7 +15,7 @@
 .method public synthetic constructor <init>(Lcom/samsung/android/settings/biometrics/face/FaceSettings;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager$ChallengeCallback;-><init>()V
 
     iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
@@ -27,81 +26,90 @@
 
 
 # virtual methods
-.method public final onGenerateChallengeResult(IIJ)V
-    .locals 7
+.method public final onPreEnroll(J)V
+    .locals 8
 
-    iget-object p2, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
+    iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;->f$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
-    iget-boolean p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;->f$1:Z
+    iget-boolean v1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$$ExternalSyntheticLambda0;->f$1:Z
 
-    invoke-virtual {p2}, Lcom/android/settings/SettingsPreferenceFragment;->isFinishingOrDestroyed()Z
+    invoke-virtual {v0}, Lcom/android/settings/SettingsPreferenceFragment;->isFinishingOrDestroyed()Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iput p1, p2, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mSensorId:I
+    iget v2, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mSensorId:I
 
-    iput-wide p3, p2, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mChallenge:J
+    const/4 v3, -0x1
 
-    iget-object v1, p2, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mGkPwProvider:Lcom/android/settings/biometrics/GatekeeperPasswordProvider;
+    if-ne v2, v3, :cond_1
 
-    if-eqz v1, :cond_1
+    const/4 v2, 0x1
 
-    iget-wide v2, p2, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mGkPwHandle:J
-
-    iget v6, p2, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
-
-    move-wide v4, p3
-
-    invoke-virtual/range {v1 .. v6}, Lcom/android/settings/biometrics/GatekeeperPasswordProvider;->requestGatekeeperHat(JJI)[B
-
-    move-result-object p1
-
-    iput-object p1, p2, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mToken:[B
+    iput v2, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mSensorId:I
 
     :cond_1
-    iget-object p1, p2, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mToken:[B
+    iput-wide p1, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mChallenge:J
 
-    if-nez p1, :cond_2
+    iget-object v2, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mGkPwProvider:Lcom/android/settings/biometrics/GatekeeperPasswordProvider;
 
-    const-string p0, "FcstFaceSettings"
+    if-eqz v2, :cond_2
 
-    const-string/jumbo p1, "token is NULL!"
+    iget-wide v3, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mGkPwHandle:J
 
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    move-wide v5, p1
 
-    invoke-virtual {p2}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+    iget v7, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
 
-    move-result-object p0
+    invoke-virtual/range {v2 .. v7}, Lcom/android/settings/biometrics/GatekeeperPasswordProvider;->requestGatekeeperHat(JJI)[B
 
-    check-cast p0, Landroid/app/Activity;
+    move-result-object v2
 
-    const p1, 0x7f14214a
+    iput-object v2, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mToken:[B
 
-    invoke-virtual {p2, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+    :cond_2
+    iget-object v2, v0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mToken:[B
 
-    move-result-object p1
+    if-nez v2, :cond_3
 
-    const/4 p2, 0x0
+    const-string v2, "FcstFaceSettings"
 
-    const/4 p3, 0x1
+    const-string/jumbo v3, "token is NULL!"
 
-    invoke-static {p0, p2, p1, p3}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->showFaceSensorErrorDialog(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/app/Activity;
+
+    const v3, 0x7f14214a
+
+    invoke-virtual {v0, v3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    invoke-static {v2, v4, v3, v5}, Lcom/samsung/android/settings/biometrics/face/FaceSettingsHelper;->showFaceSensorErrorDialog(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Z)V
 
     goto :goto_0
 
-    :cond_2
-    if-eqz p0, :cond_3
-
-    const-string p0, "FaceSettings_unlock_switch"
-
-    invoke-virtual {p2, p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->runRegister(Ljava/lang/String;)V
-
     :cond_3
+    if-eqz v1, :cond_4
+
+    const-string v1, "FaceSettings_unlock_switch"
+
+    invoke-virtual {v0, v1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->runRegister(Ljava/lang/String;)V
+
+    :cond_4
     :goto_0
     return-void
 .end method

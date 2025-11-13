@@ -6,7 +6,7 @@
 # instance fields
 .field public final mContext:Landroid/content/Context;
 
-.field public final mFaceManager:Landroid/hardware/face/FaceManager;
+.field public final mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public final mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
@@ -27,11 +27,11 @@
 
     iput-object v0, p0, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object p1, p0, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iput p2, p0, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mUserId:I
 
@@ -116,13 +116,13 @@
     move v0, v1
 
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v3, p0, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     const/4 v4, 0x1
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3, v2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v3, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v2
 

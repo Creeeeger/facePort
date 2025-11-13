@@ -19,6 +19,100 @@
 
 .field public static final abc_action_bar_home_description:I = 0x7f140001
 
+
+
+.field public static final sec_face_add_alternative_face:I = 0x7f121dea
+
+.field public static final sec_face_add_alternative_face_summary:I = 0x7f121deb
+
+.field public static final sec_face_add_face:I = 0x7f121dec
+
+.field public static final sec_face_add_summary:I = 0x7f121ded
+
+.field public static final sec_face_advanced_access_control:I = 0x7f121dee
+
+.field public static final sec_face_advanced_access_control_summary:I = 0x7f121def
+
+.field public static final sec_face_attention:I = 0x7f121df0
+
+.field public static final sec_face_auth_fail:I = 0x7f121df1
+
+.field public static final sec_face_backup_lock_type_helptext_ppp_directions:I = 0x7f121df2
+
+.field public static final sec_face_brighten_screen:I = 0x7f121df3
+
+.field public static final sec_face_brighten_screen_summary:I = 0x7f121df4
+
+.field public static final sec_face_chooselock_help_text_1:I = 0x7f121df5
+
+.field public static final sec_face_delete_popup_title:I = 0x7f121df6
+
+.field public static final sec_face_error_message_button_retry:I = 0x7f121df7
+
+.field public static final sec_face_error_message_retry:I = 0x7f121df8
+
+.field public static final sec_face_error_message_retry_too_dark:I = 0x7f121df9
+
+.field public static final sec_face_error_message_sensor_error:I = 0x7f121dfa
+
+.field public static final sec_face_error_timeout:I = 0x7f121dfb
+
+.field public static final sec_face_error_title_retry:I = 0x7f121dfc
+
+.field public static final sec_face_failcase_title_text:I = 0x7f121dfd
+
+.field public static final sec_face_open_eyes:I = 0x7f121dfe
+
+.field public static final sec_face_open_eyes_summary:I = 0x7f121dff
+
+.field public static final sec_face_recognition_speed_up:I = 0x7f121e00
+
+.field public static final sec_face_recognition_speed_up_summary:I = 0x7f121e01
+
+.field public static final sec_face_recognize_with_mask:I = 0x7f121e02
+
+.field public static final sec_face_recognize_with_mask_summary:I = 0x7f121e03
+
+.field public static final sec_face_register_summary:I = 0x7f121e04
+
+.field public static final sec_face_remove_alternative_face:I = 0x7f121e05
+
+.field public static final sec_face_remove_alternative_face_popup_message:I = 0x7f121e06
+
+.field public static final sec_face_remove_alternative_face_popup_title:I = 0x7f121e07
+
+.field public static final sec_face_remove_face:I = 0x7f121e08
+
+.field public static final sec_face_remove_face_popup_message_2:I = 0x7f121e09
+
+.field public static final sec_face_remove_face_popup_title:I = 0x7f121e0a
+
+.field public static final sec_face_samsungpass_summary:I = 0x7f121e0b
+
+.field public static final sec_face_settings_option_about_face_recognition:I = 0x7f121e0c
+
+.field public static final sec_face_setupwizard_error_unable_to_process_popup_title:I = 0x7f121e0d
+
+.field public static final sec_face_stay_on_lock_screen_button_done_text:I = 0x7f121e0e
+
+.field public static final sec_face_stay_on_lock_screen_button_next_text:I = 0x7f121e0f
+
+.field public static final sec_face_stay_on_lock_screen_summary:I = 0x7f121e10
+
+.field public static final sec_face_title:I = 0x7f121e11
+
+.field public static final sec_face_unlock_summary_common:I = 0x7f121e12
+
+.field public static final sec_face_unlock_title:I = 0x7f121e13
+
+.field public static final sec_face_useful_face_recognition_feature_faster_recognition_summary:I = 0x7f121e14
+
+.field public static final sec_face_useful_face_recognition_feature_faster_recognition_title:I = 0x7f121e15
+
+.field public static final sec_face_useful_face_recognition_feature_msg:I = 0x7f121e16
+
+.field public static final sec_face_useful_face_recognition_feature_title:I = 0x7f121e17
+
 .field public static final abc_action_bar_up_description:I = 0x7f140002
 
 .field public static final abc_action_menu_overflow_description:I = 0x7f140003

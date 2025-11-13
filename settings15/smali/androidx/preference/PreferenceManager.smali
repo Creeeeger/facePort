@@ -58,6 +58,20 @@
     return-void
 .end method
 
+.method public setStorageDeviceProtected()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Landroidx/preference/PreferenceManager;->mStorage:I
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroidx/preference/PreferenceManager;->mSharedPreferences:Landroid/content/SharedPreferences;
+
+    return-void
+.end method
+
 .method public static getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 2
 

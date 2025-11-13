@@ -1,5 +1,5 @@
 .class public final Lcom/android/settings/Utils$1;
-.super Landroid/hardware/face/FaceManager$RemovalCallback;
+.super Lcom/samsung/android/bio/face/SemBioFaceManager$RemovalCallback;
 .source "qb/98004394 196cb3c588f4bce8f34d9a4b22ef87dca56ab51c1d488078a331bdfa0f5f580b"
 
 
@@ -13,14 +13,14 @@
 
     iput p1, p0, Lcom/android/settings/Utils$1;->val$userId:I
 
-    invoke-direct {p0}, Landroid/hardware/face/FaceManager$RemovalCallback;-><init>()V
+    invoke-direct {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager$RemovalCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onRemovalError(Landroid/hardware/face/Face;ILjava/lang/CharSequence;)V
+.method public final onRemovalError(Lcom/samsung/android/bio/face/SemBioFace;ILjava/lang/CharSequence;)V
     .locals 0
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public final onRemovalSucceeded(Landroid/hardware/face/Face;I)V
+.method public final onRemovalSucceeded(Lcom/samsung/android/bio/face/SemBioFace;I)V
     .locals 0
 
     if-nez p2, :cond_0

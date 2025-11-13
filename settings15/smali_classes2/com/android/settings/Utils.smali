@@ -1881,7 +1881,7 @@
     return-object p0
 .end method
 
-.method public static getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+.method public static getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
     .locals 2
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1896,13 +1896,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "face"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p0
-
-    check-cast p0, Landroid/hardware/face/FaceManager;
 
     return-object p0
 
@@ -4053,13 +4049,13 @@
 .method public static hasFaceHardware(Landroid/content/Context;)Z
     .locals 0
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
+    invoke-virtual {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
 
     move-result p0
 
@@ -5033,7 +5029,7 @@
 .method public static isFaceNotConvenienceBiometric(Landroid/content/Context;)Z
     .locals 2
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p0
 
@@ -5041,7 +5037,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Landroid/hardware/face/FaceManager;->getSensorPropertiesInternal()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getSensorPropertiesInternal()Ljava/util/List;
 
     move-result-object p0
 

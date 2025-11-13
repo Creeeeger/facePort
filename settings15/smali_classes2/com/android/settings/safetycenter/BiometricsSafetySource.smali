@@ -246,11 +246,11 @@
     goto :goto_2
 
     :cond_4
-    iget-object v1, v9, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, v9, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {v1, v12}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v1, v12}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v1
 
@@ -416,11 +416,11 @@
     goto :goto_7
 
     :cond_b
-    iget-object v1, v9, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, v9, Lcom/android/settings/biometrics/combination/CombinedBiometricStatusUtils;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v1, :cond_c
 
-    invoke-virtual {v1, v12}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v1, v12}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v1
 
@@ -451,7 +451,7 @@
     return-void
 
     :cond_d
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static/range {p0 .. p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v3
 
@@ -546,7 +546,7 @@
 
     move-result-object v10
 
-    invoke-virtual {v3, v2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v3, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v12
 
@@ -591,7 +591,7 @@
     move v4, v11
 
     :cond_13
-    invoke-virtual {v3, v2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v3, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v7
 

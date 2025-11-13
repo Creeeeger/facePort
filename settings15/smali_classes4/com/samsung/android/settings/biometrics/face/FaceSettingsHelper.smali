@@ -323,26 +323,38 @@
 .end method
 
 .method public static isSupportBioFaceRecognizeWithMask(Landroid/content/Context;)Z
-    .locals 1
+    .locals 4
 
     const/4 v0, 0x0
 
-    if-nez p0, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
+    :try_start_0
     invoke-static {}, Landroid/hardware/face/FaceManager;->semIsSupportOnMask()Z
 
-    move-result v0
+    move-result v1
 
-    :cond_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "isSupportBioFaceRecognizeWithMask : "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "FcstFaceSettingsHelper"
+
+    invoke-static {v2, v1, v3}, Landroidx/appcompat/widget/ActionBarContextView$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
+
+    return v1
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v1, "FcstFaceSettingsHelper"
+
+    const-string v2, "isSupportBioFaceRecognizeWithMask : false"
+
+    invoke-static {v1, v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     return v0
 .end method
 
@@ -490,6 +502,45 @@
     invoke-static {p0, p2, p1}, Landroidx/appcompat/widget/ActionBarContextView$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;)V
 
     return-void
+.end method
+
+.method public static getFaceSensorErrorMessage(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "FcstFaceSettingsHelper"
+
+    if-nez p0, :cond_0
+
+    const-string v1, "Context is null. Using fallback face sensor error message."
+    invoke-static {v0, v1}, Landroid/util/Log;->secW(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_0
+
+    :cond_0
+    :try_start_0
+    sget v1, Lcom/android/settings/R$string;->sec_face_error_message_sensor_error:I
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v1, :cond_1
+
+    return-object v1
+
+    :cond_1
+    const-string v2, "Face sensor error string was empty. Using fallback message."
+    invoke-static {v0, v2}, Landroid/util/Log;->secW(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_0
+
+    :catch_0
+    const-string v2, "Face sensor error string resource missing. Using fallback message."
+    invoke-static {v0, v2}, Landroid/util/Log;->secW(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    const-string v0, "Face recognition can't be used right now because the face sensor isn't working. Please try again later."
+    return-object v0
 .end method
 
 .method public static showFaceSensorErrorDialog(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Z)V

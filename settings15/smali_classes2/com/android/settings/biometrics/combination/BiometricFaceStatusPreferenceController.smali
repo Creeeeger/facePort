@@ -207,11 +207,11 @@
 
     iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceStatusPreferenceController;->mFaceStatusUtils:Lcom/android/settings/biometrics/face/FaceStatusUtils;
 
-    iget-object v1, v0, Lcom/android/settings/biometrics/face/FaceStatusUtils;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, v0, Lcom/android/settings/biometrics/face/FaceStatusUtils;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     iget v0, v0, Lcom/android/settings/biometrics/face/FaceStatusUtils;->mUserId:I
 
-    invoke-virtual {v1, v0}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v1, v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v0
 

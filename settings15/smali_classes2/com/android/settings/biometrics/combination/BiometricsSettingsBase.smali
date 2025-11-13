@@ -16,7 +16,7 @@
 
 .field public mDoNotFinishActivity:Z
 
-.field public mFaceManager:Landroid/hardware/face/FaceManager;
+.field public mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public final mFaceOrFingerprintPreferenceLauncher:Landroidx/activity/result/ActivityResultLauncher;
 
@@ -76,7 +76,7 @@
 .method public getUseAnyBiometricSummary()Ljava/lang/String;
     .locals 4
 
-    iget-object v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     const/4 v1, 0x0
 
@@ -84,7 +84,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
+    invoke-virtual {v0}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
 
     move-result v0
 
@@ -304,6 +304,8 @@
 
     iput-wide p2, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mGkPwHandle:J
 
+    invoke-static {p2, p3}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->storeSharedGatekeeperHandle(J)V
+
     iget-object p2, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mRetryPreferenceKey:Ljava/lang/String;
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -416,11 +418,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {v0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -451,6 +453,8 @@
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mGkPwHandle:J
+
+    invoke-static {v0, v1}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->storeSharedGatekeeperHandle(J)V
 
     :cond_0
     if-eqz p1, :cond_1
@@ -501,6 +505,8 @@
 
     iput-wide v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mGkPwHandle:J
 
+    invoke-static {v0, v1}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->storeSharedGatekeeperHandle(J)V
+
     :cond_1
     iget-wide v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mGkPwHandle:J
 
@@ -548,7 +554,7 @@
 
     if-eqz p1, :cond_e
 
-    iget-object v1, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v1, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     const/4 v2, 0x0
 
@@ -556,7 +562,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v1}, Landroid/hardware/face/FaceManager;->getSensorPropertiesInternal()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->getSensorPropertiesInternal()Ljava/util/List;
 
     move-result-object v1
 
@@ -815,15 +821,13 @@
 
     iput-boolean v3, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mDoNotFinishActivity:Z
 
-    iget-object v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Landroid/hardware/face/FaceManager;
-
-    iget v2, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mUserId:I
+    iget-object v0, p0, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     new-instance v4, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase$$ExternalSyntheticLambda1;
 
     invoke-direct {v4, p0, v1, p1, p2}, Lcom/android/settings/biometrics/combination/BiometricsSettingsBase$$ExternalSyntheticLambda1;-><init>(Lcom/android/settings/biometrics/combination/BiometricsSettingsBase;Landroid/content/Context;Landroidx/preference/Preference;Z)V
 
-    invoke-virtual {v0, v2, v4}, Landroid/hardware/face/FaceManager;->generateChallenge(ILandroid/hardware/face/FaceManager$GenerateChallengeCallback;)V
+    invoke-virtual {v0, v4}, Lcom/samsung/android/bio/face/SemBioFaceManager;->preEnroll(Lcom/samsung/android/bio/face/SemBioFaceManager$ChallengeCallback;)J
 
     return v3
 
@@ -952,6 +956,8 @@
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
+
+    invoke-static {}, Lcom/samsung/android/settings/biometrics/BiometricsGenericHelper;->clearSharedGatekeeperHandle()V
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 

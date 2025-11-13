@@ -18,7 +18,7 @@
 
 .field public final mDpm:Landroid/app/admin/DevicePolicyManager;
 
-.field public final mFaceManager:Landroid/hardware/face/FaceManager;
+.field public final mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
 .field public final mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
@@ -135,11 +135,11 @@
 
     iput-object p2, p0, Lcom/android/settings/security/LockUnificationPreferenceController;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p1}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/settings/security/LockUnificationPreferenceController;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iput-object p1, p0, Lcom/android/settings/security/LockUnificationPreferenceController;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     return-void
 
@@ -488,11 +488,11 @@
     if-nez v0, :cond_2
 
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/security/LockUnificationPreferenceController;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v0, p0, Lcom/android/settings/security/LockUnificationPreferenceController;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0, v1}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v0, v1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v0
 

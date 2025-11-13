@@ -98,6 +98,14 @@
     return-void
 .end method
 
+.method public final setRequestCode(I)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    iput p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mRequestCode:I
+
+    return-object p0
+.end method
+
 
 # virtual methods
 .method public final build()Lcom/android/settings/password/ChooseLockSettingsHelper;
@@ -171,6 +179,132 @@
     invoke-direct {v0, p0, v1, v3, v2}, Lcom/android/settings/password/ChooseLockSettingsHelper;-><init>(Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;Landroid/app/Activity;Landroidx/fragment/app/Fragment;Landroidx/activity/result/ActivityResultLauncher;)V
 
     return-object v0
+.end method
+
+.method public setAllowAnyUserId(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 276
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mAllowAnyUserId:Z
+
+    return-object p0
+.end method
+
+.method public setAlternateButton(Ljava/lang/CharSequence;)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 242
+    iput-object p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mAlternateButton:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setDescription(Ljava/lang/CharSequence;)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 234
+    iput-object p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mDescription:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setExternal(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 286
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mExternal:Z
+
+    return-object p0
+.end method
+
+.method public setForceVerifyPath(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 304
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mForceVerifyPath:Z
+
+    return-object p0
+.end method
+
+.method public setForegroundOnly(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 295
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mForegroundOnly:Z
+
+    return-object p0
+.end method
+
+.method public setHeader(Ljava/lang/CharSequence;)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 226
+    iput-object p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mHeader:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setKnoxWorkProfileSecurity(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 333
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mKnoxWorkProfileSecurity:Z
+
+    return-object p0
+.end method
+
+.method public setRequestCode(I)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 210
+    iput p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mRequestCode:I
+
+    return-object p0
+.end method
+
+.method public setRequestGatekeeperPasswordHandle(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 320
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mRequestGatekeeperPasswordHandle:Z
+
+    return-object p0
+.end method
+
+.method public setReturnCredentials(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 258
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mReturnCredentials:Z
+
+    return-object p0
+.end method
+
+.method public setTitle(Ljava/lang/CharSequence;)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 218
+    iput-object p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mTitle:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setUnlockRecovery(Z)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 326
+    iput-boolean p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mUnlockRecovery:Z
+
+    return-object p0
+.end method
+
+.method public setUserId(I)Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;
+    .locals 0
+
+    .line 266
+    iput p1, p0, Lcom/android/settings/password/ChooseLockSettingsHelper$Builder;->mUserId:I
+
+    return-object p0
 .end method
 
 .method public final show()Z

@@ -893,6 +893,160 @@
     return-void
 .end method
 
+.method public static isSupportMultiPaneLayout(Landroid/app/Activity;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+    return v0
+
+    :cond_0
+    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-static {}, Lcom/samsung/android/settings/Rune;->supportFoldableDualDisplay()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+    return v0
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "device_provisioned"
+
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_2
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v0
+
+    :goto_0
+    if-eqz v1, :cond_3
+    return v0
+
+    :cond_3
+    invoke-static {p0}, Lcom/android/settings/Utils;->isLockTaskModeLocked(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+    return v0
+
+    :cond_4
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v3, "extra_show_multi_pane_layout"
+
+    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+    return v0
+
+    :cond_5
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v1
+
+    iget-object v1, v1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    invoke-virtual {v1}, Landroid/app/WindowConfiguration;->isPopOver()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+    return v0
+
+    :cond_6
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "com.android.settings.SEARCH_RESULT_TRAMPOLINE"
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object p0
+
+    const-string v1, "from_finder"
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    if-nez p0, :cond_7
+    return v0
+
+    :cond_7
+    invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
+
+    move-result p0
+
+    invoke-static {p0}, Lcom/samsung/android/knox/SemPersonaManager;->isKnoxId(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_8
+    return v0
+
+    :cond_8
+    invoke-static {}, Lcom/samsung/android/knox/custom/ProKioskManager;->getInstance()Lcom/samsung/android/knox/custom/ProKioskManager;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_9
+
+    invoke-virtual {p0}, Lcom/samsung/android/knox/custom/ProKioskManager;->getProKioskState()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_9
+    return v0
+
+    :cond_9
+    return v2
+.end method
+
 .method public static getCarrierInfoLogo()Ljava/lang/String;
     .locals 5
 
@@ -3703,6 +3857,37 @@
     return p0
 .end method
 
+.method public static supportRelativeLink(Landroid/content/Context;)Z
+    .locals 2
+
+    invoke-static {}, Lcom/samsung/android/settings/Rune;->supportRelativeLink()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    if-eqz p0, :cond_2
+
+    invoke-static {p0}, Lcom/samsung/android/emergencymode/SemEmergencyManager;->getInstance(Landroid/content/Context;)Lcom/samsung/android/emergencymode/SemEmergencyManager;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    invoke-static {p0}, Lcom/samsung/android/emergencymode/SemEmergencyManager;->isEmergencyMode(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_2
+    return v0
+.end method
+
 .method public static supportRelativeLink()Z
     .locals 2
 
@@ -3953,6 +4138,14 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public static supportFoldableDualDisplay()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
     return v0
 .end method
 

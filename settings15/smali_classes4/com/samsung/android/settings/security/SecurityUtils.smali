@@ -113,6 +113,14 @@
     return v0
 .end method
 
+.method public static getBiometricPromptType(Landroid/content/Context;)I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public static declared-synchronized hasFingerprintFeature(Landroid/content/Context;)Z
     .locals 2
 
@@ -239,16 +247,31 @@
     return v0
 .end method
 
+
+.method public static isEnrolledFace(Landroid/content/Context;)Z
+    .locals 1
+
+    invoke-static {}, Landroid/os/UserHandle;->myUserId()I
+
+    move-result v0
+
+    invoke-static {p0, v0}, Lcom/samsung/android/settings/security/SecurityUtils;->isEnrolledFace(Landroid/content/Context;I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static isEnrolledFace(Landroid/content/Context;I)Z
     .locals 0
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static {p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {p0, p1}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result p0
 
@@ -963,6 +986,38 @@
     return v1
 .end method
 
+.method public static isSupportBioFace()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public static setSplitViewFullScScreen(Landroid/app/Activity;)Z
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/app/Activity;->semExitMultiWindowMode()Z
+
+    move-result v0
+
+    sget v1, Lcom/android/settings/R$string;->sec_biometrics_common_not_use_multi_window_view:I
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {p0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/widget/Toast;->show()V
+
+    return v0
+.end method
+
 .method public static isWinnerProduct()Z
     .locals 2
 
@@ -1097,6 +1152,29 @@
 
     invoke-static {p0, p2, p3}, Lcom/samsung/android/settings/security/SecurityUtils;->setBiometricsLockDBValue(Landroid/content/Context;II)V
 
+    return-void
+.end method
+
+.method public static setBiometricPromptType(Landroid/content/Context;ZI)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p0}, Lcom/samsung/android/settings/security/SecurityUtils;->getBiometricPromptType(Landroid/content/Context;)I
+
+    move-result p0
+
+    const/4 p1, -0x1
+
+    if-eq p0, p1, :cond_0
+
+    const-string p0, "SecurityUtils"
+
+    const-string p1, "Already enrolled at least 1 biometric"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     return-void
 .end method
 

@@ -345,7 +345,7 @@
 
     if-nez v0, :cond_b
 
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Landroid/hardware/face/FaceManager;
+    invoke-static/range {p0 .. p0}, Lcom/android/settings/Utils;->getFaceManagerOrNull(Landroid/content/Context;)Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     move-result-object v0
 
@@ -377,7 +377,7 @@
 
     move-object/from16 v6, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/settings/password/SetNewPasswordController;-><init>(ILandroid/content/pm/PackageManager;Landroid/hardware/fingerprint/FingerprintManager;Landroid/hardware/face/FaceManager;Landroid/app/admin/DevicePolicyManager;Lcom/android/settings/password/SetNewPasswordController$Ui;)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/settings/password/SetNewPasswordController;-><init>(ILandroid/content/pm/PackageManager;Landroid/hardware/fingerprint/FingerprintManager;Lcom/samsung/android/bio/face/SemBioFaceManager;Landroid/app/admin/DevicePolicyManager;Lcom/android/settings/password/SetNewPasswordController$Ui;)V
 
     iput-object v10, v7, Lcom/android/settings/password/SetNewPasswordActivity;->mSetNewPasswordController:Lcom/android/settings/password/SetNewPasswordController;
 
@@ -480,19 +480,19 @@
     move v5, v14
 
     :goto_a
-    iget-object v6, v0, Lcom/android/settings/password/SetNewPasswordController;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v6, v0, Lcom/android/settings/password/SetNewPasswordController;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     if-eqz v6, :cond_10
 
-    invoke-virtual {v6}, Landroid/hardware/face/FaceManager;->isHardwareDetected()Z
+    invoke-virtual {v6}, Lcom/samsung/android/bio/face/SemBioFaceManager;->isHardwareDetected()Z
 
     move-result v6
 
     if-eqz v6, :cond_10
 
-    iget-object v6, v0, Lcom/android/settings/password/SetNewPasswordController;->mFaceManager:Landroid/hardware/face/FaceManager;
+    iget-object v6, v0, Lcom/android/settings/password/SetNewPasswordController;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
-    invoke-virtual {v6, v2}, Landroid/hardware/face/FaceManager;->hasEnrolledTemplates(I)Z
+    invoke-virtual {v6, v2}, Lcom/samsung/android/bio/face/SemBioFaceManager;->hasEnrolledFaces(I)Z
 
     move-result v6
 
