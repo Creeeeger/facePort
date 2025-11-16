@@ -554,6 +554,40 @@ So make sure Samsung’s stack is the only active one.
 
 ---
 
+## 11.5. `build.prop` Changes
+
+Edit:
+
+```text
+system_root/system/build.prop
+```
+
+1. Change:
+
+```properties
+ro.product.system.name=r12sxxx
+```
+
+to:
+
+```properties
+ro.product.system.name=beyondxxxx
+```
+
+(adjust to your exact device family identifier, THIS IS IMPORTANT).
+
+2. Add or adjust the device property (depending on your device, THIS TOO):
+
+```properties
+ro.product.device=beyondx
+```
+
+Ensure these values match what Samsung expects for your device. This matters because in the libsecfr components Samsung compares the ```ro.product.device=``` string against beyondx to enable if the device is a S10 5G the second ToF camera.
+
+Following this, the setup crashes on a missing cam, or a TEE which rejects missing data, depending on which device you would mess up.
+
+---
+
 ## 12. Re-sign the System Image
 
 After all modifications:
@@ -581,3 +615,9 @@ In short, to **fix face biometrics** on this setup you:
 - Fix permissions XMLs and compatibility matrix.
 - Ensure no conflicting face services remain.
 - Re-sign and flash the updated system.
+
+
+## 14. Etc.
+
+- Inside the build folder are the 2 required components prebuild and signed with the stock aosp keys
+- in the Android15 branch, inside the build folder, the signing tools can be found.
