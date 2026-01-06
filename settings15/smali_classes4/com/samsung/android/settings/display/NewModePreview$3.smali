@@ -76,7 +76,7 @@
 
     invoke-virtual {p0}, Landroid/widget/Toast;->show()V
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     :cond_0
     iget-object p0, p0, Lcom/samsung/android/settings/display/NewModePreview$3;->this$0:Lcom/samsung/android/settings/display/NewModePreview;
@@ -91,7 +91,7 @@
 
     if-eqz p1, :cond_1
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
     :cond_1
     const/4 p1, 0x0
@@ -120,11 +120,12 @@
 
     move v2, v3
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_2
     move v2, v0
 
+    :goto_0
     sget-object v4, Lcom/samsung/android/settings/Rune;->COMMON_CONFIG_PACKAGE_NAME_SMART_MANAGER:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
@@ -150,7 +151,7 @@
 
     const v2, 0x7f1426be
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_4
     if-nez v2, :cond_5
@@ -161,14 +162,14 @@
 
     const v2, 0x7f1426c1
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_5
     const v0, 0x7f1426c0
 
     const v2, 0x7f1426bd
 
-    :goto_0
+    :goto_1
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
     iget-object v5, p0, Lcom/samsung/android/settings/display/NewModePreview;->mContext:Landroid/content/Context;
@@ -227,6 +228,6 @@
 
     invoke-virtual {p1}, Landroid/app/AlertDialog;->show()V
 
-    :goto_1
+    :goto_2
     return-void
 .end method
