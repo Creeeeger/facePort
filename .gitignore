@@ -1,3 +1,6 @@
 .DS_Store
 /framework15/build
 /settings15/build
+/BiometricSettingOLD/build
+/BiometricSettingOLD/dist
+/settings15/dist

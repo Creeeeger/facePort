@@ -1487,7 +1487,8 @@
     return-void
 .end method
 
-.method public static removeFaceLock(ILandroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;)V
+.method public static removeFaceLock(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;I)V
+
     .locals 2
 
     const-string v0, "FcstFaceSettingsHelper"

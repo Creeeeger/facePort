@@ -1049,6 +1049,25 @@
 
     int-to-float v12, v12
 
+    # --- 1.5cm (15mm) upward offset ---
+    const/4 v13, 0x5
+
+    const/high16 v0, 0x41f00000    # 30.0f
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    invoke-static {v13, v0, v1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result v13
+
+    sub-float/2addr v12, v13
+
     invoke-virtual {v11}, Landroid/view/View;->getHeight()I
 
     move-result v13

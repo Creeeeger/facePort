@@ -162,7 +162,7 @@
 
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$3;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
-    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->access$500(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/SecSwitchPreferenceScreen;
+    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->access$500(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/TwoStatePreference;
 
     move-result-object p1
 
@@ -171,7 +171,7 @@
     .line 1177
     iget-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings$3;->this$0:Lcom/samsung/android/settings/biometrics/face/FaceSettings;
 
-    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->access$500(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/SecSwitchPreferenceScreen;
+    invoke-static {p1}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->access$500(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/TwoStatePreference;
 
     move-result-object p1
 
