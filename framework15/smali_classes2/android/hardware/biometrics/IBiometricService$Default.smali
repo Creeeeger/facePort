@@ -266,3 +266,25 @@
 
     return-object v0
 .end method
+
+.method public blacklist semAddFailedAttempt(II)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public blacklist semResetFailedAttempts(II)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method

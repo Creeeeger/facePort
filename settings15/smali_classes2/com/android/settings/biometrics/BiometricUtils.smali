@@ -329,6 +329,27 @@
     return p0
 .end method
 
+.method public static removeGatekeeperPasswordHandle(Landroid/content/Context;J)V
+    .locals 1
+
+    .line 103
+    new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
+
+    .line 104
+    invoke-virtual {v0, p1, p2}, Lcom/android/internal/widget/LockPatternUtils;->removeGatekeeperPasswordHandle(J)V
+
+    const-string p0, "BiometricUtils"
+
+    const-string p1, "Removed handle"
+
+    .line 105
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
 .method public static removeGatekeeperPasswordHandle(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
