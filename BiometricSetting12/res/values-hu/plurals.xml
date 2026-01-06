@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Próbálja újra %d másodperc múlva.</item>
+        <item quantity="one">Próbálja meg 1 másodperc múlva.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Próbálja meg %d perc múlva.</item>
+        <item quantity="one">Próbálja meg 1 perc múlva.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">A jelszó helytelen. Még %d alkalommal próbálkozhat.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">A jelszó helytelen. Még %d alkalommal próbálkozhat.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">A minta helytelen. Még %d alkalommal próbálkozhat.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">A minta helytelen. Még %d alkalommal próbálkozhat.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">A PIN-kód helytelen. Még %d alkalommal próbálkozhat.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">A PIN-kód helytelen. Még %d alkalommal próbálkozhat.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Próbálja meg %d perc múlva.</item>
+        <item quantity="one">Próbálja meg 1 perc múlva.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Próbálja újra %d másodperc múlva.</item>
+        <item quantity="one">Próbálja meg 1 másodperc múlva.</item>
+    </plurals>
+</resources>

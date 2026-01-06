@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Riprovare tra %d secondi.</item>
+        <item quantity="one">Riprovate tra 1 secondo.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Riprovate tra %d minuti.</item>
+        <item quantity="one">Riprovate tra 1 minuto.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Password errata. %d tentativi rimasti.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Password errata. %d tentativo rimasto.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Segno errato. %d tentativi rimasti.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Segno errato. %d tentativo rimasto.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Codice PIN errato. %d tentativi rimasti.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Codice PIN errato. %d tentativo rimasto.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Riprovate tra %d minuti.</item>
+        <item quantity="one">Riprovate tra 1 minuto.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Riprovare tra %d secondi.</item>
+        <item quantity="one">Riprovate tra 1 secondo.</item>
+    </plurals>
+</resources>

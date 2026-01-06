@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Prøv på nytt om %d sekunder.</item>
+        <item quantity="one">Prøv på nytt om 1 sekund.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Prøv igjen om %d minutter.</item>
+        <item quantity="one">Prøv igjen om 1 minutt.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Feil passord. %d forsøk igjen.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Feil passord. %d forsøk igjen.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Feil mønster. %d forsøk igjen.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Feil mønster. %d forsøk igjen.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Feil PIN-kode. %d forsøk igjen.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Feil PIN-kode. %d forsøk igjen.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Prøv igjen om %d minutter.</item>
+        <item quantity="one">Prøv igjen om 1 minutt.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Prøv på nytt om %d sekunder.</item>
+        <item quantity="one">Prøv på nytt om 1 sekund.</item>
+    </plurals>
+</resources>

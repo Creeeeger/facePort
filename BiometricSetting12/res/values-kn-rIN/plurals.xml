@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item quantity="one">1 ಸೆಕೆಂಡ್‌ನಲ್ಲಿ ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">%d ನಿಮಿಷದಲ್ಲಿ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item quantity="one">1 ನಿಮಿಷದಲ್ಲಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">ತಪ್ಪಾದ ಪಾಸ್‌ವರ್ಡ್. %d ಪ್ರಯತ್ನಗಳು ಬಾಕಿ ಉಳಿದಿವೆ.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ತಪ್ಪಾದ ಪಾಸ್‍ವರ್ಡ್. %d ಪ್ರಯತ್ನ ಉಳಿದಿದೆ.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">ತಪ್ಪಾದ ಮಾದರಿ. %d ಪ್ರಯತ್ನಗಳು ಉಳಿದಿವೆ.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ತಪ್ಪಾದ ಮಾದರಿ. %d ಪ್ರಯತ್ನ ಉಳಿದಿದೆ.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">ತಪ್ಪಾದ PIN. %d ಪ್ರಯತ್ನಗಳು ಉಳಿದಿವೆ.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ತಪ್ಪಾದ PIN. %d ಪ್ರಯತ್ನ ಉಳಿದಿದೆ.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">%d ನಿಮಿಷದಲ್ಲಿ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item quantity="one">1 ನಿಮಿಷದಲ್ಲಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">%d ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item quantity="one">1 ಸೆಕೆಂಡ್‌ನಲ್ಲಿ ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+    </plurals>
+</resources>

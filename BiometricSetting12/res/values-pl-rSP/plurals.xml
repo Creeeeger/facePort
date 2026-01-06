@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Sprōbuj jeszcze rŏz za %d sek.</item>
+        <item quantity="one">Sprōbuj zajś za 1 s.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Spróbuj ponownie za %d min.</item>
+        <item quantity="one">Wybadej drugi rŏz za 1 minuta.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Felerne hasło. Ôstało %d prōb.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Felerne hasło. Ôstała %d prōba.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Felerne hasło. Ôstały %d prōby.</item>
+        <item quantity="many">Felerne hasło. Ôstało %d prōb.</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Felerny znak. Ôstało %d prōb.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Felerny znak. Ôstała %d prōba.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Felerny znak. Ôstały %d prōby.</item>
+        <item quantity="many">Felerny znak. Ôstało %d prōb.</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Felerny kod PIN. Ôstało %d prōb.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Felerny kod PIN. Ôstała %d prōba.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Felerny kod PIN. Ôstały %d prōby.</item>
+        <item quantity="many">Felerny kod PIN. Ôstało %d prōb.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Spróbuj ponownie za %d min.</item>
+        <item quantity="one">Wybadej drugi rŏz za 1 minuta.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Sprōbuj jeszcze rŏz za %d sek.</item>
+        <item quantity="one">Sprōbuj zajś za 1 s.</item>
+    </plurals>
+</resources>

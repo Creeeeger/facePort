@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Προσπαθήστε ξανά σε %d δευτερόλεπτα.</item>
+        <item quantity="one">Δοκιμάστε ξανά σε 1 δευτερόλεπτο.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Προσπαθήστε ξανά σε %d λεπτά.</item>
+        <item quantity="one">Δοκιμάστε ξανά σε 1 λεπτό.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Εσφαλμένος κωδικός πρόσβασης. Απομένουν %d προσπάθειες.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Εσφαλμένος κωδικός πρόσβασης. Απομένει %d προσπάθεια.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Εσφαλμένο μοτίβο. Απομένουν %d προσπάθειες.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Εσφαλμένο μοτίβο. Απομένει %d προσπάθεια.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Εσφαλμένο PIN. Απομένουν %d προσπάθειες.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Εσφαλμένο PIN. Απομένει %d προσπάθεια.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Προσπαθήστε ξανά σε %d λεπτά.</item>
+        <item quantity="one">Δοκιμάστε ξανά σε 1 λεπτό.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Προσπαθήστε ξανά σε %d δευτερόλεπτα.</item>
+        <item quantity="one">Δοκιμάστε ξανά σε 1 δευτερόλεπτο.</item>
+    </plurals>
+</resources>

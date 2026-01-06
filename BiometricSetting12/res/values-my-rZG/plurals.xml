@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">%d စကၠန္႕အတြင္း ထပ္မံၾကိဳးစားပါ</item>
+        <item quantity="one">၁ စကၠန္႔အၾကာမွာ ထပ္ၾကိဳးစားပါ။</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">%d မိနစ္အတြင္း ျပန္ၾကိဳးစားပါ။</item>
+        <item quantity="one">၁ မိနစ္အတြင္း ထပ္မံႀကိဳးစားပါ။</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">မမွန္ေသာ စကားဝွက္။ ႀကိဳးစားမႈ %d ႀကိမ္ က်န္ေသးသည္။</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">မမွန္ေသာ ပုံစံနမူနာ။ ႀကိဳးစားမႈ %d ႀကိမ္ က်န္ေသးသည္။</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">မမွန္ေသာ PIN။ ႀကိဳးစားမႈ %d ႀကိမ္ က်န္ေသးသည္။</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">N/A</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">%d မိနစ္အတြင္း ျပန္ၾကိဳးစားပါ။</item>
+        <item quantity="one">၁ မိနစ္အတြင္း ထပ္မံႀကိဳးစားပါ။</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">%d စကၠန္႕အတြင္း ထပ္မံၾကိဳးစားပါ</item>
+        <item quantity="one">၁ စကၠန္႔အၾကာမွာ ထပ္ၾကိဳးစားပါ။</item>
+    </plurals>
+</resources>

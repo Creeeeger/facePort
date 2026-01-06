@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/id_prompt_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/id_prompt_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:id="@id/id_prompt_main_layout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <com.airbnb.lottie.LottieAnimationView android:id="@id/id_prompt_punch_hole_lottie_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/id_prompt_feedback_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+            <TextView android:textSize="@dimen/biometric_prompt_background_feedback_text_size" android:textStyle="normal" android:textColor="@color/biometric_prompt_background_feedback_text_color" android:gravity="center_horizontal" android:id="@id/id_prompt_feedback_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/biometric_prompt_verification_left_margin" android:layout_marginTop="@dimen/biometric_prompt_verification_feedback_top_margin" android:layout_marginRight="@dimen/biometric_prompt_verification_right_margin" android:fontFamily="sec-roboto-light" />
+            <LinearLayout android:gravity="center|bottom" android:orientation="vertical" android:id="@id/id_prompt_dialog_vertical_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <View android:id="@id/id_prompt_dialog_vertical_layout_top_margin" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:id="@id/id_prompt_dialog_left_space" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/id_prompt_dialog_full" android:background="@drawable/sem_biometric_prompt_dialog_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/biometric_prompt_verification_min_height">
+                        <View android:id="@id/id_prompt_dialogpart_left_space" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+                        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/id_prompt_dialog" android:padding="@dimen/biometric_prompt_verification_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <Switch android:id="@id/id_prompt_switch" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/biometric_prompt_switch_width" android:layout_marginBottom="24.0dip" android:textOn="@string/biometric_prompt_button_face" android:textOff="@string/biometric_prompt_button_fingerprint" android:switchTextAppearance="@style/BiometricPromptSwitchTextAppearance" android:switchMinWidth="220.0dip" android:showText="true" />
+                                <com.airbnb.lottie.LottieAnimationView android:id="@id/id_prompt_switch_progress_left" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" app:lottie_fileName="progress_circle.json" />
+                                <com.airbnb.lottie.LottieAnimationView android:id="@id/id_prompt_switch_progress_right" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" app:lottie_fileName="progress_circle.json" />
+                            </RelativeLayout>
+                            <ScrollView android:layout_gravity="center" android:id="@id/id_prompt_dialog_scroll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                                <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/sem_biometric_prompt_knox_icon" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="6.0dip" />
+                                        <TextView android:textSize="@dimen/biometric_prompt_verification_title_text_size" android:textColor="@color/biometric_prompt_title_text_color" android:gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                                    </LinearLayout>
+                                    <TextView android:textSize="@dimen/biometric_prompt_verification_subtitle_text_size" android:textColor="@color/biometric_prompt_subtitle_text_color" android:gravity="center" android:id="@id/id_knox_prompt_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                                    <TextView android:textSize="@dimen/biometric_prompt_verification_subtitle_text_size" android:textColor="@color/biometric_prompt_subtitle_text_color" android:gravity="center" android:id="@id/id_knox_prompt_two_step" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="1/2" />
+                                    <TextView android:textSize="@dimen/biometric_prompt_verification_subtitle_text_size" android:textColor="@color/biometric_prompt_subtitle_text_color" android:gravity="center" android:layout_gravity="center" android:id="@id/subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                                    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/id_prompt_dialog_authenticate_complete_icon_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/biometric_prompt_top_margin_avalible_biometrics_icon">
+                                        <com.airbnb.lottie.LottieAnimationView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/id_prompt_dialog_authenticate_complete_icon" android:layout_width="@dimen/biometric_prompt_icon_width" android:layout_height="@dimen/biometric_prompt_icon_height" android:src="@drawable/ic_success" />
+                                    </LinearLayout>
+                                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/id_prompt_description_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                        <com.airbnb.lottie.LottieAnimationView android:id="@id/id_prompt_description_image" android:visibility="gone" android:layout_width="@dimen/biometric_prompt_icon_width" android:layout_height="@dimen/biometric_prompt_icon_height" android:layout_marginTop="@dimen/biometric_prompt_verification_description_top_margin" android:layout_marginBottom="8.0dip" android:animateLayoutChanges="false" />
+                                        <TextView android:textSize="@dimen/biometric_prompt_verification_description_text_size" android:textColor="@color/biometric_prompt_description_text_color" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="26.0dip" />
+                                    </LinearLayout>
+                                    <FrameLayout android:layout_gravity="center" android:id="@id/id_prompt_positive_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                        <Button android:id="@id/button_try_again" android:visibility="invisible" style="@style/BiometricPromptPositiveButtonStyle" />
+                                        <Button android:id="@id/button_confirm" android:visibility="invisible" style="@style/BiometricPromptPositiveButtonStyle" />
+                                    </FrameLayout>
+                                </LinearLayout>
+                            </ScrollView>
+                            <Button android:id="@id/button_negative" android:visibility="gone" style="@style/BiometricPromptBottomButtonStyle" />
+                            <Button android:id="@id/button_use_credential" android:visibility="gone" style="@style/BiometricPromptBottomButtonStyle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:id="@id/id_prompt_dialog_right_space" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/id_prompt_knox_image" android:visibility="invisible" android:layout_width="@dimen/biometric_prompt_knox_logo_width" android:layout_height="@dimen/biometric_prompt_knox_logo_height" android:layout_marginRight="@dimen/biometric_prompt_knox_logo_end_margin" android:layout_marginBottom="@dimen/biometric_prompt_knox_logo_bottom_margin" android:src="@drawable/bi_knox_secured" android:tint="@color/biometric_prompt_knox_logo_color" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:alpha="@dimen/biometric_prompt_knox_logo_view_alpha" />
+    </RelativeLayout>
+</FrameLayout>

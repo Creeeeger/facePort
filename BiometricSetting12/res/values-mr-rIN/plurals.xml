@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">कृपया %d सेकंदांत पुन्हा प्रयत्न करा.</item>
+        <item quantity="one">1 सेकंदात पुन्हा प्रयत्न करा.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">पुन्हा %d मिनिटांनी प्रयत्‍न करा.</item>
+        <item quantity="one">1 मिनिटात पुन्‍हा प्रयत्‍न करा.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">चुकीचा पासवर्ड. %d प्रयत्‍न शिल्‍लक आहेत.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">चुकीचा पासवर्ड. %d प्रयत्न शिल्लक आहे.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">चुकीचे पॅटर्न. %d प्रयत्न शिल्लक आहेत.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">चुकीचे पॅटर्न. %d प्रयत्न शिल्लक आहे.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">चुकीचा PIN. %d प्रयत्न शिल्लक आहेत.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">चुकीचा PIN. %d प्रयत्न शिल्लक आहे.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">पुन्हा %d मिनिटांनी प्रयत्‍न करा.</item>
+        <item quantity="one">1 मिनिटात पुन्‍हा प्रयत्‍न करा.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">कृपया %d सेकंदांत पुन्हा प्रयत्न करा.</item>
+        <item quantity="one">1 सेकंदात पुन्हा प्रयत्न करा.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Opakujte akci za %d sekund.</item>
+        <item quantity="one">Opakujte akci za 1 sekundu.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Opakujte pokus za %d minut.</item>
+        <item quantity="one">Opakujte akci za 1 minutu.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Nesprávné heslo. Zbývá %d pokusů.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Nesprávné heslo. Zbývá %d pokus.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Nesprávné heslo. Zbývají %d pokusy.</item>
+        <item quantity="many">Nesprávné heslo. Zbývá %d pokusů.</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Nesprávný znak. Zbývá %d pokusů.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Nesprávný znak. Zbývá %d pokus.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Nesprávný znak. Zbývají %d pokusy.</item>
+        <item quantity="many">Nesprávný znak. Zbývá %d pokusů.</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Nesprávný PIN kód. Zbývá %d pokusů.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Nesprávný PIN kód. Zbývá %d pokus.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Nesprávný PIN kód. Zbývají %d pokusy.</item>
+        <item quantity="many">Nesprávný PIN kód. Zbývá %d pokusů.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Opakujte pokus za %d minut.</item>
+        <item quantity="one">Opakujte akci za 1 minutu.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Opakujte akci za %d sekund.</item>
+        <item quantity="one">Opakujte akci za 1 sekundu.</item>
+    </plurals>
+</resources>

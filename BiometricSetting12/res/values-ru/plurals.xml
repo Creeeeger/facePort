@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Повторите попытку через %d с.</item>
+        <item quantity="one">Повторите через 1 секунду.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Повторите через %d мин.</item>
+        <item quantity="one">Повторите попытку через 1 минуту.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Неправильный пароль. Осталось %d попытки.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Неправильный пароль. Осталась %d попытка.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Неправильный пароль. Осталось %d попытки.</item>
+        <item quantity="many">Неправильный пароль. Осталось %d попыток.</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Неправильный рисунок разблокировки. Осталось %d попытки.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Неправильный рисунок разблокировки. Осталась %d попытка.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Неправильный рисунок разблокировки. Осталось %d попытки.</item>
+        <item quantity="many">Неправильный рисунок разблокировки. Осталось %d попыток.</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Неправильный PIN-код. Осталось %d попытки.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Неправильный PIN-код. Осталась %d попытка.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Неправильный PIN-код. Осталось %d попытки.</item>
+        <item quantity="many">Неправильный PIN-код. Осталось %d попыток.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Повторите через %d мин.</item>
+        <item quantity="one">Повторите попытку через 1 минуту.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Повторите попытку через %d с.</item>
+        <item quantity="one">Повторите через 1 секунду.</item>
+    </plurals>
+</resources>

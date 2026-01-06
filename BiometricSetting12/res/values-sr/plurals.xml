@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Probaj ponovo za %d sekundi.</item>
+        <item quantity="one">Pokušaj ponovo nakon jedne sekunde.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Pokušaj ponovo za %d min.</item>
+        <item quantity="one">Pokušajte ponovo za 1 minut.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Pogrešna lozinka. Preostalo je još %d pokušaja.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Pogrešna lozinka. Preostao je još %d pokušaj.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Pogrešna lozinka. Preostala su još %d pokušaja.</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Pogrešan obrazac. Peostalo je još %d pokušaja.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Pogrešan obrazac. Peostao je još %d pokušaj.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Pogrešan obrazac. Peostala su još %d pokušaja.</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Pogrešan PIN kod. Preostalo je %d pokušaja.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Pogrešan PIN kod. Preostao je %d pokušaj.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">Pogrešan PIN kod. Preostala su %d pokušaja.</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Pokušaj ponovo za %d min.</item>
+        <item quantity="one">Pokušajte ponovo za 1 minut.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Probaj ponovo za %d sekundi.</item>
+        <item quantity="one">Pokušaj ponovo nakon jedne sekunde.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">%d सेकेन्डमा पुनः प्रयास गर्नुहोस्।</item>
+        <item quantity="one">1 सेकेन्डमा फेरि प्रयास गर्नुहोस्।</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">%d मिनटमा फेरि कोशिश गर।</item>
+        <item quantity="one">1 मिनटमा फेरि प्रयास गर्नुहोस्।</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">पासवर्ड गलत छ। %d प्रयासहरू बाँकी छन्।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">पासवर्ड गलत छ। %d प्रयास बाँकी छ।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">ढाँचा गलत छ। %d प्रयासहरू बाँकी छन्।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ढाँचा गलत छ। %d प्रयास बाँकी छ।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">PIN गलत छ। %d प्रयासहरू बाँकी छन्।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">PIN गलत छ। %d प्रयास बाँकी छ।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">%d मिनटमा फेरि कोशिश गर।</item>
+        <item quantity="one">1 मिनटमा फेरि प्रयास गर्नुहोस्।</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">%d सेकेन्डमा पुनः प्रयास गर्नुहोस्।</item>
+        <item quantity="one">1 सेकेन्डमा फेरि प्रयास गर्नुहोस्।</item>
+    </plurals>
+</resources>

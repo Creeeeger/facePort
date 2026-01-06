@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">%d സെക്കന്‍റിനുശേഷം വീണ്ടും ശ്രമിക്കുക.</item>
+        <item quantity="one">1 സെക്കന്‍റില്‍ വീണ്ടും ശ്രമിക്കുക.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">%d മിനിറ്റിനുശേഷം വീണ്ടും ശ്രമിക്കുക.</item>
+        <item quantity="one">1 മിനിറ്റിന് ശേഷം വീണ്ടും ശ്രമിക്കുക.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">തെറ്റായ പാസ്‌വേഡ്. %d ശ്രമങ്ങൾ ശേഷിക്കുന്നു.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">തെറ്റായ പാസ്‌വേഡ്. %d ശ്രമം ശേഷിക്കുന്നു.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">തെറ്റായ പാറ്റേൺ. %d ശ്രമങ്ങൾ ശേഷിക്കുന്നു.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">തെറ്റായ പാറ്റേൺ. %d ശ്രമം ശേഷിക്കുന്നു.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">തെറ്റായ PIN. %d ശ്രമങ്ങൾ ശേഷിക്കുന്നു.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">തെറ്റായ PIN. %d ശ്രമം ശേഷിക്കുന്നു.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">%d മിനിറ്റിനുശേഷം വീണ്ടും ശ്രമിക്കുക.</item>
+        <item quantity="one">1 മിനിറ്റിന് ശേഷം വീണ്ടും ശ്രമിക്കുക.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">%d സെക്കന്‍റിനുശേഷം വീണ്ടും ശ്രമിക്കുക.</item>
+        <item quantity="one">1 സെക്കന്‍റില്‍ വീണ്ടും ശ്രമിക്കുക.</item>
+    </plurals>
+</resources>

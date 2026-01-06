@@ -245,11 +245,11 @@
     return-object p0
 .end method
 
-.method static synthetic access$500(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/TwoStatePreference;
+.method static synthetic access$500(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/SecSwitchPreferenceScreen;
     .locals 0
 
     .line 83
-    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mStayOnLockScreen:Landroidx/preference/TwoStatePreference;
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mStayOnLockScreen:Landroidx/preference/SecSwitchPreferenceScreen;
 
     return-object p0
 .end method

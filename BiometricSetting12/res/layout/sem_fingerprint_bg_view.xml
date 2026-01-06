@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/sem_fingerprint_bg_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/sem_fingerprint_bg_error_image" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+        <TextView android:textSize="20.0sp" android:textColor="#fffafafa" android:gravity="center" android:id="@id/sem_fingerprint_bg_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:fontFamily="sec-roboto-light" />
+        <TextView android:textSize="16.0sp" android:textColor="#fffafafa" android:gravity="center" android:id="@id/sem_fingerprint_bg_guide_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:fontFamily="sec-roboto-light" />
+        <Button android:textSize="15.0sp" android:textColor="#fffafafa" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/sem_fingerprint_bg_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="31.0dip" android:minWidth="220.0dip" android:minHeight="36.0dip" android:fontFamily="sec-roboto-light" android:paddingVertical="0.0dip" />
+        <View android:id="@id/sem_fingerprint_bg_bottom_view" android:layout_width="fill_parent" android:layout_height="417.0px" android:layout_alignParentBottom="true" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="biometric_dialog_credential_too_many_attempts">
+        <item quantity="other">Опитайте отново след %d секунди.</item>
+        <item quantity="one">Опитайте пак след 1 секунда.</item>
+    </plurals>
+    <plurals name="biometric_dialog_credential_too_many_attempts_min">
+        <item quantity="other">Опитайте отново след %d минути.</item>
+        <item quantity="one">Опитайте пак след 1 минута.</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Неправилна парола. Остават %d опита.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Неправилна парола. Остава %d опит.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Неправилен шаблон. Остават %d опита.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Неправилен шаблон. Остава %d опит.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Неправилен PIN. Остават %d опита.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Неправилен PIN. Остава %d опит.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_min">
+        <item quantity="other">Опитайте отново след %d минути.</item>
+        <item quantity="one">Опитайте пак след 1 минута.</item>
+    </plurals>
+    <plurals name="sec_lockpattern_too_many_failed_confirmation_attempts_footer_sec">
+        <item quantity="other">Опитайте отново след %d секунди.</item>
+        <item quantity="one">Опитайте пак след 1 секунда.</item>
+    </plurals>
+</resources>
