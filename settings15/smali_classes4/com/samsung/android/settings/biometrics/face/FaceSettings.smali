@@ -3144,6 +3144,98 @@
     return-void
 .end method
 
+
+.method static synthetic access$000(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)[B
+    .locals 0
+
+    .line 83
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mToken:[B
+
+    return-object p0
+.end method
+
+.method static synthetic access$002(Lcom/samsung/android/settings/biometrics/face/FaceSettings;[B)[B
+    .locals 0
+
+    .line 83
+    iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mToken:[B
+
+    return-object p1
+.end method
+
+.method static synthetic access$100(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)I
+    .locals 0
+
+    .line 83
+    iget p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mUserId:I
+
+    return p0
+.end method
+
+.method static synthetic access$202(Lcom/samsung/android/settings/biometrics/face/FaceSettings;Z)Z
+    .locals 0
+
+    .line 83
+    iput-boolean p1, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mIsRemoveOnlyAlternativeFace:Z
+
+    return p1
+.end method
+
+.method static synthetic access$300(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)V
+    .locals 0
+
+    .line 83
+    invoke-direct {p0}, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->updatePreferences()V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Lcom/android/internal/widget/LockPatternUtils;
+    .locals 0
+
+    .line 83
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    return-object p0
+.end method
+
+.method static synthetic access$500(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/TwoStatePreference;
+    .locals 0
+
+    .line 83
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mStayOnLockScreen:Landroidx/preference/TwoStatePreference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$600(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/SwitchPreference;
+    .locals 0
+
+    .line 83
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mRecognitionSpeedUp:Landroidx/preference/SwitchPreference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$700(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/SwitchPreference;
+    .locals 0
+
+    .line 83
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mOpenEyes:Landroidx/preference/SwitchPreference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$800(Lcom/samsung/android/settings/biometrics/face/FaceSettings;)Landroidx/preference/SwitchPreference;
+    .locals 0
+
+    .line 83
+    iget-object p0, p0, Lcom/samsung/android/settings/biometrics/face/FaceSettings;->mBrightenScreen:Landroidx/preference/SwitchPreference;
+
+    return-object p0
+.end method
+
+
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
 
