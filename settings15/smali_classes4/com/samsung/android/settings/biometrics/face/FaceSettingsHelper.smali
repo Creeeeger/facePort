@@ -22,6 +22,27 @@
     return-void
 .end method
 
+.method public static removeFaceLock(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;IZ)V
+    .locals 2
+
+    const-string/jumbo v0, "FcstFaceSettingsHelper"
+
+    const-string/jumbo v1, "removeFaceLock!"
+
+    invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v0, 0x100
+
+    invoke-static {p0, p1, v0, p2}, Lcom/android/settings/Utils;->removeBiometricLock(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;II)V
+
+    if-eqz p3, :cond_0
+
+    invoke-static {p0, p1, p2}, Lcom/samsung/android/settings/face/FaceSettingsHelper;->sendSurveyForLockScreen(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public static getFaceBrightenScreenBooleanValue(Landroid/content/Context;I)Z
     .locals 2
 

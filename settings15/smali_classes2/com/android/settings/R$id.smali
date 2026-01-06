@@ -1186,7 +1186,11 @@
 
 .field public static final face_useful_feature_brighten_screen:I = 0x7f0a03fe
 
+.field public static final face_useful_feature_fast_recognition_speed_up:I = 0x7f0a03ff
+
 .field public static final face_useful_feature_brighten_screen_switch:I = 0x7f0a0400
+
+.field public static final face_useful_feature_fast_recognition_speed_up_switch:I = 0x7f0a0401
 
 .field public static final face_useful_feature_open_eyes:I = 0x7f0a0402
 
@@ -3139,6 +3143,10 @@
 .field public static final three:I = 0x7f0a0b4e
 
 .field public static final tile_divider:I = 0x7f0a0b4f
+
+.field public static final tile_divider_brighten_screen:I = 0x7f0a0b4f
+
+.field public static final tile_divider_open_eyes:I = 0x7f0a0b4f
 
 .field public static final time:I = 0x7f0a0b50
 

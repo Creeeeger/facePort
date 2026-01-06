@@ -859,12 +859,20 @@
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->mFasterRecognition:Landroid/widget/RelativeLayout;
 
+    if-eqz v0, :cond_1a
+
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    :cond_1a
 
     .line 166
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->mOpenEyesDivider:Landroid/view/View;
 
+    if-eqz v0, :cond_1b
+
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1b
 
     .line 169
     :cond_2
@@ -1000,6 +1008,8 @@
     .line 220
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->mOpenEyesDivider:Landroid/view/View;
 
+    if-eqz v0, :cond_9
+
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_2
@@ -1007,6 +1017,8 @@
     .line 223
     :cond_8
     iget-object v0, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->mBrightenScreenDivider:Landroid/view/View;
+
+    if-eqz v0, :cond_9
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -1390,7 +1402,7 @@
     iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->mOpenEyes:Landroid/widget/RelativeLayout;
 
     .line 128
-    sget p1, Lcom/android/settings/R$id;->face_useful_feature_birghten_screen:I
+    sget p1, Lcom/android/settings/R$id;->face_useful_feature_brighten_screen:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
@@ -1423,7 +1435,7 @@
     iput-object p1, p0, Lcom/samsung/android/settings/biometrics/face/SuwFaceUsefulFeature;->mOpenEyesSwitch:Landroid/widget/Switch;
 
     .line 131
-    sget p1, Lcom/android/settings/R$id;->face_useful_feature_birghten_screen_switch:I
+    sget p1, Lcom/android/settings/R$id;->face_useful_feature_brighten_screen_switch:I
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
