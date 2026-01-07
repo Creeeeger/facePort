@@ -434,3 +434,10 @@ $HOME/Desktop/signer/my-app-unsigned.apk
 - Tested successfully on S10e, S10, S10+, S10 5G. Thanks to all the testers <3
 
 ---Made with luuuvvvve by Crecker---
+
+## Git Apply
+- Please apply the patches with one line of fuzz to ensure that the hashes dont cause trouble
+
+```git
+git apply -C1 patch.diff
+```
