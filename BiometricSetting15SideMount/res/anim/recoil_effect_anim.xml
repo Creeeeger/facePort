@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false" android:state_hovered="true">
+        <objectAnimator android:interpolator="@anim/recoil_pressed" android:duration="100" android:valueTo="0.8" android:propertyName="alpha" />
+    </item>
+    <item android:state_enabled="true" android:state_pressed="true">
+        <set>
+            <objectAnimator android:interpolator="@anim/recoil_pressed" android:duration="100" android:valueTo="0.96" android:propertyName="scaleX" />
+            <objectAnimator android:interpolator="@anim/recoil_pressed" android:duration="100" android:valueTo="0.96" android:propertyName="scaleY" />
+            <objectAnimator android:interpolator="@anim/recoil_pressed" android:duration="100" android:valueTo="0.8" android:propertyName="alpha" />
+        </set>
+    </item>
+    <item android:state_enabled="true" android:state_pressed="false">
+        <set>
+            <objectAnimator android:interpolator="@anim/recoil_scale_release" android:duration="350" android:valueTo="1" android:propertyName="scaleX" />
+            <objectAnimator android:interpolator="@anim/recoil_scale_release" android:duration="350" android:valueTo="1" android:propertyName="scaleY" />
+            <objectAnimator android:interpolator="@anim/recoil_opacity_release" android:duration="350" android:valueTo="1" android:propertyName="alpha" />
+        </set>
+    </item>
+</selector>
