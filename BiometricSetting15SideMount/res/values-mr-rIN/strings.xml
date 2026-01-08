@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">एनिमेशन</string>
     <string name="fingerprint_custom_icon_title">आयकॉन</string>
     <string name="fingerprint_dex_toast">आपली ओळख पडताळणी करण्या साठी आपल्या फोन वर आपले फिंगरप्रिंट वापरा.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">जाड किंवा रंगीत संरक्षक फिल्म कार्यक्षमतेवर परिणाम करू शकते. आपण स्क्रीन संरक्षक वापरत असल्यास, ते ऑन-स्क्रीन फिंगरप्रिंट सेंसरशी सुसंगत असे लेबल केलेले असल्याची खात्री करण्यासाठी तपासा.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">जाड संरक्षक फिल्म परफॉरमन्‍सवर परिणाम करू शकते. आपण स्क्रीन संरक्षक वापरत असल्यास, ते ऑन-स्क्रीन फिंगरप्रिंट सेंसरशी सुसंगत असे लेबल केलेले असल्याची खात्री करण्यासाठी तपासा.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">फिंगरप्रिंट नोंदवताना आपण स्क्रीन कव्हर वापरत नसल्याचे सुनिश्चित करा.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">हा अनुप्रयोग मल्टि विंडोचे सामर्थन करत नाही.</string>
-    <string name="fingerprint_duplicate_guide_msg">प्रत्येक वेळी आपल्या बोटाची स्थिती थोडीशी समायोजित करण्याचे सुनिश्चित करा.</string>
+    <string name="fingerprint_duplicate_guide_msg">संपूर्ण स्कॅन प्राप्त करण्या साठी साठी प्रत्येक वेळी आपल्या बोटाची स्थिती थोडीशी बदला.</string>
     <string name="fingerprint_enroll_dont_move">स्कॅन पूर्ण होईपर्यंत आपले बोट हलवू नका.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">संपूर्ण वर्तुळ भरा</string>
     <string name="fingerprint_enroll_first_guide_subtitle">आपले बोट सेंसरभोवती फिरवा</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">जर असे होणे सुरू राहिले, तर आपल्या फोनचा पुनरारंभ करा.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">येथे काही गोष्टी आहेत ज्या आपण वापरून पाहू शकता:</string>
-    <string name="fingerprint_error_message_something_on_sensor">ही समस्या कायम राहिल्यास, ग्राहक सेवेशी संपर्क साधा.</string>
+    <string name="fingerprint_error_message_something_on_sensor">खात्री करा की फिंगरप्रिंट सेंसर स्वच्छ आणि कोरडा आहे, नंतर पुन्हा प्रयत्न करा.</string>
     <string name="fingerprint_error_message_timed_out">नोंदणीची वेळ संपली. पुन्‍हा प्रयत्न करा.</string>
     <string name="fingerprint_error_title_no_space">पुरेसा संग्रह नाही</string>
     <string name="fingerprint_error_title_not_responding">फिंगरप्रिंट सेंसर प्रतिसाद देत नाही</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">झाले</string>
     <string name="fingerprint_register_guide_side_key">फोनच्या उजव्या बाजूवरील साइड बटणा वर सेंसर आहे.</string>
     <string name="fingerprint_register_lift_your_finger">आपले बोट फिंगरप्रिंट सेंसर वरून उचला.</string>
-    <string name="fingerprint_register_place_your_finger">संपूर्ण स्कॅन प्राप्त करण्या साठी आपल्या बोटाची स्थिती समायोजित करा</string>
+    <string name="fingerprint_register_place_your_finger">आपली फिंगरप्रिंट स्कॅन करा</string>
     <string name="fingerprint_register_success">फिंगरप्रिंट जोडली</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">उत्तम! आपले फिंगरप्रिंट ओळखले गेले होते.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">फिंगरप्रिंट सेंसरला स्‍पर्श करा.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">आपली फिंगरप्रिंट स्कॅन करा.</string>
     <string name="fingerscanner_keyboard_dialog_msg">कीबोर्ड कव्‍ह संलग्‍न असताना %1$s वापरण्‍यात अक्षम. %2$s अक्षम करण्‍यात येईल.</string>
     <string name="fingerscanner_keyboard_dialog_title">कीबोर्ड कव्‍हर संलग्‍न केले</string>
-    <string name="fingerscanner_lift_your_finger_off_first">आपले बोट फिंगरप्रिंट सेंसर वर ठेवा, नंतर ते पुन्‍हा उचला.</string>
-    <string name="fingerscanner_register_text">आपले बोट सेंसर वर दाबा, नंतर आपल्याला कंपन जाणवल्या वर ते काढून टाका.</string>
+    <string name="fingerscanner_register_text">आपले बोट सेंसर वर ठेवा, नंतर आपल्याला कंपन जाणवल्या वर ते काढून टाका.</string>
     <string name="fingerscanner_toast_back_text">आपले फिंगरप्रिंट जोडणे थांबवण्या साठी पुन्हा मागे बटण टॅप करा.</string>
     <string name="forgot_password">पासवर्ड विसरलात</string>
     <string name="forgot_password_header">पासवर्ड पुन्हा मांडणी करायची?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">पासवर्ड प्रविष्‍ट करा</string>
     <string name="sec_enter_pin_WC">PIN प्रविष्ट करा</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">फिंगरप्रिंट सेंसर सक्रिय करा</string>
-    <string name="sec_fingerprint_always_on_summary">स्क्रीन बंद असतानाही आपले फिंगरप्रिंट स्कॅन करा.</string>
+    <string name="sec_fingerprint_always_on_summary">फक्त साइड बटणाला स्पर्श करून आपला फोन सक्रिय करा आणि अनलॉक करा. जलद ऍक्सेस साठी चालू करा किंवा अपघाती फिंगरप्रिंट स्कॅन टाळण्यासाठी बंद करा.</string>
     <string name="sec_fingerprint_always_on_summary_dex">स्क्रीन बंद असतानाही आपले फिंगरप्रिंट स्कॅन करा. Samsung DeX चालू असताना उपलब्ध नाही.</string>
     <string name="sec_fingerprint_enroll_title">फिंगरप्रिंट जोडा</string>
     <string name="sec_fingerprint_error_contact_customer_service">ही समस्या कायम राहिल्यास, ग्राहक सेवेशी संपर्क साधा.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">आपले फिंगरप्रिंट नोंदणी करण्या पूर्वी आपल्या फोनला बिनतारी चार्जर वरून बंद करा.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">आपले फिंगरप्रिंट जोडणे सुरू ठेवण्यासाठी आपला फोन उघडा.</string>
-    <string name="sec_fingerprint_register_guide_text">आपले बोट सेंसर वर दाबा, नंतर आपल्याला कंपन जाणवल्या वर ते काढून टाका.</string>
+    <string name="sec_fingerprint_register_guide_text">आपले बोट सेंसर वर ठेवा, नंतर आपल्याला कंपन जाणवल्या वर ते काढून टाका.</string>
     <string name="sec_fingerprint_register_open_phone">आपले फिंगरप्रिंट जोडणे सुरू ठेवण्या साठी आपला फोन उघडा.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">आपले बोट सेंसर वर दाबा, नंतर टक्केवारी वाढल्या वर ते काढून टाका.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">आपले बोट सेंसर वर ठेवा, नंतर टक्केवारी वाढल्या वर ते काढून टाका.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">आपल्या फिंगरप्रिंटचे काठ कॅप्चर करण्या साठी प्रत्येक वेळी आपल्या बोटाचे स्थान बदला.</string>
     <string name="sec_fingerprint_scan_fingerprint">फिंगरप्रिंट स्कॅन करा.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX चालू असताना आयकॉन दर्शवला जाणार नाही.</string>
     <string name="sec_fingerprint_second_guide_title">संपूर्ण स्कॅन करा</string>
     <string name="sec_fingerprint_sensor">फिंगरप्रिंट सेंसर</string>
     <string name="sec_fingerprint_sensor_activated">फिंगरप्रिंट सेंसर सक्रिय केले</string>

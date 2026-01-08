@@ -1,10 +1,10 @@
 Signature-Version: 1.0
 Created-By: 2.0 (Samsung SignApk)
-SHA-256-Digest-Manifest: N+xIHpJpey9ZImSCanAPjqdHEhjCa5FWwaizfHMezqs=
+SHA-256-Digest-Manifest: YIZp9MNNY3Ofw9Fn96lvqGVwfRiWswM0e1KqXbPlLpc=
 X-Android-APK-Signed: 2, 3
 
 Name: AndroidManifest.xml
-SHA-256-Digest: WIaB5qZ+XRzWb78DkGJw2ZOpSN5YD4cXnz8t1i3fWRI=
+SHA-256-Digest: nhQPubC5hE8hCkcG5YYLQe6MzjW3ahoD3LpySahGBeU=
 
 Name: META-INF/activity_release.kotlin_module
 SHA-256-Digest: OaJnv3at2HnHDpDn67p8TxkX3suR4A4nVeN08Kijass=
@@ -214,7 +214,7 @@ Name: SEC-INF/buildConfirm.crt
 SHA-256-Digest: P3ynqIdbDmwF1PsNloTMDkK1dQ1IUV/iAEjaKUKMbUg=
 
 Name: SEC-INF/buildinfo.xml
-SHA-256-Digest: TMaV8YD3jP4NE7n0lsbdrkIpvQeT9flfaEPDPbecQOA=
+SHA-256-Digest: FXTbmGtNE3Iew+bbxXHi56cFsgq5rKCYD7bvLCOFPm0=
 
 Name: assets/face_error_nomatch.json
 SHA-256-Digest: +ENHb95XRtfc2cm5+K0zOGuzKJlVfr9sT3sExEHWUqM=
@@ -307,7 +307,7 @@ Name: assets/punch_hole_ic_vcut_whitebg.json
 SHA-256-Digest: Mi44NCWSFO4N0BWLbODkENGOGRiefljA/R3A0jzQT9A=
 
 Name: classes.dex
-SHA-256-Digest: IUqT3Gq9HIKzgs/nFJ/6JDanTfaTHvhVIxu3RRK4XsY=
+SHA-256-Digest: alszAG/9w2Qka0oPOZS4MQc3jtj3Y4BnXrfnmQax5tA=
 
 Name: kotlin/annotation/annotation.kotlin_builtins
 SHA-256-Digest: 37WDWfmYN6iX75eAXUXFlMf/SlVVztjbh/wKm8XgEWU=
@@ -703,6 +703,18 @@ Name: res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9
  .png
 SHA-256-Digest: A9Jol2MPwVehVOzfDWtt5LdVyenhetK7FogbIJXguSg=
 
+Name: res/drawable-xxhdpi-v4/finger_sensor_gesture_image_01.webp
+SHA-256-Digest: IqZwoau7YMGMJsknmOxdZdIPmVqymyTCp9jD1CEbeFY=
+
+Name: res/drawable-xxhdpi-v4/finger_sensor_gesture_image_02.webp
+SHA-256-Digest: tqZZxaCLZHkAX1C6dFUTe5z9yS3WKHpAhZ/jo6Bw7t0=
+
+Name: res/drawable-xxhdpi-v4/finger_sensor_gesture_up_image_01.webp
+SHA-256-Digest: UnbkOx17LBI0q8UaZn8WcCrgDv4psFgGBUPmeDDBkgg=
+
+Name: res/drawable-xxhdpi-v4/finger_sensor_gesture_up_image_02.webp
+SHA-256-Digest: imR0R27aBkzh9Nc/kH+QI8xtXfnt+vqqihLUMI6YtTQ=
+
 Name: res/drawable/abc_btn_borderless_material.xml
 SHA-256-Digest: mgf1p4CBawdyk2vZm5o2ZKJ6Nfb4Os3CV8YyzIQXY6k=
 
@@ -1038,9 +1050,6 @@ SHA-256-Digest: Xm9e6FApqSBWcS/Oh0+rEEgAx1avF2ycgX3qH+U691Q=
 Name: res/drawable/sec_fingerprint_raised_button_background.xml
 SHA-256-Digest: 5InqnwRSDm+p2pfyTSKb66FX21dC/c6RYBKIPmugt24=
 
-Name: res/drawable/sec_fingerprint_suw_bottom_arrow_left.webp
-SHA-256-Digest: 4w17PD1A5Dza5b68vwNasKWoQo+av428TgVLJkWA0Kg=
-
 Name: res/drawable/sec_fingerprint_verification_success_color.spr
 SHA-256-Digest: eHBAyP8u3aooIFxFWTKBnLSQ3jJVSfAgfJ6BiE3cERs=
 
@@ -1200,7 +1209,7 @@ Name: res/interpolator/sine_out_60.xml
 SHA-256-Digest: FF8zjwjPRJWNcSbrF3CW0bTQePxetczMOR+jrDuyQJc=
 
 Name: res/layout-land/biometric_prompt_credential_password_tablet.xml
-SHA-256-Digest: 8FtFDux6bjhvpFAOtPhCJkJ/7LsR9AFRq/wYpuEX7Gc=
+SHA-256-Digest: Hc4vJsJEVQqDzKfb6arLnlXQQoSJCFe52a/VC9kIjH4=
 
 Name: res/layout-v21/notification_action.xml
 SHA-256-Digest: rMiDU5UJf/L3aGlnRfsGtJBMGeKvhXkLVSqnPU3VQpI=
@@ -1308,32 +1317,32 @@ Name: res/layout/biometric_prompt_auth_container_view.xml
 SHA-256-Digest: cFLbHGkfmBNFbSkHoJXW9urb0p//8cZMqc9geX9S0UI=
 
 Name: res/layout/biometric_prompt_credential_password.xml
-SHA-256-Digest: X7+GIgKrWc9ISyoXoQcQLQTgUjRDIifEU7Doit3HaGc=
+SHA-256-Digest: whH6FGNJFFMX/cySdONgUxetdS1qb4GGvCUQwfd0fIA=
 
 Name: res/layout/biometric_prompt_credential_password_cover.xml
-SHA-256-Digest: Y/VfgseZ1KPDBDfLfm3zXwdylpY1Uhg4+OecbsxfGSg=
+SHA-256-Digest: HMZsu7Iw9EvAGUgtzSZk7b0hJl7EZ6bjvxlSLBLCsLw=
 
 Name: res/layout/biometric_prompt_credential_password_tablet.xml
-SHA-256-Digest: EN1XHop4upM2vsUDcVpOF5vxPI98i7ZPGp8yQOVFFsM=
+SHA-256-Digest: Ala+1JbwwFpAupKsTm3zKwjPmXQmUfU047krquuQ7G4=
 
 Name: res/layout/biometric_prompt_credential_pattern.xml
-SHA-256-Digest: qmNMq78npjF7a4zPVA531itVW4+dtApQaXws14zWHlM=
+SHA-256-Digest: +JlcVG2zMTVBVy0fE7QcoglRj3L4CBXqUlG0xG6oAtg=
 
 Name: res/layout/biometric_prompt_credential_pattern_cover.xml
-SHA-256-Digest: OY/uFwrLMleWN+f3WikN1ksnOR7eyvZwnIwoQurltq0=
+SHA-256-Digest: uJbtvRvnkbCAcYZZmc2eiUKAwlVfI4WbQtpjzJPY/5E=
 
 Name: res/layout/biometric_prompt_credential_pattern_tablet.xml
-SHA-256-Digest: a6XWDqaZWtb2xO+BisEPzo+dhHjocH8kKx651V13wBM=
+SHA-256-Digest: 1s05hFC1n7luXrjFUK8lP/skVzkioJMhwIdXmsdVHGM=
 
 Name: res/layout/biometric_prompt_credential_pattern_tablet_landscape.
  xml
-SHA-256-Digest: proQ9mBbRJisT1/d9aqDCh4VPZOdModDNc73rAxLZQA=
+SHA-256-Digest: MqZaWlRNeSrxzi7n/Om2n2cigYwONWYAnY1HtRoHDHc=
 
 Name: res/layout/biometric_prompt_generic_cover_dialog.xml
-SHA-256-Digest: un6j+FOMY9vKfUTW/tj5RV9dbhpA2G1KG6EiXMvXlMw=
+SHA-256-Digest: 3rqi39Ca68X3k35DTbQTObb80cwr4J2k5DRMliJpMBc=
 
 Name: res/layout/biometric_prompt_generic_dialog.xml
-SHA-256-Digest: KWFJscCL+cmwHqggbDNJldao15XlKsocDBksObzuQ+I=
+SHA-256-Digest: 0esAusGIoIoRXPDtyJ9f7pqwo+9XJU+pzi5zgUukliU=
 
 Name: res/layout/biometric_prompt_list_item.xml
 SHA-256-Digest: 0eOyaVKSg1wPW6k1ogXNN/bZ/ml6vnOZdCnK0wAgFXI=
@@ -1342,7 +1351,7 @@ Name: res/layout/custom_dialog.xml
 SHA-256-Digest: MT42c/hTQjYwnje0GPcsuha7eOYVDnznS1uaAiqsUUM=
 
 Name: res/layout/face_enroll_layout.xml
-SHA-256-Digest: TeHdq3te0eYmNnhsTRhGqhIOGL9k5Izod3uar6WvnRI=
+SHA-256-Digest: zv5Wy/Oug5z+HhD8DE6reBeDf5L8iTF7JBXECulmV0A=
 
 Name: res/layout/face_guide_layout.xml
 SHA-256-Digest: BlxCJPDE7kR7cSZihQP8i5V1PxezcSy5NFWq4XL24PY=
@@ -1360,19 +1369,19 @@ Name: res/layout/face_service_auth_with_preview.xml
 SHA-256-Digest: UBsw3+oeBsURz7cENzCP6TRLkWNwr3l00rsm9Om/zxw=
 
 Name: res/layout/finger_icon_custom_color_item.xml
-SHA-256-Digest: OCF7uFYLtojrjSt48zfyyjh+hSTHmOPUsmWT9D7pig4=
+SHA-256-Digest: 0krPhXazsn+48hAcOjVDUoaklIZvrJ3YbNybjNFdaSE=
 
 Name: res/layout/finger_icon_custom_effect_item.xml
-SHA-256-Digest: 2ez2otGYR+rVvuA14130YBANrC68l5bCHJSyehqTQ3s=
+SHA-256-Digest: mwl/KVog1JVIrE/5iU1Mziml7YgS/6pod5EPt8YIroc=
 
 Name: res/layout/fingerprint_display_enroll_layout.xml
-SHA-256-Digest: 0Y9Vt9ahiEL9DTDqvZksx+obIeqBE3BeUkivtz27F/I=
+SHA-256-Digest: aGxnoVDSwy1OxSfb/O1lWjAtGtHl4kgSKN250C9R6Pk=
 
 Name: res/layout/fingerprint_gesture_calibration_view.xml
-SHA-256-Digest: FBpX3UdMyTFdpQ4xTbZXErO81Jw55C53bTKh75itrak=
+SHA-256-Digest: DOPpUQXiKWoKaJ/5/XZBz0lMzCYlI4mNQn1Kg5dEfAg=
 
 Name: res/layout/fingerprint_register_first_screen.xml
-SHA-256-Digest: QQJ0Y8R+OvrgkAx5Yn4/GFJ5nDvlcgedHAw74/USvwI=
+SHA-256-Digest: uePoyqJUOXzW70UuuZL8P6Dq118VdNp2HN6bEnF6CGc=
 
 Name: res/layout/ime_base_split_test_activity.xml
 SHA-256-Digest: Rt+7BGHzI0Q0hXQVW4+EMqJT4ZplycSpNl9KcUJg680=
@@ -1387,22 +1396,22 @@ Name: res/layout/notification_template_part_time.xml
 SHA-256-Digest: oHfHqTBLwi1smP5/dbOY+XH/GvQkbitqhJhtx0bZD2U=
 
 Name: res/layout/sec_fingerprint_register_v10.xml
-SHA-256-Digest: 84zRPUd7VDtsmMQ2ZTwM5J1iAwpxdVo6z4X3+JWYZIQ=
+SHA-256-Digest: bifyIQnwmkV+r697e2++MLK+Ma/dCxlcGU5BF8xulaY=
 
 Name: res/layout/sec_knox_biometric_prompt_auth_container_view.xml
 SHA-256-Digest: aHTZuSo1kNItlpVCovXWM2ml4RUtR/LT0I/TGXVD5aE=
 
 Name: res/layout/sec_knox_biometric_prompt_credential_password.xml
-SHA-256-Digest: Y5FbVVTs5sKnq0kQg+3PF+6j/X7v1f/fgUSMNRKJZQQ=
+SHA-256-Digest: c7kAdVGn0wDR4ITUk30+UACPS8oWSGgEQN2Gmi+JM6k=
 
 Name: res/layout/sec_knox_biometric_prompt_credential_pattern.xml
-SHA-256-Digest: 0q1M8R5exskQOZ75bWOu9ql0pwIXVKEsilLQiwrZgRk=
+SHA-256-Digest: k/GMwTAF+/Ayb9jTuRt91jt3DsRnVPOCn4mxS+8rfqQ=
 
 Name: res/layout/sec_knox_confirm_credential_logo_view.xml
 SHA-256-Digest: iRW4ngUvZCMKJdRRjKh8FM9ZFkX9rvvJ4Vn9nT71ju4=
 
 Name: res/layout/sec_ucm_biometric_prompt_credential_password.xml
-SHA-256-Digest: nhPhgLOHZxx++zwRAQ5a6ZQs1chEUTUKXK+7L7ABI/A=
+SHA-256-Digest: VSUeLEUjIfJpGauOXrlplvzSn/1zrpbMYaraYqM8/Rw=
 
 Name: res/layout/select_dialog_item_material.xml
 SHA-256-Digest: cScgRhazGjC3VFWy+hjChZOXnaHJB7QuLdTDHaEZMaE=
@@ -1437,6 +1446,9 @@ SHA-256-Digest: JWd1H2RBRUjrXrBMqnJjaJGU9tMNmQDtozLgOz1T/zI=
 Name: res/raw/fingerprint_touch_effect_json.json
 SHA-256-Digest: nLiRWodRi/DaOvVklO/P64xodb5V8Krz621TuXrQKRk=
 
+Name: res/raw/sec_fingerprint_fold.mp4
+SHA-256-Digest: Yy8gZtKJiHyNttdMKj+cZoOnyDe3Uc+CbtAg5jy4uxM=
+
 Name: res/raw/sec_fingerprint_h_01.mp4
 SHA-256-Digest: 2q7tluCzmtoSfxRxD2pdL5JBSE5qqWr1VAMSto3GcXk=
 
@@ -1447,14 +1459,20 @@ Name: res/raw/sec_fingerprint_recognition_tap.mp4
 SHA-256-Digest: Z7k1YCy4Xl5TbwppSD4CMauKioEoC3tYLnVY00AvABs=
 
 Name: res/raw/sec_fingerprint_unfold.mp4
-SHA-256-Digest: r9uBmLmaGg00+Gcro3SW0lA8P7hbvOzWw0UjEbcDuT8=
+SHA-256-Digest: ixdC0x2TBpTA8x+HjI707L7dtO7WgcpfBb3t+gudmFA=
 
 Name: res/raw/sec_fingerprint_v_01.mp4
-SHA-256-Digest: t4K+7LtAr4bXMNcTxHr9ltYDsvCgwm5T57ePBG0jyv8=
+SHA-256-Digest: kNEilztQN9yLPPP9LO99U8qePaEfUOM9K1E+6JQGcoY=
 
 Name: res/raw/sec_fingerprint_v_02.mp4
-SHA-256-Digest: /laSlyr8p6uZe2vm6vGugwUELWtt7XrmNNxYGU2CQiM=
+SHA-256-Digest: aBAJJfqb8dYgXYMta2QTNRQ0QRhueCp89jWZ7ewmNYU=
+
+Name: res/raw/sec_fingerprint_v_fold_01.mp4
+SHA-256-Digest: gd9H3KsCuc59OZIfiBt9IEC2ZtRgcfNZrp7U121wH2E=
+
+Name: res/raw/sec_fingerprint_v_fold_02.mp4
+SHA-256-Digest: 3qKOscjrM1evHOBA/n5HaMdObN7BUfoShfbFdO/Q6bw=
 
 Name: resources.arsc
-SHA-256-Digest: ug6vIs+CFZX7jA9zKaSPrdNG+s9Yhu6gu1laJivXZ4Q=
+SHA-256-Digest: 3BH+I5qof39mQ3HN7EF5a+hlwQElH+dIMUtl/MC73gg=
 

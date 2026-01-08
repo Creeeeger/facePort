@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">アニメーション</string>
     <string name="fingerprint_custom_icon_title">アイコン</string>
     <string name="fingerprint_dex_toast">ユーザー認証を行うには、端末で指紋認証を使用してください。</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">厚い保護フィルムや色付きの保護フィルムは、性能に影響を及ぼす場合があります。画面保護フィルムを使用する場合、オンスクリーン指紋センサー対応と表記されていることを確認してください。</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">厚い保護フィルムは、性能に影響を及ぼす場合があります。画面保護フィルムを使用する場合、オンスクリーン指紋センサー対応と表記されていることを確認してください。</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">指紋を登録する際は、画面カバーを使用していないことをしっかりと確認してください。</string>
     <string name="fingerprint_doesnt_support_multi_window_text">このアプリは、マルチウィンドウに対応していません。</string>
-    <string name="fingerprint_duplicate_guide_msg">1回ごとに少しずつ指の位置をずらしてください。</string>
+    <string name="fingerprint_duplicate_guide_msg">指紋全体をスキャンできるように、1回ごとに少しずつ指の位置をずらしてください。</string>
     <string name="fingerprint_enroll_dont_move">スキャンが完了するまで指を動かさないでください。</string>
     <string name="fingerprint_enroll_first_guide_indisplay">円の色が完全に変わるまで指で押す</string>
     <string name="fingerprint_enroll_first_guide_subtitle">指をセンサーの周りで動かす</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">この問題が引き続き発生する場合、端末を再起動してください。</string>
     <string name="fingerprint_error_message_sensor_error_vzw">指紋センサーにエラーが発生しました。このメッセージが繰り返し表示される場合は、端末を再起動してください。</string>
     <string name="fingerprint_error_message_some_things_try">以下の操作をお試しください。</string>
-    <string name="fingerprint_error_message_something_on_sensor">この問題が解決しない場合は、カスタマーサービスにお問い合わせください。</string>
+    <string name="fingerprint_error_message_something_on_sensor">指紋センサーに汚れや水濡れがないことを確認し、再度実行してください。</string>
     <string name="fingerprint_error_message_timed_out">登録がタイムアウトしました。再度実行してください。</string>
     <string name="fingerprint_error_title_no_space">空き容量不足</string>
     <string name="fingerprint_error_title_not_responding">指紋センサーの応答なし</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">完了</string>
     <string name="fingerprint_register_guide_side_key">センサーは、端末の右側のサイドボタンにあります。</string>
     <string name="fingerprint_register_lift_your_finger">指紋センサーから指を離してください。</string>
-    <string name="fingerprint_register_place_your_finger">指の位置を調整して指紋全体をスキャン</string>
+    <string name="fingerprint_register_place_your_finger">指紋をスキャン</string>
     <string name="fingerprint_register_success">指紋の追加完了</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">お見事です。指紋が認識されました。</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">指紋センサーにタッチしてください。</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">指紋をスキャンしてください。</string>
     <string name="fingerscanner_keyboard_dialog_msg">キーボードカバーが装着されている間は、%1$sを使用できません。%2$sは無効になります。</string>
     <string name="fingerscanner_keyboard_dialog_title">キーボードカバー装着中</string>
-    <string name="fingerscanner_lift_your_finger_off_first">指紋センサーに指を置いてから離してください。</string>
-    <string name="fingerscanner_register_text">指でセンサーを押し、振動したら指を離してください。</string>
+    <string name="fingerscanner_register_text">センサーに指を置き、振動したら指を離してください。</string>
     <string name="fingerscanner_toast_back_text">指紋の追加を中止するには、再度戻るボタンをタップしてください。</string>
     <string name="forgot_password">パスワードを忘れた場合</string>
     <string name="forgot_password_header">パスワードをリセットしますか？</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">パスワードを入力</string>
     <string name="sec_enter_pin_WC">PINを入力してください</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">指紋センサーを有効化</string>
-    <string name="sec_fingerprint_always_on_summary">画面がOFFのときでも、指紋をスキャンできます。</string>
+    <string name="sec_fingerprint_always_on_summary">サイドボタンに触れるだけで端末の画面をONにし、ロックを解除することができます。素早くアクセスするには、ONにしてください。指紋認証の誤操作を防止するには、OFFにしてください。</string>
     <string name="sec_fingerprint_always_on_summary_dex">画面がOFFのときでも、指紋をスキャンできます。Samsung DeXを実行中は使用できません。</string>
     <string name="sec_fingerprint_enroll_title">指紋を追加</string>
     <string name="sec_fingerprint_error_contact_customer_service">この問題が解決しない場合は、カスタマーサービスにお問い合わせください。</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">指紋を登録する前に、端末をワイヤレス充電器から離してください。</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">指紋の追加を続行するには、端末を閉じてください。</string>
-    <string name="sec_fingerprint_register_guide_text">指でセンサーを押し、振動したら指を離してください。</string>
+    <string name="sec_fingerprint_register_guide_text">センサーに指を置き、振動したら指を離してください。</string>
     <string name="sec_fingerprint_register_open_phone">指紋の追加を続行するには、端末を開いてください。</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">指でセンサーを押し、パーセンテージが上がったら指を離してください。</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">センサーに指を置き、パーセンテージが上がったら指を離してください。</string>
     <string name="sec_fingerprint_register_reposition_your_finger">指紋の端までキャプチャできるように、毎回指の位置を変えてください。</string>
     <string name="sec_fingerprint_scan_fingerprint">指紋をスキャンしてください。</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeXを実行中は、アイコンが表示されません。</string>
     <string name="sec_fingerprint_second_guide_title">指紋全体をスキャン</string>
     <string name="sec_fingerprint_sensor">指紋センサー</string>
     <string name="sec_fingerprint_sensor_activated">指紋センサーが有効</string>

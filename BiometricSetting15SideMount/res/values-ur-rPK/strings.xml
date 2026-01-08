@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">انیمیشن</string>
     <string name="fingerprint_custom_icon_title">شبیہ</string>
     <string name="fingerprint_dex_toast">اپنے فون پر اپنی شناخت کی تصدیق کرنے کے لیے اپنا فنگرپرنٹ استعمال کریں۔</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">موٹی یا رنگین حفاظتی فلم سے کارکردگی متاثر ہو سکتی ہے۔ اگر آپ کوئی اسکرین محافظ استعمال کر رہے ہیں، تو یہ یقینی بنانے کیلئے چیک کریں کہ اسے آن اسکرین فنگرپرنٹ سینسر کے ساتھ موافق کے طور پر لیبل کیا گیا ہے۔</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">موٹی حفاظتی فلم سے کارکردگی متاثر ہو سکتی ہے۔ اگر آپ کوئی اسکرین محافظ استعمال کر رہے ہیں، تو یہ یقینی بنانے کیلئے چیک کریں کہ اسے آن اسکرین فنگرپرنٹ سینسر کے ساتھ موافق کے طور پر لیبل کیا گیا ہے۔</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">فنگرپرنٹس رجسٹر کرتے وقت یقینی بنائیں کہ آپ اسکرین کور استعمال نہیں کرتے ہیں۔</string>
     <string name="fingerprint_doesnt_support_multi_window_text">یہ ایپلیکیشن ملٹی ونڈو کو تعاون نہیں کرتا ہے۔</string>
-    <string name="fingerprint_duplicate_guide_msg">ہر بار اپنی انگلی کی پوزیشن کو تھوڑا سا مطابق کرنے کو یقینی بنائیں۔</string>
+    <string name="fingerprint_duplicate_guide_msg">مکمل اسکین کرنے کے لیے ہر وقت اپنی انگلی کی جگہ تھوڑی تبدیل کریں۔</string>
     <string name="fingerprint_enroll_dont_move">اسکین مکمل ہونے تک اپنی انگلی کو نہ ہلائیں۔</string>
     <string name="fingerprint_enroll_first_guide_indisplay">پورے دائرے کو پُر کریں</string>
     <string name="fingerprint_enroll_first_guide_subtitle">اپنی انگلی کو سینسر کے ارد گرد گھمائیں</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">اگر یہ ہوتا رہتا ہے، تو اپنا فون پھر سے اسٹارٹ کریں۔</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">یہاں کچھ ایسی چیزیں ہیں جنہیں آپ آزما سکتے ہیں:</string>
-    <string name="fingerprint_error_message_something_on_sensor">اگر یہ مسئلہ جاری رہتا ہے، تو کسٹمر خدمت سے رابطہ کریں۔</string>
+    <string name="fingerprint_error_message_something_on_sensor">اس بات کا یقین دلائيں کہ فنگرپرنٹ سینسر صاف اور سوکھی ہے، پھر دوبارہ کوشش کریں۔</string>
     <string name="fingerprint_error_message_timed_out">رجسٹریشن کا وقت ختم ہو گیا۔ دوبارہ کوشش کریں۔</string>
     <string name="fingerprint_error_title_no_space">زیادہ ذخیرہ نہیں ہے</string>
     <string name="fingerprint_error_title_not_responding">فنگرپرنٹ سینسر جواب نہیں دے رہا ہے</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">ہوگیا</string>
     <string name="fingerprint_register_guide_side_key">سینسر فون کے دائیں طرف سائیڈ بٹن پر ہے۔</string>
     <string name="fingerprint_register_lift_your_finger">فنگرپرنٹ سینسر پر اپنی انگلی اٹھائيں۔</string>
-    <string name="fingerprint_register_place_your_finger">مکمل اسکین حاصل کرنے کے لیے اپنی انگلی کی پوزیشن کو مطابق کریں</string>
+    <string name="fingerprint_register_place_your_finger">اپنا فنگر پرنٹ اسکین کریں</string>
     <string name="fingerprint_register_success">فنگرپرنٹ شامل ہوگیا</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">شاندار! آپ کے فنگرپرنٹ کی شناخت ہوچکی ہے۔</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">فنگرپرنٹ سینسر کو چھوئیں۔</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">اپنا فنگر پرنٹ اسکین کریں۔</string>
     <string name="fingerscanner_keyboard_dialog_msg">کیی بورڈ سرورق کے منسلک ہونے پر %1$s کا استعمال کرنے سے قاصر۔ %2$s نااہل ہوجائے گا۔</string>
     <string name="fingerscanner_keyboard_dialog_title">کیی بورڈ کا سرورق منسلک ہے</string>
-    <string name="fingerscanner_lift_your_finger_off_first">اپنی انگلی کو فنگرپرنٹ سینسر پر رکھیں، پھر اسے دوبارہ دور رکھیں۔</string>
-    <string name="fingerscanner_register_text">اپنی انگلی کو سینسر پر رکھیں، پھر جب آپ کو تھرتھراہٹ محسوس ہو تو اسے اٹھالیں۔</string>
+    <string name="fingerscanner_register_text">اپنی انگلی کو سینسر پر رکھیں، پھر جب آپ تھرتھراہٹ محسوس کریں تو اسے اٹھالیں۔</string>
     <string name="fingerscanner_toast_back_text">اپنا فنگرپرنٹ شامل کرنا بند کرنے کیلئے، ’پیچھے‘ بٹن دوبارہ تھپتھپائیں۔</string>
     <string name="forgot_password">پاس ورڈ بھول گئے ہیں</string>
     <string name="forgot_password_header">پاس ورڈ پھر سیٹ کریں؟</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">پاس ورڈ داخل کریں</string>
     <string name="sec_enter_pin_WC">پن درج کریں</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">فنگرپرنٹ سینسر فعال کرنے کے لیے</string>
-    <string name="sec_fingerprint_always_on_summary">اسکرین آف ہونے پر بھی اپنا فنگر پرنٹ اسکین کریں۔</string>
+    <string name="sec_fingerprint_always_on_summary">صرف سائیڈ بٹن کو ٹچ کر کے اپنے فون کو بیدار اور ان لاک کریں۔ فوری رسائی کیلئے آن کریں یا حادثاتی فنگر پرنٹ اسکین سے بچنے کیلئے آف کریں۔</string>
     <string name="sec_fingerprint_always_on_summary_dex">اسکرین آف ہونے پر بھی اپنا فنگر پرنٹ اسکین کریں۔ Samsung DeX چلنے پر دستیاب نہیں۔</string>
     <string name="sec_fingerprint_enroll_title">فنگرپرنٹ شامل کریں</string>
     <string name="sec_fingerprint_error_contact_customer_service">اگر یہ مسئلہ جاری رہتا ہے، تو کسٹمر خدمت سے رابطہ کریں۔</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">اپنا فنگرپرنٹ رجسٹر کرنے سے قبل وائرلیس چارجر سے اپنا فون ہٹا لیں۔</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">اپنا فنگرپرنٹ شامل کرنا جاری رکھنے کیلئے اپنا فون بند کریں۔</string>
-    <string name="sec_fingerprint_register_guide_text">اپنی انگلی کو سینسر پر رکھیں، پھر جب آپ کو تھرتھراہٹ محسوس ہو تو اسے اٹھالیں۔</string>
+    <string name="sec_fingerprint_register_guide_text">اپنی انگلی کو سینسر پر رکھیں، پھر جب آپ تھرتھراہٹ محسوس کریں تو اسے اٹھالیں۔</string>
     <string name="sec_fingerprint_register_open_phone">اپنا فنگرپرنٹ شامل کرنا جاری رکھنے کے لیے اپنا فون چالو کریں۔</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">اپنی انگلی کو سینسر پر دبائيں، پھر فیصد بڑھ جانے کے بعد اسے اٹھالیں۔</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">اپنی انگلی سینسر پر رکھیں، پھر فیصد بڑھ جانے کے بعد اٹھالیں۔</string>
     <string name="sec_fingerprint_register_reposition_your_finger">اپنے فنگرپرنٹ کے کنارے کو کیپچر کرنے کے لیے اپنی انگلی ہر بار دوبارہ پوزیش میں لائیں۔</string>
     <string name="sec_fingerprint_scan_fingerprint">فنگرپرنٹ اسکین کریں۔</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">‏Samsung DeX چلنے کے دوران آئیکن دکھائی نہیں دے گا۔</string>
     <string name="sec_fingerprint_second_guide_title">مکمل اسکین کریں</string>
     <string name="sec_fingerprint_sensor">فنگرپرنٹ سینسر</string>
     <string name="sec_fingerprint_sensor_activated">فنگر پرنٹ سینسر فعال ہوگیا</string>

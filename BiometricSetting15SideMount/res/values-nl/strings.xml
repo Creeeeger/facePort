@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animatie</string>
     <string name="fingerprint_custom_icon_title">Pictogram</string>
     <string name="fingerprint_dex_toast">Gebruik uw vingerafdruk op uw telefoon om uw identiteit te verifiëren.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Dikke beschermende laag met kleuren kan van invloed zijn op de prestaties. Als u een schermprotector gebruikt, moet deze compatibel zijn met de vingerafdruksensor.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Dikke beschermende laag kan van invloed zijn op de prestaties. Als u een schermprotector gebruikt, moet deze compatibel zijn met de vingerafdruksensor.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Gebruik geen schermafdekking bij het registreren van vingerafdrukken.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Deze app ondersteunt Multi window niet.</string>
-    <string name="fingerprint_duplicate_guide_msg">Pas de positie van uw vinger elke keer een beetje aan.</string>
+    <string name="fingerprint_duplicate_guide_msg">Wijzig de positie van uw vinger elke keer een beetje om een volledige scan te maken.</string>
     <string name="fingerprint_enroll_dont_move">Verplaats je vinger niet tot de scan is voltooid.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">De hele cirkel vullen</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Je vinger verplaatsen rond de sensor</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Als dit blijft gebeuren, start u uw telefoon opnieuw.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Hier volgt een aantal dingen dat u kunt proberen:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Neem contact op met de Klantenservice als dit probleem blijft bestaan.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Zorg dat de vingerafdruksensor schoon en droog is en probeer het opnieuw.</string>
     <string name="fingerprint_error_message_timed_out">Time-out voor registratie. Probeer het opnieuw.</string>
     <string name="fingerprint_error_title_no_space">Onvoldoende opslagruimte</string>
     <string name="fingerprint_error_title_not_responding">Vingerafdruksensor reageert niet</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Gereed</string>
     <string name="fingerprint_register_guide_side_key">De sensor zit op de zijknop aan de rechterkant van de telefoon.</string>
     <string name="fingerprint_register_lift_your_finger">Til uw vinger van de vingerafdruksensor.</string>
-    <string name="fingerprint_register_place_your_finger">Positie van vinger aanpassen voor volledige scan</string>
+    <string name="fingerprint_register_place_your_finger">Uw vingerafdruk scannen</string>
     <string name="fingerprint_register_success">Vingerafdruk toegevoegd</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Geweldig! Uw vingerafdruk is herkend.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Raak de vingerafdruksensor aan.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Scan uw vingerafdruk.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Kan %1$s niet gebruiken terwijl de toetsenbordhoes is bevestigd. %2$s wordt uitgeschakeld.</string>
     <string name="fingerscanner_keyboard_dialog_title">Toetsenbordhoes bevest.</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Plaats uw vinger op de vingerafdruksensor en til uw vinger weer op.</string>
-    <string name="fingerscanner_register_text">Druk met uw vinger op de sensor en til uw vinger op wanneer u een trilling voelt.</string>
+    <string name="fingerscanner_register_text">Plaats uw vinger op de sensor en til uw vinger op wanneer u een trilling voelt.</string>
     <string name="fingerscanner_toast_back_text">Tik nogmaals op de knop Terug om te stoppen met het toevoegen van uw vingerafdruk.</string>
     <string name="forgot_password">Wachtwoord vergeten</string>
     <string name="forgot_password_header">Wachtwoord resetten?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Wachtwoord invoeren</string>
     <string name="sec_enter_pin_WC">Pincode invoeren</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Vingerafdruksensor activeren</string>
-    <string name="sec_fingerprint_always_on_summary">Scan uw vingerafdruk zelfs wanneer het scherm is uitgeschakeld.</string>
+    <string name="sec_fingerprint_always_on_summary">Activeer en ontgrendel je telefoon door de zijknop aan te raken. Schakel in voor snelle toegang of schakel uit om onbedoelde vingerafdrukscans te voorkomen.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Scan je vingerafdruk zelfs wanneer het scherm is uitgeschakeld. Niet beschikbaar wanneer Samsung DeX actief is.</string>
     <string name="sec_fingerprint_enroll_title">Vingerafdruk toevoegen</string>
     <string name="sec_fingerprint_error_contact_customer_service">Neem contact op met de Klantenservice als dit probleem blijft bestaan.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Haal uw telefoon los van de draadloze oplader voordat u uw vingerafdruk registreert.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Sluit de telefoon om door te gaan met het toevoegen van je vingerafdruk.</string>
-    <string name="sec_fingerprint_register_guide_text">Druk met uw vinger op de sensor en til uw vinger op wanneer u een trilling voelt.</string>
+    <string name="sec_fingerprint_register_guide_text">Plaats uw vinger op de sensor en til uw vinger op wanneer u een trilling voelt.</string>
     <string name="sec_fingerprint_register_open_phone">Open de telefoon om door te gaan met het toevoegen van uw vingerafdruk.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Druk met uw vinger op de sensor en til vervolgens uw vinger op wanneer het percentage stijgt.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Plaats met uw vinger op de sensor en til vervolgens uw vinger op wanneer het percentage stijgt.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Verplaats uw vinger elke keer om de randen van de vingerafdruk vast te leggen.</string>
     <string name="sec_fingerprint_scan_fingerprint">Scan vingerafdruk.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Het pictogram wordt niet weergegeven als Samsung DeX actief is.</string>
     <string name="sec_fingerprint_second_guide_title">Een volledige scan doen</string>
     <string name="sec_fingerprint_sensor">Vingerafdruksensor</string>
     <string name="sec_fingerprint_sensor_activated">Vingerafdruksensor geactiveerd</string>

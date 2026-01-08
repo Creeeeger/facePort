@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animation</string>
     <string name="fingerprint_custom_icon_title">Icône</string>
     <string name="fingerprint_dex_toast">Utilisez votre empreinte sur votre téléphone pour confirmer votre identité.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">"Un film de protection épais ou coloré peut avoir un impact sur les performances. Si vous utilisez une protection d'écran, assurez-vous qu'elle est garantie comme compatible avec le capteur d'empreinte sur l'écran."</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">"Un film de protection épais peut avoir un impact sur les performances. Si vous utilisez une protection d'écran, assurez-vous qu'elle est garantie comme compatible avec le capteur d'empreinte sur l'écran."</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">"Veillez à ne pas utiliser de protection d'écran lorsque vous enregistrez vos empreintes."</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Cette application ne prend pas en charge la fonction Multi-fenêtres.</string>
-    <string name="fingerprint_duplicate_guide_msg">Veillez à ajuster légèrement la position de votre doigt à chaque fois.</string>
+    <string name="fingerprint_duplicate_guide_msg">Modifiez légèrement la position de votre doigt à chaque appui pour obtenir une analyse complète.</string>
     <string name="fingerprint_enroll_dont_move">"Ne bougez pas votre doigt tant que l'analyse n'est pas terminée."</string>
     <string name="fingerprint_enroll_first_guide_indisplay">"Remplissage de l'intégralité du cercle"</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Déplacement de votre doigt autour du capteur</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Si cela se reproduit, redémarrez votre téléphone.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">"Une erreur s'est produite avec le capteur d'empreintes digitales. Si ce message s'affiche plusieurs fois, redémarrez votre téléphone."</string>
     <string name="fingerprint_error_message_some_things_try">Voici quelques actions que vous pouvez essayer :</string>
-    <string name="fingerprint_error_message_something_on_sensor">Si ce problème persiste, contactez le service client.</string>
+    <string name="fingerprint_error_message_something_on_sensor">"Assurez-vous que le capteur d'empreinte est propre et sec, puis réessayez."</string>
     <string name="fingerprint_error_message_timed_out">"L'enregistrement a expiré. Réessayez."</string>
     <string name="fingerprint_error_title_no_space">Espace de stockage insuffisant</string>
     <string name="fingerprint_error_title_not_responding">"Le capteur d'empreinte ne répond pas"</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Terminé</string>
     <string name="fingerprint_register_guide_side_key">Le capteur est situé sur la touche latérale, sur le côté droit du téléphone.</string>
     <string name="fingerprint_register_lift_your_finger">"Décollez votre doigt du capteur d'empreinte."</string>
-    <string name="fingerprint_register_place_your_finger">Repositionner le doigt pour une numérisation complète</string>
+    <string name="fingerprint_register_place_your_finger">Analyse de votre empreinte</string>
     <string name="fingerprint_register_success">Empreinte ajoutée</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Parfait ! Votre empreinte a été reconnue.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">"Touchez le capteur d'empreinte."</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Analysez votre empreinte.</string>
     <string name="fingerscanner_keyboard_dialog_msg">"Impossible d'utiliser %1$s lorsque le couvercle du clavier est attaché. %2$s va être désactivé."</string>
     <string name="fingerscanner_keyboard_dialog_title">Couvercle clav. attaché</string>
-    <string name="fingerscanner_lift_your_finger_off_first">"Placez votre doigt sur le capteur d'empreinte, puis décollez-le à nouveau."</string>
-    <string name="fingerscanner_register_text">Posez votre doigt sur le capteur, puis décollez-le lorsque vous ressentez une vibration.</string>
+    <string name="fingerscanner_register_text">Placez votre doigt sur le capteur, puis décollez-le lorsque vous ressentez une vibration.</string>
     <string name="fingerscanner_toast_back_text">"Rappuyez sur la touche Retour pour arrêter l'ajout de votre empreinte."</string>
     <string name="forgot_password">Mot de passe oublié</string>
     <string name="forgot_password_header">Réinitialiser le mot de passe ?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Entrer le mot de passe</string>
     <string name="sec_enter_pin_WC">Entrer le code PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">"Activer le capteur d'empreinte"</string>
-    <string name="sec_fingerprint_always_on_summary">"Analysez votre empreinte même lorsque l'écran est éteint."</string>
+    <string name="sec_fingerprint_always_on_summary">"Activez et déverrouillez votre téléphone en appuyant simplement sur la touche latérale. Activez cette fonction pour accélérer l'accès, ou désactivez-la pour éviter les analyses d'empreinte accidentelles."</string>
     <string name="sec_fingerprint_always_on_summary_dex">"Scannez votre empreinte même lorsque l'écran est éteint. Cette fonction n'est pas disponible lorsque Samsung DeX est en cours d'exécution."</string>
     <string name="sec_fingerprint_enroll_title">Ajouter une empreinte</string>
     <string name="sec_fingerprint_error_contact_customer_service">Si ce problème persiste, contactez le service client.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">"Décollez votre téléphone du chargeur sans fil avant d'enregistrer votre empreinte."</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Fermez votre téléphone pour continuer à ajouter votre empreinte.</string>
-    <string name="sec_fingerprint_register_guide_text">Posez votre doigt sur le capteur, puis décollez-le lorsque vous ressentez une vibration.</string>
+    <string name="sec_fingerprint_register_guide_text">Placez votre doigt sur le capteur, puis décollez-le lorsque vous ressentez une vibration.</string>
     <string name="sec_fingerprint_register_open_phone">Ouvrez votre téléphone pour continuer à ajouter votre empreinte.</string>
     <string name="sec_fingerprint_register_percentage_goes_up">Posez votre doigt sur le capteur, puis décollez-le lorsque le pourcentage augmente.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Repositionnez votre doigt à chaque fois pour capturer les bords de votre empreinte.</string>
     <string name="sec_fingerprint_scan_fingerprint">"Analysez l'empreinte."</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">"L'icône ne s'affichera pas pendant l'exécution de Samsung DeX."</string>
     <string name="sec_fingerprint_second_guide_title">Analyse complète</string>
     <string name="sec_fingerprint_sensor">"Capteur d'empreinte"</string>
     <string name="sec_fingerprint_sensor_activated">"Capteur d'empreinte activé"</string>

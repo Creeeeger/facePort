@@ -2683,7 +2683,7 @@
 
     .line 52
     .line 53
-    const v2, 0x7f0800b1
+    const v2, 0x7f0800b0
 
     .line 54
     .line 55

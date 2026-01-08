@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animácia</string>
     <string name="fingerprint_custom_icon_title">Ikona</string>
     <string name="fingerprint_dex_toast">Na overenie svojej identity použite rozpoznávanie odtlačkov prstov pomocou telefónu.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Hrubá alebo farebná ochranná fólia môže negatívne ovplyvniť funkčnosť. Ak používate ochrannú fóliu na displej, skontrolujte, či je označená ako kompatibilná so snímačom odtlačkov prstov na obrazovke.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Hrubá ochranná fólia môže negatívne ovplyvniť funkčnosť. Ak používate ochrannú fóliu na displej, skontrolujte, či je označená ako kompatibilná so snímačom odtlačkov prstov na obrazovke.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Pri registrovanie odtlačkov prstov sa uistite, že nepoužívate žiadny chránič obrazovky.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Táto aplikácia nepodporuje funkciu Zobrazenie viacerých okien.</string>
-    <string name="fingerprint_duplicate_guide_msg">Zakaždým mierne zmeňte polohu prsta.</string>
+    <string name="fingerprint_duplicate_guide_msg">Zakaždým mierne zmeňte polohu prsta, aby sa nasnímal jeho úplný odtlačok.</string>
     <string name="fingerprint_enroll_dont_move">Nehýbte prstom, kým sa skenovanie nedokončí.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Vyplňte celý kruh</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Pohybujte prstom po senzore</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Ak tento problém pretrváva, reštartujte telefón.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Tu je niekoľko možností, ktoré môžete vyskúšať:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Ak tento problém pretrváva, kontaktujte centrum služieb zákazníkom.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Uistite sa, či je snímač odtlačkov prstov čistý a suchý, a potom to skúste znova.</string>
     <string name="fingerprint_error_message_timed_out">Uplynul časový limit registrácie. Skúste to znova.</string>
     <string name="fingerprint_error_title_no_space">Nedostatok úložiska</string>
     <string name="fingerprint_error_title_not_responding">Snímač odtlačkov prstov nereaguje</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Hotovo</string>
     <string name="fingerprint_register_guide_side_key">Snímač je na bočnom tlačidle na pravej strane telefónu.</string>
     <string name="fingerprint_register_lift_your_finger">Zdvihnite prst zo snímača odtlačkov prstov.</string>
-    <string name="fingerprint_register_place_your_finger">Upravte polohu prsta, aby sa naskenoval celý</string>
+    <string name="fingerprint_register_place_your_finger">Naskenovanie odtlačku prsta</string>
     <string name="fingerprint_register_success">Odtlačok prsta bol pridaný</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Skvelé! Odtlačok prsta bol rozpoznaný.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Dotknite sa snímača odtlačkov prstov.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Naskenujte svoj odtlačok prsta.</string>
     <string name="fingerscanner_keyboard_dialog_msg">%1$s sa nedá použiť, keď je pripojený kryt klávesnice. %2$s sa vypne.</string>
     <string name="fingerscanner_keyboard_dialog_title">Pripoj. kryt klávesnice</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Položte prst na snímač odtlačkov prstov a potom ho znova zdvihnite.</string>
-    <string name="fingerscanner_register_text">Pritlačte prst na snímač a keď pocítite vibrovanie, zdvihnite ho.</string>
+    <string name="fingerscanner_register_text">Položte prst na snímač a keď pocítite vibrovanie, zdvihnite ho.</string>
     <string name="fingerscanner_toast_back_text">Opätovným ťuknutím na tlačidlo Späť môžete zastaviť pridávanie odtlačku prsta.</string>
     <string name="forgot_password">Zabudnuté heslo</string>
     <string name="forgot_password_header">Chcete resetovať heslo?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Zadajte heslo</string>
     <string name="sec_enter_pin_WC">Zadajte kód PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktivovať snímač odtlačkov prstov</string>
-    <string name="sec_fingerprint_always_on_summary">Umožňuje skenovať odtlačok prsta, aj keď je vypnutá obrazovka.</string>
+    <string name="sec_fingerprint_always_on_summary">Umožňuje prebudenie a odomknutie telefónu jednoduchým dotykom bočného tlačidla. Zapnutím získate rýchly prístup alebo vypnutím zabránite náhodnému skenovaniu odtlačkov prstov.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Umožňuje naskenovať odtlačok prsta, aj keď je vypnutá obrazovka. Keď je spustený režim Samsung DeX, nie je to k dispozícii.</string>
     <string name="sec_fingerprint_enroll_title">Pridať odtlačok prsta</string>
     <string name="sec_fingerprint_error_contact_customer_service">Ak tento problém pretrváva, kontaktujte centrum služieb zákazníkom.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Pred registráciou odtlačku prsta dajte telefón mimo bezdrôtovej nabíjačky.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Zavrite telefón a pokračujte v pridávaní odtlačku prsta.</string>
-    <string name="sec_fingerprint_register_guide_text">Pritlačte prst na snímač a keď pocítite vibrovanie, zdvihnite ho.</string>
+    <string name="sec_fingerprint_register_guide_text">Položte prst na snímač a keď pocítite vibrovanie, zdvihnite ho.</string>
     <string name="sec_fingerprint_register_open_phone">Otvorte telefón a pokračujte v pridávaní odtlačku prsta.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Pritlačte prst na snímač a keď sa zvýši percentuálna hodnota, zdvihnite ho.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Položte prst na snímač a keď sa zvýši percentuálna hodnota, zdvihnite ho.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Zakaždým zmeňte polohu prsta, aby sa nasnímali okraje odtlačku prsta.</string>
     <string name="sec_fingerprint_scan_fingerprint">Naskenujte odtlačok prsta.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Keď je spustený režim Samsung DeX, táto ikona sa nezobrazí.</string>
     <string name="sec_fingerprint_second_guide_title">Naskenujte celý odtlačok prsta</string>
     <string name="sec_fingerprint_sensor">Snímač odtlačkov prstov</string>
     <string name="sec_fingerprint_sensor_activated">Snímač odtlačkov prstov je aktivovaný</string>

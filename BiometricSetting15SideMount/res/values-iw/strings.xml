@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">הנפשה</string>
     <string name="fingerprint_custom_icon_title">סמל</string>
     <string name="fingerprint_dex_toast">אמת את זהותך בטלפון שלך בעזרת טביעת אצבע.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ציפוי מגן עבה או צבעוני עלול להשפיע על הביצועים. אם אתה משתמש במגן מסך, ודא שהוא מסומן כתואם לחיישן טביעות האצבע שבמסך.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ציפוי מגן עבה עלול להשפיע על הביצועים. אם אתה משתמש במגן מסך, ודא שהוא מסומן כתואם לחיישן טביעות האצבע שבמסך.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">הקפד שלא להשתמש בכיסוי מסך כאשר אתה רושם טביעות אצבע.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">"יישום זה אינו תומך ב'חלונות מרובים'."</string>
-    <string name="fingerprint_duplicate_guide_msg">שנה מעט את מיקום האצבע בכל פעם.</string>
+    <string name="fingerprint_duplicate_guide_msg">כדי לסרוק טביעת אצבע מלאה, שנה מעט את תנוחת האצבע בכל פעם.</string>
     <string name="fingerprint_enroll_dont_move">אל תזיז את האצבע עד לסיום תהליך הסריקה.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">מלא את כל העיגול</string>
     <string name="fingerprint_enroll_first_guide_subtitle">הזז את האצבע סביב החיישן</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">אם הבעיה נמשכת, הפעל מחדש את הטלפון שלך.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">הנה כמה פעולות שאפשר לנסות:</string>
-    <string name="fingerprint_error_message_something_on_sensor">אם הבעיה נמשכת, פנה אל שירות הלקוחות.</string>
+    <string name="fingerprint_error_message_something_on_sensor">ודא שחיישן טביעות האצבע נקי ויבש ונסה שוב.</string>
     <string name="fingerprint_error_message_timed_out">תם הזמן הקצוב לרישום. נסה שוב.</string>
     <string name="fingerprint_error_title_no_space">אין די שטח אחסון</string>
     <string name="fingerprint_error_title_not_responding">חיישן טביעות האצבעות אינו מגיב</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">בוצע</string>
     <string name="fingerprint_register_guide_side_key">החיישן נמצא בלחצן הצידי, בצד הימני של הטלפון.</string>
     <string name="fingerprint_register_lift_your_finger">הורד את האצבע מחיישן טביעות האצבע.</string>
-    <string name="fingerprint_register_place_your_finger">התאמת מיקום האצבע לסריקה מלאה</string>
+    <string name="fingerprint_register_place_your_finger">סריקת טביעת אצבע</string>
     <string name="fingerprint_register_success">טביעת אצבע נוספה</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">נהדר! טביעת האצבע שלך זוהתה.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">גע בחיישן טביעות האצבע.</string>
@@ -253,7 +253,6 @@
     <string name="fingerprint_verification_description_default_text">סרוק טביעת אצבע.</string>
     <string name="fingerscanner_keyboard_dialog_msg">לא ניתן להשתמש בפריט %1$s כל עוד מכסה המקלדת מחובר. הפריט %2$s יושבת.</string>
     <string name="fingerscanner_keyboard_dialog_title">מכסה המקלדת מחובר</string>
-    <string name="fingerscanner_lift_your_finger_off_first">הנח לרגע אצבע על חיישן טביעות האצבע והורד אותה מיד.</string>
     <string name="fingerscanner_register_text">הנח אצבע על החיישן והרם אותה כאשר תחוש ברטט.</string>
     <string name="fingerscanner_toast_back_text">הקש על לחצן החזרה שוב כדי לעצור את הוספת טביעת האצבע שלך.</string>
     <string name="forgot_password">שכחתי סיסמה</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">הזן סיסמה</string>
     <string name="sec_enter_pin_WC">הזן קוד PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">הפעל חיישן טביעות אצבע</string>
-    <string name="sec_fingerprint_always_on_summary">סרוק את טביעת האצבע שלך גם כאשר המסך כבוי.</string>
+    <string name="sec_fingerprint_always_on_summary">הער את הטלפון ובטל את נעילתו פשוט על-ידי נגיעה בלחצן הצידי. הפעל לצורך גישה מהירה או כבה כדי למנוע סריקה של טביעות אצבע שלא בכוונה.</string>
     <string name="sec_fingerprint_always_on_summary_dex">סרוק את טביעת האצבע שלך גם כאשר המסך כבוי. לא זמין כאשר Samsung DeX מופעל.</string>
     <string name="sec_fingerprint_enroll_title">הוסף טביעת אצבע</string>
     <string name="sec_fingerprint_error_contact_customer_service">אם הבעיה נמשכת, פנה אל שירות הלקוחות.</string>
@@ -297,10 +296,9 @@
     <string name="sec_fingerprint_register_close_phone">סגור את הטלפון כדי להמשיך בהוספת טביעת האצבע.</string>
     <string name="sec_fingerprint_register_guide_text">הנח אצבע על החיישן והרם אותה כאשר תחוש ברטט.</string>
     <string name="sec_fingerprint_register_open_phone">פתח את הטלפון כדי להמשיך ברישום טביעת האצבע.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">הנח אצבע על החיישן והרם אותה כאשר הערך באחוזים יעלה.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">הנח את אצבע שלך על החיישן והרם אותה כאשר הערך באחוזים יעלה.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">שנה מעט את מיקום האצבע בכל פעם כדי לכלול גם את שולי טביעת האצבע שלך.</string>
     <string name="sec_fingerprint_scan_fingerprint">סרוק טביעת אצבע.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">הסמל לא יופיע בעת הפעלה של Samsung DeX.</string>
     <string name="sec_fingerprint_second_guide_title">קבלת סריקה מלאה</string>
     <string name="sec_fingerprint_sensor">חיישן טביעות אצבע</string>
     <string name="sec_fingerprint_sensor_activated">חיישן טביעות האצבע מופעל</string>

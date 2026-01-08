@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Анимация</string>
     <string name="fingerprint_custom_icon_title">Сүрөтчөсү</string>
     <string name="fingerprint_dex_toast">Жекелигиңизди ырастоо үчүн телефонуңузда бармак изиңизди колдонуңуз.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Калың же түстүү коргоочу пленка иштөөгө таасир этиши мүмкүн. Эгер экран коргоочусун колдонсоңуз, анын экрандагы бармак изинин сенсоруна шайкеш келгенин текшериңиз.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Калың коргоочу пленка иштөөсүнө таасир этиши мүмкүн. Эгер экран коргоочусун колдонсоңуз, анын экрандагы бармак изинин сенсоруна шайкеш келгенин текшериңиз.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Бармак издерин каттоодо экран мукабасын колдонбоңуз.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Бул колдонмо Көп терезени колдоого албайт.</string>
-    <string name="fingerprint_duplicate_guide_msg">Ар дайым бармагыңыздын жайгашуусун акырын тууралаңыз.</string>
+    <string name="fingerprint_duplicate_guide_msg">Толук сканды алуу үчүн бармагыңыздын абалын акырын алмаштырыңыз.</string>
     <string name="fingerprint_enroll_dont_move">Скандоо аяктаганга чейин бармагыңызды жылдырбаңыз.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Тегеректи толтуруңуз</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Бармакты сенсордун айланасында жылдырыңыз</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Эгерде бул кайталана бере турган болсо, телефонуңузду кайра иштетиңиз.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Бул жерде сиз байкай алга бир нече нерсеңиз бар:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Эгер бул көйгөй чечилбесе, Кардарлар Кызматына кайрылыңыз.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Бармак изи сенсорунун таза жана кургак экендигин ырастаңыз, андан соң дагы аракеттениңиз.</string>
     <string name="fingerprint_error_message_timed_out">Каттоо убактысы бүттү. Кайра аракет кылыңыз.</string>
     <string name="fingerprint_error_title_no_space">Сактагычта бош орун жетишсиз</string>
     <string name="fingerprint_error_title_not_responding">Бармак изи сенсору жооп бербей жатат</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Даяр</string>
     <string name="fingerprint_register_guide_side_key">Сенсор телефондун оң жагындагы Каптал баскычында жайгашкан.</string>
     <string name="fingerprint_register_lift_your_finger">Бармагыңызды бармак изи сенсорунан алыңыз.</string>
-    <string name="fingerprint_register_place_your_finger">Бармагыңыздын жайгаш. тууралап, толук скандаңыз</string>
+    <string name="fingerprint_register_place_your_finger">Бармак изиңизди издөө</string>
     <string name="fingerprint_register_success">Бармак изи кошулду</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Соонун! Бармак изиңиз таанылды.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Бармак изи сенсорун басыңыз.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Бармак изиңизди издетиңиз.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Клавиатура мукабасы тиркелип турганда %1$s колдонуу мүмкүн эмес. %2$s иштен чыгарылат.</string>
     <string name="fingerscanner_keyboard_dialog_title">Клав. мукаб. тиркелген</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Бармагыңызды бармак изинин сенсоруна коюңуз, анан аны кайра алыңыз.</string>
-    <string name="fingerscanner_register_text">Бармагыңызды сенсорго басып, андан соң дирилдөөнү сезгениңизде аны алыңыз.</string>
+    <string name="fingerscanner_register_text">Бармагыңызды сенсоруна коюңуз, андан соң дирилдөөнү сезгенден кийин аны алыңыз.</string>
     <string name="fingerscanner_toast_back_text">Бармак изиңизди кошууну токтотуу үчүн, Артка баскычын кайра басыңыз.</string>
     <string name="forgot_password">Сырсөздү унуттум</string>
     <string name="forgot_password_header">Сырсөздү кайра коюубу?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Сырсөз киргизүү</string>
     <string name="sec_enter_pin_WC">PINди киргизүү</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Бармак изинин сенсорун иштетүү</string>
-    <string name="sec_fingerprint_always_on_summary">Экран өчүп турса да, бармак изиңизди скандаңыз.</string>
+    <string name="sec_fingerprint_always_on_summary">Каптал баскычын басып эле телефонуңузду ойготуп, кулпусун ачыңыз. Тез кирүү үчүн күйгүзүңүз же капыстан бармак издери скандалышынын алдын алуу үчүн өчүрүп коюңуз.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Экран өчүп турса да, бармак изиңизди скандаңыз. Samsung DeX иштеп жатканда жеткиликтүү эмес.</string>
     <string name="sec_fingerprint_enroll_title">Бармак изин кошуу</string>
     <string name="sec_fingerprint_error_contact_customer_service">Эгер бул көйгөй чечилбесе, Кардарлар Кызматына кайрылыңыз.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Бармак изиңизди каттаганга чейин телефонуңузду зымсыз заряддагычтан алып салыңыз.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Бармак изиңизди кошууну улантуу үчүн телефонуңузду жабыңыз.</string>
-    <string name="sec_fingerprint_register_guide_text">Бармагыңызды сенсорго басып, андан соң дирилдөөнү сезгениңизде аны алыңыз.</string>
+    <string name="sec_fingerprint_register_guide_text">Бармагыңызды сенсоруна коюңуз, андан соң дирилдөөнү сезгенден кийин аны алыңыз.</string>
     <string name="sec_fingerprint_register_open_phone">Бармак изиңизди кошууну улантуу үчүн телефонуңузду ачыңыз.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Бармагыңызды сенсорго басып, андан соң пайыз жогору чыкканда аны алыңыз.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Бармагыңызды сенсорго коюп, андан соң пайыз жогорулаганда, колуңузду алыңыз.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Бармак изиңиздин кырын тартуу үчүн ар убак бармагыңыздын жайгаштырыңыз.</string>
     <string name="sec_fingerprint_scan_fingerprint">Бармак изиңизди скандаңыз.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Сүрөтчө Samsung DeX иштеп жатканда көрүнбөйт.</string>
     <string name="sec_fingerprint_second_guide_title">Толук издөө алуу</string>
     <string name="sec_fingerprint_sensor">Бармак изинин сенсору</string>
     <string name="sec_fingerprint_sensor_activated">Бармак изинин сенсору иштетилди</string>

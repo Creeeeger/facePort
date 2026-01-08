@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">애니메이션</string>
     <string name="fingerprint_custom_icon_title">아이콘</string>
     <string name="fingerprint_dex_toast">휴대전화에서 지문을 인식하여 본인을 인증하세요.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">두껍거나 색상이 있는 보호 필름을 사용할 경우 지문 인식에 영향을 줄 수 있으니, 보호 필름 부착 시에는 지문 센서를 사용할 수 있는 제품인지 확인하세요.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">두꺼운 보호 필름을 사용할 경우 지문 인식에 영향을 줄 수 있으니, 보호 필름 부착 시에는 지문 센서를 사용할 수 있는 제품인지 확인하세요.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">지문 등록은 전면 커버를 씌우지 않은 상태에서 진행하세요.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">이 앱은 멀티윈도우 기능이 지원되지 않습니다.</string>
-    <string name="fingerprint_duplicate_guide_msg">골고루 등록될 수 있도록 손가락 위치를 살짝 움직여 주세요.</string>
+    <string name="fingerprint_duplicate_guide_msg">지문 전체가 등록될 수 있도록 손가락을 살짝 움직여 주세요.</string>
     <string name="fingerprint_enroll_dont_move">스캔이 완료될 때까지 손가락을 움직이지 마세요.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">손가락으로 원 전체 채우기</string>
     <string name="fingerprint_enroll_first_guide_subtitle">손가락으로 센서 문지르기</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">이 현상이 지속되면 휴대전화를 다시 시작하세요.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">지문 인식 센서에 오류가 발생했습니다. 이 메시지가 반복될 경우 휴대전화를 다시 시작하세요.</string>
     <string name="fingerprint_error_message_some_things_try">다음의 방법을 시도하세요.</string>
-    <string name="fingerprint_error_message_something_on_sensor">문제가 지속될 경우 고객 서비스 센터에 문의하세요.</string>
+    <string name="fingerprint_error_message_something_on_sensor">지문 센서에 이물질 또는 물기가 있는지 확인한 후 다시 해보세요.</string>
     <string name="fingerprint_error_message_timed_out">등록 시간이 초과되었습니다. 다시 해보세요.</string>
     <string name="fingerprint_error_title_no_space">저장공간 부족</string>
     <string name="fingerprint_error_title_not_responding">지문 센서가 응답하지 않아요</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">완료</string>
     <string name="fingerprint_register_guide_side_key">센서는 휴대전화 오른쪽의 측면 버튼에 있습니다.</string>
     <string name="fingerprint_register_lift_your_finger">손가락을 지문 센서에서 떼세요.</string>
-    <string name="fingerprint_register_place_your_finger">조금씩 움직여 지문을 골고루 등록하기</string>
+    <string name="fingerprint_register_place_your_finger">지문 등록</string>
     <string name="fingerprint_register_success">지문 등록 완료</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">잘했어요! 지문 인식이 완료되었습니다.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">지문 센서에 손가락을 대세요.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">지문을 입력하세요.</string>
     <string name="fingerscanner_keyboard_dialog_msg">키보드 커버가 장착된 상태에서는 %1$s을(를) 사용할 수 없습니다. %2$s을(를) 끕니다.</string>
     <string name="fingerscanner_keyboard_dialog_title">키보드 커버 장착됨</string>
-    <string name="fingerscanner_lift_your_finger_off_first">손가락을 지문 센서 위에 올렸다가 떼세요. 이 동작을 반복하세요.</string>
-    <string name="fingerscanner_register_text">손가락으로 센서를 살짝 누른 후, 진동이 느껴지면 떼세요.</string>
+    <string name="fingerscanner_register_text">손가락을 센서에 살짝 올린 후, 진동이 느껴지면 떼세요.</string>
     <string name="fingerscanner_toast_back_text">지문 추가를 중지하려면 뒤로가기 버튼을 다시 누르세요.</string>
     <string name="forgot_password">비밀번호 찾기</string>
     <string name="forgot_password_header">비밀번호 초기화</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">비밀번호를 입력하세요</string>
     <string name="sec_enter_pin_WC">PIN을 입력하세요</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">지문 센서 활성화</string>
-    <string name="sec_fingerprint_always_on_summary">화면이 꺼져 있어도 지문이 인식됩니다.</string>
+    <string name="sec_fingerprint_always_on_summary">화면이 꺼져 있을 때, 측면 버튼을 터치하기만 하면 휴대전화 잠금이 바로 해제됩니다. 실수로 잠금이 해제되는 것을 원하지 않는다면, 이 기능을 끄세요.</string>
     <string name="sec_fingerprint_always_on_summary_dex">화면이 꺼져 있어도 지문을 스캔할 수 있습니다. Samsung DeX 실행 중인 경우는 예외입니다.</string>
     <string name="sec_fingerprint_enroll_title">지문 추가</string>
     <string name="sec_fingerprint_error_contact_customer_service">문제가 지속될 경우 고객 서비스 센터에 문의하세요.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">지문을 등록하기 전에 무선 충전기에서 휴대전화를 들어주세요.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"/>%</string>
     <string name="sec_fingerprint_register_close_phone">휴대전화를 닫고 지문을 등록하세요.</string>
-    <string name="sec_fingerprint_register_guide_text">손가락으로 센서를 살짝 누른 후, 진동이 느껴지면 떼세요.</string>
+    <string name="sec_fingerprint_register_guide_text">손가락을 센서에 살짝 올린 후, 진동이 느껴지면 떼세요.</string>
     <string name="sec_fingerprint_register_open_phone">휴대전화를 열고 지문을 등록하세요.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">손가락으로 센서를 누르세요. 누르고 있다가 퍼센트가 올라가면 떼세요.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">손가락을 센서에 올린 후, 퍼센트가 올라가면 떼세요.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">가장자리까지 등록될 수 있도록 손가락을 돌려가며 스캔하세요.</string>
     <string name="sec_fingerprint_scan_fingerprint">지문을 스캔하세요.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX 실행 중에는 아이콘이 표시되지 않습니다.</string>
     <string name="sec_fingerprint_second_guide_title">지문 가장자리 등록</string>
     <string name="sec_fingerprint_sensor">지문 센서</string>
     <string name="sec_fingerprint_sensor_activated">지문 센서 활성화됨</string>

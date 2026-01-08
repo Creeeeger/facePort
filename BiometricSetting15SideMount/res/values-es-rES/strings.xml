@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animación</string>
     <string name="fingerprint_custom_icon_title">Icono</string>
     <string name="fingerprint_dex_toast">Usa la huella digital en el teléfono para verificar tu identidad.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Las películas protectoras gruesas o con colores pueden afectar al rendimiento. Si utilizas un protector de pantalla, comprueba que sea compatible con el sensor de huellas digitales en pantalla.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Las películas protectoras gruesas pueden afectar al rendimiento. Si utilizas un protector de pantalla, comprueba que sea compatible con el sensor de huellas digitales en pantalla.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Asegúrate de que no usas un protector de pantalla durante el registro de las huellas digitales.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Esta aplicación no admite Multiwindow.</string>
-    <string name="fingerprint_duplicate_guide_msg">Asegúrate de cambiar ligeramente la posición del dedo cada vez.</string>
+    <string name="fingerprint_duplicate_guide_msg">Cambia ligeramente la posición del dedo cada vez para obtener un escaneo completo.</string>
     <string name="fingerprint_enroll_dont_move">No muevas el dedo hasta que se haya completado el escaneado.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Llena todo el círculo</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Mueve el dedo por todo el sensor</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Si se sigue produciendo, reinicia el teléfono.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Prueba a hacer lo siguiente:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Si el problema persiste, ponte en contacto con el Servicio de atención al cliente.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Asegúrate de que el sensor de huellas digitales esté limpio y seco y, a continuación, inténtalo de nuevo.</string>
     <string name="fingerprint_error_message_timed_out">Se ha agotado el tiempo de espera para registrar. Inténtalo de nuevo.</string>
     <string name="fingerprint_error_title_no_space">No hay espacio de almacenamiento suficiente</string>
     <string name="fingerprint_error_title_not_responding">El sensor de huellas digitales no responde</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Hecho</string>
     <string name="fingerprint_register_guide_side_key">El sensor se encuentra en el botón Función, en el lado derecho del teléfono.</string>
     <string name="fingerprint_register_lift_your_finger">Levanta el dedo del sensor de huella digital.</string>
-    <string name="fingerprint_register_place_your_finger">Ajusta la posición del dedo para escanearlo todo</string>
+    <string name="fingerprint_register_place_your_finger">Escanea la huella digital</string>
     <string name="fingerprint_register_success">Huella digital añadida</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">¡Estupendo! Se ha reconocido tu huella digital.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Toca el sensor de huellas digitales.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Escanea tu huella digital.</string>
     <string name="fingerscanner_keyboard_dialog_msg">No se puede usar %1$s mientras la funda teclado esté conectada. Se desactivará %2$s.</string>
     <string name="fingerscanner_keyboard_dialog_title">Funda teclado conectada</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Pon el dedo en el sensor de huellas digitales y, a continuación, levántalo de nuevo.</string>
-    <string name="fingerscanner_register_text">Pulsa el sensor con el dedo y levántalo cuando sientas una vibración.</string>
+    <string name="fingerscanner_register_text">Coloca el dedo en el sensor y levántalo cuando sientas una vibración.</string>
     <string name="fingerscanner_toast_back_text">Pulsa el botón Atrás de nuevo para dejar de añadir tu huella digital.</string>
     <string name="forgot_password">He olvidado la contraseña</string>
     <string name="forgot_password_header">¿Quieres restablecer la contraseña?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Introducir contraseña</string>
     <string name="sec_enter_pin_WC">Introducir PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Activar sensor de huellas digitales</string>
-    <string name="sec_fingerprint_always_on_summary">Escanea tu huella digital incluso cuando la pantalla está apagada.</string>
+    <string name="sec_fingerprint_always_on_summary">Activa y desbloquea el teléfono con tan solo tocar el botón Función. Activa esta opción para acceder rápidamente o desactívala para evitar escanear accidentalmente las huellas digitales.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Escanea tu huella digital incluso cuando la pantalla esté apagada. Esta función no está disponible mientras se ejecuta Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">Añadir huella digital</string>
     <string name="sec_fingerprint_error_contact_customer_service">Si el problema persiste, ponte en contacto con el Servicio de atención al cliente.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Retira el teléfono del cargador inalámbrico antes de registrar la huella digital.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Cierra el teléfono para continuar añadiendo tu huella digital.</string>
-    <string name="sec_fingerprint_register_guide_text">Pulsa el sensor con el dedo y levántalo cuando sientas una vibración.</string>
+    <string name="sec_fingerprint_register_guide_text">Coloca el dedo en el sensor y levántalo cuando sientas una vibración.</string>
     <string name="sec_fingerprint_register_open_phone">Abre el teléfono para continuar añadiendo tu huella digital.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Pulsa el sensor con el dedo y levántalo cuando el porcentaje suba.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Coloca el dedo en el sensor y levántalo cuando el porcentaje suba.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Cambia la posición del dedo cada vez para capturar los bordes de tu huella digital.</string>
     <string name="sec_fingerprint_scan_fingerprint">Escanea la huella digital.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">El icono no se mostrará cuando Samsung DeX se esté ejecutando.</string>
     <string name="sec_fingerprint_second_guide_title">Obtener un escaneo completo</string>
     <string name="sec_fingerprint_sensor">Sensor de huellas digitales</string>
     <string name="sec_fingerprint_sensor_activated">Sensor de huellas digitales activado</string>

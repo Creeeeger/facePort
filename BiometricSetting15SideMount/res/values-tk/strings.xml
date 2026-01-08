@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animasiýa</string>
     <string name="fingerprint_custom_icon_title">Şekiljik</string>
     <string name="fingerprint_dex_toast">Şahsyýetiňizi tassyklamak üçin, telefonda barmak yzyňyzy ulanyň.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Galyň ýa-da reňkli gorag plýonkasy öndürijilige täsir edip bilýär. Ekran goraýjy ulansaňyz, onuň ekrandaky barmak yzy sensory bilen ylalaşykly diýen etiketkasynyň bardygyny anyklaň.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Galyň gorag plýonkasy öndürijilige täsir edip bilýär. Ekran goraýjy ulansaňyz, onuň ekrandaky barmak yzy sensory bilen ylalaşykly diýen etiketkasynyň bardygyny anyklaň.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Barmak yzlary bellige alanyňyzda ekran gapagyny ulanmazlygyny üpjün ediň.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Bu programma Köp-penjiräni goldamaýar.</string>
-    <string name="fingerprint_duplicate_guide_msg">Her gezek barmak ornuňyzy çalaja sazlaň.</string>
+    <string name="fingerprint_duplicate_guide_msg">Her gezek doly skanirleme almak üçin, barmagyňyzyň ýerini çala üýtgediň.</string>
     <string name="fingerprint_enroll_dont_move">Skanlama dynýança, barmagyňyzy gymyldatmaň.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Tutuş halkany dolduryň</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Barmagyňyzy sensorda gezdiriň</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Ol gaýtalanyp dursa, telefonyňyzy açyp ýapyň.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Ynha, synanyşyp biljek käbir zatlaryňyz:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Eger bu mesele dowam etse, Müşderi hyzmatyna ýüz tutuň.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Barmak yzy sensorynyň arassa we gurudygyny barlap synanyşyň.</string>
     <string name="fingerprint_error_message_timed_out">Bellige almak taým-aut boldy. Ýene synanyň.</string>
     <string name="fingerprint_error_title_no_space">Ýeterlik ammar ýok</string>
     <string name="fingerprint_error_title_not_responding">Barmak yzy sensory jogap bermeýär</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Tamam</string>
     <string name="fingerprint_register_guide_side_key">Sensor telefonyň sag tarapyndaky Ýan düwmede ýerleşýär.</string>
     <string name="fingerprint_register_lift_your_finger">Barmagyňyzy barmak yzy sensoryndan galdyryň.</string>
-    <string name="fingerprint_register_place_your_finger">Doly skanlama almak üçin, barmagyň ornuny sazlaň</string>
+    <string name="fingerprint_register_place_your_finger">Barmak yzyňyzy skanlaň</string>
     <string name="fingerprint_register_success">Barmak yzy goşuldy</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Ajaýyp! Barmak yzyňyz tanaldy.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Barmak yzy sensory degiň.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Barmak yzyňyzy skanirläň.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Klawiatura gapagy dakylgy wagty, %1$s ulanyp bolmaýar. %2$s ýapylar.</string>
     <string name="fingerscanner_keyboard_dialog_title">Klawiat. gapagy dakyldy</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Barmagyňyzy barmak yzy sensoryna goýup, gaýtadan galdyryň.</string>
-    <string name="fingerscanner_register_text">Barmagyňyzy sensora basyp titreme duýanda ony galdyryň.</string>
+    <string name="fingerscanner_register_text">Barmagyňyzy sensora goýup titreme duýanda ony galdyryň.</string>
     <string name="fingerscanner_toast_back_text">Barmak yzyňyzy goşmagy duruzmak üçin, täzeden Yza düwmesini basyň.</string>
     <string name="forgot_password">Parol ýatdan çykdy</string>
     <string name="forgot_password_header">Paroly nol etmelimi?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Paroly giriziň</string>
     <string name="sec_enter_pin_WC">PIN kody giriz</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Barmak yzy sensoryny işjeňleşdir</string>
-    <string name="sec_fingerprint_always_on_summary">Ekran ýapyk bolsa-da, barmak yzyňyzy skanlaň.</string>
+    <string name="sec_fingerprint_always_on_summary">Diňe Ýan düwmä degmek arkaly, telefonyňyzy oýaryň we gulpuny açyň. Çalt girmek üçin açyň ýa-da tötänden barmak yzy skanlanmaz ýaly ýapyň.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Ekran ýapyk bolsa-da, barmak yzyňyzy skanlaň. Samsung DeX işläp durka elýeterli bolmaýar.</string>
     <string name="sec_fingerprint_enroll_title">Barmak yzy goş</string>
     <string name="sec_fingerprint_error_contact_customer_service">Eger bu mesele dowam etse, Müşderi hyzmatyna ýüz tutuň.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Barmak yzyňyzy bellige almadan öň, telefonyňyzy simsiz zarýadlaýjydan aýryň.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Barmak yzyňyzy goşmaga dowam etmek üçin, telefonyňyzy ýapyň.</string>
-    <string name="sec_fingerprint_register_guide_text">Barmagyňyzy sensora basyp titreme duýanda ony galdyryň.</string>
+    <string name="sec_fingerprint_register_guide_text">Barmagyňyzy sensora goýup titreme duýanda ony galdyryň.</string>
     <string name="sec_fingerprint_register_open_phone">Barmak yzyňyzy goşmaga dowam etmek üçin, telefonyňyzy açyň.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Barmagyňyzy sensora basyp göterim ýokarlanda ony galdyryň.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Barmagyňyzy sensora ýerleşdirip göterim ýokarlanda ony galdyryň.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Barmak yzyňyzyň gyralary düşürmek üçin, barmagyňyzyň orny her gezek düzediň.</string>
     <string name="sec_fingerprint_scan_fingerprint">Barmak yzyny skanlaň.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Şekiljik Samsung DeX işläp durka görkezilmez.</string>
     <string name="sec_fingerprint_second_guide_title">Doly skany al</string>
     <string name="sec_fingerprint_sensor">Barmak yzy sensory</string>
     <string name="sec_fingerprint_sensor_activated">Barmak yzy sensory işjeňleşdi</string>

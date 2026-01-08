@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">యానిమేషన్</string>
     <string name="fingerprint_custom_icon_title">చిహ్నం</string>
     <string name="fingerprint_dex_toast">మీ ఫోన్‌లో మీ గుర్తింపును ధృవీకరించడానికి మీ వేలిముద్రను ఉపయోగించండి.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">మందమైన లేదా రంగు రక్షిత ఫిల్మ్ పనితీరుని ప్రభావితం చేయవచ్చు. మీరు స్క్రీన్ ప్రొజెక్టర్ ఉపయోగిస్తుంటే గనుక, ఇది ఆన్-స్క్రీన్ వేలిముద్ర సెన్సార్‌కు అనుకూలంగా ఉందని నిర్ధారించడానికి తనిఖీ చేయండి.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">మందమైన రక్షిత ఫిల్మ్ పనితీరుని ప్రభావితం చేయవచ్చు. మీరు స్క్రీన్ ప్రొజెక్టర్ ఉపయోగిస్తుంటే గనుక, ఇది ఆన్-స్క్రీన్ వేలిముద్ర సెన్సార్‌కు అనుకూలంగా ఉందని నిర్ధారించడానికి తనిఖీ చేయండి.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">వేలిముద్రలను నమోదు చేసేటప్పుడు మీరు స్క్రీన్ కవర్ ఉపయోగించలేదని నిర్ధారించుకోండి.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">ఈ అప్లికేషన్‌కు మల్టీ విండోలో మద్దతులేకపోవచ్చు.</string>
-    <string name="fingerprint_duplicate_guide_msg">ప్రతిసారీ మీ వేలు స్థానాన్ని కొద్దిగా సర్దుబాటు చేస్తున్నట్టు నిర్ధారించుకోండి.</string>
+    <string name="fingerprint_duplicate_guide_msg">మీ పూర్తి వేలిముద్రని స్కాన్ చేయడానికి ప్రతిసారి మీ వేలి స్థితిని కొద్దిగా మార్చండి.</string>
     <string name="fingerprint_enroll_dont_move">స్కాన్ పూర్తయ్యే వరకు మీ వేలిని కదిలించవద్దు.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">మొత్తం సర్కిల్‌ను పూరించండి</string>
     <string name="fingerprint_enroll_first_guide_subtitle">మీ వేలిని సెన్సార్ చుట్టూ తరలించండి</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">ఇలా జరుగుతూ ఉంటే, మీ ఫోన్‌ని పునఃప్రారంభించండి.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">మీరు ప్రయత్నించాల్సిన కొన్ని ఇక్కడ ఉన్నాయి:</string>
-    <string name="fingerprint_error_message_something_on_sensor">ఈ సమస్య కొనసాగితే, కస్టమర్ సేవను సంప్రదించండి.</string>
+    <string name="fingerprint_error_message_something_on_sensor">వెలిముద్ర సెన్సార్ శుభ్రంగా, పొడిగా ఉన్నట్లు నిర్ధారించుకుని, ఆపై మళ్లీ ప్రయత్నించండి.</string>
     <string name="fingerprint_error_message_timed_out">నమోదు సమయం ముగిసింది. మళ్లీ ప్రయత్నించండి.</string>
     <string name="fingerprint_error_title_no_space">తగినంత నిల్వ లేదు</string>
     <string name="fingerprint_error_title_not_responding">వేలిముద్ర సెన్సార్ ప్రతిస్పందించడం లేదు</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">పూర్తయింది</string>
     <string name="fingerprint_register_guide_side_key">సెన్సార్ ప్రక్కన ఉన్న బటన్‌పై ఉంది, ఇది ఫోన్ కుడివైపు ఉంటుంది.</string>
     <string name="fingerprint_register_lift_your_finger">వేలిముద్ర సెన్సార్‌ని ఆఫ్ చేయడానికి మీ వేలిని పైకి ఎత్తండి.</string>
-    <string name="fingerprint_register_place_your_finger">పూర్తిగా స్కాన్ చేయడానికి మీ వేలు స్థానాన్ని సర్దుబాటు చేయండి</string>
+    <string name="fingerprint_register_place_your_finger">మీ వేలిముద్రను స్కాన్ చేయండి</string>
     <string name="fingerprint_register_success">వేలిముద్ర జోడించబడింది</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">అద్భుతం! మీ వేలిముద్ర గుర్తించబడింది.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">వేలిముద్ర సెన్సార్‌ని తాకండి.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">మీ వేలిముద్రను స్కాన్ చేయండి.</string>
     <string name="fingerscanner_keyboard_dialog_msg">కీబోర్డ్ కవర్ జోడించబడినప్పుడు %1$sను ఉపయోగించలేరు. %2$s నిలిపివేయబడుతుంది.</string>
     <string name="fingerscanner_keyboard_dialog_title">కీబోర్డ్ కవర్ జోడించు</string>
-    <string name="fingerscanner_lift_your_finger_off_first">మీ వేలిని వేలిముద్ర సెన్సార్‌పై ఉంచి, ఆపై మళ్లీ దానిని పైకి ఎత్తండి.</string>
-    <string name="fingerscanner_register_text">సెన్సార్‌పై మీ వేలిని నొక్కి, ఆపై మీకు వైబ్రేషన్ వచ్చినప్పుడు వేలిని పైకి ఎత్తండి.</string>
+    <string name="fingerscanner_register_text">సెన్సార్‌పై మీ వేలిని ఉంచి, ఆపై మీకు వైబ్రేషన్ వచ్చినప్పుడు వేలిని పైకి ఎత్తండి.</string>
     <string name="fingerscanner_toast_back_text">మీ వేలిముద్రని జోడించడాన్ని ఆపడానికి వెనుకకు బటన్‌ని మళ్లీ నొక్కండి.</string>
     <string name="forgot_password">పాస్‌వర్డ్ మర్చిపోయాను</string>
     <string name="forgot_password_header">పాస్‌వర్డ్‌ని రీసెట్ చేయాలా?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">పాస్‌వర్డ్‌ను నమోదు చేయండి</string>
     <string name="sec_enter_pin_WC">PIN నమోదు చేయండి</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">వేలిముద్ర సెన్సార్‌ని సక్రియం చేయడానికి</string>
-    <string name="sec_fingerprint_always_on_summary">స్క్రీన్ ఆఫ్ చేయబడినప్పటికీ మీ వేలిముద్రని స్కాన్ చేయండి.</string>
+    <string name="sec_fingerprint_always_on_summary">ప్రక్కన ఉన్న బటన్‌ను తాకడం ద్వారా మీ ఫోన్‌ను మేల్కొల్పండి మరియు అన్‌లాక్ చేయండి. త్వరిత ప్రాప్యత కోసం ఆన్ చేయండి లేదా అనుకోకుండా జరిగే వేలిముద్ర స్కాన్‌లను నివారించడానికి ఆఫ్ చేయండి.</string>
     <string name="sec_fingerprint_always_on_summary_dex">స్క్రీన్ ఆఫ్ చేయబడినప్పటికీ మీ వేలిముద్రని స్కాన్ చేయండి. Samsung DeX అమలవుతున్నప్పుడు అందుబాటులో లేదు.</string>
     <string name="sec_fingerprint_enroll_title">వేలిముద్రని జోడించు</string>
     <string name="sec_fingerprint_error_contact_customer_service">ఈ సమస్య కొనసాగితే, కస్టమర్ సేవను సంప్రదించండి.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">మీ వేలిముద్రని నమోదు చేయడానికి ముందు వైర్‌లెస్ ఛార్జర్ నుండి మీ ఫోన్‌ని తీసివేయండి.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">మీ వేలిముద్రను జోడించడాన్ని కొనసాగించడానికి మీ ఫోన్‌ను మూసివేయండి.</string>
-    <string name="sec_fingerprint_register_guide_text">సెన్సార్‌పై మీ వేలిని నొక్కి, ఆపై మీకు వైబ్రేషన్ వచ్చినప్పుడు వేలిని పైకి ఎత్తండి.</string>
+    <string name="sec_fingerprint_register_guide_text">సెన్సార్‌పై మీ వేలిని ఉంచి, ఆపై మీకు వైబ్రేషన్ వచ్చినప్పుడు వేలిని పైకి ఎత్తండి.</string>
     <string name="sec_fingerprint_register_open_phone">మీ వేలిముద్రను జోడించడాన్ని కొనసాగించడానికి మీ ఫోన్‌ను తెరవండి.</string>
     <string name="sec_fingerprint_register_percentage_goes_up">సెన్సార్‌పై మీ వేలిని ఉంచి, ఆపై శాతం పెరిగినప్పుడు వేలిని పైకి ఎత్తండి.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">మీ వేలిముద్ర అంచులను సంగ్రహించడానికి మీ వేలిని ప్రతిసారి తిరిగి ఉంచండి.</string>
     <string name="sec_fingerprint_scan_fingerprint">వేలిముద్రని స్కాన్ చేయండి.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX అమలవుతున్నప్పుడు చిహ్నం చూపబడదు.</string>
     <string name="sec_fingerprint_second_guide_title">పూర్తి స్కాన్‌ని పొందండి</string>
     <string name="sec_fingerprint_sensor">వేలిముద్ర సెన్సార్</string>
     <string name="sec_fingerprint_sensor_activated">వేలిముద్ర సెన్సార్ సక్రియం చేయబడింది</string>

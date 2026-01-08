@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">الرسوم المتحركة</string>
     <string name="fingerprint_custom_icon_title">الرمز</string>
     <string name="fingerprint_dex_toast">استخدم بصمة إصبعك على هاتفك للتحقق من هويتك.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">قد يؤثر الشريط الواقي السميك أو الملون على الأداء. إذا كنت تستعمل واقي شاشة، فتأكد من أنه مصنف على أنه متوافق مع مستشعر بصمة الإصبع على الشاشة.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">قد يؤثر الشريط الواقي السميك على الأداء. إذا كنت تستعمل واقي شاشة، فتأكد من أنه مصنف على أنه متوافق مع مستشعر بصمة الإصبع على الشاشة.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">تأكد من عدم استخدام غلاف شاشة أثناء تسجيل بصمات الأصابع.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">لا يدعم هذا التطبيق عرض الإطارات المتعددة.</string>
-    <string name="fingerprint_duplicate_guide_msg">تأكد من تعديل موضع إصبعك قليلاً في كل مرة.</string>
+    <string name="fingerprint_duplicate_guide_msg">غيّر موضع إصبعك قليلاً في كل مرة للمسح بشكلٍ كامل.</string>
     <string name="fingerprint_enroll_dont_move">لا تحرك إصبعك حتى يكتمل المسح.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">املأ الدائرة بالكامل</string>
     <string name="fingerprint_enroll_first_guide_subtitle">حرِّك إصبعك حول المستشعر</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">إذا استمر هذا الخطأ، فأعد تشغيل هاتفك.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">إليك بعض الأشياء التي يمكنك تجربتها:</string>
-    <string name="fingerprint_error_message_something_on_sensor">إذا استمرت هذه المشكلة، فاتصل بخدمة العملاء.</string>
+    <string name="fingerprint_error_message_something_on_sensor">تأكد من أن مستشعر بصمة الإصبع نظيف وجاف، ثم حاول مرة أخرى.</string>
     <string name="fingerprint_error_message_timed_out">انتهت مهلة التسجيل. حاول مرة أخرى.</string>
     <string name="fingerprint_error_title_no_space">لا توجد مساحة كافية للتخزين</string>
     <string name="fingerprint_error_title_not_responding">مستشعر بصمة الإصبع لا يستجيب</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">تم</string>
     <string name="fingerprint_register_guide_side_key">إن المستشعر موجود على الزر الجانبي على الجهة اليمنى من الهاتف.</string>
     <string name="fingerprint_register_lift_your_finger">ارفع إصبعك عن مستشعر بصمة الإصبع.</string>
-    <string name="fingerprint_register_place_your_finger">تعديل موضع إصبعك للحصول على مسح كامل</string>
+    <string name="fingerprint_register_place_your_finger">مسح بصمة الإصبع</string>
     <string name="fingerprint_register_success">تمت إضافة بصمة الإصبع</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">رائع! تم التعرف على بصمة إصبعك.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">المس مستشعر بصمة الإصبع.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">امسح بصمة الإصبع.</string>
     <string name="fingerscanner_keyboard_dialog_msg">يتعذر استخدام %1$s عندما يكون غلاف لوحة المفاتيح مرفقاً. سيتم إلغاء تفعيل %2$s.</string>
     <string name="fingerscanner_keyboard_dialog_title">تم إرفاق غلاف لوحة المفاتيح</string>
-    <string name="fingerscanner_lift_your_finger_off_first">ضع إصبعك على مستشعر بصمة الإصبع، ثم ارفعه مرة أخرى.</string>
-    <string name="fingerscanner_register_text">اضغط بإصبعك على المستشعر، ثم ارفعه عندما تشعر باهتزاز.</string>
+    <string name="fingerscanner_register_text">ضع إصبعك على المستشعر، ثم ارفعه عندما تشعر باهتزاز.</string>
     <string name="fingerscanner_toast_back_text">اضغط على مفتاح الرجوع مرة أخرى لإيقاف إضافة بصمة إصبعك.</string>
     <string name="forgot_password">نسيت كلمة المرور</string>
     <string name="forgot_password_header">هل تريد إعادة ضبط كلمة المرور؟</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">إدخال كلمة المرور</string>
     <string name="sec_enter_pin_WC">إدخال رمز PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">تفعيل مستشعر بصمة الإصبع</string>
-    <string name="sec_fingerprint_always_on_summary">يمكنك مسح بصمة إصبعك حتى عندما تكون الشاشة متوقفة عن التشغيل.</string>
+    <string name="sec_fingerprint_always_on_summary">‏‫يمكنك تفعيل هاتفك وإلغاء قفله فقط من خلال لمس الزر الجانبي. قم بتشغيله للوصول السريع أو إيقاف تشغيله لتجنب عمليات مسح بصمة الإصبع عن طريق الخطأ.</string>
     <string name="sec_fingerprint_always_on_summary_dex">يمكنك مسح بصمة إصبعك حتى عندما تكون الشاشة متوقفة عن التشغيل. غير متوفر عندما يكون Samsung DeX قيد التشغيل.</string>
     <string name="sec_fingerprint_enroll_title">إضافة بصمة إصبع</string>
     <string name="sec_fingerprint_error_contact_customer_service">إذا استمرت هذه المشكلة، فاتصل بخدمة العملاء.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">افصل هاتفك عن الشاحن اللاسلكي قبل تسجيل بصمة إصبعك.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">أغلق هاتفك لمتابعة إضافة بصمة إصبعك.</string>
-    <string name="sec_fingerprint_register_guide_text">اضغط بإصبعك على المستشعر، ثم ارفعه عندما تشعر باهتزاز.</string>
+    <string name="sec_fingerprint_register_guide_text">ضع إصبعك على المستشعر، ثم ارفعه عندما تشعر باهتزاز.</string>
     <string name="sec_fingerprint_register_open_phone">افتح هاتفك لمتابعة إضافية بصمة إصبعك.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">اضغط بإصبعك على المستشعر، ثم ارفعه عند ارتفاع النسبة المئوية.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">ضع إصبعك على المستشعر، ثم ارفعه عند ارتفاع النسبة المئوية.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">قم بتغيير موضع إصبعك في كل مرة لالتقاط حواف بصمتك.</string>
     <string name="sec_fingerprint_scan_fingerprint">امسح بصمة الإصبع.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">لن يتم عرض الرمز عندما يكون Samsung DeX قيد التشغيل.</string>
     <string name="sec_fingerprint_second_guide_title">احصل على مسح كامل</string>
     <string name="sec_fingerprint_sensor">مستشعر بصمة الإصبع</string>
     <string name="sec_fingerprint_sensor_activated">تم تفعيل مستشعر بصمة الإصبع</string>

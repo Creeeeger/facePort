@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animatsioon</string>
     <string name="fingerprint_custom_icon_title">Ikoon</string>
     <string name="fingerprint_dex_toast">Kasutage telefonis oma sõrmejälge, et kinnitada oma identiteet.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Paks või toonitud kaitsekile võib mõjutada jõudlust. Kui kasutate ekraanikaitset, kontrollige, kas see sobib kasutamiseks ekraani sõrmejäljeanduriga.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Paks kaitsekile võib mõjutada jõudlust. Kui kasutate ekraanikaitset, kontrollige, kas see sobib kasutamiseks ekraani sõrmejäljeanduriga.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Ärge kasutage sõrmejälgede registreerimise ajal ekraanikatet.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">See rakendus ei toeta mitmikakent.</string>
-    <string name="fingerprint_duplicate_guide_msg">Muutke iga kord pisut oma sõrme asendit.</string>
+    <string name="fingerprint_duplicate_guide_msg">Muutke iga kord veidi oma sõrme asendit, et skannida kogu oma sõrmejälg.</string>
     <string name="fingerprint_enroll_dont_move">Ärge liigutage oma sõrme enne, kui skannimine on lõppenud.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Täitke kogu ring</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Liigutage sõrme ümber anduri</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Taaskäivitage oma telefon, kui see kordub.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Siin on mõned asjad, mida saate proovida:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Probleemi püsimise korral võtke ühendust klienditeenindusega.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Veenduge, et sõrmejälje sensor oleks puhas ja kuiv, seejärel proovige uuesti.</string>
     <string name="fingerprint_error_message_timed_out">Registreerimine on aegunud. Proovige uuesti.</string>
     <string name="fingerprint_error_title_no_space">Pole piisavalt mäluruumi</string>
     <string name="fingerprint_error_title_not_responding">Sõrmejäljeandur ei reageeri</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Valmis</string>
     <string name="fingerprint_register_guide_side_key">Sensor asub küljenupul telefoni paremal küljel.</string>
     <string name="fingerprint_register_lift_your_finger">Tõstke oma sõrm sõrmejälje sensorilt.</string>
-    <string name="fingerprint_register_place_your_finger">Muutke oma sõrme asendit, et skannida täielikult</string>
+    <string name="fingerprint_register_place_your_finger">Skannige oma sõrmejälg</string>
     <string name="fingerprint_register_success">Sõrmejälg lisatud</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Suurepärane! Teie sõrmejälg tuvastati.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Puudutage sõrmejälje sensorit.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Skannige oma sõrmejälg.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Üksust %1$s ei saa kasutada, kui klaviatuuri kate on ühendatud. %2$s inaktiveeritakse.</string>
     <string name="fingerscanner_keyboard_dialog_title">Klaviat. kate ühendatud</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Asetage oma sõrm sõrmejälje sensorile ja seejärel tõstke sõrm sellelt ära.</string>
-    <string name="fingerscanner_register_text">Vajutage sõrmega andurit, seejärel tõstke üles, kui tunnete värinat.</string>
+    <string name="fingerscanner_register_text">Asetage oma sõrm andurile, seejärel tõstke üles, kui tunnete värinat.</string>
     <string name="fingerscanner_toast_back_text">Toksake uuesti tagasiliikumise nuppu, et oma sõrmejälje lisamine lõpule viia.</string>
     <string name="forgot_password">Unustasin parooli</string>
     <string name="forgot_password_header">Kas lähtestada parool?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Sisestage parool</string>
     <string name="sec_enter_pin_WC">Sisestage PIN-kood</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktiveeri sõrmejäljeandur</string>
-    <string name="sec_fingerprint_always_on_summary">Saate oma sõrmejälge skannida isegi siis, kui ekraan on välja lülitatud.</string>
+    <string name="sec_fingerprint_always_on_summary">Äratage telefon ja avage selle lukk, puudutades lihtsalt küljenuppu. Lülitage sisse kiireks juurdepääsuks või lülitage välja, et vältida juhuslikku sõrmejälgede skannimist.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Saate oma sõrmejälge skannida isegi siis, kui ekraan on välja lülitatud. Ei ole saadaval, kui Samsung DeX töötab.</string>
     <string name="sec_fingerprint_enroll_title">Lisa sõrmejälg</string>
     <string name="sec_fingerprint_error_contact_customer_service">Probleemi püsimise korral võtke ühendust klienditeenindusega.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Eemaldage oma telefon juhtmevabalt laadijalt enne, kui registreerite oma sõrmejälje.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Sulgege oma telefon, et jätkata oma sõrmejälje lisamisega.</string>
-    <string name="sec_fingerprint_register_guide_text">Vajutage sõrmega andurit, seejärel tõstke üles, kui tunnete värinat.</string>
+    <string name="sec_fingerprint_register_guide_text">Asetage oma sõrm andurile, seejärel tõstke üles, kui tunnete värinat.</string>
     <string name="sec_fingerprint_register_open_phone">Avage oma telefon, et jätkata oma sõrmejälje lisamisega.</string>
     <string name="sec_fingerprint_register_percentage_goes_up">Asetage sõrm andurile, seejärel tõstke üles, kui protsent tõuseb.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Muutke oma sõrme asendit iga kord, et jäädvustada ka oma sõrmejälje servad.</string>
     <string name="sec_fingerprint_scan_fingerprint">Sõrmejälje skannimine.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ikooni ei kuvata Samsung DeX-i töötamise ajal.</string>
     <string name="sec_fingerprint_second_guide_title">Hangi täisskannimine</string>
     <string name="sec_fingerprint_sensor">Sõrmejäljeandur</string>
     <string name="sec_fingerprint_sensor_activated">Sõrmejäljeandur on aktiveeritud</string>

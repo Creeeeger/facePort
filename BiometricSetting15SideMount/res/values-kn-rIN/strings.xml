@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">ಅನಿಮೇಶನ್</string>
     <string name="fingerprint_custom_icon_title">ಐಕಾನ್</string>
     <string name="fingerprint_dex_toast">ನಿಮ್ಮ ಗುರುತು ಪರಿಶೀಲನೆಗೆ ನಿಮ್ಮ ಫೋನ್‍ನಲ್ಲಿ ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್‌ ಬಳಸಿ.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ಕಾರ್ಯನಿರ್ವಹಣೆಗೆ ದಪ್ಪನೆಯ ಅಥವಾ ಬಣ್ಣದ ರಕ್ಷಣಾತ್ಮಕ ಫಿಲ್ಮ್ ಪರಿಣಾಮ ಬೀರಬಹುದು. ನೀವು ಸ್ಕ್ರೀನ್ ಪ್ರೊಟೆಕ್ಟರ್ ಬಳಸಿದರೆ, ಆನ್-ಸ್ಕ್ರೀನ್ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಜೊತೆಗೆ ಅದು ಹೊಂದಾಣಿಕೆಯಾಗುತ್ತದೆ ಎಂಬುದಾಗಿ ಅದನ್ನು ಲೇಬಲ್ ಮಾಡಲಾಗಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಪರೀಕ್ಷಿಸಿ.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ಕಾರ್ಯನಿರ್ವಹಣೆಗೆ ದಪ್ಪನೆಯ ರಕ್ಷಣಾತ್ಮಕ ಫಿಲ್ಮ್ ಪರಿಣಾಮ ಬೀರಬಹುದು. ನೀವು ಸ್ಕ್ರೀನ್ ಪ್ರೊಟೆಕ್ಟರ್ ಬಳಸಿದರೆ, ಆನ್-ಸ್ಕ್ರೀನ್ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಜೊತೆಗೆ ಅದು ಹೊಂದಾಣಿಕೆಯಾಗುತ್ತದೆ ಎಂಬುದಾಗಿ ಅದನ್ನು ಲೇಬಲ್ ಮಾಡಲಾಗಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಪರೀಕ್ಷಿಸಿ.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್‌ಗಳನ್ನು ನೋಂದಾಯಿಸುವಾಗ ನೀವು ಸ್ಕ್ರೀನ್ ಕವರ್ ಬಳಸದೇ ಇರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">ಈ ಆ್ಯಪ್ ಮಲ್ಟಿ ವಿಂಡೋ ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
-    <string name="fingerprint_duplicate_guide_msg">ಪ್ರತಿ ಬಾರಿಯೂ ನಿಮ್ಮ ಬೆರಳಿನ ಸ್ಥಾನವನ್ನು ಸ್ವಲ್ಪಮಟ್ಟಿಗೆ ಹೊಂದಿಸಲು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.</string>
+    <string name="fingerprint_duplicate_guide_msg">ಪೂರ್ಣ ಸ್ಕ್ಯಾನ್ ಅನ್ನು ಪಡೆಯಲು ಪ್ರತಿ ಬಾರಿ ನಿಮ್ಮ ಬೆರಳಿನ ಸ್ಥಾನವನ್ನು ಸ್ವಲ್ಪಮಟ್ಟಿಗೆ ಬದಲಾಯಿಸಿ.</string>
     <string name="fingerprint_enroll_dont_move">ಸ್ಕ್ಯಾನ್ ಪೂರ್ಣಗೊಳ್ಳುವವರೆಗೆ ನಿಮ್ಮ ಬೆರಳನ್ನು ಚಲಿಸಬೇಡಿ.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">ಸಂಪೂರ್ಣ ವೃತ್ತವನ್ನು ಭರ್ತಿ ಮಾಡಿ</string>
     <string name="fingerprint_enroll_first_guide_subtitle">ಸೆನ್ಸಾರ್ ಸುತ್ತಲೂ ನಿಮ್ಮ ಕೈಬೆರಳನ್ನು ಸರಿಸಿ</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">ಅದು ಹೀಗೆ ಮುಂದುವರಿದರೆ, ನಿಮ್ಮ ಫೋನ್ ಮರುಪ್ರಾರಂಭಿಸಿ.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">ನೀವು ಪ್ರಯತ್ನಿಸಬಹುದಾದ ಕೆಲವು ಸಂಗತಿಗಳು ಇಲ್ಲಿವೆ:</string>
-    <string name="fingerprint_error_message_something_on_sensor">ಈ ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
+    <string name="fingerprint_error_message_something_on_sensor">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಸ್ವಚ್ಛವಾಗಿದೆಯೇ ಮತ್ತು ಶುಷ್ಕವಾಗಿದೆಯೇ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ, ನಂತರ ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="fingerprint_error_message_timed_out">ನೋಂದಣಿ ಅವಧಿ ಮೀರಿದೆ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="fingerprint_error_title_no_space">ಸಾಕಷ್ಟು ಸಂಗ್ರಹಣೆಯಿಲ್ಲ</string>
     <string name="fingerprint_error_title_not_responding">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಿಲ್ಲ</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">ಮುಗಿದಿದೆ</string>
     <string name="fingerprint_register_guide_side_key">ಫೋನ್‌ನ ಬಲಭಾಗದಲ್ಲಿರುವ ಸೈಡ್ ಬಟನ್‌ನಲ್ಲಿ ಸೆನ್ಸಾರ್ ಇದೆ.</string>
     <string name="fingerprint_register_lift_your_finger">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಮೇಲಿಂದ ನಿಮ್ಮ ಕೈಬೆರಳನ್ನು ತೆಗೆಯಿರಿ.</string>
-    <string name="fingerprint_register_place_your_finger">ಪೂರ್ಣ ಸ್ಕ್ಯಾನ್ ಪಡೆಯಲು ನಿಮ್ಮ ಬೆರಳಿನ ಸ್ಥಾನವನ್ನು ಹೊಂದಿಸಿ</string>
+    <string name="fingerprint_register_place_your_finger">ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</string>
     <string name="fingerprint_register_success">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್‍ ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">ಅದ್ಭುತ! ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಗುರುತಿಸಿದೆ.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಸ್ಪರ್ಶಿಸಿ.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ.</string>
     <string name="fingerscanner_keyboard_dialog_msg">ಕೀಬೋರ್ಡ್ ಕವರ್ ಲಗತ್ತಿಸಿರುವಾಗ %1$s ಬಳಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. %2$s ನಿಶಕ್ತಗೊಳಿಸಲಾಗುತ್ತದೆ.</string>
     <string name="fingerscanner_keyboard_dialog_title">ಕೀಬೋರ್ಡ್ ಕವರ್ ಲಗತ್ತಿಸಿದೆ</string>
-    <string name="fingerscanner_lift_your_finger_off_first">ನಿಮ್ಮ ಕೈಬೆರಳನ್ನು ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಮೇಲಿರಿಸಿ, ನಂತರ ಮತ್ತೊಮ್ಮೆ ಹಿಂತೆಗೆದುಕೊಳ್ಳಿ.</string>
-    <string name="fingerscanner_register_text">ಸೆನ್ಸಾರ್ ಮೇಲೆ ನಿಮ್ಮ ಬೆರಳು ಒತ್ತಿ, ನಂತರ ನೀವು ವೈಬ್ರೆಶನ್‌ನ್ನು ಅನುಭವಿಸಿದಾಗ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಎತ್ತಿರಿ.</string>
+    <string name="fingerscanner_register_text">ಸೆನ್ಸಾರ್ ಮೇಲೆ ನಿಮ್ಮ ಬೆರಳು ಇರಿಸಿ, ನಂತರ ನೀವು ವೈಬ್ರೆಶನ್‌ನ್ನು ಅನುಭವಿಸಿದಾಗ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಎತ್ತಿರಿ.</string>
     <string name="fingerscanner_toast_back_text">ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೇರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸಲು ಮತ್ತೊಮ್ಮೆ ಹಿಂದೆ ಬಟನ್ ಅನ್ನು ತಟ್ಟಿ.</string>
     <string name="forgot_password">ಪಾಸ್‌‌‌‌‌‌‌‌ವರ್ಡ್ ಮರೆಯುವಿಕೆ</string>
     <string name="forgot_password_header">ಪಾಸ್‌ವರ್ಡ್ ಮರುಹೊಂದಿಸುವುದೇ?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">ಪಾಸ್‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌ವರ್ಡ್ ನಮೂದಿಸಿ</string>
     <string name="sec_enter_pin_WC">PIN ನಮೂದಿಸಿ</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್ ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
-    <string name="sec_fingerprint_always_on_summary">ಸ್ಕ್ರೀನ್ ಆಫ್ ಆಗಿರುವಾಗಲೂ ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ.</string>
+    <string name="sec_fingerprint_always_on_summary">ಕೇವಲ ಸೈಡ್ ಬಟನ್ ಸ್ಪರ್ಶಿಸುವ ಮೂಲಕ ನಿಮ್ಮ ಫೋನ್ ಎಚ್ಚರಗೊಳಿಸಿ ಮತ್ತು ಅನ್‌ಲಾಕ್ ಮಾಡಿ. ತ್ವರಿತ ಪ್ರವೇಶಕ್ಕಾಗಿ ಆನ್ ಮಾಡಿ ಅಥವಾ ಆಕಸ್ಮಿಕ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸ್ಕ್ಯಾನ್‌ಗಳನ್ನು ತಡೆಯಲು ಆಫ್ ಮಾಡಿ.</string>
     <string name="sec_fingerprint_always_on_summary_dex">ಸ್ಕ್ರೀನ್ ಆಫ್ ಆಗಿರುವಾಗಲೂ ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ. Samsung DeX ರನ್ ಆಗುತ್ತಿರುವಾಗ ಲಭ್ಯವಿರುವುದಿಲ್ಲ.</string>
     <string name="sec_fingerprint_enroll_title">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೇರಿಸು</string>
     <string name="sec_fingerprint_error_contact_customer_service">ಈ ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಗ್ರಾಹಕ ಸೇವೆಯನ್ನು ಸಂಪರ್ಕಿಸಿ.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ನೋಂದಾಯಿಸುವ ಮೊದಲು ವೈರ್‌ಲೆಸ್ ಚಾರ್ಜರ್‌ನಿಂದ ನಿಮ್ಮ ಫೋನ್ ತೆಗೆಯಿರಿ.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೇರಿಸುವುದನ್ನು ಮುಂದುವರಿಸಲು ನಿಮ್ಮ ಫೋನ್ ಮುಚ್ಚಿ.</string>
-    <string name="sec_fingerprint_register_guide_text">ಸೆನ್ಸಾರ್ ಮೇಲೆ ನಿಮ್ಮ ಬೆರಳು ಒತ್ತಿ, ನಂತರ ನೀವು ವೈಬ್ರೆಶನ್‌ನ್ನು ಅನುಭವಿಸಿದಾಗ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಎತ್ತಿರಿ.</string>
+    <string name="sec_fingerprint_register_guide_text">ಸೆನ್ಸಾರ್ ಮೇಲೆ ನಿಮ್ಮ ಬೆರಳು ಇರಿಸಿ, ನಂತರ ನೀವು ವೈಬ್ರೆಶನ್‌ನ್ನು ಅನುಭವಿಸಿದಾಗ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಎತ್ತಿರಿ.</string>
     <string name="sec_fingerprint_register_open_phone">ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೇರಿಸುವಿಕೆಯನ್ನು ಮುಂದುವರಿಸಲು ನಿಮ್ಮ ಫೋನ್ ತೆರೆಯಿರಿ.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">ಸೆನ್ಸಾರ್ ಮೇಲೆ ನಿಮ್ಮ ಬೆರಳು ಒತ್ತಿ, ನಂತರ ನೀವು ಪ್ರತಿಶತವನ್ನು ಹೆಚ್ಚಾದಂತೆ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಎತ್ತಿರಿ.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">ಸೆನ್ಸಾರ್ ಮೇಲೆ ನಿಮ್ಮ ಬೆರಳು ಇರಿಸಿ, ನಂತರ ಪ್ರತಿಶತ ಹೆಚ್ಚಾದಂತೆ ಅದನ್ನು ಮೇಲಕ್ಕೆ ಎತ್ತಿರಿ.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">ನಿಮ್ಮ ಫಿಂಗರ್ಪ್ರಿಂಟ್ ಅಂಚುಗಳನ್ನು ಸೆರೆಹಿಡಿಯಲು ಪ್ರತಿ ಸರಿ ನಿಮ್ಮ ಕೈಬೆರಳನ್ನು ಮರುಸ್ಥಾನಗೊಳಿಸು.</string>
     <string name="sec_fingerprint_scan_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX ರನ್ ಆಗುತ್ತಿರುವಾಗ ಐಕಾನ್ ಕಾಣಿಸುವುದಿಲ್ಲ.</string>
     <string name="sec_fingerprint_second_guide_title">ಪೂರ್ಣ ಸ್ಕ್ಯಾನ್ ಪಡೆಯಿರಿ</string>
     <string name="sec_fingerprint_sensor">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸಾರ್</string>
     <string name="sec_fingerprint_sensor_activated">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಸೆನ್ಸರ್ ಸಕ್ರಿಯವಾಗಿದೆ</string>

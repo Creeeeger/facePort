@@ -143,8 +143,8 @@
     <color name="sec_fingerprint_bottom_bar_ripple_color">#33ffffff</color>
     <color name="sec_fingerprint_contained_button_bg_color">#ff2d2d30</color>
     <color name="sec_fingerprint_enroll_bg_color">#ff010102</color>
-    <color name="sec_fingerprint_enroll_bg_radius_color">#fffafafa</color>
-    <color name="sec_fingerprint_enroll_bg_stroke_color">#ffd6d6d6</color>
+    <color name="sec_fingerprint_enroll_bg_radius_color">?android:windowBackground</color>
+    <color name="sec_fingerprint_enroll_bg_stroke_color">?android:windowBackground</color>
     <color name="sec_fingerprint_enroll_finger_line_color">#ff424242</color>
     <color name="sec_fingerprint_enroll_progress_color">#fffafaff</color>
     <color name="sec_fingerprint_enroll_text_color">#ffe0e0e0</color>

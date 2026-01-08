@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animație</string>
     <string name="fingerprint_custom_icon_title">Pictogramă</string>
     <string name="fingerprint_dex_toast">Utilizați amprenta pe telefon pentru a verifica identitatea dvs.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Foliile de protecție groase sau colorate pot afecta performanța. Dacă utilizați o protecție de ecran, asigurați-vă că este clasificată ca fiind compatibilă cu senzorul de amprentă de pe ecran.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Foliile de protecție groase pot afecta performanța. Dacă utilizați o protecție de ecran, asigurați-vă că este clasificată ca fiind compatibilă cu senzorul de amprentă de pe ecran.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Asigurați-vă că nu utilizați o protecție de ecran atunci când înregistrați amprente.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Aplicația nu acceptă opțiunea Ferestre multiple.</string>
-    <string name="fingerprint_duplicate_guide_msg">Asigurați-vă că ajustați puțin poziția degetului de fiecare dată.</string>
+    <string name="fingerprint_duplicate_guide_msg">Pentru a obține o scanare completă, modificați ușor poziția degetului de fiecare dată.</string>
     <string name="fingerprint_enroll_dont_move">Nu mișcați degetul până când scanarea este finalizată.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Umpleți întregul cerc</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Deplasați degetul în jurul senzorului</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Dacă eroarea persistă, reporniți telefonul.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Iată câteva lucruri pe care îi puteți încerca:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Dacă problema continuă, contactați Serviciul de asistență pentru clienți.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Asigurați-vă că senzorul pentru amprente este curat și uscat, apoi încercați din nou.</string>
     <string name="fingerprint_error_message_timed_out">Înregistrare expirată. Încercați din nou.</string>
     <string name="fingerprint_error_title_no_space">Spațiu de stocare insuficient</string>
     <string name="fingerprint_error_title_not_responding">Senzorul pentru amprente nu răspunde</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Efectuat</string>
     <string name="fingerprint_register_guide_side_key">Senzorul se află pe Butonul lateral, în partea dreaptă a telefonului.</string>
     <string name="fingerprint_register_lift_your_finger">Ridicați degetul de pe senzorul pentru amprente.</string>
-    <string name="fingerprint_register_place_your_finger">Pt. o scanare completă, ajustați poziția degetului</string>
+    <string name="fingerprint_register_place_your_finger">Scanați-vă amprenta</string>
     <string name="fingerprint_register_success">Amprentă adăugată</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Excelent! Amprenta dvs. a fost recunoscută.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Atingeți senzorul de amprente.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Scanați-vă amprenta.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Nu se poate utiliza %1$s în timp ce tastatura tip copertă este atașată. %2$s se va dezactiva.</string>
     <string name="fingerscanner_keyboard_dialog_title">Tast. tip copertă con.</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Așezați degetul pe senzorul pentru amprente, apoi ridicați-l din nou.</string>
-    <string name="fingerscanner_register_text">Apăsați degetul pe senzor, apoi ridicați-l până când simțiți o vibrație.</string>
+    <string name="fingerscanner_register_text">Așezați degetul pe senzorul pentru amprente, apoi ridicați-l până când simțiți o vibrație.</string>
     <string name="fingerscanner_toast_back_text">Atingeți din nou butonul Înapoi pentru a opri adăugarea amprentei.</string>
     <string name="forgot_password">Parolă uitată</string>
     <string name="forgot_password_header">Resetați parola?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Introduceți parola</string>
     <string name="sec_enter_pin_WC">Introducere PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Activare senzor de amprente</string>
-    <string name="sec_fingerprint_always_on_summary">Scanați amprenta chiar și atunci când ecranul este oprit.</string>
+    <string name="sec_fingerprint_always_on_summary">Activați și deblocați telefonul prin simpla atingere a Butonului lateral. Porniți această opțiune pentru acces rapid sau opriți-o pentru a evita scanările accidentale ale amprentei.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Scanați amprenta chiar și atunci când ecranul este oprit. Opțiunea nu este disponibilă atunci când Samsung DeX rulează.</string>
     <string name="sec_fingerprint_enroll_title">Adăugare amprentă</string>
     <string name="sec_fingerprint_error_contact_customer_service">Dacă problema continuă, contactați Serviciul de asistență pentru clienți.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Scoateți telefonul de la încărcătorul wireless înainte de a înregistra amprenta.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Închideți telefonul pentru a continua adăugarea amprentei.</string>
-    <string name="sec_fingerprint_register_guide_text">Apăsați degetul pe senzor, apoi ridicați-l până când simțiți o vibrație.</string>
+    <string name="sec_fingerprint_register_guide_text">Așezați degetul pe senzorul pentru amprente, apoi ridicați-l până când simțiți o vibrație.</string>
     <string name="sec_fingerprint_register_open_phone">Deschideți telefonul pentru a continua să adăugați amprenta dvs.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Apăsați degetul pe senzor, apoi ridicați-l atunci când procentajul crește.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Așezați degetul pe senzor, apoi ridicați-l atunci când procentajul crește.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Repoziționați degetul de fiecare dată, pentru a captura marginile amprentei.</string>
     <string name="sec_fingerprint_scan_fingerprint">Scanați amprenta.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Pictograma nu va indica faptul că Samsung DeX rulează.</string>
     <string name="sec_fingerprint_second_guide_title">Obțineți o scanare completă</string>
     <string name="sec_fingerprint_sensor">Senzor de amprente</string>
     <string name="sec_fingerprint_sensor_activated">Senzor de amprente activat</string>

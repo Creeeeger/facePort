@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Շարժապատկեր</string>
     <string name="fingerprint_custom_icon_title">Պատկերակ</string>
     <string name="fingerprint_dex_toast">Ձեր ինքնությունը հաստատելու համար հեռախոսում օգտագործեք մատնահետք:</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Հաստ կամ գունավոր պաշտպանիչ ժապավենը կարող է ազդել աշխատանքի վրա: Եթե պաշտպանիչ թաղանթ եք օգտագործում, ստուգեք և համոզվեք, որ այն նշված է որպես էկրանի վրայի մատնահետքի տվիչի հետ համատեղելի:</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Հաստ պաշտպանիչ ժապավենը կարող է ազդել աշխատանքի վրա: Եթե պաշտպանիչ թաղանթ եք օգտագործում, ստուգեք և համոզվեք, որ այն նշված է որպես էկրանի վրայի մատնահետքի տվիչի հետ համատեղելի:</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Համոզվեք, որ մատնահետքեր գրանցելիս չեք օգտագործում էկրանի պաշտպանիչ շապիկ:</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Այս ծրագիրը չի ապահովում Բազմակի պատուհանի օգտագործում:</string>
-    <string name="fingerprint_duplicate_guide_msg">Ամեն անգամ թեթևակի ճշգրտեք մատի դիրքը:</string>
+    <string name="fingerprint_duplicate_guide_msg">Ամեն անգամ մի քիչ փոխեք մատի դիրքը՝ լրիվ տեսածրում կատարելու համար:</string>
     <string name="fingerprint_enroll_dont_move">Մի շարժեք մատը, մինչև տեսածրումն ավարտվի:</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Լցնել ամբողջ շրջանը</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Մատը շարժել տվիչի շուրջ</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Եթե սա շարունակի տեղի ունենալ, վերագործարկեք հեռախոսը:</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Ահա որոշ բաներ, որոնք կարող եք փորձել՝</string>
-    <string name="fingerprint_error_message_something_on_sensor">Եթե այս խնդիրը շարունակվի, դիմեք Հաճախորդների սպասարկման ծառայությանը:</string>
+    <string name="fingerprint_error_message_something_on_sensor">Համոզվեք, որ մատնահետքի տվիչը մաքուր ու չոր է, հետո նորից փորձեք:</string>
     <string name="fingerprint_error_message_timed_out">Գրանցման համար հատկացված ժամանակը սպառվել է: Նորից փորձեք:</string>
     <string name="fingerprint_error_title_no_space">Հիշողության ծավալը բավարար չէ</string>
     <string name="fingerprint_error_title_not_responding">Մատնահետքի տվիչը չի պատասխանում</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Արված</string>
     <string name="fingerprint_register_guide_side_key">Տվիչը Կողային կոճակի վրա է՝ հեռախոսի աջ կողմում:</string>
     <string name="fingerprint_register_lift_your_finger">Մատը հեռացրեք մատնահետքի տվիչից:</string>
-    <string name="fingerprint_register_place_your_finger">Լրիվ տեսածրում կատարելու համար ճշտեք մատի դիրքը</string>
+    <string name="fingerprint_register_place_your_finger">Տեսածրեք Ձեր մատնահետքը</string>
     <string name="fingerprint_register_success">Մատնահետքն ավելացվեց</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Հիանալի՜ է: Ձեր մատնահետքը ճանաչվեց:</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Հպվեք մատնահետքի տվիչին:</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Տեսածրեք Ձեր մատնահետքը:</string>
     <string name="fingerscanner_keyboard_dialog_msg">Անհնար է օգտագործել %1$s, երբ ստեղնաշարի շապիկը կցված է: %2$s-ը կկասեցվի:</string>
     <string name="fingerscanner_keyboard_dialog_title">Ստեղնաշարի շապիկը կցվեց</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Մատը դրեք մատնահետքի տվիչի վրա, հետո նորից հեռացրեք տվիչից:</string>
-    <string name="fingerscanner_register_text">Մատով սեղմեք տվիչը, հետո հեռացրեք տվիչից, երբ թրթռում զգաք:</string>
+    <string name="fingerscanner_register_text">Մատը դրեք տվիչի վրա, հետո հեռացրեք տվիչից, երբ թրթռում զգաք:</string>
     <string name="fingerscanner_toast_back_text">Մատնահետքի ավելացումը կանգնեցնելու համար կրկին թակեք Վերադարձի կոճակը:</string>
     <string name="forgot_password">Մոռացել եմ գաղտնաբառը</string>
     <string name="forgot_password_header">Վերադնե՞լ գաղտնաբառը:</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Մուտքագրեք գաղտնաբառ</string>
     <string name="sec_enter_pin_WC">Մուտքագրել PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Ակտիվացնել մատնահետքի տվիչը</string>
-    <string name="sec_fingerprint_always_on_summary">Տեսածրել մատնահետքը, նույնիսկ երբ էկրանն անջատված է:</string>
+    <string name="sec_fingerprint_always_on_summary">Ակտիվացրեք և արգելաբացեք հեռախոսը՝ պարզապես Կողային կոճակին հպվելով: Միացրեք արագ մուտքի համար, կամ անջատեք՝ մատնահետքի պատահական տեսածրումներից խուսափելու համար:</string>
     <string name="sec_fingerprint_always_on_summary_dex">Տեսածրել մատնահետքը, նույնիսկ երբ էկրանն անջատված է: Մատչելի չէ, երբ Samsung DeX-ը գործում է:</string>
     <string name="sec_fingerprint_enroll_title">Ավելացնել մատնահետք</string>
     <string name="sec_fingerprint_error_contact_customer_service">Եթե այս խնդիրը շարունակվի, դիմեք Հաճախորդների սպասարկման ծառայությանը:</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Մատնահետքը գրանցելուց առաջ հեռախոսն անջատեք անլար լիցքավորիչից:</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Փակեք հեռախոսը, որպեսզի շարունակեք ավելացնել Ձեր մատնահետքը:</string>
-    <string name="sec_fingerprint_register_guide_text">Մատով սեղմեք տվիչը, հետո հեռացրեք տվիչից, երբ թրթռում զգաք:</string>
+    <string name="sec_fingerprint_register_guide_text">Մատը դրեք տվիչի վրա, հետո հեռացրեք տվիչից, երբ թրթռում զգաք:</string>
     <string name="sec_fingerprint_register_open_phone">Բացեք հեռախոսը, որպեսզի շարունակեք ավելացնել Ձեր մատնահետքը:</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Մատով սեղմեք տվիչը, հետո հեռացրեք տվիչից, երբ տոկոսն աճի:</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Մատը դրեք տվիչի վրա և այն բարձրացրեք, երբ տոկոսը սկսի ավելանալ:</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Ամեն անգամ փոխեք մատի դիրքը՝ մատնահետքի եզրերը նկարահանելու համար:</string>
     <string name="sec_fingerprint_scan_fingerprint">Տեսածրել մատնահետքը:</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Պատկերակը չի ցուցադրվի, երբ Samsung DeX-ը գործում է:</string>
     <string name="sec_fingerprint_second_guide_title">Կատարւել լրիվ տեսածրում</string>
     <string name="sec_fingerprint_sensor">Մատնահետքի տվիչ</string>
     <string name="sec_fingerprint_sensor_activated">Մատնահետքի տվիչն ակտիվացված է</string>

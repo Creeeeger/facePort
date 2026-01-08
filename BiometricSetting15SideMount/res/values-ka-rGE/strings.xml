@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">ანიმაცია</string>
     <string name="fingerprint_custom_icon_title">ნიშანი</string>
     <string name="fingerprint_dex_toast">თქვენი პირადობის ტელეფონში დასადასტურებლად, გამოიყენეთ თითის ანაბეჭდი.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">სქელმა ან ფერადმა დამცავმა ფირმა შეიძლება იმოქმედოს მუშაობაზე. თუ ეკრანის დამცავს იყენებთ, შეამოწმეთ და დარწმუნდით, რომ მასზე აღნიშნულია თითის ანაბეჭდის ეკრანის სენსორის გამოყენებასთან თავსებადობა.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">სქელმა დამცავმა ფირმა შეიძლება იმოქმედოს მუშაობაზე. თუ ეკრანის დამცავს იყენებთ, შეამოწმეთ და დარწმუნდით, რომ მასზე აღნიშნულია თითის ანაბეჭდის ეკრანის სენსორის გამოყენებასთან თავსებადობა.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">დარწმუნდით, რომ თითის ანაბეჭდების დარეგისტრირების დროს არ იყენებთ ეკრანის საფარს.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">ამ აპლიკაციას არ აქვს მრავალფანჯრიანი ხედის მხარდაჭერა.</string>
-    <string name="fingerprint_duplicate_guide_msg">ყოველ ჯერზე დარწმუნდით, რომ თითის პოზიციის ოდნავ მორგებას ახდენთ.</string>
+    <string name="fingerprint_duplicate_guide_msg">ყოველ ჯერზე ოდნავ შეცვალეთ თითის პოზიცია, რომ სრულად დაასკანეროთ.</string>
     <string name="fingerprint_enroll_dont_move">არ ამოძრაოთ თითი სკანირების დასრულებამდე.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">შეავსეთ მთელი ციკლი</string>
     <string name="fingerprint_enroll_first_guide_subtitle">ამოძრავეთ თითი სენსორზე</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">თუ პრობლემა არ მოგვარდება, გადატვირთეთ ტელეფონი.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">შეგიძლიათ მოსინჯოთ აქ მოცემული რამდენიმე რამ:</string>
-    <string name="fingerprint_error_message_something_on_sensor">პრობლემის მოუგვარებლობის შემთხვევაში, მიმართეთ მომხმარებელთა მომსახურების სამსახურს.</string>
+    <string name="fingerprint_error_message_something_on_sensor">დარწმუნდით, რომ თითის ანაბეჭდის სენსორი სუფთა და მშრალია, შემდეგ კი ისევ სცადეთ.</string>
     <string name="fingerprint_error_message_timed_out">რეგისტრაციის დრო გავიდა. ისევ სცადეთ.</string>
     <string name="fingerprint_error_title_no_space">საცავი არ არის საკმარისი</string>
     <string name="fingerprint_error_title_not_responding">თითის ანაბეჭდის სენსორი არ რეაგირებს</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">მზადაა</string>
     <string name="fingerprint_register_guide_side_key">სენსორი მოთავსებულია ტელეფონის მარჯვენა მხარეს მოთავსებულ გვერდით ღილაკზე.</string>
     <string name="fingerprint_register_lift_your_finger">აიღეთ თითი თითის ანაბეჭდის სენსორიდან.</string>
-    <string name="fingerprint_register_place_your_finger">შეარჩიეთ თითის პოზიცია, რომ სრულად დასკანერდეს</string>
+    <string name="fingerprint_register_place_your_finger">დაასკანერეთ თითის ანაბეჭდი</string>
     <string name="fingerprint_register_success">თითის ანაბეჭდი დაემატა</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">მშვენიერია! თითის ანაბეჭდი ამოცნობილია.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">შეეხეთ თითის ანაბეჭდის სენსორს.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">დაასკანერეთ თითის ანაბეჭდი.</string>
     <string name="fingerscanner_keyboard_dialog_msg">%1$s-ს ვერ გამოიყენებთ, როდესაც მიმაგრებულია კლავიატურის ყდა. %2$s გამოირთვება.</string>
     <string name="fingerscanner_keyboard_dialog_title">კლავიატ. ყდა მიმაგრდა</string>
-    <string name="fingerscanner_lift_your_finger_off_first">დადეთ თითი თითის ანაბეჭდის სენსორზე და შემდეგ ისევ აიღეთ თითი.</string>
-    <string name="fingerscanner_register_text">დააჭირეთ თითი სენსორს და შემდეგ აიღეთ, როცა ვიბრაციას იგრძნობთ.</string>
+    <string name="fingerscanner_register_text">დადეთ თითი სენსორზე და შემდეგ აიღეთ, როცა ვიბრაციას იგრძნობთ.</string>
     <string name="fingerscanner_toast_back_text">თითის ანაბეჭდის დამატების შესაწყვეტად ისევ შეეხეთ ღილაკს „უკან“.</string>
     <string name="forgot_password">დაგავიწყდათ პაროლი</string>
     <string name="forgot_password_header">შეცვლით პაროლს?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">შეიყვანეთ პაროლი</string>
     <string name="sec_enter_pin_WC">შეიყვანეთ PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">თითის ანაბეჭდის სენსორის გააქტიურება</string>
-    <string name="sec_fingerprint_always_on_summary">დაასკანერეთ თითის ანაბეჭდი მაშინაც, როდესაც ეკრანი გამორთულია.</string>
+    <string name="sec_fingerprint_always_on_summary">გააღვიძეთ და განბლოკეთ თქვენი ტელეფონი მხოლოდ გვერდით ღილაკზე შეხებით. ჩართეთ სწრაფი წვდომისთვის, ან გამორთეთ თითის ანაბეჭდის შემთხვევითი სკანირების თავიდან ასაცილებლად.</string>
     <string name="sec_fingerprint_always_on_summary_dex">დაასკანერეთ თითის ანაბეჭდი მაშინაც, როდესაც ეკრანი გამორთულია. მიუწვდომელია, როდესაც Samsung DeX გაშვებულია.</string>
     <string name="sec_fingerprint_enroll_title">თითის ანაბეჭდის დამატება</string>
     <string name="sec_fingerprint_error_contact_customer_service">პრობლემის მოუგვარებლობის შემთხვევაში, მიმართეთ მომხმარებელთა მომსახურების სამსახურს.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">თითის ანაბეჭდის დარეგისტრირებამდე ამოიღეთ ტელეფონი უსადენო დამტენიდან.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">დახურეთ ტელეფონი, რომ განაგრძოთ თითის ანაბეჭდის დამატება.</string>
-    <string name="sec_fingerprint_register_guide_text">დააჭირეთ თითი სენსორს და შემდეგ აიღეთ, როცა ვიბრაციას იგრძნობთ.</string>
+    <string name="sec_fingerprint_register_guide_text">დადეთ თითი სენსორზე და შემდეგ აიღეთ, როცა ვიბრაციას იგრძნობთ.</string>
     <string name="sec_fingerprint_register_open_phone">გახსენით ტელეფონი, რომ განაგრძოთ თითის ანაბეჭდის დამატება.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">დააჭირეთ თითი სენსორს და შემდეგ აიღეთ, როცა პროცენტი გაიზრდება.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">დაადეთ თითი სენსორს და შემდეგ აიღეთ, როცა პროცენტი გაიზრდება.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">ყოველ ჯერზე შეცვალეთ თითის პოზიცია, რომ მოიცვათ თითის ანაბეჭდის გვერდები.</string>
     <string name="sec_fingerprint_scan_fingerprint">დაასკანერეთ თითის ანაბეჭდი.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">ნიშანი არ ჩანს, როდესაც Samsung DeX გაშვებულია.</string>
     <string name="sec_fingerprint_second_guide_title">მიიღეთ სრული სკანირება</string>
     <string name="sec_fingerprint_sensor">თითის ანაბეჭდის სენსორი</string>
     <string name="sec_fingerprint_sensor_activated">თითის ანაბეჭდის სენსორი გააქტიურებულია</string>

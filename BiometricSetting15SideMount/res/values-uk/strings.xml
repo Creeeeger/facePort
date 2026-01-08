@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Анімація</string>
     <string name="fingerprint_custom_icon_title">Значок</string>
     <string name="fingerprint_dex_toast">Для підтвердження особи використовуйте відбиток пальця на телефоні.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Товста чи кольорова захисна плівка може зашкодити роботі з пристроєм. Якщо ви користуєтеся захисним покриттям для екрана, переконайтеся, що на ньому є маркування, яке свідчить про сумісність з екранним датчиком відбитків пальців.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Товста захисна плівка може зашкодити роботі з пристроєм. Якщо ви користуєтеся захисним покриттям для екрана, переконайтеся, що на ньому є маркування, яке свідчить про сумісність з екранним датчиком відбитків пальців.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Переконайтеся, що під час реєстрації відбитків пальців на екрані немає засобу захисту екрана.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Ця програма не підтримує режим декількох вікон.</string>
-    <string name="fingerprint_duplicate_guide_msg">Трохи змінюйте положення пальця після кожного дотику.</string>
+    <string name="fingerprint_duplicate_guide_msg">Щоб повністю відсканувати відбиток, кожного разу, прикладаючи палець, трохи змінюйте його положення.</string>
     <string name="fingerprint_enroll_dont_move">Не рухайте палець до завершення сканування.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Має бути заповнене все коло</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Проведіть пальцем по датчику</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Якщо проблема не зникне, перезапустіть телефон.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Ось що можна спробувати зробити:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Якщо проблема не зникне, зверніться до служби підтримки.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Переконайтеся, що датчик відбитків пальців чистий і сухий, і спробуйте ще раз.</string>
     <string name="fingerprint_error_message_timed_out">Час сеансу реєстрації минув. Спробуйте ще раз.</string>
     <string name="fingerprint_error_title_no_space">Недостатньо місця у сховищі</string>
     <string name="fingerprint_error_title_not_responding">Датчик відбитків пальців не відповідає</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Готово</string>
     <string name="fingerprint_register_guide_side_key">Датчик розташовано в боковій кнопці на правій панелі телефона.</string>
     <string name="fingerprint_register_lift_your_finger">Підніміть палець із датчика відбитків пальців.</string>
-    <string name="fingerprint_register_place_your_finger">Переміщуйте палець, щоб відсканувати повністю</string>
+    <string name="fingerprint_register_place_your_finger">Проскануйте відбиток пальця</string>
     <string name="fingerprint_register_success">Відбиток пальця додано</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Відмінно! Відбиток пальця розпізнано.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Торкніться датчика відбитків пальців.</string>
@@ -253,7 +253,6 @@
     <string name="fingerprint_verification_description_default_text">Проскануйте відбиток пальця.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Неможливо використовувати %1$s, поки підключено зовнішню клавіатура. %2$s буде відключено.</string>
     <string name="fingerscanner_keyboard_dialog_title">Під’єд. зовнішню клав.</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Розташуйте палець на датчику відбитків пальців, а потім підніміть його.</string>
     <string name="fingerscanner_register_text">Прикладіть палець до датчика та підніміть його, коли відчуєте вібрацію.</string>
     <string name="fingerscanner_toast_back_text">Торкніться кнопки «Назад», щоб зупинити додавання відбитка пальця.</string>
     <string name="forgot_password">Не пам’ятаю пароль</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Введіть пароль</string>
     <string name="sec_enter_pin_WC">Введіть PIN-код</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Активувати датчик відбитків пальців</string>
-    <string name="sec_fingerprint_always_on_summary">Скануйте відбитки пальців навіть за вимкненого екрана.</string>
+    <string name="sec_fingerprint_always_on_summary">Виводьте телефон із режиму сну й розблоковуйте його, торкаючись бокової кнопки. Увімкніть цю функцію, щоб отримувати швидкий доступ до пристрою, або вимкніть її, щоб уникнути випадкового сканування відбитків.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Сканування відбитка пальця навіть із вимкненим екраном. Функція недоступна, якщо запущено Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">Додати відбиток пальця</string>
     <string name="sec_fingerprint_error_contact_customer_service">Якщо проблема не зникне, зверніться до служби підтримки.</string>
@@ -297,10 +296,9 @@
     <string name="sec_fingerprint_register_close_phone">Закрийте телефон, щоб продовжити реєстрацію відбитка пальця.</string>
     <string name="sec_fingerprint_register_guide_text">Прикладіть палець до датчика та підніміть його, коли відчуєте вібрацію.</string>
     <string name="sec_fingerprint_register_open_phone">Відкрийте телефон, щоб зареєструвати відбиток пальця.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Прикладіть палець до датчика та підніміть його, коли процент зросте.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Прикладіть палець до датчика та підніміть його, коли процент збільшиться.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Щоб відсканувати відбиток повністю, кожного разу трохи змінюйте положення пальця.</string>
     <string name="sec_fingerprint_scan_fingerprint">Відскануйте відбиток пальця.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Піктограма не відображається, коли працює Samsung DeX.</string>
     <string name="sec_fingerprint_second_guide_title">Відскануйте відбиток повністю</string>
     <string name="sec_fingerprint_sensor">Датчик відбитка пальця</string>
     <string name="sec_fingerprint_sensor_activated">Датчик відбитка пальця активовано</string>

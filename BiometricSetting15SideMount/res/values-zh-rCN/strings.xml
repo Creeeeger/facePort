@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">动画</string>
     <string name="fingerprint_custom_icon_title">图标</string>
     <string name="fingerprint_dex_toast">请在您的手机上使用指纹来验证身份。</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">厚实或带有颜色的保护膜会影响性能。如果您使用屏幕保护膜，请确保其标记为与屏幕上的指纹传感器兼容。</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">厚实的保护膜会影响性能。如果您使用屏幕保护膜，请确保其标记为与屏幕上的指纹传感器兼容。</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">确保在注册指纹时不使用屏幕保护套。</string>
     <string name="fingerprint_doesnt_support_multi_window_text">此应用程序不支持多窗口。</string>
-    <string name="fingerprint_duplicate_guide_msg">确保每次略微调整您的手指位置。</string>
+    <string name="fingerprint_duplicate_guide_msg">每次稍微改变手指的位置以便完整扫描指纹。</string>
     <string name="fingerprint_enroll_dont_move">在扫描完成之前，请不要移动您的手指。</string>
     <string name="fingerprint_enroll_first_guide_indisplay">填满整个圆圈</string>
     <string name="fingerprint_enroll_first_guide_subtitle">在传感器周围移动手指</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">如果仍然如此，请重启您的手机。</string>
     <string name="fingerprint_error_message_sensor_error_vzw">指纹传感器发生错误。如果该信息反复出现，请重新启动您的手机。</string>
     <string name="fingerprint_error_message_some_things_try">您可以尝试以下操作：</string>
-    <string name="fingerprint_error_message_something_on_sensor">如果此问题持续存在，请联系客服。</string>
+    <string name="fingerprint_error_message_something_on_sensor">请确保指纹传感器洁净干燥，然后重试。</string>
     <string name="fingerprint_error_message_timed_out">注册已超时，请重试。</string>
     <string name="fingerprint_error_title_no_space">存储空间不足</string>
     <string name="fingerprint_error_title_not_responding">指纹传感器无响应</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">完成</string>
     <string name="fingerprint_register_guide_side_key">传感器位于手机右侧的侧面按钮上。</string>
     <string name="fingerprint_register_lift_your_finger">请将您的手指从指纹传感器上抬起。</string>
-    <string name="fingerprint_register_place_your_finger">调整您的手指位置以便获得完整扫描</string>
+    <string name="fingerprint_register_place_your_finger">扫描您的指纹</string>
     <string name="fingerprint_register_success">已添加指纹</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">非常好！您的指纹已识别。</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">请触摸指纹传感器。</string>
@@ -253,7 +253,6 @@
     <string name="fingerprint_verification_description_default_text">扫描您的指纹。</string>
     <string name="fingerscanner_keyboard_dialog_msg">键盘保护盖已连接时无法使用 %1$s。%2$s 将禁用。</string>
     <string name="fingerscanner_keyboard_dialog_title">键盘保护盖已连接</string>
-    <string name="fingerscanner_lift_your_finger_off_first">请将您的手指放在指纹传感器上，然后再抬起。</string>
     <string name="fingerscanner_register_text">将您的手指放在传感器上，在感觉到振动后再抬起手指。</string>
     <string name="fingerscanner_toast_back_text">再次点击【返回】按钮可停止添加指纹。</string>
     <string name="forgot_password">忘记混合密码</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">输入混合密码</string>
     <string name="sec_enter_pin_WC">输入数字密码</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">激活指纹传感器</string>
-    <string name="sec_fingerprint_always_on_summary">即使在屏幕关闭时也要扫描指纹。</string>
+    <string name="sec_fingerprint_always_on_summary">通过触摸侧面按钮唤醒并解锁手机。启用可便于快速访问，关闭可避免意外扫描指纹。</string>
     <string name="sec_fingerprint_always_on_summary_dex">即使在屏幕关闭时也要扫描指纹。在 Samsung DeX 运行期间不可用。</string>
     <string name="sec_fingerprint_enroll_title">添加指纹</string>
     <string name="sec_fingerprint_error_contact_customer_service">如果此问题持续存在，请联系客服。</string>
@@ -300,7 +299,6 @@
     <string name="sec_fingerprint_register_percentage_goes_up">将您的手指放在传感器上，在百分比升高后再抬起手指。</string>
     <string name="sec_fingerprint_register_reposition_your_finger">每次重新调整手指的位置来捕捉整个指纹。</string>
     <string name="sec_fingerprint_scan_fingerprint">扫描指纹。</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">该图标在 Samsung DeX 运行期间不会显示。</string>
     <string name="sec_fingerprint_second_guide_title">全面扫描</string>
     <string name="sec_fingerprint_sensor">指纹传感器</string>
     <string name="sec_fingerprint_sensor_activated">指纹传感器已激活</string>

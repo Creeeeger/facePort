@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animació</string>
     <string name="fingerprint_custom_icon_title">Icona</string>
     <string name="fingerprint_dex_toast">"Utilitzi l'empremta al telèfon per verificar la seva identitat."</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">"Un protector de pantalla gruixut o de color pot afectar el rendiment. Si utilitzes un protector de pantalla, assegura't que sigui compatible amb el sensor d'empremtes digitals a la pantalla."</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">"Un protector de pantalla gruixut pot afectar el rendiment. Si utilitzes un protector de pantalla, assegura't que sigui compatible amb el sensor d'empremtes digitals a la pantalla."</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">"Assegura't de no utilitzar un protector de pantalla en registrar empremtes."</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Aquesta aplicació no admet Multiwindow.</string>
-    <string name="fingerprint_duplicate_guide_msg">Ajusta la posició del dit suaument cada cop.</string>
+    <string name="fingerprint_duplicate_guide_msg">Canvia la posició del dit lleugerament cada vegada que obtinguis un escaneig complet.</string>
     <string name="fingerprint_enroll_dont_move">"No moguis el dit fins que es completi l'escaneig."</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Omple tot el cercle</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Mou el dit per tot el sensor</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Si segueix passant, reiniciï el telèfon.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Et mostrem algunes coses que pots provar:</string>
-    <string name="fingerprint_error_message_something_on_sensor">"Si aquest problema continua, posa't en contacte amb el Servei d'atenció al client."</string>
+    <string name="fingerprint_error_message_something_on_sensor">"Asseguri's que el sensor d'empremta estigui net i sec i, a continuació, torni-ho a intentar."</string>
     <string name="fingerprint_error_message_timed_out">"El temps d'espera del registre s'ha esgotat. Torna-ho a intentar."</string>
     <string name="fingerprint_error_title_no_space">No hi ha prou emmagatzematge</string>
     <string name="fingerprint_error_title_not_responding">"El sensor d'empremtes no respon"</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Realitzat</string>
     <string name="fingerprint_register_guide_side_key">El sensor és al botó Funció, al costat dret del telèfon.</string>
     <string name="fingerprint_register_lift_your_finger">"Aixequi el dit del sensor d'empremta."</string>
-    <string name="fingerprint_register_place_your_finger">Ajustar posició dit per obtenir escaneig complet</string>
+    <string name="fingerprint_register_place_your_finger">"Cercar l'empremta"</string>
     <string name="fingerprint_register_success">Empremta afegida</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">"Fantàstic! S'ha reconegut l'empremta."</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">"Toca el sensor d'empremtes."</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">"Escaneja l'empremta."</string>
     <string name="fingerscanner_keyboard_dialog_msg">No es pot utilitzar %1$s mentre la funda teclat està enganxada. Es desactivarà %2$s.</string>
     <string name="fingerscanner_keyboard_dialog_title">Funda teclat enganx</string>
-    <string name="fingerscanner_lift_your_finger_off_first">"Col·loqui el dit al sensor d'empremta i, a continuació, torni'l a aixecar."</string>
-    <string name="fingerscanner_register_text">"Prem el dit sobre el sensor i, a continuació, aixeca'l quan notis una vibració."</string>
+    <string name="fingerscanner_register_text">"Posa el dit sobre el sensor i, a continuació, aixeca'l quan notis una vibració."</string>
     <string name="fingerscanner_toast_back_text">"Torna a tocar el botó Tornar per deixar d'afegir empremtes."</string>
     <string name="forgot_password">He oblidat la contrasenya</string>
     <string name="forgot_password_header">Vols restablir la contrasenya?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Introduir la contrasenya</string>
     <string name="sec_enter_pin_WC">Introduir PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">"Activar el sensor d'empremtes"</string>
-    <string name="sec_fingerprint_always_on_summary">"Escaneja l'empremta fins i tot amb la pantalla desactivada."</string>
+    <string name="sec_fingerprint_always_on_summary">"Activa i desbloqueja el telèfon només tocant el botó Funció. Activa aquesta funció per a un accés més ràpid o desactiva-la per evitar l'escaneig accidental d'empremtes."</string>
     <string name="sec_fingerprint_always_on_summary_dex">"Escaneja l'empremta fins i tot amb la pantalla desactivada. No està disponible amb Samsung DeX en execució."</string>
     <string name="sec_fingerprint_enroll_title">Afegir empremta</string>
     <string name="sec_fingerprint_error_contact_customer_service">"Si aquest problema continua, posa't en contacte amb el Servei d'atenció al client."</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">"Treu el telèfon del carregador sense fil abans de registrar l'empremta."</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">"Tanca el telèfon per continuar afegint l'empremta."</string>
-    <string name="sec_fingerprint_register_guide_text">"Prem el dit sobre el sensor i, a continuació, aixeca'l quan notis una vibració."</string>
+    <string name="sec_fingerprint_register_guide_text">"Posa el dit sobre el sensor i, a continuació, aixeca'l quan notis una vibració."</string>
     <string name="sec_fingerprint_register_open_phone">"Obre el telèfon per continuar afegint l'empremta."</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">"Prem el dit sobre el sensor i, a continuació, aixeca'l quan el percentatge augmenti."</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">"Posa el dit sobre el sensor i, a continuació, aixeca'l quan el percentatge augmenti."</string>
     <string name="sec_fingerprint_register_reposition_your_finger">"Canvia la posició del dit cada cop per capturar les vores de l'empremta."</string>
     <string name="sec_fingerprint_scan_fingerprint">Escaneja les empremtes.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">La icona no apareixerà quan Samsung DeX estigui en execució.</string>
     <string name="sec_fingerprint_second_guide_title">Obtenir un escaneig complet</string>
     <string name="sec_fingerprint_sensor">"Sensor d'empremtes"</string>
     <string name="sec_fingerprint_sensor_activated">"Sensor d'empremtes activat"</string>

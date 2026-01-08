@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Анимация</string>
     <string name="fingerprint_custom_icon_title">Значок</string>
     <string name="fingerprint_dex_toast">Для подтверждения личности используйте отпечаток пальца на телефоне.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Плотная или цветная защитная пленка может повлиять на производительность. Если на экране есть защитная пленка, убедитесь, что она обозначена как совместимая с экранным датчиком отпечатков пальцев.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Плотная защитная пленка может повлиять на производительность. Если на экране есть защитная пленка, убедитесь, что она отмечена как совместимая с экранным датчиком отпечатков пальцев.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Убедитесь, что при регистрации отпечатков пальцев на экране нет средства защиты экрана.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Это приложение не поддерживает режим нескольких окон.</string>
-    <string name="fingerprint_duplicate_guide_msg">Каждый раз слегка изменяйте положение пальца.</string>
+    <string name="fingerprint_duplicate_guide_msg">Чтобы отсканировать отпечаток целиком, каждый раз, прикладывая палец, немного изменяйте его положение.</string>
     <string name="fingerprint_enroll_dont_move">Не двигайте палец до завершения сканирования.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Весь круг должен быть заполнен</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Проведите пальцем по датчику</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Если устранить проблему не удалось, перезагрузите телефон.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Попробуйте выполнить описанные ниже действия:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Если проблема не исчезнет, обратитесь в службу поддержки.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Убедитесь, что датчик отпечатка пальца чистый и сухой, а затем повторите попытку.</string>
     <string name="fingerprint_error_message_timed_out">Время ожидания регистрации истекло. Повторите попытку.</string>
     <string name="fingerprint_error_title_no_space">Недостаточно места в хранилище</string>
     <string name="fingerprint_error_title_not_responding">Датчик отпечатков пальцев не отвечает</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Готово</string>
     <string name="fingerprint_register_guide_side_key">Датчик находится на боковой кнопке, расположенной на правой панели телефона.</string>
     <string name="fingerprint_register_lift_your_finger">Уберите палец с датчика отпечатка пальца.</string>
-    <string name="fingerprint_register_place_your_finger">Перемещайте палец, чтобы отсканировать полностью</string>
+    <string name="fingerprint_register_place_your_finger">Сканирование отпечатка пальца</string>
     <string name="fingerprint_register_success">Отпечаток пальца добавлен</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Отлично! Отпечаток пальца распознан.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Прикоснитесь к датчику отпечатков пальцев.</string>
@@ -253,7 +253,6 @@
     <string name="fingerprint_verification_description_default_text">Отсканируйте отпечаток пальца.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Невозможно использовать %1$s, пока подключена внешняя клавиатура. %2$s будет отключена.</string>
     <string name="fingerscanner_keyboard_dialog_title">Подсоед. внешней клав.</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Положите палец на датчик отпечатка пальца, затем снова уберите.</string>
     <string name="fingerscanner_register_text">Приложите палец к датчику и уберите его, когда почувствуете вибрацию.</string>
     <string name="fingerscanner_toast_back_text">Снова коснитесь кнопки “Назад”, чтобы остановить добавление отпечатка пальца.</string>
     <string name="forgot_password">Не помню пароль</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Введите пароль</string>
     <string name="sec_enter_pin_WC">Введите PIN-код</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Активировать датчик отпечатков пальцев</string>
-    <string name="sec_fingerprint_always_on_summary">Сканируйте отпечаток пальца даже при выключенном экране.</string>
+    <string name="sec_fingerprint_always_on_summary">Выводите телефон из режима сна и разблокируйте его, касаясь боковой кнопки. Включите эту функцию, чтобы получать быстрый доступ к устройству, или выключите ее, чтобы избежать случайного сканирования отпечатков.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Сканирование отпечатка пальца даже с выключенным экраном. Функция недоступна, если запущен Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">Добавить отпечаток пальца</string>
     <string name="sec_fingerprint_error_contact_customer_service">Если проблема не исчезнет, обратитесь в службу поддержки.</string>
@@ -300,7 +299,6 @@
     <string name="sec_fingerprint_register_percentage_goes_up">Приложите палец к датчику и уберите его, когда процент увеличится.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Чтобы просканировать отпечаток полностью, каждый раз немного сдвигайте палец.</string>
     <string name="sec_fingerprint_scan_fingerprint">Отсканируйте отпечаток пальца.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Значок не отображается, если Samsung DeX запущен.</string>
     <string name="sec_fingerprint_second_guide_title">Просканируйте отпечаток полностью</string>
     <string name="sec_fingerprint_sensor">Датчик отпечатков пальцев</string>
     <string name="sec_fingerprint_sensor_activated">Датчик отпечатков пальцев активирован</string>

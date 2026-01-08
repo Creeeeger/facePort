@@ -1761,7 +1761,7 @@
     .line 76
     .line 77
     .line 78
-    const v2, 0x7f0800c3
+    const v2, 0x7f0800c2
 
     .line 79
     .line 80
@@ -2342,7 +2342,7 @@
 
     .line 114
     .line 115
-    const v2, 0x7f0800c3
+    const v2, 0x7f0800c2
 
     .line 116
     .line 117

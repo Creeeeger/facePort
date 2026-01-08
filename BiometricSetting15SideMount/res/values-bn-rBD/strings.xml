@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">অ্যানিমেশন</string>
     <string name="fingerprint_custom_icon_title">আইকন</string>
     <string name="fingerprint_dex_toast">আপনার পরিচয় যাচাই করতে আপনার ফোনে আপনার আঙুলের ছাপ ব্যবহার করুন।</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">পুরু বা রঙিন সুরক্ষা ফিল্ম নৈপুণ্যকে প্রভাবিত করতে পারে৷ যদি আপনি স্ক্রিন প্রোটেক্টর ব্যবহার করেন, তাহলে সেটি স্ক্রিনের ওপরের আঙুলের ছাপের সেন্সরের সাথে সঙ্গতিপূর্ণ হিসেবে লেবেলযুক্ত থাকার বিষয়টি নিশ্চিত করুন৷</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">পুরু সুরক্ষা ফিল্ম নৈপুণ্যকে প্রভাবিত করতে পারে৷ যদি আপনি স্ক্রিন প্রোটেক্টর ব্যবহার করেন, তাহলে সেটি স্ক্রিনের ওপরের আঙুলের ছাপের সেন্সরের সাথে সঙ্গতিপূর্ণ হিসেবে লেবেলযুক্ত থাকার বিষয়টি নিশ্চিত করুন৷</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">আঙুলের ছাপ নিবন্ধন করার সময় স্ক্রিন কভার ব্যবহার না করার বিষয়টি নিশ্চিত করুন৷</string>
     <string name="fingerprint_doesnt_support_multi_window_text">এই অ্যাপ মাল্টি উইন্ডো সমর্থন করে না৷</string>
-    <string name="fingerprint_duplicate_guide_msg">প্রতিবার আপনার আঙুলের অবস্থান সামান্য সমন্বয় করার বিষয়টি নিশ্চিত করুন৷</string>
+    <string name="fingerprint_duplicate_guide_msg">একটি সম্পূর্ণ স্ক্যান পেতে প্রতি বার আপনার আঙুলের অবস্থান সামান্য পরিবর্তন করুন৷</string>
     <string name="fingerprint_enroll_dont_move">স্ক্যান শেষ না হওয়া পর্যন্ত আপনার আঙুল নাড়াবেন না।</string>
     <string name="fingerprint_enroll_first_guide_indisplay">সম্পূর্ণ বৃত্তটি পূরণ করুন</string>
     <string name="fingerprint_enroll_first_guide_subtitle">আপনার আঙুল সেন্সরের উপর নড়াচড়া করান</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">এটি ঘটতে থাকলে, আপনার ফোন পুনরায় চালু করুন৷</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">আপনি চেষ্টা করে দেখতে পারেন এমন কিছু জিনিস এখানে দেয়া হয়েছে:</string>
-    <string name="fingerprint_error_message_something_on_sensor">এই সমস্যা অব্যাহত থাকলে, গ্রাহকসেবায় যোগাযোগ করুন৷</string>
+    <string name="fingerprint_error_message_something_on_sensor">আঙুলের ছাপের সেন্সরটি পরিষ্কার ও শুষ্ক আছে তা নিশ্চিত করে আবার চেষ্টা করুন৷</string>
     <string name="fingerprint_error_message_timed_out">নিবন্ধনের সময় শেষ৷ আবার চেষ্টা করুন৷</string>
     <string name="fingerprint_error_title_no_space">পর্যাপ্ত স্টোরেজ নেই</string>
     <string name="fingerprint_error_title_not_responding">আঙুলের ছাপের সেন্সর সাড়া দিচ্ছে না৷</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">শেষ</string>
     <string name="fingerprint_register_guide_side_key">ফোনের ডান দিকে সাইড বাটনের উপর সেন্সর আছে৷</string>
     <string name="fingerprint_register_lift_your_finger">আঙুলের ছাপের সেন্সর থেকে আপনার আঙুল তুলুন৷</string>
-    <string name="fingerprint_register_place_your_finger">সম্পূর্ণ স্ক্যান পেতে আপনার আঙুলের অবস্থান সমন্বয় করুন</string>
+    <string name="fingerprint_register_place_your_finger">আপনার আঙুলের ছাপ স্ক্যান করুন</string>
     <string name="fingerprint_register_success">আঙুলের ছাপ যোগ করা হয়েছে</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">চমৎকার! আপনার আঙুলের ছাপ শনাক্ত হয়েছে।</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">আঙুলের ছাপের সেন্সর স্পর্শ করুন৷</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">আপনার আঙুলের ছাপ স্ক্যান করুন৷</string>
     <string name="fingerscanner_keyboard_dialog_msg">কীবোর্ডের কভার লাগানো অবস্থায় %1$s ব্যবহার করতে অক্ষম৷ %2$s নিষ্ক্রিয় হবে৷</string>
     <string name="fingerscanner_keyboard_dialog_title">কীবোর্ডের কভার লাগানো হয়েছে</string>
-    <string name="fingerscanner_lift_your_finger_off_first">আঙুলের ছাপের সেন্সরের উপর আপনার আঙুল রাখুন, তারপর এটি আবার তুলে নিন।</string>
-    <string name="fingerscanner_register_text">সেন্সরের উপর আপনার আঙুল দিয়ে চাপ দিন, তারপর আপনি একটি কম্পন অনুভব করলে আঙুল তুলে নিন।</string>
+    <string name="fingerscanner_register_text">সেন্সরের উপর আপনার আঙুল রাখুন, তারপর আপনি একটি কম্পন অনুভব করলে এটি তুলে নিন।</string>
     <string name="fingerscanner_toast_back_text">আপনার আঙুলের ছাপ যোগ করা বন্ধ করতে ‘পিছনে’ বাটনে আবার ট্যাপ করুন৷</string>
     <string name="forgot_password">পাসওয়ার্ড ভুলে গিয়েছি</string>
     <string name="forgot_password_header">পাসওয়ার্ড রিসেট করবেন?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">পাসওয়ার্ড লিখুন</string>
     <string name="sec_enter_pin_WC">PIN লিখুন</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">আঙুলের ছাপের সেন্সর সক্রিয় করুন</string>
-    <string name="sec_fingerprint_always_on_summary">স্ক্রিন বন্ধ থাকা অবস্থাতেও আপনার আঙুলের ছাপ স্ক্যান করুন৷</string>
+    <string name="sec_fingerprint_always_on_summary">শুধু সাইড বাটন স্পর্শ করে আপনার ফোনকে জাগিয়ে তুলুন ও আনলক করুন৷ দ্রুত অ্যাক্সেসের জন্য চালু করুন, অথবা অনিচ্ছাকৃতভাবে আঙুলের ছাপ স্ক্যান করা এড়াতে বন্ধ করুন৷</string>
     <string name="sec_fingerprint_always_on_summary_dex">স্ক্রিন বন্ধ থাকা অবস্থাতেও আপনার আঙুলের ছাপ স্ক্যান করুন৷ Samsung DeX চলার সময় লভ্য থাকে না৷</string>
     <string name="sec_fingerprint_enroll_title">আঙুলের ছাপ যোগ করুন</string>
     <string name="sec_fingerprint_error_contact_customer_service">এই সমস্যা অব্যাহত থাকলে, গ্রাহকসেবায় যোগাযোগ করুন৷</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">আপনার আঙুলের ছাপ নিবন্ধন করার আগে ওয়্যারলেস চার্জার থেকে আপনার ফোন তুলে নিন৷</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">আপনার আঙুলের ছাপ যোগ করা অব্যাহত রাখতে আপনার ফোন বন্ধ করুন৷</string>
-    <string name="sec_fingerprint_register_guide_text">সেন্সরের উপর আপনার আঙুল দিয়ে চাপ দিন, তারপর আপনি একটি কম্পন অনুভব করলে আঙুল তুলে নিন।</string>
+    <string name="sec_fingerprint_register_guide_text">সেন্সরের উপর আপনার আঙুল রাখুন, তারপর আপনি একটি কম্পন অনুভব করলে এটি তুলে নিন।</string>
     <string name="sec_fingerprint_register_open_phone">আপনার আঙুলের ছাপ যোগ করা অব্যাহত রাখতে আপনার ফোন খুলুন৷</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">সেন্সরের উপর আপনার আঙুল দিয়ে চাপ দিন, তারপর শতকরা হার বাড়লে আঙুল তুলে নিন।</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">সেন্সরের উপর আপনার আঙুল রাখুন, তারপর শতকরা হার বাড়লে আঙুল তুলে নিন।</string>
     <string name="sec_fingerprint_register_reposition_your_finger">আপনার আঙুলের ছাপের প্রান্তগুলো ক্যাপচার করতে প্রতিবার আপনার আঙুলের অবস্থান পরিবর্তন করুন৷</string>
     <string name="sec_fingerprint_scan_fingerprint">আঙুলের ছাপ স্ক্যান করুন৷</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX চলার সময় এই আইকন দেখানো হবে না।</string>
     <string name="sec_fingerprint_second_guide_title">সম্পূর্ণভাবে স্ক্যান করুন</string>
     <string name="sec_fingerprint_sensor">আঙুলের ছাপের সেন্সর</string>
     <string name="sec_fingerprint_sensor_activated">আঙুলের ছাপের সেন্সর সক্রিয় হয়েছে</string>

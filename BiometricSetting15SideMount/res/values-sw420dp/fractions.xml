@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="face_verification_width_percent_land">60.000004%</fraction>
+    <fraction name="face_verification_width_percent_portrait">68.36001%</fraction>
+</resources>

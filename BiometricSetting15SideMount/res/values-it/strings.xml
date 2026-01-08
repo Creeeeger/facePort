@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animazione</string>
     <string name="fingerprint_custom_icon_title">Icona</string>
     <string name="fingerprint_dex_toast">"Utilizzate l'impronta digitale sul telefono per confermare l'identità."</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Una pellicola protettiva spessa o colorata può influire sulle prestazioni. Se utilizzate una protezione per lo schermo, assicuratevi che sia compatibile con il sensore per impronte digitali su schermo.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Una pellicola protettiva spessa può influire sulle prestazioni. Se utilizzate una protezione per lo schermo, assicuratevi che sia compatibile con il sensore per impronte digitali su schermo.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Assicuratevi di non utilizzare una pellicola protettiva durante la registrazione delle impronte digitali.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">"Questa applicazione non supporta l'opzione Multischermo."</string>
-    <string name="fingerprint_duplicate_guide_msg">Assicuratevi di modificare leggermente la posizione del dito ogni volta.</string>
+    <string name="fingerprint_duplicate_guide_msg">Cambiate leggermente la posizione del dito ogni volta per ottenere una scansione completa.</string>
     <string name="fingerprint_enroll_dont_move">Non muovete il dito fino al termine della scansione.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Riempi tutto il cerchio</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Muovete il dito attorno al sensore</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Se il problema persiste, riavviate il telefono.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">Si è verificato un errore con il sensore delle impronte digitali. Se questo messaggio viene visualizzato più volte, riavviate il telefono.</string>
     <string name="fingerprint_error_message_some_things_try">Ecco alcune operazioni che potete tentare:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Se il problema persiste, contattate il Servizio clienti.</string>
+    <string name="fingerprint_error_message_something_on_sensor">"Assicuratevi che il sensore dell'impronta digitale sia pulito e asciutto e riprovate."</string>
     <string name="fingerprint_error_message_timed_out">Registrazione scaduta. Riprovate.</string>
     <string name="fingerprint_error_title_no_space">Spazio di archiviazione insufficiente</string>
     <string name="fingerprint_error_title_not_responding">Il sensore di impronte digitali non risponde</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Fatto</string>
     <string name="fingerprint_register_guide_side_key">Il sensore si trova sul tasto Laterale, sul lato destro dello smartphone.</string>
     <string name="fingerprint_register_lift_your_finger">"Sollevate il dito dal sensore dell'impronta digitale."</string>
-    <string name="fingerprint_register_place_your_finger">Modifica posizione dito per scansione completa</string>
+    <string name="fingerprint_register_place_your_finger">"Eseguite la scansione dell'impronta digitale"</string>
     <string name="fingerprint_register_success">Impronta digitale aggiunta</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">"Bene! L'impronta digitale è stata riconosciuta."</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Toccate il sensore dell’impronta digitale.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Eseguite la scansione dell’impronta digitale.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Impossibile utilizzare %1$s mentre la cover della tastiera è collegata. %2$s verrà disattivato.</string>
     <string name="fingerscanner_keyboard_dialog_title">Cover tastiera collegata</string>
-    <string name="fingerscanner_lift_your_finger_off_first">"Posizionate il dito sul sensore dell'impronta digitale, quindi sollevatelo nuovamente."</string>
-    <string name="fingerscanner_register_text">Premete il dito sul sensore, quindi sollevatelo quando avvertite una vibrazione.</string>
+    <string name="fingerscanner_register_text">Posizionate il dito sul sensore, quindi sollevatelo quando avvertite una vibrazione.</string>
     <string name="fingerscanner_toast_back_text">Toccate nuovamente il pulsante Indietro per arrestare l’aggiunta dell’impronta digitale.</string>
     <string name="forgot_password">Password dimenticata</string>
     <string name="forgot_password_header">Ripristinare la password?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Inserite la password</string>
     <string name="sec_enter_pin_WC">Inserite il PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Attivate il sensore di impronte digitali</string>
-    <string name="sec_fingerprint_always_on_summary">Consente di effettuare la scansione delle impronte digitali anche quando lo schermo è spento.</string>
+    <string name="sec_fingerprint_always_on_summary">Consente di attivare e sbloccare lo smartphone toccando il tasto Laterale. Attivate questa funzione per accedere rapidamente o disattivatela per evitare la scansione accidentale dell’impronta digitale.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Consente di effettuare la scansione dell’impronta digitale anche quando lo schermo è spento. Non disponibile quando Samsung DeX è in esecuzione.</string>
     <string name="sec_fingerprint_enroll_title">Aggiungi impronta digitale</string>
     <string name="sec_fingerprint_error_contact_customer_service">Se il problema persiste, contattate il Servizio clienti.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">"Allontanate lo smartphone dal caricatore wireless prima di registrare l'impronta digitale."</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Chiudete lo smartphone per continuare ad aggiungere l’impronta digitale.</string>
-    <string name="sec_fingerprint_register_guide_text">Premete il dito sul sensore, quindi sollevatelo quando avvertite una vibrazione.</string>
+    <string name="sec_fingerprint_register_guide_text">Posizionate il dito sul sensore, quindi sollevatelo quando avvertite una vibrazione.</string>
     <string name="sec_fingerprint_register_open_phone">"Aprite lo smartphone per continuare ad aggiungere l'impronta digitale."</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Premete il dito sul sensore, quindi sollevatelo quando la percentuale aumenta.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Posizionate il dito sul sensore, quindi sollevatelo quando la percentuale aumenta.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Modificate ogni volta la posizione del dito per acquisire i bordi dell’impronta digitale.</string>
     <string name="sec_fingerprint_scan_fingerprint">Effettuate la scansione dell’impronta digitale.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">L’icona non viene visualizzata quando Samsung DeX è in esecuzione.</string>
     <string name="sec_fingerprint_second_guide_title">Scansione completa</string>
     <string name="sec_fingerprint_sensor">Sensore di impronte digitali</string>
     <string name="sec_fingerprint_sensor_activated">Sensore di impronte digitali attivato</string>

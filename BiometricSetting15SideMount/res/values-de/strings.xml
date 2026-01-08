@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animation</string>
     <string name="fingerprint_custom_icon_title">Symbol</string>
     <string name="fingerprint_dex_toast">Verwende deinen Fingerabdruck auf deinem Telefon, um deine Identität zu bestätigen.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Eine dicke oder farbige Schutzfolie kann die Leistung beeinflussen. Überprüfe bei Verwendung eines Displayschutzes, dass er als kompatibel mit dem Fingerabdrucksensor auf dem Bildschirm gekennzeichnet ist.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Eine dicke Schutzfolie kann die Leistung beeinflussen. Überprüfe bei Verwendung eines Displayschutzes, dass er als kompatibel mit dem Fingerabdrucksensor auf dem Bildschirm gekennzeichnet ist.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Vergewissere dich, dass du bei der Registrierung von Fingerabdrücken keine Displayschutzfolien verwendest.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Diese App unterstützt Multi Window nicht.</string>
-    <string name="fingerprint_duplicate_guide_msg">Passe unbedingt jedes Mal deine Fingerposition ein wenig an.</string>
+    <string name="fingerprint_duplicate_guide_msg">Ändere jedes Mal die Position deines Fingers ein wenig, um einen vollständigen Scan durchzuführen.</string>
     <string name="fingerprint_enroll_dont_move">Bewege den Finger nicht, bis der Scan abgeschlossen ist.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Den gesamten Kreis ausfüllen</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Bewegen des Fingers um den Sensor</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Wenn dieses Problem bestehen bleibt, starte dein Telefon neu.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">Es ist ein Fehler beim Fingerabdrucksensor aufgetreten. Starte das Telefon neu, wenn die Meldung häufiger auftritt.</string>
     <string name="fingerprint_error_message_some_things_try">Das kannst du versuchen:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Kontaktiere den Kundendienst, falls dieses Problem bestehen bleibt.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Stelle sicher, dass der Fingerabdrucksensor sauber und trocken ist und versuche es erneut.</string>
     <string name="fingerprint_error_message_timed_out">Zeitüberschreitung bei Registrierung. Versuche es erneut.</string>
     <string name="fingerprint_error_title_no_space">Nicht genügend Speicherplatz</string>
     <string name="fingerprint_error_title_not_responding">Fingerabdrucksensor reagiert nicht</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">OK</string>
     <string name="fingerprint_register_guide_side_key">Der Sensor befindet sich auf der Funktionstaste an der rechten Seite des Telefons.</string>
     <string name="fingerprint_register_lift_your_finger">Nimm deinen Finger vom Fingerabdrucksensor.</string>
-    <string name="fingerprint_register_place_your_finger">Anpassen der Fingerposition für Vollscan</string>
+    <string name="fingerprint_register_place_your_finger">Scannen deines Fingerabdrucks</string>
     <string name="fingerprint_register_success">Fingerabdruck hinzugefügt</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Großartig! dein Fingerabdruck wurde erkannt.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Berühre den Fingerabdrucksensor.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Scanne deinen Fingerabdruck.</string>
     <string name="fingerscanner_keyboard_dialog_msg">%1$s kann nicht verwendet werden, wenn das Tastatur-Cover angebracht ist. %2$s wird deaktiviert.</string>
     <string name="fingerscanner_keyboard_dialog_title">Tastatur-Cover-Verbindung</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Lege den Finger auf den Fingerabdrucksensor und hebe ihn wieder an.</string>
-    <string name="fingerscanner_register_text">Drücke den Finger auf den Sensor und hebe ihn an, wenn du eine Vibration spürst.</string>
+    <string name="fingerscanner_register_text">Lege den Finger auf den Sensor und hebe ihn an, wenn du eine Vibration spürst.</string>
     <string name="fingerscanner_toast_back_text">Tippe erneut auf die Schaltfläche „Zurück“, um das Hinzufügen deines Fingerabdrucks zu beenden.</string>
     <string name="forgot_password">Passwort vergessen</string>
     <string name="forgot_password_header">Passwort zurücksetzen?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Passwort eingeben</string>
     <string name="sec_enter_pin_WC">PIN eingeben</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Fingerabdrucksensor aktivieren</string>
-    <string name="sec_fingerprint_always_on_summary">Scanne deinen Fingerabdruck auch bei deaktiviertem Bildschirm.</string>
+    <string name="sec_fingerprint_always_on_summary">Dein Telefon aktivieren und entsperren, indem du nur die Funktionstaste berührst. Für schnellen Zugriff einschalten, oder ausschalten, um versehentliche Fingerabdruckscans zu vermeiden.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Scanne deinen Fingerabdruck auch bei deaktiviertem Bildschirm. Dies ist nicht verfügbar, wenn Samsung DeX ausgeführt wird.</string>
     <string name="sec_fingerprint_enroll_title">Fingerabdruck hinzufügen</string>
     <string name="sec_fingerprint_error_contact_customer_service">Kontaktiere den Kundendienst, falls dieses Problem bestehen bleibt.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Nimm dein Telefon vom induktiven Ladegerät, bevor du deinen Fingerabdruck registrierst.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Schließe dein Telefon, um das Hinzufügen deines Fingerabdrucks fortzusetzen.</string>
-    <string name="sec_fingerprint_register_guide_text">Drücke den Finger auf den Sensor und hebe ihn an, wenn du eine Vibration spürst.</string>
+    <string name="sec_fingerprint_register_guide_text">Lege den Finger auf den Sensor und hebe ihn an, wenn du eine Vibration spürst.</string>
     <string name="sec_fingerprint_register_open_phone">Öffne dein Telefon, um das Hinzufügen deines Fingerabdrucks fortzusetzen.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Drücke den Finger auf den Sensor und heben ihn an, wenn der Prozentwert steigt.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Platziere den Finger auf dem Sensor und hebe ihn an, wenn der Prozentwert steigt.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Ändere jedes Mal die Position deines Fingers, um die Ränder deines Fingerabdrucks zu erfassen.</string>
     <string name="sec_fingerprint_scan_fingerprint">Fingerabdruck scannen.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Das Symbol wird nicht angezeigt, wenn Samsung DeX ausgeführt wird.</string>
     <string name="sec_fingerprint_second_guide_title">Durchführung eines vollständigen Scans</string>
     <string name="sec_fingerprint_sensor">Fingerabdrucksensor</string>
     <string name="sec_fingerprint_sensor_activated">Fingerabdrucksensor aktiviert</string>

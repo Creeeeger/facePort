@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">සජීවීකරණය</string>
     <string name="fingerprint_custom_icon_title">අයිකනය</string>
     <string name="fingerprint_dex_toast">ඔබේ අනන්‍යතාවය සත්‍යාපනය කිරීමට ඔබේ දුරකථනයේ ඔබේ ඇඟිලි සලකුණ භාවිතා කරන්න.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ඝන හෝ වර්ණ ගැන්වූ ආරක්ෂිත පටලය ක්‍රියාකාරිත්වයට බලපෑම් කළ හැක. ඔබ තිර ආරක්ෂකයක් භාවිතා කරන්නේ නම්, එය තිරය-මත ඇඟිලි සලකුණු සංවේදකය සමග ගැළපෙන ලෙස ලේබල් කර ඇති බවට වග බලා ගන්න.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ඝන ආරක්ෂිත පටලය ක්‍රියාකාරිත්වයට බලපෑම් කළ හැක. ඔබ තිර ආරක්ෂකයක් භාවිතා කරන්නේ නම්, එය තිරය-මත ඇඟිලි සලකුණු සංවේදකය සමග ගැළපෙන ලෙස ලේබල් කර ඇති බවට වග බලා ගන්න.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">ඇඟිලි සලකුණු ලියාපදිංචි කරන අතරේ ඔබ තිර ආවරණයක් භාවිතා නොකරන බවට වග බලා ගන්න.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">මෙම යෙදුම බහු කවුළුවට සහාය නොදක්වයි.</string>
-    <string name="fingerprint_duplicate_guide_msg">සෑම අවස්ථාවකදීම ඔබේ ඇඟිල්ලේ පිහිටුම තරමක් වෙනස් කිරීමට වග බලා ගන්න.</string>
+    <string name="fingerprint_duplicate_guide_msg">පූර්ණ පිරික්සුමක් ලබා ගැනීමට සෑම විටම ඔබේ ඇඟිල්ලේ පිහිටුම තරමක් වෙනස් කරන්න.</string>
     <string name="fingerprint_enroll_dont_move">ස්කෑන් කිරීම සම්පූර්ණ වන තුරු ඔබේ ඇඟිල්ල චලනය නොකරන්න.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">සම්පූර්ණ රවුම පිරවීම</string>
     <string name="fingerprint_enroll_first_guide_subtitle">සංවේදකය වටා ඔබේ ඇඟිල්ල ගෙන යාම</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">මෙය දිගටම සිදු වේ නම්, ඔබේ දුරකථනය යළි අරඹන්න.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">ඔබට උත්සාහ කළ හැකි සමහර දේවල් මෙන්න:</string>
-    <string name="fingerprint_error_message_something_on_sensor">මෙම ගැටලුව දිගටම පවතී නම්, පාරිභෝගික සේවාව අමතන්න.</string>
+    <string name="fingerprint_error_message_something_on_sensor">ඇඟිලි සලකුණු සංවේදකය පිරිසිදු සහ වියළි බව සහතික කර ගන්න, එවිට නැවත උත්සාහ කරන්න.</string>
     <string name="fingerprint_error_message_timed_out">ලියාපදිංචි කිරීම කාලය ඉක්මවා ඇත. නැවත උත්සාහ කරන්න.</string>
     <string name="fingerprint_error_title_no_space">ප්‍රමාණවත් ගබඩාවක් නැත</string>
     <string name="fingerprint_error_title_not_responding">ඇඟිලි සලකුණු සංවේදකය ප්‍රතිචාර නොදක්වයි</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">නිමයි</string>
     <string name="fingerprint_register_guide_side_key">සංවේදකය දුරකථනයෙහි දකුණු පැත්තෙහි පැති බොත්තම මත වේ.</string>
     <string name="fingerprint_register_lift_your_finger">ඔබේ ඇඟිල්ල ඇඟිලි සලකුණු සංවේදකයෙන් ගන්න.</string>
-    <string name="fingerprint_register_place_your_finger">පූර්ණ ස්කෑනය ගැනීමට ඔබේ ඇඟිලි පිහිටුම සීරුමාරුව</string>
+    <string name="fingerprint_register_place_your_finger">ඔබේ ඇඟිලි සලකුණ පිරික්සීම</string>
     <string name="fingerprint_register_success">ඇඟිලි සලකුණ එක් කෙරිණි</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">අනර්ඝයි! ඔබේ ඇඟිලි සලකුණ හඳුනා ගැනිණි.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">ඇඟිලි සලකුණු සංවේදකය ස්පර්ශ කරන්න.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">ඔබේ ඇඟිලි සලකුණ පිරික්සන්න.</string>
     <string name="fingerscanner_keyboard_dialog_msg">යතුරු පුවරු කවරය අමුණා තිබිය දී %1$s භාවිතා කළ නොහැක. %2$s අක්‍රිය වනු ඇත.</string>
     <string name="fingerscanner_keyboard_dialog_title">යතුරුපුවරු කවරය අමුණා ඇත</string>
-    <string name="fingerscanner_lift_your_finger_off_first">ඔබේ ඇඟිල්ල ඇඟිලි සලකුණු සංවේදකය මත තබන්න, එවිට නැවත එය ගන්න.</string>
-    <string name="fingerscanner_register_text">සංවේදකය මත ඔබේ ඇඟිල්ල ඔබා, ඔබට කම්පනයක් හැඟෙන විට එය ඔසවන්න.</string>
+    <string name="fingerscanner_register_text">ඔබේ ඇඟිල්ල සංවේදකය මත තබා, ඔබට කම්පනයක් හැඟෙන විට එය ඔසවන්න.</string>
     <string name="fingerscanner_toast_back_text">ඔබේ ඇඟිලි සලකුණ එක් කිරීම නැවැත්වීමට ආපසු බොත්තම නැවත තට්ටු කරන්න.</string>
     <string name="forgot_password">මුරපදය අමතකයි</string>
     <string name="forgot_password_header">මුරපදය යළි සකසන්න ද?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">මුරපදය ඇතුළු කරන්න</string>
     <string name="sec_enter_pin_WC">PIN ඇතුළු කරන්න</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">ඇඟිලි සලකුණු සංවේදකය සක්‍රියනයට</string>
-    <string name="sec_fingerprint_always_on_summary">තිරය ක්‍රියාවිරහිත විට පවා ඔබේ ඇඟිලි සලකුණ ස්කෑන් කරන්න.</string>
+    <string name="sec_fingerprint_always_on_summary">හුදෙක් පැති බොත්තම ස්පර්ශ කිරීමෙන් ඔබේ දුරකථනය අවදි කර අගුළු හරින්න. යුහු ප්‍රවේශය සඳහා ක්‍රියාත්මක කරන්න, හෝ හදිසි ඇඟිලි සලකුණු ස්කෑන් කිරීම් වළක්වා ගැනීමට ක්‍රියා විරහිත කරන්න.</string>
     <string name="sec_fingerprint_always_on_summary_dex">තිරය ක්‍රියාවිරහිත විට පවා ඔබේ ඇඟිලි සලකුණ ස්කෑන් කරන්න. Samsung DeX ධාවනය වන විට ලබා ගත නොහැක.</string>
     <string name="sec_fingerprint_enroll_title">ඇඟිලි සලකුණ එක් කරන්න</string>
     <string name="sec_fingerprint_error_contact_customer_service">මෙම ගැටලුව දිගටම පවතී නම්, පාරිභෝගික සේවාව අමතන්න.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">ඔබේ ඇඟිලි සලකුණ ලියාපදිංචි කිරීමට පෙර ඔබේ දුරකථනය විරැහැන් චාජරයෙන් ඉවත් කරන්න.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">ඔබේ ඇඟිලි සලකුණ දිගටම එක් කිරීමට ඔබේ දුරකථනය වසන්න.</string>
-    <string name="sec_fingerprint_register_guide_text">සංවේදකය මත ඔබේ ඇඟිල්ල ඔබා, ඔබට කම්පනයක් හැඟෙන විට එය ඔසවන්න.</string>
+    <string name="sec_fingerprint_register_guide_text">ඔබේ ඇඟිල්ල සංවේදකය මත තබා, ඔබට කම්පනයක් හැඟෙන විට එය ඔසවන්න.</string>
     <string name="sec_fingerprint_register_open_phone">ඔබේ ඇඟිලි සලකුණු දිගටම එක් කිරීමට ඔබේ දුරකථනය විවෘත කරන්න.</string>
     <string name="sec_fingerprint_register_percentage_goes_up">ඔබේ ඇඟිල්ල සංවේදකය මත ඔබා, ප්‍රතිශතය ඉහළ යන විට එය ඔසවන්න.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">ඔබේ ඇඟිලි සලකුණේ දාර ග්‍රහණයට එක් එක් වතාවේ ඔබේ ඇඟිල්ල යළි ස්ථානගත කරන්න.</string>
     <string name="sec_fingerprint_scan_fingerprint">ඇඟිලි සලකුණ සුපිරික්සන්න.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX ධාවනය වන විට අයිකනය නොපෙන්වයි.</string>
     <string name="sec_fingerprint_second_guide_title">පූර්ණ පිරික්සුමක් ලබා ගැනීම</string>
     <string name="sec_fingerprint_sensor">ඇඟිලි සලකුණු සංවේදකය</string>
     <string name="sec_fingerprint_sensor_activated">ඇඟිලි සලකුණු සංවේදකය සක්‍රියයි</string>

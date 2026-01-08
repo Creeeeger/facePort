@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">ການເຄື່ອນໄຫວ</string>
     <string name="fingerprint_custom_icon_title">ໄອຄອນ</string>
     <string name="fingerprint_dex_toast">ໃຊ້ລາຍນິ້ວມືຂອງທ່ານໃນໂທລະສັບຂອງທ່ານເພື່ອກວດສອບຕົວຕົນຂອງທ່ານ.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ຟີມກັນແຕກແບບໜາ ຫຼື ມີສີສາມາດສົ່ງຜົນກະທົບຕໍ່ການປະຕິບັດງານ. ຖ້າທ່ານກຳລັງໃຊ້ກັນແຕກໜ້າຈໍ, ເບິ່ງໃຫ້ແນ່ໃຈວ່າມັນມີປ້າຍກຳກັບວ່າເຂົ້າກັນໄດ້ກັບເຊັນເຊີລາຍນິ້ວມືເທິງໜ້າຈໍ.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ຟີມກັນແຕກແບບໜາສາມາດສົ່ງຜົນກະທົບຕໍ່ການປະຕິບັດງານ. ຖ້າທ່ານກຳລັງໃຊ້ກັນແຕກໜ້າຈໍ, ເບິ່ງໃຫ້ແນ່ໃຈວ່າມັນມີປ້າຍກຳກັບວ່າເຂົ້າກັນໄດ້ກັບເຊັນເຊີລາຍນິ້ວມືເທິງໜ້າຈໍ.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">ເບິ່ງໃຫ້ແນ່ໃຈວ່າທ່ານບໍ່ໄດ້ໃຊ້ຝາປິດໜ້າຈໍໃນຂະນະທີ່ລົງທະບຽນລາຍນິ້ວມື.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">ແອັບນີ້ບໍ່ຮອງຮັບມັລຕິວິນໂດ.</string>
-    <string name="fingerprint_duplicate_guide_msg">ເບິ່ງໃຫ້ແນ່ໃຈວ່າໄດ້ປັບປ່ຽນຕຳແໜ່ງນິ້ວມືຂອງທ່ານໜ້ອຍໜຶ່ງໃນແຕ່ລະຄັ້ງ.</string>
+    <string name="fingerprint_duplicate_guide_msg">ປ່ຽນຕຳແໜ່ງນິ້ວມືຂອງທ່ານເລັກນ້ອຍໃນແຕ່ລະຄັ້ງເພື່ອຮັບເອົາການສະແກນເຕັມຮູບແບບ.</string>
     <string name="fingerprint_enroll_dont_move">ຢ່າຍ້າຍນິ້ວມືຂອງທ່ານຈົນກວ່າການອັບເດດຈະສຳເລັດ.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">ຕື່ມໃຫ້ເຕັມວົງມົນ</string>
     <string name="fingerprint_enroll_first_guide_subtitle">ຍ້າຍນິ້ວມືຂອງທ່ານອ້ອມຮອບເຊັນເຊີ</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">ຖ້າສິ່ງນີ້ຍັງສືບຕໍ່ເກີດຂຶ້ນຢູ່, ປິດເປີດໂທລະສັບຂອງທ່ານຄືນໃໝ່.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">ນີ້ແມ່ນບາງສິ່ງຢ່າງທີ່ທ່ານສາມາດລອງໄດ້:</string>
-    <string name="fingerprint_error_message_something_on_sensor">ຖ້າບັນຫານີ້ຍັງສືບຕໍ່ຢູ່, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າ.</string>
+    <string name="fingerprint_error_message_something_on_sensor">ເບິ່ງໃຫ້ແນ່ໃຈວ່າເຊັນເຊີລາຍນິ້ວມືສະອາດແລະແຫ້ງ, ຈາກນັ້ນ​ລອງ​ໃໝ່​ອີກ.</string>
     <string name="fingerprint_error_message_timed_out">ການລົງທະບຽນໝົດເວລາແລ້ວ. ລອງໃໝ່ອີກ.</string>
     <string name="fingerprint_error_title_no_space">ບ່ອນເກັບຂໍ້ມູນບໍ່ພຽງພໍ</string>
     <string name="fingerprint_error_title_not_responding">ເຊັນເຊີລາຍນິ້ວມືບໍ່ຕອບສະໜອງ</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">ສໍາເລັດ</string>
     <string name="fingerprint_register_guide_side_key">ເຊັນເຊີຢູ່ທີ່ປຸ່ມດ້ານຂ້າງຢູ່ທາງດ້ານຂວາຂອງໂທລະສັບ.</string>
     <string name="fingerprint_register_lift_your_finger">ຍົກນິ້ວມືຂອງທ່ານອອກຈາກເຊັນເຊີລາຍນິ້ວມື.</string>
-    <string name="fingerprint_register_place_your_finger">ປັບປ່ຽນຕຳແໜ່ງນິ້ວມືຂອງທ່ານເພື່ອຮັບເອົາການສະແກນເຕັມຮູບແບບ</string>
+    <string name="fingerprint_register_place_your_finger">ສະແກນລາຍນິ້ວມືຂອງທ່ານ</string>
     <string name="fingerprint_register_success">ເພີ່ມລາຍນິ້ວມືແລ້ວ</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">ດີຫຼາຍ! ລາຍນິ້ວມືຂອງທ່ານຖືກຈົດຈຳແລ້ວ.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">ສຳພັດເຊັນເຊີລາຍນິ້ວມື.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">ສະແກນລາຍນິ້ວມືຂອງທ່ານ.</string>
     <string name="fingerscanner_keyboard_dialog_msg">ບໍ່ສາມາດໃຊ້ %1$s ໃນເວລາຊົບຂອງຄີບອດໄດ້ຖືກຕິດຄັດ. %2$s ຈະ​ຖືກປິດ​ໃຊ້​ງານ.</string>
     <string name="fingerscanner_keyboard_dialog_title">ຊົບຄີບອດທີ່ໄດ້ຖືກຕິດຄັດມາ</string>
-    <string name="fingerscanner_lift_your_finger_off_first">ວາງນິ້ວມືຂອງທ່ານລົງເທິງເຊັນເຊີລາຍນິ້ວມື, ຈາກນັ້ນຍົກມັນຂຶ້ນອີກ.</string>
-    <string name="fingerscanner_register_text">ກົດນິ້ວມືຂອງທ່ານຢູ່ເທິງເຊັນເຊີ, ຈາກນັ້ນຍົກມັນອອກເມື່ອທ່ານຮູ້ສຶກເຖິງການສັ່ນ.</string>
+    <string name="fingerscanner_register_text">ວາງນິ້ວມືຂອງທ່ານຢູ່ເທິງເຊັນເຊີ, ຈາກນັ້ນຍົກມັນອອກເມື່ອທ່ານຮູ້ສຶກເຖິງການສັ່ນ.</string>
     <string name="fingerscanner_toast_back_text">ແຕະປຸ່ມກັບຄືນອີກຄັ້ງເພື່ອຢຸດການເພີ່ມລາຍນິ້ວມືຂອງທ່ານ.</string>
     <string name="forgot_password">ລືມລະຫັດຜ່ານ</string>
     <string name="forgot_password_header">ຕັ້ງລະຫັດຜ່ານຄືນໃໝ່ບໍ?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">ໃສ່ລະຫັດເຂົ້າໄປ</string>
     <string name="sec_enter_pin_WC">​ໃສ່ PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">ເປີດໃຊ້ງານເຊັນເຊີລາຍນິ້ວມື</string>
-    <string name="sec_fingerprint_always_on_summary">ສະແກນລາຍນິ້ວມືຂອງທ່ານ ເຖິງແມ່ນວ່າເວລາໜ້າຈໍປິດຢູ່.</string>
+    <string name="sec_fingerprint_always_on_summary">ປຸກ ແລະ ປົດລັອກໂທລະສັບຂອງທ່ານໂດຍການສຳພັດປຸ່ມດ້ານຂ້າງເທົ່ານັ້ນ. ເປີດສຳລັບການເຂົ້າໃຊ້ດ່ວນ, ຫຼື ປິດເພື່ອຫຼີກຫຼ່ຽງການສະແກນລາຍນິ້ວມືແບບບັງເອີນ.</string>
     <string name="sec_fingerprint_always_on_summary_dex">ສະແກນລາຍນິ້ວມືຂອງທ່ານ ເຖິງແມ່ນວ່າເວລາໜ້າຈໍປິດຢູ່. ບໍ່ມີຢູ່ເມື່ອກຳລັງເປີດໃຊ້ Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">ເພີ່ມລາຍນິ້ວມື</string>
     <string name="sec_fingerprint_error_contact_customer_service">ຖ້າບັນຫານີ້ຍັງສືບຕໍ່ຢູ່, ຕິດຕໍ່ຝ່າຍບໍລິການລູກຄ້າ.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">ຖອດໂທລະສັບຂອງທ່ານອອກຈາກເຄື່ອງສາກໄວເລສກ່ອນລົງທະບຽນລາຍນິ້ວມືຂອງທ່ານ.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">ປິດໂທລະສັບຂອງທ່ານເພື່ອສືບຕໍ່ເພີ່ມລາຍນິ້ວມືຂອງທ່ານ.</string>
-    <string name="sec_fingerprint_register_guide_text">ກົດນິ້ວມືຂອງທ່ານຢູ່ເທິງເຊັນເຊີ, ຈາກນັ້ນຍົກມັນອອກເມື່ອທ່ານຮູ້ສຶກເຖິງການສັ່ນ.</string>
+    <string name="sec_fingerprint_register_guide_text">ວາງນິ້ວມືຂອງທ່ານຢູ່ເທິງເຊັນເຊີ, ຈາກນັ້ນຍົກມັນອອກເມື່ອທ່ານຮູ້ສຶກເຖິງການສັ່ນ.</string>
     <string name="sec_fingerprint_register_open_phone">ເປີດໂທລະສັບຂອງທ່ານເພື່ອສືບຕໍ່ເພີ່ມລາຍນິ້ວມືຂອງທ່ານ.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">ວາງນິ້ວມືຂອງທ່ານຢູ່ເທິງເຊັນເຊີ, ຈາກນັ້ນຍົກມັນອອກເມື່ອເປີເຊັນຂຶ້ນສູງ.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">ວາງນິ້ວມືຂອງທ່ານຢູ່ເທິງເຊັນເຊີ, ຈາກນັ້ນຍົກມັນອອກເມື່ອເປີເຊັນເພີ່ມຂຶ້ນ.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">ວາງຕຳແໜ່ງນິ້ວມືຂອງທ່ານຄືນໃໝ່ແຕ່ລະຄັ້ງ ເພື່ອແຄັບເຈີຂອບລາຍນິ້ວມືຂອງທ່ານ.</string>
     <string name="sec_fingerprint_scan_fingerprint">ສະແກນລາຍນິ້ວມື.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">ໄອຄອນຈະບໍ່ສະແດງຂຶ້ນເມື່ອກຳລັງເປີດໃຊ້ Samsung DeX ຢູ່.</string>
     <string name="sec_fingerprint_second_guide_title">ຮັບເອົາການສະແກນທັງໝົດ</string>
     <string name="sec_fingerprint_sensor">ເຊັນເຊີລາຍນິ້ວມື</string>
     <string name="sec_fingerprint_sensor_activated">ເປີດໃຊ້ງານເຊັນເຊີລາຍນິ້ວມືແລ້ວ</string>

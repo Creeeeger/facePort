@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animasyon</string>
     <string name="fingerprint_custom_icon_title">Simge</string>
     <string name="fingerprint_dex_toast">Kimliğinizi doğrulamak için telefonunuzda parmak izinizi kullanın.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Kalın veya renkli koruyucu film, performansı etkileyebilir. Ekran koruyucu kullanıyorsanız bunun ekran üzerindeki parmak izi sensörüyle uyumlu olduğundan emin olun.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Kalın koruyucu film, performansı etkileyebilir. Ekran koruyucu kullanıyorsanız bunun ekran üzerindeki parmak izi sensörüyle uyumlu olduğundan emin olun.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Parmak izi kaydederken ekran koruyucu kullanmadığınızdan emin olun.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Bu uygulama Çoklu pencereyi desteklemiyor.</string>
-    <string name="fingerprint_duplicate_guide_msg">Her seferinde parmağınızın konumunu biraz değiştirdiğinizden emin olun.</string>
+    <string name="fingerprint_duplicate_guide_msg">Her tam tarama gerçekleştirdiğinizde parmağınızın konumunu hafifçe değiştirin.</string>
     <string name="fingerprint_enroll_dont_move">Tarama tamamlanana kadar parmağınızı hareket ettirmeyin.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Tüm daireyi doldurun</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Parmağınızı sensörde hareket ettirin</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Bu durum devam ederse telefonunuzu yeniden başlatın.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Deneyebileceğiniz şeylerden bazılarını burada bulabilirsiniz:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Bu sorun devam ederse Müşteri Hizmetleri ile iletişim kurun.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Parmak izi sensörünün temiz ve kuru olduğundan emin olun, ardından tekrar deneyin.</string>
     <string name="fingerprint_error_message_timed_out">Kayıt zaman aşımına uğradı. Tekrar deneyin.</string>
     <string name="fingerprint_error_title_no_space">Yeterli depolama alanı yok</string>
     <string name="fingerprint_error_title_not_responding">Parmak izi sensörü yanıt vermiyor</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Bitti</string>
     <string name="fingerprint_register_guide_side_key">Sensör, telefonun sağ tarafındaki Yan tuştadır.</string>
     <string name="fingerprint_register_lift_your_finger">Parmağınızı parmak izi sensöründen kaldırın.</string>
-    <string name="fingerprint_register_place_your_finger">Tam tarama için parmağınızın konumunu ayarlayın</string>
+    <string name="fingerprint_register_place_your_finger">Parmak izinizi tarayın</string>
     <string name="fingerprint_register_success">Parmak izi eklendi</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Harika! Parmak iziniz tanındı.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Parmak izi sensörüne dokunun.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Parmak izinizi tarayın.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Klavye kapağı takılıyken %1$s kullanılamaz. %2$s devre dışı bırakılacak.</string>
     <string name="fingerscanner_keyboard_dialog_title">Klavye kapağı takıldı</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Parmağınızı parmak izi sensörünün üzerine yerleştirip tekrar kaldırın.</string>
-    <string name="fingerscanner_register_text">Parmağınızı sensöre bastırın ve titreşim hissettiğinizde kaldırın.</string>
+    <string name="fingerscanner_register_text">Parmağınızı sensöre yerleştirin, ardından titreşim hissettiğinizde kaldırın.</string>
     <string name="fingerscanner_toast_back_text">Parmak izinizi eklemeyi durdurmak için Geri tuşuna tekrar dokunun.</string>
     <string name="forgot_password">Şifreyi unuttum</string>
     <string name="forgot_password_header">Şifre sıfırlansın mı?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Şifreyi girin</string>
     <string name="sec_enter_pin_WC">PIN gir</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Parmak izi sensörünü etkinleştir</string>
-    <string name="sec_fingerprint_always_on_summary">Ekran kapalıyken bile parmak izinizi tarayın.</string>
+    <string name="sec_fingerprint_always_on_summary">Sadece Yan tuşa dokunarak telefonunuzu uyandırın ve telefonunuzun kilidini açın. Hızlı erişim için açın veya yanlışlıkla parmak izinizin taranmasını önlemek için kapatın.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Ekran kapalıyken bile parmak izinizi tarayın. Samsung DeX çalışırken kullanılamaz.</string>
     <string name="sec_fingerprint_enroll_title">Parmak izi ekle</string>
     <string name="sec_fingerprint_error_contact_customer_service">Bu sorun devam ederse Müşteri Hizmetleri ile iletişim kurun.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Parmak izinizi kaydetmeden önce telefonunuzu kablosuz şarj cihazından alın.</string>
     <string name="sec_fingerprint_percent_format">%<font size="6"> </font>^1</string>
     <string name="sec_fingerprint_register_close_phone">Parmak izinizi eklemeye devam etmek için telefonunuzu kapatın.</string>
-    <string name="sec_fingerprint_register_guide_text">Parmağınızı sensöre bastırın ve titreşim hissettiğinizde kaldırın.</string>
+    <string name="sec_fingerprint_register_guide_text">Parmağınızı sensöre yerleştirin, ardından titreşim hissettiğinizde kaldırın.</string>
     <string name="sec_fingerprint_register_open_phone">Parmak izinizi eklemeye devam etmek için telefonunuzu açın.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Parmağınızı sensöre bastırın ve ardından yüzde değeri arttığında kaldırın.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Parmağınızı sensöre yerleştirin ve ardından yüzde değeri arttığında kaldırın.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Parmak izinizin kenarlarını yakalamak için parmağınızın konumunu her seferinde değiştirin.</string>
     <string name="sec_fingerprint_scan_fingerprint">Parmak izini tarayın.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX çalışırken simge gösterilmez.</string>
     <string name="sec_fingerprint_second_guide_title">Tam tarama alın</string>
     <string name="sec_fingerprint_sensor">Parmak izi sensörü</string>
     <string name="sec_fingerprint_sensor_activated">Parmak izi sensörü etkinleştirildi</string>

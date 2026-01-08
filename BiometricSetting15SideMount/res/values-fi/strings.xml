@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animaatio</string>
     <string name="fingerprint_custom_icon_title">Kuvake</string>
     <string name="fingerprint_dex_toast">Vahvista henkilöllisyytesi käyttämällä puhelimessa sormenjälkeä.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Paksu tai värillinen suojakalvo voi vaikuttaa suorituskykyyn. Jos käytät näytönsuojaa, varmista, että se on merkitty yhteensopivaksi näytössä olevan sormenjälkitunnistimen kanssa.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Paksu suojakalvo voi vaikuttaa suorituskykyyn. Jos käytät näytönsuojaa, varmista, että se on merkitty yhteensopivaksi näytössä olevan sormenjälkitunnistimen kanssa.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Varmista, että et käytä näyttösuojaa sormenjälkiä rekisteröitäessä.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Tämä sovellus ei tue Moni-ikkuna-toimintoa.</string>
-    <string name="fingerprint_duplicate_guide_msg">Muuta sormesi paikkaa hieman joka kerta.</string>
+    <string name="fingerprint_duplicate_guide_msg">Muuta sormesi paikkaa joka kerta hieman, jotta saat täydellisen skannauksen.</string>
     <string name="fingerprint_enroll_dont_move">Älä liikuta sormeasi, ennen kuin skannaus on suoritettu loppuun.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Täytä koko ympyrä</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Liikuta sormeasi tunnistimella</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Jos ongelma jatkuu, käynnistä puhelin uudelleen.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Tässä on muutamia asioita, joita voit kokeilla:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Jos ongelma jatkuu, ota yhteyttä asiakaspalveluun.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Varmista, että sormenjälkitunnistin on puhdas ja kuiva, ja yritä uudelleen.</string>
     <string name="fingerprint_error_message_timed_out">Rekisteröinti on aikakatkaistu. Yritä uudelleen.</string>
     <string name="fingerprint_error_title_no_space">Tallennustila ei riitä</string>
     <string name="fingerprint_error_title_not_responding">Sormenjälkilukija ei vastaa</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Valmis</string>
     <string name="fingerprint_register_guide_side_key">Tunnistin on sivupainikkeessa puhelimen oikealla puolella.</string>
     <string name="fingerprint_register_lift_your_finger">Nosta sormesi sormenjälkitunnistimelta.</string>
-    <string name="fingerprint_register_place_your_finger">Siirrä sormea, jotta saat täydellisen skannauksen</string>
+    <string name="fingerprint_register_place_your_finger">Skannaa sormenjälkesi</string>
     <string name="fingerprint_register_success">Sormenjälki lisätty</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Loistavaa! Sormenjälkesi tunnistettiin.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Kosketa sormenjälkitunnistinta.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Skannaa sormenjälkesi.</string>
     <string name="fingerscanner_keyboard_dialog_msg">%1$s ei ole käytettävissä, kun näppäimistön kansi on kiinnitetty. %2$s poistetaan käytöstä.</string>
     <string name="fingerscanner_keyboard_dialog_title">Näpp. kansi kiinnitetty</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Aseta sormesi sormenjälkitunnistimelle ja nosta se sitten ylös.</string>
-    <string name="fingerscanner_register_text">Paina sormellasi tunnistinta ja nosta sormesi ylös, kun tunnet värinän.</string>
+    <string name="fingerscanner_register_text">Aseta sormesi tunnistimelle ja nosta se ylös, kun tunnet värinän.</string>
     <string name="fingerscanner_toast_back_text">Lopeta sormenjäljen lisäys napauttamalla Takaisin-painiketta uudelleen.</string>
     <string name="forgot_password">Salasana unohtunut</string>
     <string name="forgot_password_header">Palautetaanko salasana?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Anna salasana</string>
     <string name="sec_enter_pin_WC">Anna PIN-koodi</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Ota sormenjälkitunnistin käyttöön</string>
-    <string name="sec_fingerprint_always_on_summary">Skannaa sormenjälkesi myös silloin, kun näyttö on sammutettu.</string>
+    <string name="sec_fingerprint_always_on_summary">Aktivoi puhelimesi ja poista sen lukitus koskettamalla sivupainiketta. Ota toiminto käyttöön, jos haluat käyttää puhelinta nopeasti, tai poista toiminto käytöstä, jos haluat välttää vahingossa suoritettuja sormenjälkiskannauksia.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Skannaa sormenjälkesi myös silloin, kun näyttö on sammutettu. Ei ole käytettävissä, kun Samsung DeX on käynnissä.</string>
     <string name="sec_fingerprint_enroll_title">Lisää sormenjälki</string>
     <string name="sec_fingerprint_error_contact_customer_service">Jos ongelma jatkuu, ota yhteyttä asiakaspalveluun.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Nosta puhelin langattomasta laturista ennen sormenjäljen rekisteröintiä.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Sulje puhelin sormenjäljen lisäämisen jatkamista varten.</string>
-    <string name="sec_fingerprint_register_guide_text">Paina sormellasi tunnistinta ja nosta sormesi ylös, kun tunnet värinän.</string>
+    <string name="sec_fingerprint_register_guide_text">Aseta sormesi tunnistimelle ja nosta se ylös, kun tunnet värinän.</string>
     <string name="sec_fingerprint_register_open_phone">Avaa puhelin sormenjäljen lisäämisen jatkamista varten.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Paina sormellasi tunnistinta ja nosta sormesi ylös, kun prosenttimäärä nousee.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Aseta sormesi tunnistimelle ja nosta sormesi ylös, kun prosenttimäärä nousee.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Muuta sormesi paikkaa joka kerta, jotta myös sormenjälkesi reunat tallennetaan.</string>
     <string name="sec_fingerprint_scan_fingerprint">Skannaa sormenjälki.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Kuvake ei näy, kun Samsung DeX on käynnissä.</string>
     <string name="sec_fingerprint_second_guide_title">Skannaa kokonaan</string>
     <string name="sec_fingerprint_sensor">Sormenjälkitunnistin</string>
     <string name="sec_fingerprint_sensor_activated">Sormenjälkitunnistin otettu käyttöön</string>

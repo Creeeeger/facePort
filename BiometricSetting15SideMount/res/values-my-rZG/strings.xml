@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">သက္ဝင္လႈပ္ရွားမႈ</string>
     <string name="fingerprint_custom_icon_title">သေကၤတ</string>
     <string name="fingerprint_dex_toast">သင္၏ အေထာက္အထားကို စစ္ေဆးအတည္ျပဳႏိုင္ရန္ သင့္လက္ေဗြကို အသံုးျပဳပါ။</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ထူေသာ သို႔မဟုတ္ အေရာင္ဆိုးထားေသာ မွန္ကာက စြမ္းေဆာင္ရည္ကို ထိခိုက္ႏိုင္သည္။ မွန္ကာကို အသုံးျပဳပါက ဖန္သားျပင္ေပၚရွိ လက္ေဗြရာအာ႐ုံခံႏွင့္ ၎ကို တြဲဖက္သုံးႏိုင္သည္ဟု ၫႊန္ျပထားေၾကာင္း ေသခ်ာေစရန္ စစ္ေဆးပါ။</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ထူေသာ မွန္ကာက စြမ္းေဆာင္ရည္ကို ထိခိုက္ႏိုင္သည္။ မွန္ကာကို အသုံးျပဳပါက ဖန္သားျပင္ေပၚရွိ လက္ေဗြရာအာ႐ုံခံႏွင့္ ၎ကို တြဲဖက္သုံးႏိုင္သည္ဟု ၫႊန္ျပထားေၾကာင္း ေသခ်ာေစရန္ စစ္ေဆးပါ။</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">လက္ေဗြရာမ်ား စာရင္းသြင္းစဥ္ မွန္ကာကို မသံုးရပါ။</string>
     <string name="fingerprint_doesnt_support_multi_window_text">ဤအက္ပ္က Multi window ကုိ ပံ့ပုိးမေပးပါ။</string>
-    <string name="fingerprint_duplicate_guide_msg">သင့္လက္ေခ်ာင္း အေနအထားကို အေခါက္တိုင္း အနည္းငယ္ ညႇိပါ။</string>
+    <string name="fingerprint_duplicate_guide_msg">တစ္ခုလံုးကို စကန္ဖတ္ႏိုင္ရန္ သင့္လက္ေခ်ာင္းကုိ အႀကိမ္တုိင္း ေနရာအနည္းစီ ေရႊ႕ပါ။</string>
     <string name="fingerprint_enroll_dont_move">စကန္ဖတ္ မၿပီးမခ်င္း သင့္လက္ေခ်ာင္းကို မေျပာင္းေ႐ႊ႕ပါႏွင့္။</string>
     <string name="fingerprint_enroll_first_guide_indisplay">စက္ဝိုင္းတစ္ခုလုံးကို ျဖည့္ပါ</string>
     <string name="fingerprint_enroll_first_guide_subtitle">သင့္လက္ေခ်ာင္းကို အာ႐ုံခံကိရိယာတစ္ဝိုက္ ေျပာင္းေ႐ႊ႕ပါ</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">ဤသုိ႔ ဆက္ျဖစ္ေနပါက သင့္ဖုန္းကုိ ပိတ္ၿပီးျပန္ဖြင့္ပါ။</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">သင္ လုပ္ေဆာင္ၾကည့္ႏိုင္သည့္ အရာအခ်ိဳ႕ကို ေဖာ္ျပလိုက္ပါသည္-</string>
-    <string name="fingerprint_error_message_something_on_sensor">ဤျပႆနာ ဆက္ျဖစ္ေနလွ်င္ ေဖာက္သည္ဝန္ေဆာင္မႈ ဌာနကို ဆက္သြယ္ပါ။</string>
+    <string name="fingerprint_error_message_something_on_sensor">လက္ေဗြ အာ႐ုံခံဆင္ဆာသည္ သန္႔႐ွင္း၍ ေျခာက္ေသြ႔ေနေၾကာင္းေသခ်ာေအာင္ျပဳလုပ္ၿပီး ထပ္မံႀကိဳးစားပါ။</string>
     <string name="fingerprint_error_message_timed_out">မွတ္ပံုတင္ခ်ိန္ေစ့သြားသည္။ ထပ္မံႀကိဳးစားပါ။</string>
     <string name="fingerprint_error_title_no_space">သုိေလွာင္ခန္း မလုံေလာက္ပါ</string>
     <string name="fingerprint_error_title_not_responding">လက္ေဗြရာ အာ႐ုံခံဆင္ဆာ တံု႔ျပန္ျခင္း မရွိပါ</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">ၿပီးပါၿပီ</string>
     <string name="fingerprint_register_guide_side_key">ဆင္ဆာသည္ ဖုန္း၏ညာဘက္ျခမ္းရွိ ေဘးခလုတ္ေပၚတြင္ ရွိသည္။</string>
     <string name="fingerprint_register_lift_your_finger">သင့္လက္ေခ်ာင္းကို လက္ေဗြ ဆင္ဆာေပၚမွ မတင္လိုက္ပါ။</string>
-    <string name="fingerprint_register_place_your_finger">စကန္အျပည့္ ဖတ္ရန္ သင့္လက္ေခ်ာင္း အေနအထားကို ညႇိပါ</string>
+    <string name="fingerprint_register_place_your_finger">သင့္လက္ေဗြကို စကန္ဖတ္ပါ</string>
     <string name="fingerprint_register_success">လက္ေဗြကုိ ထည့္ၿပီးျဖစ္သည္</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">ေကာင္းတာေပါ့! သင့္လက္ေဗြရာကုိ မွတ္မိသည္။</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">လက္ေဗြရာဆင္ဆာကုိ ထိပါ။</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">သင့္လက္ေဗြရာကို စကန္ဖတ္ပါ။</string>
     <string name="fingerscanner_keyboard_dialog_msg">ကီးဘုတ္အဖုံး ပူးတြဲထားစဥ္ %1$s ကို သုံး၍မရႏိုင္ပါ။ %2$s ကို ပိတ္သြားမည္။</string>
     <string name="fingerscanner_keyboard_dialog_title">ကီးဘုတ္အဖုံး ပူးတြဲထားသည္</string>
-    <string name="fingerscanner_lift_your_finger_off_first">သင့္လက္ေခ်ာင္းကို လက္ေဗြဆင္ဆာေပၚတြင္ တင္ၿပီး ၎ကုိ တစ္ဖန္ ျပန္ မလိုက္ပါ။</string>
-    <string name="fingerscanner_register_text">သင့္လက္ေခ်ာင္းကို အာ႐ုံခံကိရိယာေပၚတြင္ တင္လိုက္ပါ ၿပီးေနာက္ တုန္ခါမႈကို ခံစားရေသာအခါ လက္ေခ်ာင္းကို မလိုက္ပါ။</string>
+    <string name="fingerscanner_register_text">သင့္လက္ေခ်ာင္းကို အာ႐ုံခံကိရိယာေပၚတြင္ တင္လိုက္ပါ ၿပီးေနာက္ တုန္ခါမႈ ခံစားရေသာအခါ လက္ေခ်ာင္းကို မလိုက္ပါ။</string>
     <string name="fingerscanner_toast_back_text">သင့္လက္ေဗြရာ ထည့္ျခင္းကို ရပ္ရန္ ေနာက္သို႔ ခလုတ္ကို ထပ္ႏွိပ္ပါ။</string>
     <string name="forgot_password">စကားဝွက္ ေမ့သြားသည္</string>
     <string name="forgot_password_header">စကားဝွက္ ျပန္သတ္မွတ္မလား?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">စကားဝွက္ျဖည့္ပါ</string>
     <string name="sec_enter_pin_WC">PIN ထည့္ပါ</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">လက္ေဗြအာရံုခံ ဆင္ဆာကို ဖြင့္ရန္</string>
-    <string name="sec_fingerprint_always_on_summary">ဖန္သားျပင္ပိတ္သြားခ်ိန္တြင္ပင္ သင့္လက္ေဗြရာကို စကန္ဖတ္ပါ။</string>
+    <string name="sec_fingerprint_always_on_summary">ေဘးခလုတ္ကုိ ႏွိပ္႐ံုျဖင့္ သင့္ဖုန္းကုိ ႏိႈးၿပီး ေလာ့ခ္ဖြင့္ပါ။ အျမန္ ဝင္သံုးစြဲခြင့္အတြက္ ဖြင့္ပါ (သုိ႔) လက္ေဗြရာကုိ မေတာ္တဆ စကန္ဖတ္မိျခင္း မျဖစ္ေစရန္ ပိတ္ပါ။</string>
     <string name="sec_fingerprint_always_on_summary_dex">ဖန္သားျပင္ ပိတ္ထားခ်ိန္တြင္ပင္ သင့္လက္ေဗြရာကို စကန္ဖတ္ပါ။ Samsung DeX လုပ္ေဆာင္ေနခ်ိန္တြင္ မရရွိႏိုင္ပါ။</string>
     <string name="sec_fingerprint_enroll_title">လက္ေဗြရာထည့္ရန္</string>
     <string name="sec_fingerprint_error_contact_customer_service">ဤျပႆနာ ဆက္ျဖစ္ေနလွ်င္ ေဖာက္သည္ဝန္ေဆာင္မႈ ဌာနကို ဆက္သြယ္ပါ။</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">သင့္လက္ေဗြအား မွတ္ပုံမတင္မီ ဖုန္းကို ႀကိဳးမဲ့အားသြင္းခ်ာဂ်ာမွ ျဖဳတ္ပါ။</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">သင့္လက္ေဗြရာကို ဆက္လက္ ထည့္ရန္ သင့္ဖုန္းကို ပိတ္ပါ။</string>
-    <string name="sec_fingerprint_register_guide_text">သင့္လက္ေခ်ာင္းကို အာ႐ုံခံကိရိယာေပၚတြင္ တင္လိုက္ပါ ၿပီးေနာက္ တုန္ခါမႈကို ခံစားရေသာအခါ လက္ေခ်ာင္းကို မလိုက္ပါ။</string>
+    <string name="sec_fingerprint_register_guide_text">သင့္လက္ေခ်ာင္းကို အာ႐ုံခံကိရိယာေပၚတြင္ တင္လိုက္ပါ ၿပီးေနာက္ တုန္ခါမႈ ခံစားရေသာအခါ လက္ေခ်ာင္းကို မလိုက္ပါ။</string>
     <string name="sec_fingerprint_register_open_phone">သင့္လက္ေဗြရာကို ဆက္လက္ စာရင္းသြင္းရန္ သင့္ဖုန္းကို ဖြင့္ပါ။</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">အာ႐ုံခံဆင္ဆာေပၚတြင္ သင့္လက္ေခ်ာင္းကို ႏွိပ္ၿပီးေနာက္ ရာခိုင္ႏႈန္း ျမင့္တက္သြားသည့္အခါ ၎ကို ဖယ္လိုက္ပါ။</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">လက္ေခ်ာင္းကို အာ႐ုံခံေပၚ တင္လိုက္ပါ၊ ရာခိုင္ႏႈန္း ျမင့္တက္လာသည့္အခါ လက္ေခ်ာင္း ဖယ္လိုက္ပါ။</string>
     <string name="sec_fingerprint_register_reposition_your_finger">သင့္လက္ေဗြ အစြန္းမ်ားကို အမိအရ ႐ိုက္ကူးရန္ သင့္လက္ေခ်ာင္းကို အႀကိမ္တိုင္း ေနရာေျပာင္းပါ။</string>
     <string name="sec_fingerprint_scan_fingerprint">လက္ေဗြရာကို စကန္ဖတ္ပါ။</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX လုပ္ေဆာင္ေနခ်ိန္တြင္ သေကၤတကို ျပသမည္ မဟုတ္ပါ။</string>
     <string name="sec_fingerprint_second_guide_title">စကန္အျပည့္ လုပ္ပါ</string>
     <string name="sec_fingerprint_sensor">လက္ေဗြအာ႐ုံခံ ဆင္ဆာ</string>
     <string name="sec_fingerprint_sensor_activated">လက္ေဗြအာ႐ုံခံ ဆင္ဆာကို ဖြင့္ထားသည္</string>

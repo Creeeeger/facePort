@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animazioa</string>
     <string name="fingerprint_custom_icon_title">Ikonoa</string>
     <string name="fingerprint_dex_toast">Zure nortasuna egiaztatzeko, erabili hatz aztarna telefonoan.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Babesle lodiak edo koloretako babesleak eragina izan dezakete errendimenduan. Pantaila babesleren bat erabiltzen baduzu, ziurtatu pantailako hatz aztarnen sentsorea erabil daitekeela ziurtatzen duela etiketan.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Babesle lodiak eragina izan dezakete errendimenduan. Pantaila babesleren bat erabiltzen baduzu, ziurtatu pantailako hatz aztarnen sentsorea erabil daitekeela ziurtatzen duela etiketan.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Ziurtatu ez duzula pantaila estalkirik erabiltzen hatz aztarnak erregistratzean.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Aplikazio honek ez du onartzen Multiwindow eginbidea.</string>
-    <string name="fingerprint_duplicate_guide_msg">Ziurtatu hatzaren posizioa ongi doitzen duzula aldi bakoitzean.</string>
+    <string name="fingerprint_duplicate_guide_msg">Hatz osoa eskaneatzeko, aldatu hatzaren posizioa apur bat aldi bakoitzean.</string>
     <string name="fingerprint_enroll_dont_move">Ez mugitu hatza eskaneatzeko prozesua amaitu arte.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Bete zirkulu osoa</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Mugitu hatza sentsorearen inguruan</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Arazoak badirau, berrabiarazi telefonoa.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Hona hemen proba ditzakezun gauza batzuk:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Arazoak badirau, jarri harremanetan bezeroentzako zerbitzuarekin.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Ziurtatu hatz aztarnen sentsorea garbi eta lehor dagoela, eta saiatu berriz.</string>
     <string name="fingerprint_error_message_timed_out">Erregistroaren denbora muga gainditu da. Saiatu berriz.</string>
     <string name="fingerprint_error_title_no_space">Ez dago behar adina biltegi</string>
     <string name="fingerprint_error_title_not_responding">Hatz aztarnen sentsoreak ez du erantzuten</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Eginda</string>
     <string name="fingerprint_register_guide_side_key">Telefonoaren eskuineko aldean dagoen Alboko botoian dago sentsorea.</string>
     <string name="fingerprint_register_lift_your_finger">Goratu hatza hatz aztarnen sentsoretik.</string>
-    <string name="fingerprint_register_place_your_finger">Doitu hatzaren posizioa hatz osoa eskaneatzeko</string>
+    <string name="fingerprint_register_place_your_finger">Eskaneatu hatz aztarna</string>
     <string name="fingerprint_register_success">Gehitu da hatz aztarna</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Ongi! Ezagutu da zure hatz aztarna.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Ukitu hatz aztarnen sentsorea.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Eskaneatu hatz aztarna.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Ezin da %1$s erabili teklatuaren estalkia erantsita badago. %2$s desgaituko da.</string>
     <string name="fingerscanner_keyboard_dialog_title">Teklat. estalkia erantsita</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Jarri hatza hatz aztarnen sentsorean eta, ondoren, altxa ezazu berriz.</string>
-    <string name="fingerscanner_register_text">Sakatu sentsorea hatzaz eta, ondoren, altxa ezazu bibrazioa nabaritzen duzunean.</string>
+    <string name="fingerscanner_register_text">Jarri hatza sentsorean eta, ondoren, altxa ezazu bibrazioa nabaritzen duzunean.</string>
     <string name="fingerscanner_toast_back_text">Hatz aztarna gehitzeko prozesua gelditzeko, ukitu Atzera botoia berriz.</string>
     <string name="forgot_password">Pasahitza ahaztu zait</string>
     <string name="forgot_password_header">Pasahitza berrezarri?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Adierazi pasahitza</string>
     <string name="sec_enter_pin_WC">Idatzi PINa</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktibatu hatz aztarnen sentsorea</string>
-    <string name="sec_fingerprint_always_on_summary">Eskaneatu hatz aztarna pantaila itzalita badago ere.</string>
+    <string name="sec_fingerprint_always_on_summary">Esnatu eta desblokeatu telefonoa Funtzioa botoia ukituta. Aktiba ezazu bizkor sartzeko, edo desaktiba ezazu hatz aztarnak nahi gabe eskaneatzea saihesteko.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Eskaneatu hatz aztarna pantaila itzalita badago ere. Aukera hori ez dago erabilgarri Samsung DeX abian denean.</string>
     <string name="sec_fingerprint_enroll_title">Gehitu hatz aztarna</string>
     <string name="sec_fingerprint_error_contact_customer_service">Arazoak badirau, jarri harremanetan bezeroentzako zerbitzuarekin.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Hatz aztarna erregistratu aurretik, kendu telefonoa hari gabeko kargagailutik.</string>
     <string name="sec_fingerprint_percent_format">%^1<font size="6"> </font></string>
     <string name="sec_fingerprint_register_close_phone">Itxi telefonoa hatz aztarna erregistratzen jarraitzeko.</string>
-    <string name="sec_fingerprint_register_guide_text">Sakatu sentsorea hatzaz eta, ondoren, altxa ezazu bibrazioa nabaritzen duzunean.</string>
+    <string name="sec_fingerprint_register_guide_text">Jarri hatza sentsorean eta, ondoren, altxa ezazu bibrazioa nabaritzen duzunean.</string>
     <string name="sec_fingerprint_register_open_phone">Ireki telefonoa hatz aztarna erregistratzen jarraitzeko.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Sakatu sentsorea hatzaz eta, ondoren, altxa ezazu ehunekoa igo ahala.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Jarri hatza sentsorean eta, ondoren, altxa ezazu ehunekoa igo ahala.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Aldatu hatzaren posizioa aldi bakoitzean hatz aztarnaren ertzak hautemateko.</string>
     <string name="sec_fingerprint_scan_fingerprint">Eskaneatu hatz aztarna.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX abian denean, ikonoa ez da agertuko.</string>
     <string name="sec_fingerprint_second_guide_title">Eskaneatu dena</string>
     <string name="sec_fingerprint_sensor">Hatz aztarnen sentsorea</string>
     <string name="sec_fingerprint_sensor_activated">Hatz aztarnen sentsorea aktibatu da</string>

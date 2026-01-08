@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Аниматсия</string>
     <string name="fingerprint_custom_icon_title">Нишона</string>
     <string name="fingerprint_dex_toast">Барои шахсияти худро исбот кардан, дар телефон изи ангушти худро истифода баред.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Навори муҳофизатии ғафс ё рангдор метавонад ба самаранокӣ таъсир расонад. Агар муҳофизи экран истифода баред, мутмаин шавед, ки он барои истифода бо сенсори рӯиэкрании изҳои ангуштон мувофиқ аст.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Навори муҳофизатии ғафс метавонад ба самаранокӣ таъсир расонад. Агар муҳофизи экран истифода баред, мутмаин шавед, ки он барои истифода бо сенсори рӯиэкрании изҳои ангуштон мувофиқ аст.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Ҳангоми изҳои ангуштони худро қайд кардан, муҳофизи экран истифода набаред.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Ин барнома намуди Серравзанаро дастгирӣ намекунад.</string>
-    <string name="fingerprint_duplicate_guide_msg">Ҳатман мавқеи ангуштро ҳар дафъа андак иваз кунед.</string>
+    <string name="fingerprint_duplicate_guide_msg">Ҷойгиршавии ангушти худро ҳар гоҳ андак тағйир диҳед, то изи ангушт пурра скан карда шавад.</string>
     <string name="fingerprint_enroll_dont_move">Ангуштро то ба анҷом расидани сканкунӣ наҷунбонед.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Тамоми ҳалқаро пур кунед</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Ангушти худро дар атрофи сенсор ҳаракат диҳед</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Агар ин такрор шудан гирад, телефонро аз нав ба кор дароред.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Дар поён якчанд амале оварда шудааст, ки шояд хаторо ҳал кунанд:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Агар ин мушкилӣ такрор шавад, бо Маркази хизматрасонии муштариён тамос гиред.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Мутмаин шавед, ки сенсори изҳои ангушт тоза ва хушк аст, пас кӯшишро такрор кунед.</string>
     <string name="fingerprint_error_message_timed_out">Муҳлати бақайдгирӣ гузашт. Кӯшишро такрор кунед.</string>
     <string name="fingerprint_error_title_no_space">Захирагоҳ кофӣ нест</string>
     <string name="fingerprint_error_title_not_responding">Сенсори изҳои ангуштон посух намедиҳад</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Тайёр</string>
     <string name="fingerprint_register_guide_side_key">Сенсор дар тугмаи Канорӣ дар канори рости телефон ҷойгир аст.</string>
     <string name="fingerprint_register_lift_your_finger">Ангуштро аз сенсори изҳои ангушт бардоред.</string>
-    <string name="fingerprint_register_place_your_finger">Мавқеи ангуштро дуруст карда, пурра скан кунед</string>
+    <string name="fingerprint_register_place_your_finger">Изи ангушти худро скан кунед</string>
     <string name="fingerprint_register_success">Изи ангушт илова карда шуд</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Олӣ! Изи ангушти шумо шинохта шуд.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Сенсори изи ангуштро бирасед.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Изи ангуштатонро скан кунед.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Ҳангоми часпонида шудани сарпӯши клавиатура %1$s-ро истифода бурда наметавонад. %2$s ғайрифаъол мешавад.</string>
     <string name="fingerscanner_keyboard_dialog_title">Сарп. клав. часп-да шуд</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Ангушти худро ба сенсори изҳои ангушт гузошта, баъд онро такроран бардоред.</string>
-    <string name="fingerscanner_register_text">Сенсорро бо ангушт пахш карда, ҳангоми ларзиш ҳис кардан, ангуштро бардоред.</string>
+    <string name="fingerscanner_register_text">Ангушти худро дар сенсор гузошта, ҳангоми ларзиш ҳис кардан, онро бардоред.</string>
     <string name="fingerscanner_toast_back_text">Барои илова кардани изи ангуштро қатъ кардан, тугмаи Қафоро бори дигар зарба занед.</string>
     <string name="forgot_password">Паролро фаромӯш кардам</string>
     <string name="forgot_password_header">Паролро барқарор кунем?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Паролро дохил кунед</string>
     <string name="sec_enter_pin_WC">ПИН дохил кунед</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Сенсори изи ангуштро фаъол кардан</string>
-    <string name="sec_fingerprint_always_on_summary">Изи ангушти худро ҳатто ҳангоми хомӯш будани экран скан кунед.</string>
+    <string name="sec_fingerprint_always_on_summary">Ангушти худро ба тугмаи Канорӣ гузошта, телефони худро бедор ва озод кунед. Ин функсияро барои дастрасиро зудтар кардан фурӯзон кунед ё онро хомӯш карда, озодкунии нохостро пешгирӣ кунед.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Изи ангушти худро ҳатто ҳангоми хомӯш будани экран скан кунед. Ҳангоми фаъол будани Samsung DeX дастнорас аст.</string>
     <string name="sec_fingerprint_enroll_title">Изи ангушт илова кардан</string>
     <string name="sec_fingerprint_error_contact_customer_service">Агар ин мушкилӣ такрор шавад, бо Маркази хизматрасонии муштариён тамос гиред.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Пеш аз изи ангушт қайд кардан, телефонро аз барқдиҳаки бесим ҷудо кунед.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Барои илова кардани изи ангуштро давом додан, телефонро пӯшед.</string>
-    <string name="sec_fingerprint_register_guide_text">Сенсорро бо ангушт пахш карда, ҳангоми ларзиш ҳис кардан, ангуштро бардоред.</string>
+    <string name="sec_fingerprint_register_guide_text">Ангушти худро дар сенсор гузошта, ҳангоми ларзиш ҳис кардан, онро бардоред.</string>
     <string name="sec_fingerprint_register_open_phone">Барои илова кардани изи ангуштро давом додан, телефонро кушоед.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Сенсорро бо ангушт пахш карда, ҳангоми боло рафтани фоизҳо ангуштро бардоред.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Сенсорро бо ангушт ламс карда, ҳангоми боло рафтани фоизҳо ангуштро бардоред.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Ҳар дафъа ҷойҳои гуногуни ангушти худро гузошта, канорҳои изи ангушти худро скан кунед.</string>
     <string name="sec_fingerprint_scan_fingerprint">Изи ангуштро скан кунед.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ҳангоми фаъол будани Samsung DeX ин нишона нишон дода намешавад.</string>
     <string name="sec_fingerprint_second_guide_title">Ангуштро пурра скан кунед</string>
     <string name="sec_fingerprint_sensor">Сенсори изи ангушт</string>
     <string name="sec_fingerprint_sensor_activated">Сенсори изи ангушт фаъол карда шуд</string>

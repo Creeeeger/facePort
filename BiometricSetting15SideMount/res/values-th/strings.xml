@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">ภาพเคลื่อนไหว</string>
     <string name="fingerprint_custom_icon_title">ไอคอน</string>
     <string name="fingerprint_dex_toast">ใช้ลายนิ้วมือบนโทรศัพท์เพื่อยืนยันตัวตนของคุณ</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ฟิล์มป้องกันที่หนาหรือมีสีอาจกระทบประสิทธิภาพ หากคุณใช้ฟิล์มกันรอย ตรวจสอบว่าเป็นฟิล์มที่ใช้งานร่วมกับเซ็นเซอร์ลายนิ้วมือบนหน้าจอได้</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ฟิล์มกันรอยหนาอาจกระทบประสิทธิภาพ หากคุณใช้ฟิล์มกันรอย ตรวจสอบว่าเป็นฟิล์มที่ใช้งานร่วมกับเซ็นเซอร์ลายนิ้วมือบนหน้าจอได้</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">ตรวจสอบว่าคุณไม่ได้ใช้ฝาปิดหน้าจอขณะที่กำลังลงทะเบียนลายนิ้วมือ</string>
     <string name="fingerprint_doesnt_support_multi_window_text">แอปนี้ไม่รองรับมัลติวินโดว์</string>
-    <string name="fingerprint_duplicate_guide_msg">ตรวจสอบว่าคุณปรับตำแหน่งนิ้วของคุณเล็กน้อยในแต่ละครั้งแล้ว</string>
+    <string name="fingerprint_duplicate_guide_msg">เปลี่ยนตำแหน่งนิ้วมือของคุณเล็กน้อยในแต่ละครั้งเพื่อสแกนให้ได้ทั่วทั้งหมด</string>
     <string name="fingerprint_enroll_dont_move">อย่าขยับนิ้วมือของคุณจนกว่าการสแกนจะเสร็จสมบูรณ์</string>
     <string name="fingerprint_enroll_first_guide_indisplay">ขยับให้เต็มวงกลม</string>
     <string name="fingerprint_enroll_first_guide_subtitle">เลื่อนนิ้วของคุณไปรอบๆ เซ็นเซอร์</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">หากยังเกิดซ้ำ ให้เริ่มโทรศัพท์ของคุณใหม่</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">นี่คือสิ่งที่คุณลองทำได้:</string>
-    <string name="fingerprint_error_message_something_on_sensor">หากยังพบปัญหานี้อยู่ ให้คุณติดต่อฝ่ายลูกค้าสัมพันธ์</string>
+    <string name="fingerprint_error_message_something_on_sensor">ตรวจสอบว่าเซ็นเซอร์ลายนิ้วมือสะอาดและแห้ง แล้วลองอีกครั้ง</string>
     <string name="fingerprint_error_message_timed_out">หมดเวลาการลงทะเบียน ลองอีกครั้ง</string>
     <string name="fingerprint_error_title_no_space">ที่จัดเก็บข้อมูลไม่พอ</string>
     <string name="fingerprint_error_title_not_responding">เซ็นเซอร์ลายนิ้วมือไม่ตอบสนอง</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">เรียบร้อย</string>
     <string name="fingerprint_register_guide_side_key">เซ็นเซอร์อยู่บนปุ่มด้านข้างที่ด้านขวาของโทรศัพท์</string>
     <string name="fingerprint_register_lift_your_finger">ยกนิ้วของคุณออกจากเซ็นเซอร์ลายนิ้วมือ</string>
-    <string name="fingerprint_register_place_your_finger">ปรับตำแหน่งนิ้วของคุณเพื่อให้สแกนได้อย่างทั่วถึง</string>
+    <string name="fingerprint_register_place_your_finger">สแกนลายนิ้วมือของคุณ</string>
     <string name="fingerprint_register_success">เพิ่มลายนิ้วมือแล้ว</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">เยี่ยม! จำแนกลายนิ้วมือของคุณแล้ว</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">แตะเซ็นเซอร์ลายนิ้วมือ</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">สแกนลายนิ้วมือของคุณ</string>
     <string name="fingerscanner_keyboard_dialog_msg">ไม่สามารถใช้ %1$s ขณะสวมที่ปิดแป้นพิมพ์อยู่ %2$s จะถูกปิดใช้งาน</string>
     <string name="fingerscanner_keyboard_dialog_title">ที่ปิดแป้นพิมพ์แนบมาด้วย</string>
-    <string name="fingerscanner_lift_your_finger_off_first">วางนิ้วมือของคุณบนเซ็นเซอร์ลายนิ้วมือแล้วยกออกอีกครั้ง</string>
-    <string name="fingerscanner_register_text">วางนิ้วบนเซ็นเซอร์แล้วยกออกเมื่อรู้สึกถึงการสั่น</string>
+    <string name="fingerscanner_register_text">วางนิ้วบนเซ็นเซอร์ แล้วยกออกเมื่อรู้สึกถึงการสั่น</string>
     <string name="fingerscanner_toast_back_text">แตะปุ่มกลับอีกครั้งเพื่อหยุดการเพิ่มลายนิ้วมือ</string>
     <string name="forgot_password">ลืมรหัสผ่าน</string>
     <string name="forgot_password_header">ต้องการรีเซ็ทรหัสผ่านหรือไม่</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">ใส่รหัสผ่าน</string>
     <string name="sec_enter_pin_WC">ใส่ PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">เปิดใช้เซ็นเซอร์ลายนิ้วมือ</string>
-    <string name="sec_fingerprint_always_on_summary">สแกนลายนิ้วมือของคุณแม้เมื่อหน้าจอปิดอยู่</string>
+    <string name="sec_fingerprint_always_on_summary">ปลุกและปลดล็อกโทรศัพท์ของคุณได้เพียงแค่แตะปุ่มด้านข้าง เปิดใช้งานเพื่อเข้าถึงด่วนหรือปิดเพื่อป้องกันไม่ให้เกิดการสแกนลายนิ้วมือโดยไม่ได้ตั้งใจ</string>
     <string name="sec_fingerprint_always_on_summary_dex">สแกนลายนิ้วมือของคุณแม้เมื่อหน้าจอปิดอยู่ ไม่พร้อมใช้งานเมื่อ Samsung DeX กำลังทำงานอยู่</string>
     <string name="sec_fingerprint_enroll_title">เพิ่มลายนิ้วมือ</string>
     <string name="sec_fingerprint_error_contact_customer_service">หากยังพบปัญหานี้อยู่ ให้คุณติดต่อฝ่ายลูกค้าสัมพันธ์</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">ยกโทรศัพท์ออกจากที่ชาร์จแบบไร้สายก่อนลงทะเบียนลายนิ้วมือของคุณ</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">ปิดโทรศัพท์เพื่อดำเนินการเพิ่มลายนิ้วมือของคุณต่อ</string>
-    <string name="sec_fingerprint_register_guide_text">วางนิ้วบนเซ็นเซอร์แล้วยกออกเมื่อรู้สึกถึงการสั่น</string>
+    <string name="sec_fingerprint_register_guide_text">วางนิ้วบนเซ็นเซอร์ แล้วยกออกเมื่อรู้สึกถึงการสั่น</string>
     <string name="sec_fingerprint_register_open_phone">เปิดโทรศัพท์เพื่อดำเนินการเพิ่มลายนิ้วมือของคุณต่อ</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">วางนิ้วบนเซ็นเซอร์แล้วยกนิ้วออกเมื่อเปอร์เซ็นต์เพิ่มสูงขึ้น</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">วางนิ้วมือบนเซ็นเซอร์แล้วยกนิ้วออกเมื่อเปอร์เซ็นต์เพิ่มสูงขึ้น</string>
     <string name="sec_fingerprint_register_reposition_your_finger">เปลี่ยนตำแหน่งของนิ้วมือทุกครั้งเพื่อให้บันทึกบริเวณขอบแต่ละด้านของลายนิ้วมือได้</string>
     <string name="sec_fingerprint_scan_fingerprint">สแกนลายนิ้วมือ</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">ไอคอนจะไม่แสดงเมื่อ Samsung DeX ทำงานอยู่</string>
     <string name="sec_fingerprint_second_guide_title">รับการสแกนเต็มรูปแบบ</string>
     <string name="sec_fingerprint_sensor">เซ็นเซอร์ลายนิ้วมือ</string>
     <string name="sec_fingerprint_sensor_activated">เปิดใช้งานเซ็นเซอร์ลายนิ้วมือแล้ว</string>

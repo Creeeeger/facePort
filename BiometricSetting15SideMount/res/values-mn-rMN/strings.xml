@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Хөдөлгөөнт зураг</string>
     <string name="fingerprint_custom_icon_title">Дүрс</string>
     <string name="fingerprint_dex_toast">Утсан дээрээ хурууны хээ таних аргаар өөрийгөө таниул.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Зузаан эсвэл өнгөт хамгаалалтын наалт ажиллагаанд нөлөөлж болно. Хэрэв дэлгэцийн хамгаалалт ашиглах гэж байгаа бол энэ нь дэлгэц дээрх хуруу уншуулах мэдрэгчтэй нийцэх тэмдэглэгээтэй эсэхийг шалгана уу.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Зузаан хамгаалалтын наалт ажиллагаанд нөлөөлж болно. Хэрэв дэлгэцийн хамгаалалт ашиглах гэж байгаа бол энэ нь дэлгэц дээрх хуруу уншуулах мэдрэгчтэй нийцэх тэмдэглэгээтэй эсэхийг шалгана уу.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Хурууны хээгээ бүртгүүлэх үед дэлгэцийн хавтас ашиглахгүй байхыг анхаарна уу.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Энэ хэрэглүүр Олон цонхонд тохиромжгүй.</string>
-    <string name="fingerprint_duplicate_guide_msg">Хурууны байрлалаа аажим аажмаар тохируулахыг анхаараарай.</string>
+    <string name="fingerprint_duplicate_guide_msg">Бүтэн уншуулахын тулд хурууныхаа байрлалыг аажмаар бага зэрэг өөрчил.</string>
     <string name="fingerprint_enroll_dont_move">Уншиж дуустал хуруугаа хөдөлгөж болохгүй.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Бүтэн тойргийг дүүргэх</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Хуруугаа мэдрэгч дээр зөөх</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Энэ дахин тохиолдоод байвал утсаа унтрааж асаана уу.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Энд таны туршиж үзэх боломжтой зүйлс:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Хэрэв асуудал үргэлжилсээр байвал Хэрэглэгчийн үйлчилгээтэй холбоо барина уу.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Хурууны хээ мэдрэгч цэвэр бас хуурай эсэхийг нягтлаад дахин оролд.</string>
     <string name="fingerprint_error_message_timed_out">Бүртгэлийн хугацаа дууссан. Дахин оролд.</string>
     <string name="fingerprint_error_title_no_space">Хадгалалт хангалтгүй</string>
     <string name="fingerprint_error_title_not_responding">Хурууны хээ мэдрэгч хариу өгөхгүй байна</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Дууслаа</string>
     <string name="fingerprint_register_guide_side_key">Мэдрэгч утасны баруун талд Тэжээлийн товчлуур дээр байрлана.</string>
     <string name="fingerprint_register_lift_your_finger">Хурууны хээ мэдрэгчээс хуруугаа өргө.</string>
-    <string name="fingerprint_register_place_your_finger">Хурууны байрлалаа тааруулж бүтэн уншуул</string>
+    <string name="fingerprint_register_place_your_finger">Хурууны хээгээ уншуул</string>
     <string name="fingerprint_register_success">Хурууны хээ нэмэгдлээ</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Маш сайн! Хурууны хээг тань таньсан.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Хурууны хээ мэдрэгчид хүр.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Хурууны хээгээ уншуул.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Гарын хавтас залгагдсан үед %1$s-г ашиглах боломжгүй. %2$s идэвхгүй болно.</string>
     <string name="fingerscanner_keyboard_dialog_title">Гарны хавтас залгагдлаа</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Хуруугаа хурууны хээ мэдрэгч дээр байрлуулаад буцааж ав.</string>
-    <string name="fingerscanner_register_text">Хуруугаа мэдрэгч дээр дараад чичиргээ мэдрэх үед авна уу.</string>
+    <string name="fingerscanner_register_text">Хуруугаа мэдрэгч дээр тавиад чичиргээ мэдрэх үедээ авна уу.</string>
     <string name="fingerscanner_toast_back_text">Буцах товчлуурыг дахин товшиж хурууны хээгээ нэмэхийг зогсоо.</string>
     <string name="forgot_password">Нууц үг мартах</string>
     <string name="forgot_password_header">Нууц үг дахин тохируулах уу?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Нууц үг оруул</string>
     <string name="sec_enter_pin_WC">PIN оруул</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Хурууны хээ мэдрэгчийг идэвхжүүлэх</string>
-    <string name="sec_fingerprint_always_on_summary">Дэлгэц хаалттай байх үед ч хурууны хээгээ уншуул.</string>
+    <string name="sec_fingerprint_always_on_summary">Хажуу товчийг л товшиж утасныхаа түгжээг тайлж асаана уу. Түргэн хандалтыг асаах эсвэл санаандгүй байдлаар хурууны хээгээ уншуулахаас сэргийлж унтраана уу.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Дэлгэц унтраалттай байсан ч хурууны хээгээ уншуул. Samsung DeX ажиллаж байх үед ашиглах боломжгүй.</string>
     <string name="sec_fingerprint_enroll_title">Хурууны хээ нэмэх</string>
     <string name="sec_fingerprint_error_contact_customer_service">Хэрэв асуудал үргэлжилсээр байвал Хэрэглэгчийн үйлчилгээтэй холбоо барина уу.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Хурууны хээгээ бүртгүүлэхийн өмнө утсаа утасгүй цэнэглэгчээс ав.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Хурууны хээгээ үргэлжлүүлэн нэмэхийн тулд утсаа хаа.</string>
-    <string name="sec_fingerprint_register_guide_text">Хуруугаа мэдрэгч дээр дараад чичиргээ мэдрэх үед авна уу.</string>
+    <string name="sec_fingerprint_register_guide_text">Хуруугаа мэдрэгч дээр тавиад чичиргээ мэдрэх үедээ авна уу.</string>
     <string name="sec_fingerprint_register_open_phone">Утсаа нээж хурууны хээгээ нэмэхийг үргэлжлүүл.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Хуруугаа мэдрэгч дээр дараад хувь дээшлэх үед авна уу.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Хуруугаа мэдрэгч дээр байрлуулаад, дараа нь хувь нь өсмөгц түүнийг ав.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Хурууны хээний захын зургийг авахын тулд хуруугаа хэд хэдэн удаа байрлуул.</string>
     <string name="sec_fingerprint_scan_fingerprint">Хурууны хээ уншуулах.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX ажиллаж байх үед дүрс харагдахгүй болно.</string>
     <string name="sec_fingerprint_second_guide_title">Бүрэн уншилт авах</string>
     <string name="sec_fingerprint_sensor">Хурууны хээ мэдрэгч</string>
     <string name="sec_fingerprint_sensor_activated">Хурууны хээ мэдрэгч идэвхэжсэн</string>

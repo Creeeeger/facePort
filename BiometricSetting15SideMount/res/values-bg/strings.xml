@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Анимация</string>
     <string name="fingerprint_custom_icon_title">Икона</string>
     <string name="fingerprint_dex_toast">Използвайте пръстов отпечатък на телефона, за да потвърдите самоличността си.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Плътно или оцветено защитно покритие може да повлияе на производителността. Ако използвате протектор за екран, проверете дали е обозначен като съвместим с екранния сензор за пръстови отпечатъци.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Плътно защитно покритие може да повлияе на производителността. Ако използвате протектор за екран, проверете дали е обозначен като съвместим с екранния сензор за пръстови отпечатъци.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Уверете се, че не използвате протектор за екран, докато регистрирате пръстови отпечатъци.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Това приложение не поддържа „Много прозорци“.</string>
-    <string name="fingerprint_duplicate_guide_msg">Уверете се, че всеки път леко регулирате позицията на пръста си.</string>
+    <string name="fingerprint_duplicate_guide_msg">Променяйте позицията на пръста си леко всеки път, за да извършите пълно сканиране.</string>
     <string name="fingerprint_enroll_dont_move">Не мърдайте пръста си, докато сканирането не приключи.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Запълнете целия кръг</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Движете пръста си около сензора</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Ако това продължава да се случва, рестартирайте телефона.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Това са няколко неща, които може да опитате:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Ако този проблем продължава, се свържете с услугите за клиенти.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Уверете се, че сензорът за пръстови отпечатъци е чист и сух, след което опитайте отново.</string>
     <string name="fingerprint_error_message_timed_out">Изтече времето за регистрация. Опитайте отново.</string>
     <string name="fingerprint_error_title_no_space">Няма достатъчно място за съхранение</string>
     <string name="fingerprint_error_title_not_responding">Сензор пръстови отпечатъци не отговаря</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Готово</string>
     <string name="fingerprint_register_guide_side_key">Сензорът е върху страничния бутон отдясно на телефона.</string>
     <string name="fingerprint_register_lift_your_finger">Вдигнете пръста си от сензора за пръстови отпечатъци.</string>
-    <string name="fingerprint_register_place_your_finger">Регул. позицията на пръста си за пълно сканиране</string>
+    <string name="fingerprint_register_place_your_finger">Сканиране на пръстовия отпечатък</string>
     <string name="fingerprint_register_success">Пръстовият отпечатък е добавен</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Страхотно! Пръстовият ви отпечатък е разпознат.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Докоснете сензора за пръстови отпечатъци.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Сканирайте пръстовия си отпечатък.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Не може да използвате %1$s, докато има прикрепен капак на клавиатура. %2$s ще бъде деактивирано.</string>
     <string name="fingerscanner_keyboard_dialog_title">Прикачен капак клавиат.</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Поставете пръста си върху сензора за пръстови отпечатъци, след което го вдигнете отново.</string>
-    <string name="fingerscanner_register_text">Натиснете с пръст върху сензора, след което го вдигнете, когато усетите вибрация.</string>
+    <string name="fingerscanner_register_text">Поставете пръста си върху сензора, след което го вдигнете, когато усетите вибрация.</string>
     <string name="fingerscanner_toast_back_text">Докоснете бутона „Назад“ отново, за да спрете добавянето на пръстов отпечатък.</string>
     <string name="forgot_password">Забравена парола</string>
     <string name="forgot_password_header">Нулиране на паролата?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Въведете парола</string>
     <string name="sec_enter_pin_WC">Въведете PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Активиране на сензора за пръстови отпечатъци</string>
-    <string name="sec_fingerprint_always_on_summary">Сканирайте пръстовия си отпечатък дори когато екранът е изключен.</string>
+    <string name="sec_fingerprint_always_on_summary">Събудете и отключете телефона само чрез докосване на страничния бутон. Включете го за бърз достъп или го изключете, за да избегнете случайно сканиране на пръстовия отпечатък.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Сканирайте пръстовия си отпечатък дори когато екранът е изключен. Не е налице, когато се изпълнява Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">Добав. пръстов отпечатък</string>
     <string name="sec_fingerprint_error_contact_customer_service">Ако този проблем продължава, се свържете с услугите за клиенти.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Свалете телефона от безжичното зарядно, преди да регистрирате пръстовия отпечатък.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Затворете телефона, за да продължите с добавянето на пръстовия си отпечатък.</string>
-    <string name="sec_fingerprint_register_guide_text">Натиснете с пръст върху сензора, след което го вдигнете, когато усетите вибрация.</string>
+    <string name="sec_fingerprint_register_guide_text">Поставете пръста си върху сензора, след което го вдигнете, когато усетите вибрация.</string>
     <string name="sec_fingerprint_register_open_phone">Отворете телефона, за да продължите с добавянето на пръстовия си отпечатък.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Натиснете с пръст върху сензора, след което го вдигнете, когато процентът се увеличи.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Поставете пръст върху сензора, след което го вдигнете, когато процентът се увеличи.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Препозиционирайте пръста си всеки път, за да заснемете краищата на пръстовия отпечатък.</string>
     <string name="sec_fingerprint_scan_fingerprint">Сканирайте пръстовия отпечатък.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Иконата няма да се показва, когато се изпълнява Samsung DeX.</string>
     <string name="sec_fingerprint_second_guide_title">Получаване на пълно сканиране</string>
     <string name="sec_fingerprint_sensor">Сензор за пръстови отпечатъци</string>
     <string name="sec_fingerprint_sensor_activated">Сензорът за пръстови отпечатъци е активиран</string>

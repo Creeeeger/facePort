@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animatsiya</string>
     <string name="fingerprint_custom_icon_title">Ikonacha</string>
     <string name="fingerprint_dex_toast">Shaxsingizni tasdiqlash uchun telefoningizda barmoq izingizdan foydalaning.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Qalin yoki rangli himoya plyonkasi unumdorlikka ta’sir ko‘rsatishi mumkin. Ekran himoya vositasidan foydalansangiz, bu ekrandagi barmoq izi sensori bilan mos ravishda belgilanganligiga ishonch hosil qilish uchun tekshiring.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Qalin himoya plyonkasi unumdorlikka ta’sir ko‘rsatishi mumkin. Ekran himoya vositasidan foydalansangiz, bu ekrandagi barmoq izi sensori bilan mos ravishda belgilanganligiga ishonch hosil qilish uchun tekshiring.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Barmoq izlarini ro‘yxatdan o‘tkazishda ekran qoplamasidan foydalanmayotganingizga ishonch hosil qiling.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Bu ilova Bir nechta oynani qo‘llab-quvvatlanmaydi.</string>
-    <string name="fingerprint_duplicate_guide_msg">Barmoq holatingizni har gal bir oz o‘zgartiring.</string>
+    <string name="fingerprint_duplicate_guide_msg">Barmoq izingizni to‘liq skanerlash uchun har gal barmoq holatini bir oz o‘zgartiring.</string>
     <string name="fingerprint_enroll_dont_move">Skanerlash yakunlangunga qadar barmog‘ingizni qimirlatmang.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Butun doirani to‘ldiring</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Barmog‘ingizni sensor atrofida harakatlantiring</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Ushbu holat davom etsa, telefonni qayta ishga tushiring.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Quyidagilarni sinab ko‘rishingiz mumkin:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Bu muammo davom etsa, Mijozlarga xizmat ko‘rsatish markazi bilan bog‘laning.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Barmoq izi sensori toza va quruq ekanligiga ishonch hosil qiling, so‘ngra qayta urinib ko‘ring.</string>
     <string name="fingerprint_error_message_timed_out">Ro‘yxatga olish vaqti o‘tdi. Qayta urinib ko‘ring.</string>
     <string name="fingerprint_error_title_no_space">Xotira yetarli emas</string>
     <string name="fingerprint_error_title_not_responding">Barmoq izi sensori javob bermayapti</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Bajarildi</string>
     <string name="fingerprint_register_guide_side_key">Sensor telefonning o‘ng tomonidagi Yon tugmada joylashgan.</string>
     <string name="fingerprint_register_lift_your_finger">Barmog‘ingizni barmoq izi sensoridan oling.</string>
-    <string name="fingerprint_register_place_your_finger">Barmoq izi to‘liq skan. u-n brmq hlt. to‘g‘rila</string>
+    <string name="fingerprint_register_place_your_finger">Barmog‘ingiz izini skanerlang</string>
     <string name="fingerprint_register_success">Barmoq izi qo‘shildi</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Ajoyib! Barmoq izi aniqlandi.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Barmoq izi sensoriga teging.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Barmoq izingizni skanerlang.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Klaviatura muqovasi biriktirilgan paytda %1$s-dan foydalanib bo‘lmaydi. %2$s o‘chirildi.</string>
     <string name="fingerscanner_keyboard_dialog_title">Klav. mqv-si birik-gan</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Barmog‘ingizni barmoq izi sensori ustiga qo‘ying, so‘ngra uni yana oling.</string>
-    <string name="fingerscanner_register_text">Barmog‘ingiz bilan sensor ustiga bosing, so‘ngra vibratsiyani his qilganingizda uni oling.</string>
+    <string name="fingerscanner_register_text">Barmog‘ingizni sensor ustiga qo‘ying, so‘ngra vibratsiyani his qilganingizda uni oling.</string>
     <string name="fingerscanner_toast_back_text">Barmoq izingizni qo‘shishni toʻxtatish uchun Orqaga tugmasiga yana teging.</string>
     <string name="forgot_password">Parol esdan chiqdi</string>
     <string name="forgot_password_header">Parol birlamchiga tashlansinmi?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Parol kiriting</string>
     <string name="sec_enter_pin_WC">PIN-kodni kiriting</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Barmoq izi sensorini faollashtirish</string>
-    <string name="sec_fingerprint_always_on_summary">Ekran o‘chiq boʻlsa ham, barmoq izlaringizni skanerlang.</string>
+    <string name="sec_fingerprint_always_on_summary">Yon tugmaga tegish orqali telefoningizni uyg‘oting va blokdan chiqaring. Tezkor kirish uchun yoqing yoki bexosdan barmoq izi skanerlariga tegib ketmaslik uchun o‘chiring.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Ekran oʻchiq boʻlganda ham, barmoq izingizni skanerlang. Samsung DeX ishlayotganda mavjud emas.</string>
     <string name="sec_fingerprint_enroll_title">Barmoq izi qo‘shish</string>
     <string name="sec_fingerprint_error_contact_customer_service">Bu muammo davom etsa, Mijozlarga xizmat ko‘rsatish markazi bilan bog‘laning.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Barmoq izingizni ro‘yxatdan o‘tkazish uchun telefoningizni simsiz zaryadlash qurilmasidan chiqaring.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Barmoq izingizni qo‘shishni davom ettirilishi uchun telefoningizni yoping.</string>
-    <string name="sec_fingerprint_register_guide_text">Barmog‘ingiz bilan sensor ustiga bosing, so‘ngra vibratsiyani his qilganingizda uni oling.</string>
+    <string name="sec_fingerprint_register_guide_text">Barmog‘ingizni sensor ustiga qo‘ying, so‘ngra vibratsiyani his qilganingizda uni oling.</string>
     <string name="sec_fingerprint_register_open_phone">Barmoq izingizni qo‘shish davom ettirilishi uchun telefoningizni oching.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Barmog‘ingiz bilan sensorni bosing, so‘ngra foiz ortganda uni oling.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Barmoqni sensor ustiga qoʻying, foiz yuqorilaganda uni sensordan oling.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Barmoq izining yon tomonidan suratga olish uchun har gal barmoq izini joylashuvini o‘zgartirish.</string>
     <string name="sec_fingerprint_scan_fingerprint">Barmoq izini skanerlang.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX ishlayotganda ikonacha koʻrsatilmaydi.</string>
     <string name="sec_fingerprint_second_guide_title">To‘liq skanerini olish</string>
     <string name="sec_fingerprint_sensor">Barmoq izi sensori</string>
     <string name="sec_fingerprint_sensor_activated">Barmoq izi sensori faollashtirildi</string>

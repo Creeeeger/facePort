@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animasi</string>
     <string name="fingerprint_custom_icon_title">Ikon</string>
     <string name="fingerprint_dex_toast">Guna cap jari pada telefon anda untuk mengesahkan identiti anda.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Filem perlindungan yang tebal atau berwarna boleh menjejaskan prestasi. Jika anda menggunakan pelindung skrin, pastikan pelindung skrin itu dilabelkan sebagai serasi dengan penderia cap jari pada skrin.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Filem perlindungan yang tebal boleh menjejaskan prestasi. Jika anda menggunakan pelindung skrin, pastikan pelindung skrin itu dilabelkan sebagai serasi dengan penderia cap jari pada skrin.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Pastikan anda tidak menggunakan penutup skrin apabila mendaftarkan cap jari.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Aplikasi ini tidak menyokong Berbilang tetingkap.</string>
-    <string name="fingerprint_duplicate_guide_msg">Pastikan anda melaraskan kedudukan jari anda sedikit setiap kali.</string>
+    <string name="fingerprint_duplicate_guide_msg">Ubah kedudukan jari anda sedikit setiap kali untuk mendapatkan imbasan penuh.</string>
     <string name="fingerprint_enroll_dont_move">Jangan gerakkan jari anda sehingga pengimbasan selesai.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Penuhkan keseluruhan bulatan</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Gerakkan jari anda di sekitar penderia</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Jika ini kerap berlaku, mulakan semula telefon anda.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Berikut beberapa perkara yang anda boleh cuba:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Jika masalah ini berterusan, hubungi Perkhidmatan Pelanggan.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Pastikan penderia cap jari bersih dan kering, kemudian cuba lagi.</string>
     <string name="fingerprint_error_message_timed_out">Pendaftaran tamat masa. Cuba lagi.</string>
     <string name="fingerprint_error_title_no_space">Storan tidak mencukupi</string>
     <string name="fingerprint_error_title_not_responding">Penderia cap jari tiada respons</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Selesai</string>
     <string name="fingerprint_register_guide_side_key">Penderia berada pada butang Sisi di sebelah kanan telefon.</string>
     <string name="fingerprint_register_lift_your_finger">Angkat jari anda dari penderia cap jari.</string>
-    <string name="fingerprint_register_place_your_finger">Laras kedudukan jari anda utk dapat imbas penuh</string>
+    <string name="fingerprint_register_place_your_finger">Imbas cap jari anda</string>
     <string name="fingerprint_register_success">Cap jari ditambah</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Hebat! Cap jari anda telah dikenal pasti.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Sentuh penderia cap jari.</string>
@@ -219,7 +219,6 @@
     <string name="fingerprint_verification_description_default_text">Imbas cap jari anda.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Tidak dapat menggunakan %1$s ketika penutup papan kekunci dipasang. %2$s akan dinyahaktifkan.</string>
     <string name="fingerscanner_keyboard_dialog_title">Penutup ppn kknci dipsg</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Letakkan jari anda pada penderia cap jari kemudian angkat semula.</string>
     <string name="fingerscanner_register_text">Letakkan jari anda pada penderia, kemudian angkat jari apabila anda rasa getaran.</string>
     <string name="fingerscanner_toast_back_text">Ketik butang Kembali sekali lagi untuk berhenti menambahkan cap jari anda.</string>
     <string name="forgot_password">Lupa kata laluan</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Masukkan kata laluan</string>
     <string name="sec_enter_pin_WC">Masukkan PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktifkan penderia cap jari</string>
-    <string name="sec_fingerprint_always_on_summary">Imbas cap jari anda walaupun semasa skrin dimatikan.</string>
+    <string name="sec_fingerprint_always_on_summary">Bangunkan dan buka kunci telefon anda dengan hanya menyentuh butang Sisi. Hidupkan untuk capaian pantas atau matikan untuk mengelakkan pengimbasan cap jari secara tidak sengaja.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Imbas cap jari anda walaupun semasa skrin dimatikan. Tidak tersedia apabila Samsung DeX sedang berjalan.</string>
     <string name="sec_fingerprint_enroll_title">Tambah cap jari</string>
     <string name="sec_fingerprint_error_contact_customer_service">Jika masalah ini berterusan, hubungi Perkhidmatan Pelanggan.</string>
@@ -265,7 +264,6 @@
     <string name="sec_fingerprint_register_percentage_goes_up">Letakkan jari anda pada penderia, kemudian angkat jari apabila peratusan meningkat.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Ubah kedudukan jari anda setiap kali untuk menangkap sisi cap jari anda.</string>
     <string name="sec_fingerprint_scan_fingerprint">Imbas cap jari.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ikon tidak akan ditunjukkan semasa Samsung DeX sedang berjalan.</string>
     <string name="sec_fingerprint_second_guide_title">Dapatkan imbasan penuh</string>
     <string name="sec_fingerprint_sensor">Penderia cap jari</string>
     <string name="sec_fingerprint_sensor_activated">Penderia cap jari diaktifkan</string>

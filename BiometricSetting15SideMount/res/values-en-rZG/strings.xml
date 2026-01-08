@@ -83,10 +83,10 @@
     <string name="fingerprint_custom_animation_title">Animation</string>
     <string name="fingerprint_custom_icon_title">Icon</string>
     <string name="fingerprint_dex_toast">Use your fingerprint on your phone to verify your identity.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">"Thick or colored protective film can affect performance. If you use a screen protector, check to make sure it's labeled as compatible with the on-screen fingerprint sensor."</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">"Thick protective film can affect performance. If you use a screen protector, check to make sure it's labeled as compatible with the on-screen fingerprint sensor."</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">"Make sure that you don't use a screen cover while registering fingerprints."</string>
     <string name="fingerprint_doesnt_support_multi_window_text">This app does not support Multi window.</string>
-    <string name="fingerprint_duplicate_guide_msg">Make sure to adjust your finger position slightly each time.</string>
+    <string name="fingerprint_duplicate_guide_msg">Change the position of your finger slightly each time to get a full scan.</string>
     <string name="fingerprint_enroll_guide">Press your finger inside the circle. Lift it when the circle is fully highlighted, then press again.</string>
     <string name="fingerprint_enroll_lift">Lift your finger to continue.</string>
     <string name="fingerprint_enroll_longer">Press a little longer.</string>
@@ -104,7 +104,7 @@
     <string name="fingerprint_error_message_sensor_error">If this keeps happening, restart your phone.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Here are some things you can try:</string>
-    <string name="fingerprint_error_message_something_on_sensor">If this problem continues, contact Customer Service.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Make sure the fingerprint sensor is clean and dry, then try again.</string>
     <string name="fingerprint_error_message_timed_out">Registration timed out. Try again.</string>
     <string name="fingerprint_error_title_no_space">Not enough storage</string>
     <string name="fingerprint_error_title_not_responding">"Fingerprint sensor isn't responding"</string>
@@ -122,7 +122,7 @@
     <string name="fingerprint_register_done">Done</string>
     <string name="fingerprint_register_guide_side_key">The sensor is on the Side button on the right side of the phone.</string>
     <string name="fingerprint_register_lift_your_finger">Lift your finger off the fingerprint sensor.</string>
-    <string name="fingerprint_register_place_your_finger">Adjust your finger position to get a full scan</string>
+    <string name="fingerprint_register_place_your_finger">Scan your fingerprint</string>
     <string name="fingerprint_register_success">Fingerprint added</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Great! Your fingerprint was recognized.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Touch the fingerprint sensor.</string>
@@ -176,8 +176,7 @@
     <string name="fingerprint_verification_description_default_text">Scan your fingerprint.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Unable to use %1$s while the keyboard cover is attached. %2$s will be disabled.</string>
     <string name="fingerscanner_keyboard_dialog_title">Keyboard cover attached</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Place your finger on the fingerprint sensor, then lift it off again.</string>
-    <string name="fingerscanner_register_text">Press your finger on the sensor, then lift it off when you feel a vibration.</string>
+    <string name="fingerscanner_register_text">Place your finger on the sensor, then lift it off when you feel a vibration.</string>
     <string name="fingerscanner_toast_back_text">Tap the Back button again to stop adding your fingerprint.</string>
     <string name="forgot_password">Forgot password</string>
     <string name="forgot_password_header">Reset password?</string>
@@ -203,7 +202,7 @@
     <string name="sec_enter_password_WC">Enter password</string>
     <string name="sec_enter_pin_WC">Enter PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Activate fingerprint sensor</string>
-    <string name="sec_fingerprint_always_on_summary">Scan your fingerprint even when the screen is off.</string>
+    <string name="sec_fingerprint_always_on_summary">Wake and unlock your phone just by touching the Side button. Turn on for quick access, or turn off to avoid accidental fingerprint scans.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Scan your fingerprint even when the screen is off. Not available when Samsung DeX is running.</string>
     <string name="sec_fingerprint_enroll_title">Add fingerprint</string>
     <string name="sec_fingerprint_error_contact_customer_service">If this problem continues, contact Customer Service.</string>
@@ -213,12 +212,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Take your phone off the wireless charger before registering your fingerprint.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Close your phone to continue adding your fingerprint.</string>
-    <string name="sec_fingerprint_register_guide_text">Press your finger on the sensor, then lift it off when you feel a vibration.</string>
+    <string name="sec_fingerprint_register_guide_text">Place your finger on the sensor, then lift it off when you feel a vibration.</string>
     <string name="sec_fingerprint_register_open_phone">Open your phone to continue adding your fingerprint.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Press your finger on the sensor, then lift it off when the percentage goes up.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Place your finger on the sensor, then lift it off when the percentage goes up.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Reposition your finger each time to capture the edges of your fingerprint.</string>
     <string name="sec_fingerprint_scan_fingerprint">Scan fingerprint.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">"The icon won't show when Samsung DeX is running."</string>
     <string name="sec_fingerprint_second_guide_title">Get a full scan</string>
     <string name="sec_fingerprint_sensor">Fingerprint sensor</string>
     <string name="sec_fingerprint_sensor_activated">Fingerprint sensor activated</string>

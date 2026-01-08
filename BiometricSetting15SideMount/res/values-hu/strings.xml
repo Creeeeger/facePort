@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animáció</string>
     <string name="fingerprint_custom_icon_title">Ikon</string>
     <string name="fingerprint_dex_toast">Személyazonosságát ujjlenyomatával igazolhatja a telefonon.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">A vastag vagy színes kijelzővédő csökkentheti a teljesítményt. Ha kijelzővédőt használ, győződjön meg róla, kompatibilis a képernyőbe épített ujjlenyomat-olvasóval.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">A vastag kijelzővédő csökkentheti a teljesítményt. Ha kijelzővédőt használ, győződjön meg róla, kompatibilis a képernyőbe épített ujjlenyomat-olvasóval.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Ügyeljen rá, hogy az ujjlenyomatok regisztrálásakor ne legyen kijelzővédő az eszközön.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Az alkalmazás nem támogatja a Több ablak funkciót.</string>
-    <string name="fingerprint_duplicate_guide_msg">Minden alkalommal változtasson egy kicsit az ujja helyzetén.</string>
+    <string name="fingerprint_duplicate_guide_msg">A teljes beolvasáshoz mindig egy kicsit máshogy tegye az ujját az olvasóra.</string>
     <string name="fingerprint_enroll_dont_move">A beolvasás befejezéséig ne mozgassa az ujját.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Töltse ki az egész kört</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Mozgassa ujját az érzékelőn</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Ha ez nem szűnik meg, indítsa újra a telefont.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Itt láthat néhány olyan dolgot, amelyeket érdemes kipróbálni:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Ha a probléma nem szűnik meg, forduljon az ügyfélszolgálathoz.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Tisztítsa és szárítsa meg az ujjlenyomat-érzékelőt, majd próbálja újra.</string>
     <string name="fingerprint_error_message_timed_out">A regisztráció túllépte az időkorlátot. Próbálja meg újra.</string>
     <string name="fingerprint_error_title_no_space">Nincs elég tárhely</string>
     <string name="fingerprint_error_title_not_responding">Az ujjlenyomat-érzékelő nem válaszol</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Kész</string>
     <string name="fingerprint_register_guide_side_key">Az érzékelő a telefon jobb oldalán lévő Oldalsó gombon található.</string>
     <string name="fingerprint_register_lift_your_finger">Emelje fel az ujját az ujjlenyomat-érzékelőről.</string>
-    <string name="fingerprint_register_place_your_finger">A teljes beolvasáshoz tegye rá máshogy az ujját</string>
+    <string name="fingerprint_register_place_your_finger">Olvassa le az ujjlenyomatát</string>
     <string name="fingerprint_register_success">Ujjlenyomat hozzáadva</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Nagyszerű! A rendszer felismerte ujjlenyomatát.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Érintse meg az ujjlenyomat-érzékelőt.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Olvassa le az ujjlenyomatát.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Felhelyezett billentyűzetes tok mellett a(z) %1$s nem használható. A(z) %2$s kikapcsol.</string>
     <string name="fingerscanner_keyboard_dialog_title">Billentyűzetes tokban</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Helyezze az ujját az ujjlenyomat-érzékelőre, majd emelje fel róla.</string>
-    <string name="fingerscanner_register_text">Nyomja az ujját az érzékelőre, majd emelje fel róla, amikor rezgést érez.</string>
+    <string name="fingerscanner_register_text">Helyezze az ujját az érzékelőre, majd emelje fel róla, amikor rezgést érez.</string>
     <string name="fingerscanner_toast_back_text">A Vissza gomb újbóli megérintésével leállíthatja az ujjlenyomat hozzáadását.</string>
     <string name="forgot_password">Elfelejtett jelszó</string>
     <string name="forgot_password_header">Visszaállítja a jelszót?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Adja meg a jelszót</string>
     <string name="sec_enter_pin_WC">PIN megadása</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Ujjlenyomat-érzékelő aktiválása</string>
-    <string name="sec_fingerprint_always_on_summary">Ujjlenyomata beolvasása akkor is, amikor a képernyő ki van kapcsolva.</string>
+    <string name="sec_fingerprint_always_on_summary">Felébresztheti és feloldhatja a telefont csupán az Oldalsó gomb megérintésével. A gyors hozzáféréshez kapcsolja be, ha azonban szeretné elkerülni a véletlen ujjlenyomat-olvasást, akkor kapcsolja ki.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Ujjlenyomata beolvasása akkor is, amikor a képernyő ki van kapcsolva. Nem áll rendelkezésre, amikor a Samsung DeX fut.</string>
     <string name="sec_fingerprint_enroll_title">Ujjlenyomat hozzáadása</string>
     <string name="sec_fingerprint_error_contact_customer_service">Ha a probléma nem szűnik meg, forduljon az ügyfélszolgálathoz.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Ujjlenyomata regisztrálása előtt vegye le a telefont a vezeték nélküli töltőről.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Az ujjlenyomat hozzáadásának folytatása előtt csukja be a telefont.</string>
-    <string name="sec_fingerprint_register_guide_text">Nyomja az ujját az érzékelőre, majd emelje fel róla, amikor rezgést érez.</string>
+    <string name="sec_fingerprint_register_guide_text">Helyezze az ujját az érzékelőre, majd emelje fel róla, amikor rezgést érez.</string>
     <string name="sec_fingerprint_register_open_phone">Az ujjlenyomat hozzáadásának folytatása előtt nyissa ki a telefont.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Nyomja az ujját az érzékelőre, majd emelje fel róla. Ekkor a százalékos érték növekszik.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Tegye az ujját az érzékelőre, majd emelje fel róla. Ekkor a százalékos érték növekszik.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Minden leolvasásánál mozdítsa el egy kicsit az ujját, hogy a rendszer regisztrálhassa az ujjlenyomata széleit is.</string>
     <string name="sec_fingerprint_scan_fingerprint">Olvassa le ujjlenyomatát.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Az ikon nem fog megjelenni, amikor a Samsung DeX fut.</string>
     <string name="sec_fingerprint_second_guide_title">Teljes beolvasás</string>
     <string name="sec_fingerprint_sensor">Ujjlenyomat-érzékelő</string>
     <string name="sec_fingerprint_sensor_activated">Ujjlenyomat-érzékelő aktiválva</string>

@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animācija</string>
     <string name="fingerprint_custom_icon_title">Ikona</string>
     <string name="fingerprint_dex_toast">Izmantojiet savu pirksta nospiedumu savā tālrunī, lai verificētu savu identitāti.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Bieza vai krāsaina aizsargplēve var ietekmēt veiktspēju. Ja izmantojat ekrāna aizsargu, pārbaudiet, vai tas ir marķēts kā saderīgs ar ekrānā redzamo pirkstu nospiedumu sensoru.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Bieza aizsargplēve var ietekmēt veiktspēju. Ja izmantojat ekrāna aizsargu, pārbaudiet, vai tas ir marķēts kā saderīgs ar ekrānā redzamo pirkstu nospiedumu sensoru.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Pirkstu nospiedumu reģistrēšanas laikā neizmantojiet ekrāna pārsegu.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Šī programma neatbalsta vairāklogu skatu.</string>
-    <string name="fingerprint_duplicate_guide_msg">Katru reizi nedaudz pielāgojiet pirksta pozīciju.</string>
+    <string name="fingerprint_duplicate_guide_msg">Lai iegūtu pilnu skenējumu, katru reizi mazliet mainiet pirksta novietojumu.</string>
     <string name="fingerprint_enroll_dont_move">Nekustiniet pirkstu, kamēr skenēšana nav pabeigta.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Aizpildiet visu apli</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Pārvietojiet pirkstu ap sensoru</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Ja tā notiek atkārtoti, restartējiet tālruni.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Lūk, dažas darbības, ko varat veikt:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Ja problēmu neizdodas novērst, sazinieties ar klientu apkalpošanas centru.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Pārliecinieties, vai pirkstu nospiedumu sensors ir tīrs un sauss, pēc tam mēģiniet vēlreiz.</string>
     <string name="fingerprint_error_message_timed_out">Iestājās reģistrācijas taimauts. Mēģiniet vēlreiz.</string>
     <string name="fingerprint_error_title_no_space">Krātuvē nepietiek vietas</string>
     <string name="fingerprint_error_title_not_responding">Pirkstu nospiedumu sensors nereaģē</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Gatavs</string>
     <string name="fingerprint_register_guide_side_key">Sensors atrodas uz sānu pogas tālruņa labajā pusē.</string>
     <string name="fingerprint_register_lift_your_finger">Noņemiet pirkstu no pirkstu nospiedumu sensora.</string>
-    <string name="fingerprint_register_place_your_finger">Pielāg. pirksta pozīciju, lai noskenētu pilnībā</string>
+    <string name="fingerprint_register_place_your_finger">Skenējiet savu pirksta nospiedumu</string>
     <string name="fingerprint_register_success">Pirksta nospiedums ir pievienots</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Lieliski! Jūsu pirksta nospiedums tika atpazīts.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Pieskarieties pirksta nospieduma sensoram.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Skenējiet savu pirksta nospiedumu.</string>
     <string name="fingerscanner_keyboard_dialog_msg">%1$s nevar lietot, kamēr ir pievienots tastatūras pārsegs. %2$s tiks deaktivizēts.</string>
     <string name="fingerscanner_keyboard_dialog_title">Piestipr. tast. pārsegs</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Novietojiet pirkstu uz pirkstu nospiedumu sensora un pēc tam noņemiet to.</string>
-    <string name="fingerscanner_register_text">Piespiediet pirkstu pie sensora un, kad sajūtat vibrāciju, noņemiet to.</string>
+    <string name="fingerscanner_register_text">Uzlieciet pirkstu uz sensora, un, kad sajūtat vibrāciju, noņemiet to.</string>
     <string name="fingerscanner_toast_back_text">Lai pārtrauktu pirksta nospieduma pievienošanu, pieskarieties vēlreiz pogai Atpakaļ.</string>
     <string name="forgot_password">Aizmirsu paroli</string>
     <string name="forgot_password_header">Vai atiestatīt paroli?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Ievadiet paroli</string>
     <string name="sec_enter_pin_WC">Ievadiet PIN kodu</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktivizēt pirkstu nospiedumu sensoru</string>
-    <string name="sec_fingerprint_always_on_summary">Skenējiet pirksta nospiedumu pat tad, ja ekrāns ir izslēgts.</string>
+    <string name="sec_fingerprint_always_on_summary">Aktivizējiet un atbloķējiet tālruni, pieskaroties sānu pogai. Ieslēdziet ātro piekļuvi vai izslēdziet, lai neveiktu nejaušu pirkstu nospiedumu skenēšanu.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Skenējiet pirksta nospiedumu pat tad, ja ekrāns ir izslēgts. Šī funkcija nav pieejama, kad darbojas Samsung DeX režīms.</string>
     <string name="sec_fingerprint_enroll_title">Piev. pirksta nospiedumu</string>
     <string name="sec_fingerprint_error_contact_customer_service">Ja problēmu neizdodas novērst, sazinieties ar klientu apkalpošanas centru.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Pirms pirksta nospieduma reģistrēšanas noņemiet tālruni no bezvadu lādētāja.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Aizveriet tālruni, lai turpinātu sava pirksta nospieduma pievienošanu.</string>
-    <string name="sec_fingerprint_register_guide_text">Piespiediet pirkstu pie sensora un, kad sajūtat vibrāciju, noņemiet to.</string>
+    <string name="sec_fingerprint_register_guide_text">Uzlieciet pirkstu uz sensora, un, kad sajūtat vibrāciju, noņemiet to.</string>
     <string name="sec_fingerprint_register_open_phone">Atveriet tālruni, lai turpinātu sava pirksta nospieduma pievienošanu.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Piespiediet pirkstu pie sensora un, kad procentu skaits palielinās, noņemiet to.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Uzlieciet pirkstu uz sensora un, kad procentu skaits palielinās, noņemiet to.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Ik reizi pārvietojiet pirkstu, lai tvertu pirksta nospieduma malas.</string>
     <string name="sec_fingerprint_scan_fingerprint">Skenējiet pirksta nospiedumu.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ikona netiks rādīta, kad darbosies Samsung DeX režīms.</string>
     <string name="sec_fingerprint_second_guide_title">Iegūt pilnu skenējumu</string>
     <string name="sec_fingerprint_sensor">Pirkstu nospiedumu sensors</string>
     <string name="sec_fingerprint_sensor_activated">Pirkstu nospiedumu sensors ir aktivizēts</string>

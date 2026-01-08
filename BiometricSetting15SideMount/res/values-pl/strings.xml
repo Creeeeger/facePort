@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animacja</string>
     <string name="fingerprint_custom_icon_title">Ikona</string>
     <string name="fingerprint_dex_toast">Użyj odcisku palca w telefonie do weryfikacji tożsamości.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Gruba lub kolorowa folia ochronna może wpływać na wydajność. Jeśli używasz osłony ekranu, upewnij się, że jest ona oznaczona jako zgodna z czujnikiem odcisków palców.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Gruba folia ochronna może wpływać na wydajność. Jeśli używasz osłony ekranu, upewnij się, że jest ona oznaczona jako zgodna z czujnikiem odcisków palców.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Upewnij się, że na ekranie nie ma osłony, kiedy rejestrujesz odciski palców.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Ta aplikacja nie obsługuje funkcji Wiele okien.</string>
-    <string name="fingerprint_duplicate_guide_msg">Pamiętaj o dostosowaniu pozycji palca powoli za każdym razem.</string>
+    <string name="fingerprint_duplicate_guide_msg">Zmieniaj nieco położenie palca, aby uzyskać pełny skan.</string>
     <string name="fingerprint_enroll_dont_move">Nie poruszaj palcem, dopóki skanowanie nie zostanie zakończone.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Zakryj cały okrąg</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Przesuń palcem wokół czujnika</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Jeśli problem nie ustępuje, uruchom telefon ponownie.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Oto kilka rzeczy, które możesz wypróbować:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Jeśli problem wciąż występuje, skontaktuj się z Obsługą klienta.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Sprawdź, czy czujnik odcisków palców jest czysty i suchy, a następnie spróbuj ponownie.</string>
     <string name="fingerprint_error_message_timed_out">Limit czasu na rejestrację upłynął. Spróbuj ponownie.</string>
     <string name="fingerprint_error_title_no_space">Za mało pamięci</string>
     <string name="fingerprint_error_title_not_responding">Czujnik odcisków palców nie reaguje</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Gotowe</string>
     <string name="fingerprint_register_guide_side_key">Czujnik znajduje się na przycisku bocznym z prawej strony telefonu.</string>
     <string name="fingerprint_register_lift_your_finger">Unieś palec znad czujnika odcisków palców.</string>
-    <string name="fingerprint_register_place_your_finger">Dostosuj pozycję palca, aby uzyskać pełne skanowanie.</string>
+    <string name="fingerprint_register_place_your_finger">Skanowanie odcisku palca</string>
     <string name="fingerprint_register_success">Dodano odcisk palca</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Świetnie! Twój odcisk palca został rozpoznany.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Dotknij czujnika odcisku palca.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Zeskanuj odcisk palca.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Nie można używać funkcji %1$s, kiedy klawiatura zewnętrzna jest dołączona. Funkcja %2$s zostanie wyłączona.</string>
     <string name="fingerscanner_keyboard_dialog_title">Dołączono klawiaturę</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Umieść palec na czujniku odcisków palców, a następnie ponownie podnieś palec.</string>
-    <string name="fingerscanner_register_text">Naciśnij palcem czujnik, a następnie podnieś palec, kiedy poczujesz wibrację.</string>
+    <string name="fingerscanner_register_text">Umieść palec na czujniku, a następnie podnieś go, kiedy poczujesz wibrację.</string>
     <string name="fingerscanner_toast_back_text">Dotknij ponownie przycisku Wstecz, aby anulować dodawanie odcisku palca.</string>
     <string name="forgot_password">Przypomnij hasło</string>
     <string name="forgot_password_header">Zresetować hasło?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Wprowadź hasło</string>
     <string name="sec_enter_pin_WC">Wprowadź kod PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktywuj czujnik odcisku palca</string>
-    <string name="sec_fingerprint_always_on_summary">Możesz zeskanować odcisk palca, nawet, gdy ekran jest wyłączony.</string>
+    <string name="sec_fingerprint_always_on_summary">Wybudź i odblokuj telefon, dotykając przycisku bocznego. Włącz, aby zyskać szybki dostęp, lub wyłącz, aby uniknąć przypadkowego skanowania linii papilarnych.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Możesz zeskanować odcisk palca, nawet gdy ekran jest wyłączony. Funkcja niedostępna, gdy działa Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">Dodaj odcisk palca</string>
     <string name="sec_fingerprint_error_contact_customer_service">Jeśli problem wciąż występuje, skontaktuj się z Obsługą klienta.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Odłącz telefon od ładowarki bezprzewodowej, zanim zarejestrujesz odcisk palca.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Zamknij telefon, aby kontynuować dodawanie odcisku palca.</string>
-    <string name="sec_fingerprint_register_guide_text">Naciśnij palcem czujnik, a następnie podnieś palec, kiedy poczujesz wibrację.</string>
+    <string name="sec_fingerprint_register_guide_text">Umieść palec na czujniku, a następnie podnieś go, kiedy poczujesz wibrację.</string>
     <string name="sec_fingerprint_register_open_phone">Otwórz telefon, aby kontynuować dodawanie odcisku palca.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Naciśnij palcem czujnik, a następnie podnieś palec, gdy wartość procentowa wzrośnie.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Przyłóż palec do czujnika, a następnie podnieś palec, gdy wartość procentowa wzrośnie.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Zmień położenie palca za każdym razem, aby przechwycić krawędzie odcisku palca.</string>
     <string name="sec_fingerprint_scan_fingerprint">Skanuj odcisk palca.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ikona nie wskaże działającego Samsung DeX.</string>
     <string name="sec_fingerprint_second_guide_title">Uzyskiwanie pełnego skanu</string>
     <string name="sec_fingerprint_sensor">Czujnik odcisku palca</string>
     <string name="sec_fingerprint_sensor_activated">Aktywowano czujnik odcisku palca</string>

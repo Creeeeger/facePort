@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Beochan</string>
     <string name="fingerprint_custom_icon_title">Íocón</string>
     <string name="fingerprint_dex_toast">"Úsáid do mhéarlorg ar d'fhón le d'aitheantas a fhíorú."</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Is féidir le sceo cosanta tiubh nó daite cur isteach ar an bhfeidhmíocht. Má úsáideann tú cosantóir scáileáin, seiceáil go bhfuil sé lipéadaithe le bheith comhoiriúnach leis an mbraiteoir méarloirg ar scáileán.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Is féidir le sceo cosanta tiubh cur isteach ar an bhfeidhmíocht. Má úsáideann tú cosantóir scáileáin, seiceáil go bhfuil sé lipéadaithe le bheith comhoiriúnach leis an mbraiteoir méarloirg ar scáileán.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Cinntigh nach n-úsáideann tú clúdach scáileáin nuair a chláraíonn tú méarloirg.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">"Níl tacú san fheidhmchlár seo d'Ilfhuinneoga."</string>
-    <string name="fingerprint_duplicate_guide_msg">Cinntigh go n-athróidh tú suíomh do mhéire beagán gach uair.</string>
+    <string name="fingerprint_duplicate_guide_msg">Athraigh suíomh do mhéire beagáinín gach uair le scanadh iomlán a fháil.</string>
     <string name="fingerprint_enroll_dont_move">Ná bog do mhéar go dtí go mbeidh an scanadh curtha i gcrích.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Líon an ciorcal iomlán</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Bog do mhéar timpeall an bhraiteora</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">"Má leanann sé seo ar aghaidh, atosaigh d'fhón."</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Seo a leanas roinnt rudaí is féidir leat a thriail:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Má leanann an fhadhb seo, déan teagmháil le Seirbhís do Chustaiméirí.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Cinntigh go bhfuil an braiteoir méarloirg glan agus tirim, ansin triail arís.</string>
     <string name="fingerprint_error_message_timed_out">Tá an t-am istigh don chlárú. Triail arís.</string>
     <string name="fingerprint_error_title_no_space">Easpa stórais</string>
     <string name="fingerprint_error_title_not_responding">Níl an braiteoir méarloirg ag freagairt</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Déanta</string>
     <string name="fingerprint_register_guide_side_key">Tá an braiteoir ar an Taobhchnaipe ar an taobh deas den fhón.</string>
     <string name="fingerprint_register_lift_your_finger">Ardaigh do mhéar den bhraiteoir méarloirg.</string>
-    <string name="fingerprint_register_place_your_finger">Athr. suíomh do mhéire le scanadh iomlán a fháil</string>
+    <string name="fingerprint_register_place_your_finger">Scan do mhéarlorg</string>
     <string name="fingerprint_register_success">Méarlorg curtha leis</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Iontach! Aithníodh do mhéarlorg.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Tadhaill an braiteoir méarloirg.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Scan do mhéarlorg.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Ní féidir %1$s a úsáid agus an clúdach eochairchláir ceangailte. Díchumasófar %2$s.</string>
     <string name="fingerscanner_keyboard_dialog_title">Clúdach e.chláir suite</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Cuir do mhéar ar an mbraiteoir méarloirg, ansin ardaigh arís í.</string>
-    <string name="fingerscanner_register_text">Brúigh do mhéar ar an mbraiteoir, ansin ardaigh arís í nuair a bhraitheann tú crith.</string>
+    <string name="fingerscanner_register_text">Cuir do mhéar ar an mbraiteoir méarloirg, ansin ardaigh arís í nuair a bhraitheann tú crith.</string>
     <string name="fingerscanner_toast_back_text">Tapáil an eochair Siar arís le cur do mhéarloirg a scor.</string>
     <string name="forgot_password">Pasfhocal dearmadta</string>
     <string name="forgot_password_header">Athshocraigh pasfhocal?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Iontráil pasfhocal</string>
     <string name="sec_enter_pin_WC">Iontráil PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Cuir an braiteoir méarloirg i gníomh</string>
-    <string name="sec_fingerprint_always_on_summary">Scan do mhéarlorg fiú agus an scáileán as.</string>
+    <string name="sec_fingerprint_always_on_summary">"Múscail d'fhón agus díghlasáil é tríd an Taobhchnaipe a thadhall. Cas air é le mear-rochtain a fháil, nó cas as é le scanadh méarloirg de thaisme a sheachaint."</string>
     <string name="sec_fingerprint_always_on_summary_dex">Scan do mhéarlorg fiú agus an scáileán casta as. Ní bhíonn sé seo ar fáil nuair a bhíonn Samsung DeX á rith.</string>
     <string name="sec_fingerprint_enroll_title">Cuir méarlorg leis</string>
     <string name="sec_fingerprint_error_contact_customer_service">Má leanann an fhadhb seo, déan teagmháil le Seirbhís do Chustaiméirí.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">"Bain d'fhón den luchtaire gan sreang sula gcláróidh tú do mhéarlorg."</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">"Dún d'fhón le leanúint le do mhéarlorg a chur leis."</string>
-    <string name="sec_fingerprint_register_guide_text">Brúigh do mhéar ar an mbraiteoir, ansin ardaigh arís í nuair a bhraitheann tú crith.</string>
+    <string name="sec_fingerprint_register_guide_text">Cuir do mhéar ar an mbraiteoir méarloirg, ansin ardaigh arís í nuair a bhraitheann tú crith.</string>
     <string name="sec_fingerprint_register_open_phone">"Oscail d'fhón le leanúint le do mhéarlorg a chur leis."</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Brúigh do mhéar ar an mbraiteoir méarloirg, ansin ardaigh arís í nuair a mhéadaíonn an céatadán.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Cuir do mhéar ar an mbraiteoir, ansin ardaigh arís í nuair a mhéadaíonn an céatadán.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Athraigh suíomh do mhéire gach uair le himill do mhéarloirg a ghabháil.</string>
     <string name="sec_fingerprint_scan_fingerprint">Scan méarlorg.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ní thaispeántar an t-íocón nuair a bhíonn Samsung DeX á rith.</string>
     <string name="sec_fingerprint_second_guide_title">Faigh scanadh iomlán</string>
     <string name="sec_fingerprint_sensor">Braiteoir méarloirg</string>
     <string name="sec_fingerprint_sensor_activated">Braiteoir méarloirg curtha i gníomh</string>

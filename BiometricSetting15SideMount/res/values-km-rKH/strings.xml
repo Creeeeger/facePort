@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">ជីវចល</string>
     <string name="fingerprint_custom_icon_title">អាយខុន</string>
     <string name="fingerprint_dex_toast">ប្រើ​ខ្ចៅដៃ​របស់​អ្នក​លើ​ទូរសព្ទ​របស់​អ្នក ដើម្បី​ផ្ទៀងផ្ទាត់​អត្តសញ្ញាណ​របស់​អ្នក។</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ហ្វីល​ការពារ​ក្រាស់​ឬ​មាន​ពណ៌​អាច​ប៉ះពាល់​ដល់​ប្រសិទ្ធផល។ បើ​អ្នក​ប្រើ​ស្គ្រីន​ការពារ​អេក្រង់ សូម​ពិនិត្យ​ដើម្បី​ឲ្យ​ប្រាកដ​ថា វា​ត្រូវ​បាន​ដាក់​ស្លាក​ថា​ត្រូវគ្នា​ជាមួយ​សិនសឺ​ខ្ចៅដៃ​លើអេក្រង់។</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ហ្វីល​ការពារ​ក្រាស់​អាច​ប៉ះពាល់​ដល់​ប្រសិទ្ធផល។ បើ​អ្នក​ប្រើ​ស្គ្រីន​ការពារ​អេក្រង់ សូម​ពិនិត្យ​ដើម្បី​ឲ្យ​ប្រាកដ​ថា វា​ត្រូវ​បាន​ដាក់​ស្លាក​ថា​ត្រូវគ្នា​ជាមួយ​សិនសឺ​ខ្ចៅដៃ​លើអេក្រង់។</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">ត្រូវ​ប្រាកដ​ថា អ្នក​មិន​ប្រើ​គម្រប​អេក្រង់ ខណៈពេល​ចុះបញ្ជី​ខ្ចៅដៃ។</string>
     <string name="fingerprint_doesnt_support_multi_window_text">កម្មវិធី​នេះ​មិន​គាំទ្រ​ពហុវីនដូវ។</string>
-    <string name="fingerprint_duplicate_guide_msg">ត្រូវ​ប្រាកដ​ថា​លៃតម្រូវ​ទីតាំង​ម្រាមដៃ​របស់​អ្នក​បន្តិចៗ នៅ​ចន្លោះ​ពេល​ធ្វើ​ម្ដងៗ។</string>
+    <string name="fingerprint_duplicate_guide_msg">ប្ដូរ​ទីតាំង​នៃ​ម្រាមដៃ​របស់​អ្នក​បន្តិច​រាល់​ពេល ដើម្បី​ទទួល​ការស្កេន​ពេញលេញ។</string>
     <string name="fingerprint_enroll_dont_move">កុំ​ផ្លាស់ទី​ខ្ចៅដៃ​អ្នក ទាល់តែ​ការស្កេន​បាន​បញ្ចប់។</string>
     <string name="fingerprint_enroll_first_guide_indisplay">បំពេញ​រង្វង់​ទាំងមូល</string>
     <string name="fingerprint_enroll_first_guide_subtitle">ផ្លាស់ទី​ម្រាមដៃ​អ្នក​ជុំវិញ​សិនសឺ</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">បើ​វា​នៅតែ​កើតឡើង សូម​ចាប់ផ្ដើម​ទូរសព្ទ​របស់​អ្នក​ឡើងវិញ។</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">នេះ​ជា​របស់​ខ្លះ​ដែល​អ្នក​អាច​សាកល្បង៖</string>
-    <string name="fingerprint_error_message_something_on_sensor">បើ​បញ្ហា​នេះ​នៅ​តែ​បន្ត​មាន សូម​ទាក់ទង​សេវា​អតិថិជន។</string>
+    <string name="fingerprint_error_message_something_on_sensor">ត្រូវ​ប្រាកដ​ថា សិនសឺ​ខ្ចៅដៃ​ស្អាត​និង​ស្ងួត រួច​សាកល្បង​ម្ដងទៀត។</string>
     <string name="fingerprint_error_message_timed_out">ការចុះបញ្ជី​បាន​អស់​ពេល។ សាកល្បង​ម្ដងទៀត។</string>
     <string name="fingerprint_error_title_no_space">ឃ្លាំងផ្ទុក​មិន​គ្រប់គ្រាន់</string>
     <string name="fingerprint_error_title_not_responding">សិនសឺ​ខ្ចៅដៃ​មិន​ឆ្លើយតប</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">រួចរាល់</string>
     <string name="fingerprint_register_guide_side_key">សិនសឺ​ស្ថិត​លើ​ប៊ូតុង​ខាង នៅ​ជ្រុង​ខាងស្ដាំ​នៃ​ទូរសព្ទ។</string>
     <string name="fingerprint_register_lift_your_finger">លើក​ម្រាមដៃ​របស់​អ្នក​ចេញ​ពី​សិនសឺ​ខ្ចៅដៃ។</string>
-    <string name="fingerprint_register_place_your_finger">លៃតម្រូវ​ទីតាំង​ម្រាមដៃ​របស់​អ្នក ដើម្បី​ទទួល​ការស្កេន​ពេញលេញ</string>
+    <string name="fingerprint_register_place_your_finger">ស្កេន​ខ្ចៅដៃ​របស់​អ្នក</string>
     <string name="fingerprint_register_success">បាន​ថែម​ខ្ចៅដៃ</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">អស្ចារ្យ! បាន​ស្គាល់​ខ្ចៅដៃ​របស់​អ្នក។</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">ប៉ះ​សិនសឺ​ខ្ចៅដៃ។</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">ស្កេន​ខ្ចៅដៃ​របស់​អ្នក។</string>
     <string name="fingerscanner_keyboard_dialog_msg">មិន​អាច​ប្រើ %1$s ខណៈពេល​បាន​ភ្ជាប់​គម្រប​ក្ដារចុច។ នឹង​បិទ %2$s។</string>
     <string name="fingerscanner_keyboard_dialog_title">បាន​ភ្ជាប់​គម្រប​ក្ដារចុច</string>
-    <string name="fingerscanner_lift_your_finger_off_first">ដាក់​ម្រាមដៃ​របស់​អ្នក​លើ​សិនសឺ​ខ្ចៅដៃ រួច​លើក​វា​ចេញ​ម្ដងទៀត។</string>
-    <string name="fingerscanner_register_text">សង្កត់​ម្រាមដៃ​របស់​អ្នក​លើ​សិនសឺ រួច​លើក​វា​ចេញ នៅពេល​អ្នក​ដឹង​ថា​មាន​រំញ័រ។</string>
+    <string name="fingerscanner_register_text">ដាក់​ម្រាមដៃ​របស់​អ្នក​លើ​សិនសឺ រួច​លើក​វា​ចេញ នៅពេល​អ្នក​ទទួល​អារម្មណ៍​រំញ័រ។</string>
     <string name="fingerscanner_toast_back_text">ប៉ះ​ប៊ូតុង​ថយ​ម្ដងទៀត ដើម្បី​បញ្ឈប់​ការថែម​ខ្ចៅដៃ​របស់​អ្នក។</string>
     <string name="forgot_password">ភ្លេច​ពាក្យសម្ងាត់</string>
     <string name="forgot_password_header">កំណត់​ពាក្យសម្ងាត់​ឡើងវិញ?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">វាយបញ្ចូល​ពាក្យសម្ងាត់</string>
     <string name="sec_enter_pin_WC">វាយបញ្ចូល PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">បើកដំណើរការ​សិនសឺ​ខ្ចៅដៃ</string>
-    <string name="sec_fingerprint_always_on_summary">ស្កេន​ខ្ចៅដៃ​របស់​អ្នក សូម្បី​នៅពេល​អេក្រង់​រលត់​ក៏​ដោយ។</string>
+    <string name="sec_fingerprint_always_on_summary">ដាស់​និង​ដោះសោ​ទូរសព្ទ​អ្នក ដោយ​គ្រាន់តែ​ប៉ះ​ប៊ូតុង​ខាង។ បើក​សម្រាប់​ការចូលប្រើ​រហ័ស ឬ​បិទ​ដើម្បី​ជៀសវាង​ការស្កេន​ខ្ចៅដៃ​ដោយ​ចៃដន្យ។</string>
     <string name="sec_fingerprint_always_on_summary_dex">ស្កេន​ខ្ចៅដៃ​អ្នក សូម្បី​នៅពេល​អេក្រង់​រលត់​ក៏​ដោយ។ មិន​អាច​ប្រើ​បាន នៅពេល Samsung DeX កំពុង​ដំណើរការ។</string>
     <string name="sec_fingerprint_enroll_title">ថែម​ខ្ចៅដៃ</string>
     <string name="sec_fingerprint_error_contact_customer_service">បើ​បញ្ហា​នេះ​នៅ​តែ​បន្ត​មាន សូម​ទាក់ទង​សេវា​អតិថិជន។</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">ដក​ទូរសព្ទ​របស់​អ្នក​ចេញ​ពី​គ្រឿងសាក​ឥតខ្សែ មុនពេល​ចុះបញ្ជី​ខ្ចៅដៃ​របស់​អ្នក។</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">បិទ​ទូរសព្ទ​អ្នក ដើម្បី​បន្ត​ថែម​ខ្ចៅដៃ​អ្នក។</string>
-    <string name="sec_fingerprint_register_guide_text">សង្កត់​ម្រាមដៃ​របស់​អ្នក​លើ​សិនសឺ រួច​លើក​វា​ចេញ នៅពេល​អ្នក​ដឹង​ថា​មាន​រំញ័រ។</string>
+    <string name="sec_fingerprint_register_guide_text">ដាក់​ម្រាមដៃ​របស់​អ្នក​លើ​សិនសឺ រួច​លើក​វា​ចេញ នៅពេល​អ្នក​ទទួល​អារម្មណ៍​រំញ័រ។</string>
     <string name="sec_fingerprint_register_open_phone">បើក​ទូរសព្ទ​របស់​អ្នក ដើម្បី​បន្ត​ថែម​ខ្ចៅដៃ​របស់​អ្នក។</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">សង្កត់​ម្រាមដៃ​របស់​អ្នក​លើ​សិនសឺ រួច​លើក​វា​ចេញ នៅពេល​ភាគរយ​កើន​ឡើង។</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">ដាក់​ម្រាមដៃ​របស់​អ្នក​លើ​សិនសឺ រួច​លើក​វា​ចេញ នៅពេល​ភាគរយ​កើន​ឡើង។</string>
     <string name="sec_fingerprint_register_reposition_your_finger">ប្ដូរ​ទីតាំង​ម្រាមដៃ​របស់​អ្នក​នៅ​ពេល​ស្កេន​ម្ដងៗ​ដើម្បី​ថត​គែម​នៃ​ខ្ចៅដៃ​របស់​អ្នក។</string>
     <string name="sec_fingerprint_scan_fingerprint">ស្កេន​ខ្ចៅដៃ។</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">អាយខុន​នេះ​នឹង​មិន​បង្ហាញ​ឡើយ នៅពេល Samsung DeX កំពុង​ដំណើរការ។</string>
     <string name="sec_fingerprint_second_guide_title">ទទួល​ការស្កេន​ពេញលេញ</string>
     <string name="sec_fingerprint_sensor">សិនសឺ​ខ្ចៅដៃ</string>
     <string name="sec_fingerprint_sensor_activated">បាន​បើកដំណើរការ​សិនសឺ​ខ្ចៅដៃ</string>

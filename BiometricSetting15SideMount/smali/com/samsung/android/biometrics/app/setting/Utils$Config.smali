@@ -55,7 +55,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 8
 
     .line 1
     invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
@@ -183,11 +183,11 @@
     move-result-object v4
 
     .line 60
-    const-string v5, "aodversion"
+    const-string v6, "aodversion"
 
     .line 61
     .line 62
-    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v4, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     .line 63
     .line 64
@@ -207,11 +207,11 @@
     move-result-object v4
 
     .line 72
-    const-string v5, "SEC_FLOATING_FEATURE_BIOAUTH_CONFIG_FINGERPRINT_FEATURES"
+    const-string v6, "SEC_FLOATING_FEATURE_BIOAUTH_CONFIG_FINGERPRINT_FEATURES"
 
     .line 73
     .line 74
-    invoke-virtual {v4, v5}, Lcom/samsung/android/feature/SemFloatingFeature;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v6}, Lcom/samsung/android/feature/SemFloatingFeature;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 75
     .line 76
@@ -219,370 +219,362 @@
     move-result-object v4
 
     .line 78
-    sput-boolean v2, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
+    const-string v6, "display"
 
     .line 79
     .line 80
-    const-string v5, "ultrasonic"
+    invoke-virtual {v4, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     .line 81
     .line 82
-    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
     .line 83
-    .line 84
-    .line 85
-    move-result v5
+    move-result v6
 
+    .line 84
+    sput-boolean v6, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_IN_DISPLAY_TYPE:Z
+
+    .line 85
     .line 86
-    sput-boolean v5, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
+    const-string v7, "ultrasonic"
 
     .line 87
     .line 88
-    sput-boolean v2, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
+    invoke-virtual {v4, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     .line 89
     .line 90
-    const-string v5, "powerkey"
-
     .line 91
+    move-result v7
+
     .line 92
-    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    sput-boolean v7, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_ULTRASONIC:Z
 
     .line 93
     .line 94
-    .line 95
-    move-result v5
+    const-string v7, "optical"
 
+    .line 95
     .line 96
-    if-nez v5, :cond_2
+    invoke-virtual {v4, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     .line 97
     .line 98
-    const-string v5, "side"
-
     .line 99
+    move-result v7
+
     .line 100
-    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    sput-boolean v7, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_OPTICAL:Z
 
     .line 101
     .line 102
-    .line 103
-    move-result v5
+    sput-boolean v2, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_SIDE:Z
 
+    .line 103
     .line 104
-    if-eqz v5, :cond_1
+    const-string v7, "rear"
 
     .line 105
     .line 106
-    goto :goto_1
+    invoke-virtual {v4, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     .line 107
-    :cond_1
-    move v5, v3
-
     .line 108
-    goto :goto_2
-
     .line 109
-    :cond_2
-    :goto_1
-    move v5, v2
+    move-result v4
 
     .line 110
-    :goto_2
-    sput-boolean v5, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_SIDE:Z
+    sput-boolean v4, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_REAR:Z
 
     .line 111
     .line 112
-    const-string v5, "rear"
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     .line 113
     .line 114
-    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
     .line 115
-    .line 116
-    .line 117
-    move-result v4
+    move-result-object v4
 
+    .line 116
+    const-string v7, "SEC_FLOATING_FEATURE_LCD_CONFIG_SELFMASK_VERSION"
+
+    .line 117
     .line 118
-    sput-boolean v4, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_SENSOR_IS_REAR:Z
+    invoke-virtual {v4, v7}, Lcom/samsung/android/feature/SemFloatingFeature;->getInt(Ljava/lang/String;)I
 
     .line 119
     .line 120
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 121
-    .line 122
-    .line 123
-    move-result-object v4
-
-    .line 124
-    const-string v5, "SEC_FLOATING_FEATURE_LCD_CONFIG_SELFMASK_VERSION"
-
-    .line 125
-    .line 126
-    invoke-virtual {v4, v5}, Lcom/samsung/android/feature/SemFloatingFeature;->getInt(Ljava/lang/String;)I
-
-    .line 127
-    .line 128
-    .line 129
     move-result v4
 
-    .line 130
-    if-lt v4, v2, :cond_3
+    .line 122
+    if-lt v4, v2, :cond_1
 
-    .line 131
-    .line 132
+    .line 123
+    .line 124
     move v4, v2
 
-    .line 133
-    goto :goto_3
+    .line 125
+    goto :goto_1
 
-    .line 134
-    :cond_3
+    .line 126
+    :cond_1
     move v4, v3
 
-    .line 135
-    :goto_3
+    .line 127
+    :goto_1
     sput-boolean v4, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_HW_LIGHT_SOURCE:Z
 
-    .line 136
-    .line 137
+    .line 128
+    .line 129
     sput-boolean v1, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_TSP_BLOCK:Z
+
+    .line 130
+    .line 131
+    sput-boolean v6, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_ENROLL_FRAME_MOVING_UX:Z
+
+    .line 132
+    .line 133
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
+
+    .line 134
+    .line 135
+    .line 136
+    move-result-object v1
+
+    .line 137
+    const-string v4, "SEC_FLOATING_FEATURE_LCD_CONFIG_LOCAL_HBM"
 
     .line 138
     .line 139
-    sput-boolean v2, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_ENROLL_FRAME_MOVING_UX:Z
+    invoke-virtual {v1, v4}, Lcom/samsung/android/feature/SemFloatingFeature;->getInt(Ljava/lang/String;)I
 
     .line 140
     .line 141
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 142
-    .line 143
-    .line 144
-    move-result-object v1
-
-    .line 145
-    const-string v4, "SEC_FLOATING_FEATURE_LCD_CONFIG_LOCAL_HBM"
-
-    .line 146
-    .line 147
-    invoke-virtual {v1, v4}, Lcom/samsung/android/feature/SemFloatingFeature;->getInt(Ljava/lang/String;)I
-
-    .line 148
-    .line 149
-    .line 150
     move-result v1
 
+    .line 143
+    if-ne v1, v2, :cond_2
+
+    .line 144
+    .line 145
+    move v1, v2
+
+    .line 146
+    goto :goto_2
+
+    .line 147
+    :cond_2
+    move v1, v3
+
+    .line 148
+    :goto_2
+    sput-boolean v1, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_LOCAL_HBM:Z
+
+    .line 149
+    .line 150
+    xor-int/2addr v0, v2
+
     .line 151
-    if-ne v1, v2, :cond_4
+    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FACE_FEATURE_POSE_ENROLL:Z
 
     .line 152
     .line 153
-    move v1, v2
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     .line 154
-    goto :goto_4
-
     .line 155
-    :cond_4
-    move v1, v3
-
     .line 156
-    :goto_4
-    sput-boolean v1, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FP_FEATURE_LOCAL_HBM:Z
+    move-result-object v0
 
     .line 157
-    .line 158
-    xor-int/2addr v0, v2
+    const-string v1, "SEC_FLOATING_FEATURE_COMMON_SUPPORT_DISABLED_MENU_K05"
 
+    .line 158
     .line 159
-    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FACE_FEATURE_POSE_ENROLL:Z
+    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
 
     .line 160
     .line 161
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 162
-    .line 163
-    .line 164
-    move-result-object v0
+    move-result v0
 
+    .line 163
+    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DISABLED_MENU_K05:Z
+
+    .line 164
     .line 165
-    const-string v1, "SEC_FLOATING_FEATURE_COMMON_SUPPORT_DISABLED_MENU_K05"
+    const-string v0, "15"
 
     .line 166
     .line 167
-    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
+    sput-object v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->SENSOR_BOTTOM_MARGIN_BOUNDARY_RECENT_HOME_KEY:Ljava/lang/String;
 
     .line 168
     .line 169
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
+
     .line 170
-    move-result v0
-
     .line 171
-    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DISABLED_MENU_K05:Z
-
     .line 172
+    move-result-object v0
+
     .line 173
-    const-string v0, "15"
+    const-string v1, "SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_FOLDABLE_TYPE_FOLD"
 
     .line 174
     .line 175
-    sput-object v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->SENSOR_BOTTOM_MARGIN_BOUNDARY_RECENT_HOME_KEY:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
 
     .line 176
     .line 177
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 178
-    .line 179
-    .line 180
-    move-result-object v0
+    move-result v0
 
+    .line 179
+    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DUAL_DISPLAY:Z
+
+    .line 180
     .line 181
-    const-string v1, "SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_FOLDABLE_TYPE_FOLD"
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     .line 182
     .line 183
-    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
-
     .line 184
-    .line 185
-    .line 186
-    move-result v0
+    move-result-object v0
 
+    .line 185
+    const-string v1, "SEC_FLOATING_FEATURE_LAUNCHER_SUPPORT_TASKBAR"
+
+    .line 186
     .line 187
-    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DUAL_DISPLAY:Z
+    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
 
     .line 188
     .line 189
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 190
-    .line 191
-    .line 192
-    move-result-object v0
+    move-result v0
 
+    .line 191
+    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_TASKBAR:Z
+
+    .line 192
     .line 193
-    const-string v1, "SEC_FLOATING_FEATURE_LAUNCHER_SUPPORT_TASKBAR"
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     .line 194
     .line 195
-    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
-
     .line 196
-    .line 197
-    .line 198
-    move-result v0
+    move-result-object v0
 
+    .line 197
+    const-string v1, "SEC_FLOATING_FEATURE_LCD_CONFIG_CONTROL_AUTO_BRIGHTNESS"
+
+    .line 198
     .line 199
-    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_TASKBAR:Z
+    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     .line 200
     .line 201
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 202
-    .line 203
-    .line 204
     move-result-object v0
 
+    .line 203
+    sput-object v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_CONFIG_CONTROL_AUTO_BRIGHTNESS:Ljava/lang/String;
+
+    .line 204
     .line 205
-    const-string v1, "SEC_FLOATING_FEATURE_LCD_CONFIG_CONTROL_AUTO_BRIGHTNESS"
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     .line 206
     .line 207
-    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getString(Ljava/lang/String;)Ljava/lang/String;
-
     .line 208
-    .line 209
-    .line 210
     move-result-object v0
 
+    .line 209
+    const-string v1, "SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_MODE"
+
+    .line 210
     .line 211
-    sput-object v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_CONFIG_CONTROL_AUTO_BRIGHTNESS:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getInt(Ljava/lang/String;)I
 
     .line 212
     .line 213
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 214
-    .line 215
-    .line 216
-    move-result-object v0
-
-    .line 217
-    const-string v1, "SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_MODE"
-
-    .line 218
-    .line 219
-    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getInt(Ljava/lang/String;)I
-
-    .line 220
-    .line 221
-    .line 222
     move-result v0
 
-    .line 223
+    .line 215
     const/4 v1, 0x2
 
-    .line 224
-    if-ne v0, v1, :cond_5
+    .line 216
+    if-ne v0, v1, :cond_3
 
-    .line 225
-    .line 226
+    .line 217
+    .line 218
     move v0, v2
 
-    .line 227
-    goto :goto_5
+    .line 219
+    goto :goto_3
 
-    .line 228
-    :cond_5
+    .line 220
+    :cond_3
     move v0, v3
 
-    .line 229
-    :goto_5
+    .line 221
+    :goto_3
     sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DISPLAY_SEAMLESS_MODE:Z
+
+    .line 222
+    .line 223
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
+
+    .line 224
+    .line 225
+    .line 226
+    move-result-object v0
+
+    .line 227
+    const-string v1, "SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_LARGE_COVER_SCREEN"
+
+    .line 228
+    .line 229
+    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
 
     .line 230
     .line 231
-    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
-
     .line 232
-    .line 233
-    .line 234
-    move-result-object v0
+    move-result v0
 
+    .line 233
+    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_BP_IN_COVER_SCREEN:Z
+
+    .line 234
     .line 235
-    const-string v1, "SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_LARGE_COVER_SCREEN"
+    invoke-static {}, Lcom/samsung/android/feature/SemFloatingFeature;->getInstance()Lcom/samsung/android/feature/SemFloatingFeature;
 
     .line 236
     .line 237
-    invoke-virtual {v0, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getBoolean(Ljava/lang/String;)Z
-
     .line 238
-    .line 239
-    .line 240
-    move-result v0
+    move-result-object v0
 
+    .line 239
+    const-string v1, ""
+
+    .line 240
     .line 241
-    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_BP_IN_COVER_SCREEN:Z
+    invoke-virtual {v0, v5, v1}, Lcom/samsung/android/feature/SemFloatingFeature;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 242
     .line 243
-    sput-boolean v2, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_AOD_TRANSITION_ANIMATION:Z
-
     .line 244
+    move-result-object v0
+
     .line 245
-    const-string v0, "vendor.display.enable_brightness_drm_prop"
+    const-string v1, "clocktransition"
 
     .line 246
     .line 247
-    invoke-static {v0, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     .line 248
     .line 249
@@ -590,21 +582,37 @@
     move-result v0
 
     .line 251
-    if-eqz v0, :cond_6
+    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_AOD_TRANSITION_ANIMATION:Z
 
     .line 252
     .line 253
-    goto :goto_6
+    const-string v0, "vendor.display.enable_brightness_drm_prop"
 
     .line 254
-    :cond_6
-    move v2, v3
-
     .line 255
-    :goto_6
-    sput-boolean v2, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DRM_PROPERTY_FOR_BRIGHTNESS:Z
+    invoke-static {v0, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     .line 256
     .line 257
+    .line 258
+    move-result v0
+
+    .line 259
+    if-eqz v0, :cond_4
+
+    .line 260
+    .line 261
+    goto :goto_4
+
+    .line 262
+    :cond_4
+    move v2, v3
+
+    .line 263
+    :goto_4
+    sput-boolean v2, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_SUPPORT_DRM_PROPERTY_FOR_BRIGHTNESS:Z
+
+    .line 264
+    .line 265
     return-void
 .end method

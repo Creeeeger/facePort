@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animasjon</string>
     <string name="fingerprint_custom_icon_title">Ikon</string>
     <string name="fingerprint_dex_toast">Bruk fingeravtrykket på telefonen for å bekrefte identiteten din.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Tykk eller farget beskyttelsesfilm kan påvirke ytelsen. Hvis du bruker skjermbeskytter, må du passe på at den er kompatibel med fingeravtrykkssensoren på skjermen.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Tykk beskyttelsesfilm kan påvirke ytelsen. Hvis du bruker skjermbeskytter, må du passe på at den er kompatibel med fingeravtrykkssensoren på skjermen.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Pass på at du ikke bruker et skjermdeksel mens du registrerer fingeravtrykk.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Denne appen støtter ikke Flervindu.</string>
-    <string name="fingerprint_duplicate_guide_msg">Pass på å justere fingerplasseringen litt hver gang.</string>
+    <string name="fingerprint_duplicate_guide_msg">Endre plasseringen på fingeren litt hver gang for å få en fullstendig skanning.</string>
     <string name="fingerprint_enroll_dont_move">Ikke flytt fingeren før skanningen er fullført.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Fyll hele sirkelen</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Beveg fingeren rundt sensoren</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Hvis dette fortsetter å skje, starter du telefonen på nytt.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Her er noen ting du kan prøve:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Hvis problemet vedvarer, kontakter du kundeservice.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Pass på at fingeravtrykkssensoren er ren og tørr, og prøv igjen.</string>
     <string name="fingerprint_error_message_timed_out">Registreringen har gått ut på tid. Prøv igjen.</string>
     <string name="fingerprint_error_title_no_space">Ikke nok lagringsplass</string>
     <string name="fingerprint_error_title_not_responding">Fingeravtrykkssensoren svarer ikke</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Ferdig</string>
     <string name="fingerprint_register_guide_side_key">Sensoren er på sideknappen på høyre side av telefonen.</string>
     <string name="fingerprint_register_lift_your_finger">Løft fingeren av fingeravtrykkssensoren.</string>
-    <string name="fingerprint_register_place_your_finger">Juster fingerplassering for fullstendig skanning</string>
+    <string name="fingerprint_register_place_your_finger">Skann fingeravtrykket</string>
     <string name="fingerprint_register_success">Fingeravtrykk ble lagt til</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Flott! Fingeravtrykket ditt ble gjenkjent.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Trykk på fingeravtrykkssensoren.</string>
@@ -253,7 +253,6 @@
     <string name="fingerprint_verification_description_default_text">Skann fingeravtrykket.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Kan ikke bruke %1$s mens tastaturomslaget er koblet til. %2$s blir deaktivert.</string>
     <string name="fingerscanner_keyboard_dialog_title">Tastaturomslag koblet til</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Legg fingeren på fingeravtrykkssensoren, og løft den av igjen.</string>
     <string name="fingerscanner_register_text">Legg fingeren på sensoren, og løft den av når du kjenner en vibrering.</string>
     <string name="fingerscanner_toast_back_text">Trykk på tilbaketasten igjen for å slutte å legge til fingeravtrykket.</string>
     <string name="forgot_password">Glemt passord</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Skriv inn passord</string>
     <string name="sec_enter_pin_WC">Angi PIN-kode</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktiver fingeravtrykkssensoren</string>
-    <string name="sec_fingerprint_always_on_summary">Skann fingeravtrykket selv når skjermen er av.</string>
+    <string name="sec_fingerprint_always_on_summary">Aktiver og lås opp telefonen ved bare å trykke på sideknappen. Slå på for hurtigtilgang, eller slå av for å unngå utilsiktede fingeravtrykksskanninger.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Skann fingeravtrykket selv når skjermen er av. Ikke tilgjengelig når Samsung DeX kjører.</string>
     <string name="sec_fingerprint_enroll_title">Legg til fingeravtrykk</string>
     <string name="sec_fingerprint_error_contact_customer_service">Hvis problemet vedvarer, kontakter du kundeservice.</string>
@@ -297,10 +296,9 @@
     <string name="sec_fingerprint_register_close_phone">Lukk telefonen for å fortsette å legge til fingeravtrykket ditt.</string>
     <string name="sec_fingerprint_register_guide_text">Legg fingeren på sensoren, og løft den av når du kjenner en vibrering.</string>
     <string name="sec_fingerprint_register_open_phone">Åpne telefonen for å fortsette å legge til fingeravtrykket ditt.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Legg fingeren på sensoren, og løft den av når prosenten går opp.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Plasser fingeren på sensoren, og løft den av når prosenten går opp.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Endre plasseringen på fingeren hver gang for å registrere kantene på fingeravtrykket.</string>
     <string name="sec_fingerprint_scan_fingerprint">Skann fingeravtrykket.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ikonet vises ikke når Samsung DeX kjører.</string>
     <string name="sec_fingerprint_second_guide_title">Få en full skanning</string>
     <string name="sec_fingerprint_sensor">Fingeravtrykkssensor</string>
     <string name="sec_fingerprint_sensor_activated">Fingeravtrykkssensoren er aktivert</string>

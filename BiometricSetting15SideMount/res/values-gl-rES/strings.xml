@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animación</string>
     <string name="fingerprint_custom_icon_title">Icona</string>
     <string name="fingerprint_dex_toast">Usa a túa impresión dixital no teléfono para verificar a túa identidade.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Unha lámina protectora grosa ou con cor pode afectar ao rendemento. Se usas un protector de pantalla, comproba que é compatible co sensor de impresións dixitais en pantalla.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Unha lámina protectora grosa pode afectar ao rendemento. Se usas un protector de pantalla, comproba que é compatible co sensor de impresións dixitais en pantalla.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Asegúrate de non usar un protector de pantalla cando esteas a rexistrar as impresións dixitais.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Esta aplicación non admite Multiwindow.</string>
-    <string name="fingerprint_duplicate_guide_msg">Asegúrate de ir reposicionando levemente o dedo cada vez.</string>
+    <string name="fingerprint_duplicate_guide_msg">Para conseguir un escaneamento completo, vai cambiando a posición do teu dedo lixeiramente cada vez.</string>
     <string name="fingerprint_enroll_dont_move">Non movas o dedo ata que remate a lectura.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Encher todo o círculo</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Move o dedo polo sensor</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Se continúa sucedendo, reinicia o teléfono.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Velaquí algunhas cousas que podes probar:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Se o problema continúa, ponte en contacto co servizo de atención ao cliente.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Asegúrate de que o sensor de impresións dixitais estea limpo e seco e, a continuación, téntao outra vez.</string>
     <string name="fingerprint_error_message_timed_out">Esgotouse o tempo de espera do rexistro. Téntao outra vez.</string>
     <string name="fingerprint_error_title_no_space">Non hai almacenamento suficiente</string>
     <string name="fingerprint_error_title_not_responding">O sensor de impresións dixitais non responde</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Feito</string>
     <string name="fingerprint_register_guide_side_key">O sensor está no botón Función no lado dereito do teléfono.</string>
     <string name="fingerprint_register_lift_your_finger">Levanta o dedo do sensor de impresións dixitais.</string>
-    <string name="fingerprint_register_place_your_finger">Reposicionar o dedo para facer escaneo completo</string>
+    <string name="fingerprint_register_place_your_finger">Escanea a túa impresión dixital</string>
     <string name="fingerprint_register_success">Impresión dixital engadida</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Moi ben! Recoñeceuse a túa impresión dixital.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Toca o sensor de impresións dixitais.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Escanea a túa impresión dixital.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Non se pode usar %1$s coa funda teclado instalada. %2$s desactivarase.</string>
     <string name="fingerscanner_keyboard_dialog_title">Funda teclado instalada</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Coloca o dedo no sensor de impresións dixitais e, a continuación, levántao outra vez.</string>
-    <string name="fingerscanner_register_text">Preme o dedo contra o sensor e despois levántao cando sintas unha vibración.</string>
+    <string name="fingerscanner_register_text">Coloca o dedo no sensor e, a continuación, levántao cando sintas unha vibración.</string>
     <string name="fingerscanner_toast_back_text">Volve pulsar a tecla Atrás para deixar de engadir a impresión dixital.</string>
     <string name="forgot_password">Esquecín o contrasinal</string>
     <string name="forgot_password_header">Queres restablecer o contrasinal?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Inserir contrasinal</string>
     <string name="sec_enter_pin_WC">Introducir PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Activar sensor de impresións dixitais</string>
-    <string name="sec_fingerprint_always_on_summary">Escanea a túa impresión dixital mesmo coa pantalla apagada.</string>
+    <string name="sec_fingerprint_always_on_summary">Activa e desbloquea o teléfono simplemente tocando o botón Función. Actívao para ter acceso rápido ou desactívao para evitar lecturas accidentais da impresión dixital.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Escanea a túa impresión dixital mesmo coa pantalla apagada. Esta función non está dispoñible mentres se está executando Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">Engadir impresión dixital</string>
     <string name="sec_fingerprint_error_contact_customer_service">Se o problema continúa, ponte en contacto co servizo de atención ao cliente.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Retira o teléfono do cargador sen fíos antes de rexistrares a impresión dixital.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Pecha o teléfono para seguir engadindo a túa impresión dixital.</string>
-    <string name="sec_fingerprint_register_guide_text">Preme o dedo contra o sensor e despois levántao cando sintas unha vibración.</string>
+    <string name="sec_fingerprint_register_guide_text">Coloca o dedo no sensor e, a continuación, levántao cando sintas unha vibración.</string>
     <string name="sec_fingerprint_register_open_phone">Abre o teléfono para seguir engadindo a túa impresión dixital.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Preme o dedo contra o sensor e despois levántao cando suba a porcentaxe.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Coloca o dedo no sensor e despois levántao cando suba a porcentaxe.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Vai recolocando o dedo para capturar os bordes da impresión dixital.</string>
     <string name="sec_fingerprint_scan_fingerprint">Escanea a impresión dixital.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">A icona non se amosará cando se estea executando Samsung DeX.</string>
     <string name="sec_fingerprint_second_guide_title">Obter un escaneamento completo</string>
     <string name="sec_fingerprint_sensor">Sensor de impresións dixitais</string>
     <string name="sec_fingerprint_sensor_activated">Sensor de impresións dixitais activado</string>

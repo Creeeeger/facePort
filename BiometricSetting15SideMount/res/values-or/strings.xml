@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">ଆନିମେସନ୍</string>
     <string name="fingerprint_custom_icon_title">ଆଇକନ୍</string>
     <string name="fingerprint_dex_toast">ଆପଣଙ୍କ ପରିଚୟ ଯାଞ୍ଚ କରିବାକୁ ଆପଣଙ୍କ ଫୋନରେ ଆପଣଙ୍କ ଟିପଚିହ୍ନ ବ୍ୟବହାର କରନ୍ତୁ।</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ମୋଟା କିମ୍ବା ରଙ୍ଗୀନ ସୁରକ୍ଷିତ ଚଳଚ୍ଚିତ୍ର ପରଫରମାନ୍ସ ଉପରେ ପ୍ରଭାବ ପକାଇପାରେ। ଯଦି ଆପଣ ଏକ ସ୍କ୍ରିନ୍ ପ୍ରୋଟେକ୍ଟର୍ ବ୍ୟବହାର କରନ୍ତି, ନିଶ୍ଚିତ କରିବାକୁ ଯାଞ୍ଚ କରନ୍ତୁ ଯେ ଏହା ଅନ୍-ସ୍କ୍ରିନ୍ ଟିପଚିହ୍ନ ସେନସର୍ ସହ ସୁସଙ୍ଗତ ଭାବେ ଲେବଲ୍ ହୋଇଛି।</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">ମୋଟା ସୁରକ୍ଷିତ ଚଳଚ୍ଚିତ୍ର ପରଫରମାନ୍ସକୁ ପ୍ରଭାବ ପକାଇପାରେ। ଯଦି ଆପଣ ଏକ ସ୍କ୍ରିନ୍ ପ୍ରୋଟେକ୍ଟର୍ ବ୍ୟବହାର କରନ୍ତି, ନିଶ୍ଚିତ କରିବାକୁ ଯାଞ୍ଚ କରନ୍ତୁ ଯେ ଏହା ଅନ୍-ସ୍କ୍ରିନ୍ ଟିପଚିହ୍ନ ସେନସର୍ ସହ ସୁସଙ୍ଗତ ଭାବେ ଲେବଲ୍ ହୋଇଛି।</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">ଏହା ନିଶ୍ଚିତ କରନ୍ତୁ ଯେ ଆପଣ ଫିଙ୍ଗରପ୍ରିଣ୍ଟସ୍ ପଞ୍ଜିକରଣ କରିବା ସମୟରେ ଏକ ସ୍କ୍ରିନ୍ କଭର୍ ବ୍ୟବହାର କରିନାହାଁନ୍ତି।</string>
     <string name="fingerprint_doesnt_support_multi_window_text">ଏହି ଆପ୍ଲିକେସନ୍ ମଲ୍ଟି ୱିଣ୍ଡୋ ସମର୍ଥନ କରେ ନାହିଁ।</string>
-    <string name="fingerprint_duplicate_guide_msg">ପ୍ରତି ଥର ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ସ୍ଥିତିକୁ ସାମାନ୍ୟ ନିୟନ୍ତ୍ରଣ କରିବାକୁ ନିଶ୍ଚିତ କରନ୍ତୁ।</string>
+    <string name="fingerprint_duplicate_guide_msg">ଏକ ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ୍‌ ପ୍ରାପ୍ତ କରିବାକୁ ପ୍ରତ୍ୟେକ ଥର ଆପଣଙ୍କ ଆଙ୍ଗୁଠିର ସ୍ଥିତି ଟିକେ ପରିବର୍ତ୍ତନ କରନ୍ତୁ।</string>
     <string name="fingerprint_enroll_dont_move">ସ୍କାନ୍ ସମ୍ପୂର୍ଣ୍ଣ ନହେବା ପର୍ଯ୍ୟନ୍ତ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ଘୁଞ୍ଚାନ୍ତୁ ନାହିଁ।</string>
     <string name="fingerprint_enroll_first_guide_indisplay">ସମଗ୍ର ସର୍କଲ୍ ପୂର୍ଣ୍ଣ କରନ୍ତୁ</string>
     <string name="fingerprint_enroll_first_guide_subtitle">ଆପଣଙ୍କ ଆଙ୍ଗୁଠିକୁ ସେନସର୍ ଚାରିପାଖରେ ଘୁଞ୍ଚାନ୍ତୁ</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">ଯଦି ଏହା ହୁଏ, ଆପଣଙ୍କ ଫୋନ୍ ପୁନଃଆରମ୍ଭ କରନ୍ତୁ।</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">ଆପଣ ଏଠାରେ କିଛି ଜିନିଷ ଚେଷ୍ଟା କରିପାରିବେ:</string>
-    <string name="fingerprint_error_message_something_on_sensor">ଯଦି ଏହି ସମସ୍ୟା ଜାରି ରହିବ, ଗ୍ରାହାକ ସେବା ସହ ସମ୍ପର୍କ କରନ୍ତୁ।</string>
+    <string name="fingerprint_error_message_something_on_sensor">ଟିପଚିହ୍ନ ସେନସର୍‌ ସଫା ଏବଂ ଶୁଖିଲା ଅଛି ନିଶ୍ଚିତ କରି, ପୁନଃଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <string name="fingerprint_error_message_timed_out">ପଞ୍ଜିକରଣ ସମୟ ସମାପ୍ତ ହୋଇଛି। ପୁନଃଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <string name="fingerprint_error_title_no_space">ପର୍ଯ୍ୟାପ୍ତ ଷ୍ଟୋରେଜ୍ ନାହିଁ</string>
     <string name="fingerprint_error_title_not_responding">ଟିପଚିହ୍ନ ସେନସର୍ ପ୍ରତିକ୍ରିୟା କରୁନାହିଁ</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">ସମାପ୍ତ</string>
     <string name="fingerprint_register_guide_side_key">ଫୋନର ଡାହାଣ ପାର୍ଶ୍ୱରେ ଥିବା ପାର୍ଶ୍ୱ ବଟନରେ ସେନସର୍ ରହିଛି।</string>
     <string name="fingerprint_register_lift_your_finger">ଟିପଚିହ୍ନ ସେନ୍ସସରରୁ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ଉଠାନ୍ତୁ।</string>
-    <string name="fingerprint_register_place_your_finger">ପୂ. ସ୍କା. ପ୍ରାପ୍ତ କରି. ଆପଣଙ୍କ ଆଙ୍ଗ. ସ୍ଥି. ନିୟ.</string>
+    <string name="fingerprint_register_place_your_finger">ଆପଣଙ୍କ ଟିପଚିହ୍ନ ସ୍କାନ୍</string>
     <string name="fingerprint_register_success">ଟିପଚିହ୍ନ ଯୋଡାଯାଇଛି</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">ଉତ୍ତମ! ଆପଣଙ୍କ ଟିପଚିହ୍ନ ଚିହ୍ନଟ ହୋଇଥିଲା।</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">ଟିପଚିହ୍ନ ସେନସର୍ ସ୍ପର୍ଶ କରନ୍ତୁ।</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">ଆପଣଙ୍କ ଟିପଚିହ୍ନ ସ୍କାନ୍ କରନ୍ତୁ।</string>
     <string name="fingerscanner_keyboard_dialog_msg">କୀବୋର୍ଡ କଭର୍ ସଂଲଗ୍ନ ହୋଇଥିବା ବେଳେ %1$s ବ୍ୟବହାର କରିବାକୁ ଅସମର୍ଥ। %2$s ଅକ୍ଷମ ହେବ।</string>
     <string name="fingerscanner_keyboard_dialog_title">କୀବୋର୍ଡ କଭର୍ ସଂଲଗ୍ନ ହୋଇ.</string>
-    <string name="fingerscanner_lift_your_finger_off_first">ଟିପଚିହ୍ନ ସେନସରରେ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ରଖି, ଏହାକୁ ବନ୍ଦ କରିବା ପାଇଁ ପୁନଃ ଉଠାନ୍ତୁ।</string>
-    <string name="fingerscanner_register_text">ସେନସର୍ ଉପରେ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ରଖି ଦବାନ୍ତୁ, ଆପଣ ଭାଇବ୍ରେସନ୍ ଅନୁଭବ କରିବା ସମୟରେ ଏହାକୁ ଉଠାନ୍ତୁ।</string>
+    <string name="fingerscanner_register_text">ସେନସର୍ ଉପରେ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ରଖି, ଆପଣ ଭାଇବ୍ରେସନ୍ ଅନୁଭବ କରିବା ସମୟରେ ଏହାକୁ ଉଠାନ୍ତୁ।</string>
     <string name="fingerscanner_toast_back_text">ଆପଣଙ୍କ ଟିପଚିହ୍ନ ଯୋଡିବା ସ୍ଥଗିତ କରିବାକୁ ପୁନଃ ବ୍ୟାକ୍ ବଟନ୍ ଟ୍ୟାପ୍ କରନ୍ତୁ।</string>
     <string name="forgot_password">ପାସୱାର୍ଡ୍ ଭୁଲିଯାଇଛନ୍ତି</string>
     <string name="forgot_password_header">ପାସୱାର୍ଡ୍ ରିସେଟ୍ କରିବେ?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">ପାସୱାର୍ଡ୍ ଏଣ୍ଟର୍ କରନ୍ତୁ</string>
     <string name="sec_enter_pin_WC">PIN ଏଣ୍ଟର୍ କରନ୍ତୁ</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">ଟିପଚିହ୍ନ ସେନସର୍ ସକ୍ରିୟ କରିବାକୁ</string>
-    <string name="sec_fingerprint_always_on_summary">ସ୍କ୍ରିନ୍ ଅଫ୍ ଥିବା ସମୟରେ ମଧ୍ୟ ଆପଣଙ୍କ ଟିପଚିହ୍ନ ସ୍କାନ୍ କରନ୍ତୁ।</string>
+    <string name="sec_fingerprint_always_on_summary">କେବଳ ପାର୍ଶ୍ୱ ବଟନ୍ ଟଚ୍ କରିବା ଦ୍ୱାରା ଆପଣଙ୍କ ଫୋନ୍ ସକ୍ରିୟ କରି ଅନଲକ୍ କରନ୍ତୁ। ଦ୍ରୁତ ଆକସେସ୍ ପାଇଁ ଟର୍ନ୍ ଅନ୍ କରନ୍ତୁ, କିମ୍ୱା ଦୁର୍ଘଟଣାବସତଃ ଟିପଚିହ୍ନ ସ୍କାନଗୁଡିକ ଉପେକ୍ଷା କରିବାକୁ ଟର୍ନ୍ ଅଫ୍ କରନ୍ତୁ।</string>
     <string name="sec_fingerprint_always_on_summary_dex">ସ୍କ୍ରିନ୍ ଅଫ୍ ଥିବା ସମୟରେ ମଧ୍ୟ ଆପଣଙ୍କ ଟିପଚିହ୍ନ ସ୍କାନ୍ କରନ୍ତୁ। Samsung DeX ଚାଲୁଥିବା ସମୟରେ ଉପଲବ୍ଧ ନାହିଁ।</string>
     <string name="sec_fingerprint_enroll_title">ଟିପଚିହ୍ନ ଯୋଡନ୍ତୁ</string>
     <string name="sec_fingerprint_error_contact_customer_service">ଯଦି ଏହି ସମସ୍ୟା ଜାରି ରହିବ, ଗ୍ରାହାକ ସେବା ସହ ସମ୍ପର୍କ କରନ୍ତୁ।</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">ଆପଣଙ୍କ ଟିପଚିହ୍ନ ପଞ୍ଜିକରଣ କରିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ଫୋନକୁ ୱେୟାରଲେସ୍ ଚାର୍ଜରରୁ ଖୋଲନ୍ତୁ।</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">ଆପଣଙ୍କ ଫିଙ୍ଗରପ୍ରିଣ୍ଟ ଯୋଡିବା ଜାରି ରଖିବାକୁ ଆପଣଙ୍କ ଫୋନ୍ ବନ୍ଦ କରନ୍ତୁ।</string>
-    <string name="sec_fingerprint_register_guide_text">ସେନସର୍ ଉପରେ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ରଖି ଦବାନ୍ତୁ, ଆପଣ ଭାଇବ୍ରେସନ୍ ଅନୁଭବ କରିବା ସମୟରେ ଏହାକୁ ଉଠାନ୍ତୁ।</string>
+    <string name="sec_fingerprint_register_guide_text">ସେନସର୍ ଉପରେ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ରଖି, ଆପଣ ଭାଇବ୍ରେସନ୍ ଅନୁଭବ କରିବା ସମୟରେ ଏହାକୁ ଉଠାନ୍ତୁ।</string>
     <string name="sec_fingerprint_register_open_phone">ଆପଣଙ୍କ ଟିପଚିହ୍ନ ଯୋଡିବାକୁ ଆପଣଙ୍କ ଫୋନ୍ ଖୋଲନ୍ତୁ।</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">ସେନସରେ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ଦବାନ୍ତୁ, ଶତକଡା ବଢିବା ସମୟରେ ଏହାକୁ ଉଠାନ୍ତୁ।</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">ସେନସରେ ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ରଖି, ଶତକଡା ବଢିବା ସମୟରେ ଏହାକୁ ଉଠାନ୍ତୁ।</string>
     <string name="sec_fingerprint_register_reposition_your_finger">ଆପଣଙ୍କ ଟିପଚିହ୍ନର କୋଣଗୁଡିକ କ୍ୟାପଚର୍ କରିବାକୁ ପ୍ରତି ଥର ଆପଣଙ୍କ ଆଙ୍ଗୁଠି ସ୍ଥାନ ପରିବର୍ତ୍ତନ କରନ୍ତୁ।</string>
     <string name="sec_fingerprint_scan_fingerprint">ଟିପଚିହ୍ନ ସ୍କାନ୍ କରନ୍ତୁ।</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX ଚାଲୁଥିବା ସମୟରେ ଆଇକନ୍ ଦେଖାଯିବ ନାହିଁ।</string>
     <string name="sec_fingerprint_second_guide_title">ଏକ ପୂର୍ଣ୍ଣ ସ୍କାନ୍ କରନ୍ତୁ</string>
     <string name="sec_fingerprint_sensor">ଟିପଚିହ୍ନ ସେନସର୍</string>
     <string name="sec_fingerprint_sensor_activated">ଟିପଚିହ୍ନ ସେନସର୍ ସକ୍ରିୟ ହୋଇଛି</string>

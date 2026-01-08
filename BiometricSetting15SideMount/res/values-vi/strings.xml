@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Ảnh động</string>
     <string name="fingerprint_custom_icon_title">Biểu tượng</string>
     <string name="fingerprint_dex_toast">Sử dụng vân tay trên điện thoại để xác thực danh tính của bạn.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Miếng dán bảo vệ dày hoặc có màu có thể ảnh hưởng đến hiệu suất. Nếu bạn sử dụng miếng dán bảo vệ màn hình, hãy kiểm tra để đảm bảo miếng dán được dán nhãn tương thích với cảm biến vân tay trên màn hình.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Miếng dán bảo vệ dày có thể ảnh hưởng đến hiệu suất. Nếu bạn sử dụng miếng dán bảo vệ màn hình, hãy kiểm tra để đảm bảo miếng dán được dán nhãn tương thích với cảm biến vân tay trên màn hình.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Hãy đảm bảo rằng bạn không sử dụng tấm bảo vệ màn hình khi đăng ký vân tay.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Ứng dụng này không hỗ trợ Đa cửa sổ.</string>
-    <string name="fingerprint_duplicate_guide_msg">Hãy đảm bảo điều chỉnh vị trí ngón tay của bạn một chút mỗi lần.</string>
+    <string name="fingerprint_duplicate_guide_msg">Hãy thay đổi nhẹ vị trí ngón tay mỗi lần để quét toàn bộ.</string>
     <string name="fingerprint_enroll_dont_move">Đừng di chuyển ngón tay của bạn cho đến khi quá trình quét hoàn tất.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Lấp kín toàn bộ vòng tròn</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Di chuyển ngón tay xung quanh cảm biến</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Nếu điều này tiếp tục xảy ra, hãy khởi động lại điện thoại của bạn.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">Đã xảy ra lỗi với cảm biến vân tay. Nếu thông báo này xuất hiện lặp đi lặp lại, hãy khởi động lại điện thoại.</string>
     <string name="fingerprint_error_message_some_things_try">Dưới đây là một số điều bạn có thể thử:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Nếu sự cố này tiếp tục xảy ra, hãy liên hệ với Dịch vụ khách hàng.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Hãy đảm bảo cảm biến vân tay sạch và khô, rồi thử lại.</string>
     <string name="fingerprint_error_message_timed_out">Đăng ký đã hết thời gian chờ. Hãy thử lại.</string>
     <string name="fingerprint_error_title_no_space">Không có đủ dung lượng lưu trữ</string>
     <string name="fingerprint_error_title_not_responding">Cảm biến vân tay không phản hồi</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Hoàn tất</string>
     <string name="fingerprint_register_guide_side_key">Cảm biến nằm trên phím Cạnh phía bên phải của điện thoại.</string>
     <string name="fingerprint_register_lift_your_finger">Nhấc ngón tay khỏi cảm biến vân tay.</string>
-    <string name="fingerprint_register_place_your_finger">Điều chỉnh vị trí ngón tay để quét toàn bộ</string>
+    <string name="fingerprint_register_place_your_finger">Quét vân tay của bạn</string>
     <string name="fingerprint_register_success">Đã thêm vân tay</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Tuyệt vời! Vân tay của bạn đã được nhận dạng.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Chạm cảm biến vân tay.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Quét vân tay của bạn.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Không thể sử dụng %1$s khi gắn vỏ bàn phím. %2$s sẽ bị tắt.</string>
     <string name="fingerscanner_keyboard_dialog_title">Đã gắn vỏ bàn phím</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Đặt ngón tay lên cảm biến vân tay rồi nhấc lên lại.</string>
-    <string name="fingerscanner_register_text">Nhấn ngón tay lên cảm biến, sau đó nhấc ngón tay lên khi bạn cảm thấy rung.</string>
+    <string name="fingerscanner_register_text">Đặt ngón tay lên cảm biến, sau đó nhấc ngón tay lên khi bạn cảm thấy rung.</string>
     <string name="fingerscanner_toast_back_text">Chạm vào phím Trở về lần nữa để dừng thêm dấu vân tay.</string>
     <string name="forgot_password">Quên mật mã</string>
     <string name="forgot_password_header">Đặt lại mật mã?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Nhập mật mã</string>
     <string name="sec_enter_pin_WC">Nhập mã PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Kích hoạt cảm biến vân tay</string>
-    <string name="sec_fingerprint_always_on_summary">Quét vân tay của bạn ngay cả khi màn hình tắt.</string>
+    <string name="sec_fingerprint_always_on_summary">Đánh thức và mở khóa điện thoại của bạn chỉ bằng cách chạm vào phím Cạnh. Bật để truy cập nhanh hoặc tắt để tránh vô tình quét vân tay.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Quét vân tay ngay cả khi màn hình tắt. Không khả dụng khi Samsung DeX đang chạy.</string>
     <string name="sec_fingerprint_enroll_title">Thêm vân tay</string>
     <string name="sec_fingerprint_error_contact_customer_service">Nếu sự cố này tiếp tục xảy ra, hãy liên hệ với Dịch vụ khách hàng.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Tháo điện thoại ra khỏi bộ sạc không dây trước khi đăng ký vân tay của bạn.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Đóng điện thoại để tiếp tục thêm vân tay của bạn.</string>
-    <string name="sec_fingerprint_register_guide_text">Nhấn ngón tay lên cảm biến, sau đó nhấc ngón tay lên khi bạn cảm thấy rung.</string>
+    <string name="sec_fingerprint_register_guide_text">Đặt ngón tay lên cảm biến, sau đó nhấc ngón tay lên khi bạn cảm thấy rung.</string>
     <string name="sec_fingerprint_register_open_phone">Mở điện thoại để tiếp tục thêm vân tay của bạn.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Nhấn ngón tay của bạn lên cảm biến, sau đó nhấc ngón tay lên khi tỷ lệ phần trăm tăng lên.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Đặt ngón tay của bạn lên cảm biến, sau đó nhấc ngón tay lên khi tỷ lệ phần trăm tăng lên.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Định vị lại ngón tay của bạn mỗi lần để chụp các cạnh của vân tay.</string>
     <string name="sec_fingerprint_scan_fingerprint">Quét vân tay.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Biểu tượng sẽ không hiển thị khi Samsung DeX đang chạy.</string>
     <string name="sec_fingerprint_second_guide_title">Quét toàn bộ</string>
     <string name="sec_fingerprint_sensor">Cảm biến vân tay</string>
     <string name="sec_fingerprint_sensor_activated">Đã kích hoạt cảm biến vân tay</string>

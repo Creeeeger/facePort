@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animacija</string>
     <string name="fingerprint_custom_icon_title">Piktograma</string>
     <string name="fingerprint_dex_toast">Naudodami piršto atspaudą telefone patvirtinkite savo tapatybę.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Stora arba spalvą turinti apsauginė plėvelė gali turėti įtakos veikimui. Jei naudojate ekrano apsaugą, įsitikinkite, kad ji pažymėta kaip suderinama su ekrano pirštų atspaudų jutikliu.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Stora apsauginė plėvelė gali turėti įtakos veikimui. Jei naudojate ekrano apsaugą, įsitikinkite, kad ji pažymėta kaip suderinama su ekrano pirštų atspaudų jutikliu.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Registruodami pirštų atspaudus nenaudokite ekrano viršelio.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Ši programa nepalaiko kelių langų funkcijos.</string>
-    <string name="fingerprint_duplicate_guide_msg">Nepamirškite kiekvieną kartą šiek tiek pakoreguoti piršto padėtį.</string>
+    <string name="fingerprint_duplicate_guide_msg">Kaskart šiek tiek pakeiskite piršto padėtį, kad nuskaitytumėte jį visą.</string>
     <string name="fingerprint_enroll_dont_move">Nepakelkite piršto, kol nebus baigtas nuskaitymas.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Užpildykite visą apskritimą</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Judinkite pirštą ant jutiklio</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Jei tai kartojasi, paleiskite telefoną iš naujo.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Štai keletas dalykų, kuriuos galite išbandyti:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Jei problema išlieka, kreipkitės į klientų aptarnavimo centrą.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Įsitikinkite, kad pirštų atspaudų jutiklis yra švarus ir sausas, tada bandykite dar kartą.</string>
     <string name="fingerprint_error_message_timed_out">Baigėsi registracijos laikas. Bandykite dar kartą.</string>
     <string name="fingerprint_error_title_no_space">Nepakanka vietos saugykloje</string>
     <string name="fingerprint_error_title_not_responding">Pirštų atspaudų jutiklis neatsako</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Atlikta</string>
     <string name="fingerprint_register_guide_side_key">Jutiklis yra šoniniame mygtuke, dešinėje telefono pusėje.</string>
     <string name="fingerprint_register_lift_your_finger">Pakelkite pirštą nuo pirštų atspaudų jutiklio.</string>
-    <string name="fingerprint_register_place_your_finger">Koreg. piršto padėtį, kad nuskaityt. jį visą</string>
+    <string name="fingerprint_register_place_your_finger">Nuskaitykite piršto atspaudą</string>
     <string name="fingerprint_register_success">Piršto atspaudas pridėtas</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Šaunu! Jūsų piršto atspaudas atpažintas.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Palieskite pirštų atspaudų jutiklį.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Nuskaitykite piršto atspaudą.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Neįmanoma naudoti %1$s, kol uždėtas klaviatūros dangtelis. %2$s bus išjungta.</string>
     <string name="fingerscanner_keyboard_dialog_title">Uždėtas klav. dangtelis</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Uždėkite pirštą ant pirštų atspaudų jutiklio, tada jį vėl pakelkite.</string>
-    <string name="fingerscanner_register_text">Prispauskite pirštą prie jutiklio ir pakelkite, kai pajusite vibraciją.</string>
+    <string name="fingerscanner_register_text">Padėkite pirštą ant jutiklio, tada pakelkite jį pajutę vibraciją.</string>
     <string name="fingerscanner_toast_back_text">Dar kartą bakstelėkite grįžimo mygtuką, kad būtų sustabdytas pirštų atspaudų pridėjimas.</string>
     <string name="forgot_password">Pamiršau slaptažodį</string>
     <string name="forgot_password_header">Nustatyti slaptažodį iš naujo?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Įveskite slaptažodį</string>
     <string name="sec_enter_pin_WC">Įveskite PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktyvinti pirštų atspaudų jutiklį</string>
-    <string name="sec_fingerprint_always_on_summary">Nuskaitykite savo piršto atspaudą, net jei ekranas išjungtas.</string>
+    <string name="sec_fingerprint_always_on_summary">Pažadinkite ir atrakinkite telefoną paliesdami šoninį mygtuką. Įjunkite, jei norite greitai pasiekti, arba išjunkite, kad piršto atspaudas nebūtų nuskaitytas netyčia.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Nuskaitykite savo piršto atspaudą, net jei ekranas išjungtas. Nepasiekiama, kai veikia „Samsung DeX“.</string>
     <string name="sec_fingerprint_enroll_title">Pridėti piršto atspaudą</string>
     <string name="sec_fingerprint_error_contact_customer_service">Jei problema išlieka, kreipkitės į klientų aptarnavimo centrą.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Prieš registruodami savo piršto atspaudą nuimkite telefoną nuo belaidžio kroviklio.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Jei norite pridėti kitus pirštų atspaudus, uždarykite telefoną.</string>
-    <string name="sec_fingerprint_register_guide_text">Prispauskite pirštą prie jutiklio ir pakelkite, kai pajusite vibraciją.</string>
+    <string name="sec_fingerprint_register_guide_text">Padėkite pirštą ant jutiklio, tada pakelkite jį pajutę vibraciją.</string>
     <string name="sec_fingerprint_register_open_phone">Jei norite pridėti kitus pirštų atspaudus, atidarykite telefoną.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Pridėkite pirštą prie jutiklio, o procentams pradėjus didėti pakelkite jį.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Uždėkite pirštą ant jutiklio, o procentams pradėjus didėti pakelkite jį.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Kaskart perkelkite pirštą, kad būtų užfiksuoti piršto atspaudo kraštai.</string>
     <string name="sec_fingerprint_scan_fingerprint">Nuskaitykite piršto atspaudą.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Piktograma nebus rodoma, kai veikia „Samsung DeX“.</string>
     <string name="sec_fingerprint_second_guide_title">Atlikti išsamų nuskaitymą</string>
     <string name="sec_fingerprint_sensor">Pirštų atspaudų jutiklis</string>
     <string name="sec_fingerprint_sensor_activated">Pirštų atspaudų jutiklis suaktyvintas</string>

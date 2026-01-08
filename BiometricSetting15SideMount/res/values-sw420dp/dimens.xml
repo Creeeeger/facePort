@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="face_enroll_guide_horizontal_margin">26.0dip</dimen>
+    <item type="dimen" name="face_enroll_guide_layout_width_percent">0.76</item>
+    <dimen name="face_enroll_guide_title_horizontal_margin">26.0dip</dimen>
+    <item type="dimen" name="face_enroll_preview_bottom_margin_view">0.045</item>
+    <item type="dimen" name="face_enroll_preview_layout_width_percent">0.44</item>
+    <dimen name="face_knox_logo_end_margin">0.0dip</dimen>
+    <item type="dimen" name="sec_fingerprint_register_width_ratio">0.75</item>
+</resources>

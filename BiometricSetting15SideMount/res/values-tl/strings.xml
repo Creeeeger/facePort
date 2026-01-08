@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animation</string>
     <string name="fingerprint_custom_icon_title">Icon</string>
     <string name="fingerprint_dex_toast">Gamitin ang fingerprint mo sa telepono mo para i-verify ang pagkakakilanlan mo.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Makaka-apekto sa paggana ang makapal o de-kolor na protective film. Kung gumagamit ka ng screen protector, tiyakin na may etiketa ito na akma ito sa on-screen na fingerprint sensor.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Makaka-apekto sa paggana ang makapal na protective film. Kung gumagamit ka ng screen protector, tiyakin na may etiketa ito na akma ito sa on-screen na fingerprint sensor.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Tiyakin na hindi gumagamit ng screen cover habang nagrerehistro ng mga fingerprint.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Hindi suportado ng app na ito ang Multi window.</string>
-    <string name="fingerprint_duplicate_guide_msg">Tiyakin na bahagyang i-adjust ang posisyon ng daliri mo sa bawat pagkakataon.</string>
+    <string name="fingerprint_duplicate_guide_msg">Bahagyang baguhin ang posisyon ng daliri mo bawat pagkakataon para makakuha ng ganap na pag-scan.</string>
     <string name="fingerprint_enroll_dont_move">Huwag igagalaw ang daliri mo hanggang sa matapos ang pag-scan.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Punan ang buong bilog</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Igalaw ang daliri mo palibot ng sensor</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Kung patuloy itong nangyayari, i-restart ang telepono mo.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Narito ang ilang bagay na masusubok mo:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Kung magpapatuloy ang problemang ito, makipag-ugnayan sa Customer Service.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Tiyakin na malinis at tuyo ang fingerprint sensor, tapos subukang muli.</string>
     <string name="fingerprint_error_message_timed_out">Nag-time out ang pagpaparehistro. Subukang muli.</string>
     <string name="fingerprint_error_title_no_space">Walang sapat na storage</string>
     <string name="fingerprint_error_title_not_responding">Hindi tumutugon ang fingerprint sensor</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Tapos na</string>
     <string name="fingerprint_register_guide_side_key">Nasa Side button ang sensor sa kanang gilid ng telepono.</string>
     <string name="fingerprint_register_lift_your_finger">Alisin ang daliri mo mula sa fingerprint sensor.</string>
-    <string name="fingerprint_register_place_your_finger">I-adjust ang posisyon ng daliri mo para maka-scan nang buo</string>
+    <string name="fingerprint_register_place_your_finger">I-scan ang fingerprint mo</string>
     <string name="fingerprint_register_success">Naidagdag ang fingerprint</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Magaling! Nakilala ang fingerprint mo.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Dampian ang fingerprint sensor.</string>
@@ -253,7 +253,6 @@
     <string name="fingerprint_verification_description_default_text">I-scan ang fingerprint mo.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Hindi magamit ang %1$s habang nakakabit ang takip ng keyboard. Hindi papaganahin ang %2$s.</string>
     <string name="fingerscanner_keyboard_dialog_title">Nakakabit ang takip ng keyboard</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Ilagay ang daliri mo sa fingerprint sensor, pagkatapos ay iangat ito ulit.</string>
     <string name="fingerscanner_register_text">Ilapat ang daliri mo sa sensor, tapos iangat ito kapag nakadama ka ng pag-vibrate.</string>
     <string name="fingerscanner_toast_back_text">I-tap muli ang Back button para ihinto ang pagdagdag ng fingerprint mo.</string>
     <string name="forgot_password">Nakalimutan ang password</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Ipasok ang password</string>
     <string name="sec_enter_pin_WC">Ipasok ang PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">I-activate ang fingerprint sensor</string>
-    <string name="sec_fingerprint_always_on_summary">I-scan ang fingerprint mo kahit na naka-off ang screen.</string>
+    <string name="sec_fingerprint_always_on_summary">Gisingin at i-unlock ang telepono mo sa pagpindot lang sa Side button. I-on para sa mabilis na access o i-off para iwasan ang mga di-sadyang pag-scan ng fingerprint.</string>
     <string name="sec_fingerprint_always_on_summary_dex">I-scan ang fingerprint mo kahit na naka-off ang screen. Hindi magagamit kapag umaandar ang Samsung DeX.</string>
     <string name="sec_fingerprint_enroll_title">Magdagdag ng fingerprint</string>
     <string name="sec_fingerprint_error_contact_customer_service">Kung magpapatuloy ang problemang ito, makipag-ugnayan sa Customer Service.</string>
@@ -300,7 +299,6 @@
     <string name="sec_fingerprint_register_percentage_goes_up">Ilapat ang daliri mo sa sensor, tapos iangat ito kapag tumaas ang porsiyento.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Ibahin ang posisyon ng daliri mo sa bawat pagkakataon para kunan ang mga gilid ng fingerprint mo.</string>
     <string name="sec_fingerprint_scan_fingerprint">I-scan ang fingerprint.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Hindi lilitaw ang icon kapag tumatakbo ang Samsung DeX.</string>
     <string name="sec_fingerprint_second_guide_title">Magpa-full scan</string>
     <string name="sec_fingerprint_sensor">Fingerprint sensor</string>
     <string name="sec_fingerprint_sensor_activated">Ini-activate ang fingerprint sensor</string>

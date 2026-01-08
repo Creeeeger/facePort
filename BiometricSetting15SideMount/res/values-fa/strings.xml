@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">تصویر متحرک</string>
     <string name="fingerprint_custom_icon_title">نماد</string>
     <string name="fingerprint_dex_toast">برای تأیید هویت خود در تلفن از اثر انگشت خود استفاده کنید.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">روکش محافظ ضخیم یا رنگی می‌تواند بر عملکرد تاثیر بگذارد. اگر از محافظ صفحه استفاده می‌کنید، بررسی کنید تا مطمئن شوید که دارای برچسب سازگاری با حسگر اثر انگشت روی صفحه نمایش باشد.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">روکش محافظ ضخیم می‌تواند بر عملکرد تأثیر بگذارد. اگر از محافظ صفحه استفاده می‌کنید، بررسی کنید تا مطمئن شوید که دارای برچسب سازگاری با حسگر اثر انگشت روی صفحه نمایش باشد.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">هنگام ثبت اثر انگشت‌ها از محافظ صفحه استفاده نکنید.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">این برنامه از حالت ”چند پنجره“ پشتیبانی نمی‌کند.</string>
-    <string name="fingerprint_duplicate_guide_msg">هر بار محل قرار گرفتن انگشت را کمی تغییر دهید.</string>
+    <string name="fingerprint_duplicate_guide_msg">هر بار انگشت خود را کمی جابجا کنید تا کل اثر انگشتتان اسکن شود.</string>
     <string name="fingerprint_enroll_dont_move">تا زمانی که اسکن کامل نشده است، انگشت خود را حرکت ندهید.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">کل دایره را پر کنید</string>
     <string name="fingerprint_enroll_first_guide_subtitle">انگشت خود را در اطراف حسگر حرکت دهید</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">اگر همچنان ادامه داشت، تلفن خود را راه‎اندازی مجدد کنید.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">این موارد را می‌توانید امتحان کنید:</string>
-    <string name="fingerprint_error_message_something_on_sensor">اگر این مشکل ادامه داشت، با خدمات مشتریان تماس بگیرید.</string>
+    <string name="fingerprint_error_message_something_on_sensor">مطمئن شوید حسگر اثر انگشت تمیز و خشک است، سپس دوباره امتحان کنید.</string>
     <string name="fingerprint_error_message_timed_out">زمان ثبت نام تمام شد. مجدداً امتحان کنید.</string>
     <string name="fingerprint_error_title_no_space">فضای ذخیره‌سازی کافی نیست</string>
     <string name="fingerprint_error_title_not_responding">حسگر اثر انگشت پاسخ نمی‌دهد</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">انجام شد</string>
     <string name="fingerprint_register_guide_side_key">حسگر روی ”دکمه جانبی“ در سمت راست گوشی قرار دارد.</string>
     <string name="fingerprint_register_lift_your_finger">انگشتتان را از روی حسگر اثر انگشت بردارید.</string>
-    <string name="fingerprint_register_place_your_finger">برای اسکن کامل، وضعیت انگشت خود را تنظیم کنید</string>
+    <string name="fingerprint_register_place_your_finger">اثر انگشت خود را اسکن کنید</string>
     <string name="fingerprint_register_success">اثر انگشت اضافه شد</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">بسیار خوب! اثر انگشت شما شناسایی شد.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">حسگر اثر انگشت را لمس کنید.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">اثر انگشت خود را اسکن کنید.</string>
     <string name="fingerscanner_keyboard_dialog_msg">وقتی روکش صفحه کلید متصل است، استفاده از ‎%1$s ممکن نیست. ‎%2$s غیرفعال خواهد شد.</string>
     <string name="fingerscanner_keyboard_dialog_title">روکش صفحه کلید وصل شد</string>
-    <string name="fingerscanner_lift_your_finger_off_first">انگشت خود را روی حسگر اثر انگشت قرار دهید، سپس دوباره آن را بردارید.</string>
-    <string name="fingerscanner_register_text">انگشت خود را روی حسگر قرار دهید، وقتی لرزشی احساس کردید، انگشت را بردارید.</string>
+    <string name="fingerscanner_register_text">انگشت خود را روی حسگر قرار دهید و وقتی لرزشی احساس کردید، انگشت را بردارید.</string>
     <string name="fingerscanner_toast_back_text">برای توقف افزودن اثر انگشت خود، دوباره روی دکمه ”بازگشت“ ضربه بزنید.</string>
     <string name="forgot_password">رمزعبور را فراموش کرده‌ام</string>
     <string name="forgot_password_header">رمز عبور بازنشانی شود؟</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">رمز ورود را وارد کنید</string>
     <string name="sec_enter_pin_WC">پین را وارد کنید</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">فعال کردن حسگر اثر انگشت</string>
-    <string name="sec_fingerprint_always_on_summary">حتی درصورت خاموش بودن صفحه، اثر انگشت خود را اسکن کنید.</string>
+    <string name="sec_fingerprint_always_on_summary">فقط با لمس ”دکمه جانبی“، گوشی خود را بیدار و قفل‌گشایی کنید. برای دسترسی سریع، روشن کنید؛ یا برای جلوگیری از اسکن‌های تصادفی اثر انگشت، خاموش کنید.</string>
     <string name="sec_fingerprint_always_on_summary_dex">حتی در صورت خاموش بودن صفحه، اثر انگشت خود را اسکن کنید. وقتی Samsung DeX در حال اجرا است، این قابلیت در دسترس نیست.</string>
     <string name="sec_fingerprint_enroll_title">افزودن اثر انگشت</string>
     <string name="sec_fingerprint_error_contact_customer_service">اگر این مشکل ادامه داشت، با خدمات مشتریان تماس بگیرید.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">قبل از ثبت اثر انگشت خود، تلفنتان را از روی شارژر بی‌سیم بردارید.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>٪</string>
     <string name="sec_fingerprint_register_close_phone">برای ادامه افزودن اثر انگشت خود، گوشی را باز کنید.</string>
-    <string name="sec_fingerprint_register_guide_text">انگشت خود را روی حسگر قرار دهید، وقتی لرزشی احساس کردید، انگشت را بردارید.</string>
+    <string name="sec_fingerprint_register_guide_text">انگشت خود را روی حسگر قرار دهید و وقتی لرزشی احساس کردید، انگشت را بردارید.</string>
     <string name="sec_fingerprint_register_open_phone">برای ادامه افزودن اثر انگشت خود، تلفن را باز کنید.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">انگشت خود را روی حسگر فشار دهید و وقتی درصد بالا رفت، انگشت را بردارید.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">انگشت خود را روی حسگر قرار دهید و وقتی درصد بالا رفت، انگشت را بردارید.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">هر بار جای انگشتتان را کمی تغییر دهید تا لبه‌های اثر انگشت هم گرفته شود.</string>
     <string name="sec_fingerprint_scan_fingerprint">اثر انگشت را اسکن کنید.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">وقتی Samsung DeX در حال اجرا است، این نماد نشان داده نمی‌شود.</string>
     <string name="sec_fingerprint_second_guide_title">انجام اسکن کامل</string>
     <string name="sec_fingerprint_sensor">حسگر اثر انگشت</string>
     <string name="sec_fingerprint_sensor_activated">حسگر اثر انگشت فعال شد</string>

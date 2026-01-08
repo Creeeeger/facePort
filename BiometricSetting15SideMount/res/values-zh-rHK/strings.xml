@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">動畫</string>
     <string name="fingerprint_custom_icon_title">圖示</string>
     <string name="fingerprint_dex_toast">在手機上使用指紋來驗證您的身分。</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">厚保護膜或彩色保護膜會影響效能。若您使用螢幕保護貼，請檢查確保其標明與螢幕內建指紋感應器相容。</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">厚保護膜會影響效能。若您使用螢幕保護貼，請檢查確保其標明與螢幕內建指紋感應器相容。</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">請確保您註冊指紋時未使用螢幕保護套。</string>
     <string name="fingerprint_doesnt_support_multi_window_text">此應用程式不支援多重視窗。</string>
-    <string name="fingerprint_duplicate_guide_msg">請確保每次都調整一下您的手指位置。</string>
+    <string name="fingerprint_duplicate_guide_msg">每次都稍微改變手指的位置以進行完整的掃描。</string>
     <string name="fingerprint_enroll_dont_move">掃描完成之前請勿移動手指。</string>
     <string name="fingerprint_enroll_first_guide_indisplay">填充整個圓圈</string>
     <string name="fingerprint_enroll_first_guide_subtitle">在感應器上移動手指</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">若這種情況持續發生，請重新啟動您的手機。</string>
     <string name="fingerprint_error_message_sensor_error_vzw">指紋感應器發生錯誤。若此訊息仍重複出現，請重新啟動您的裝置。</string>
     <string name="fingerprint_error_message_some_things_try">以下是您可以嘗試的一些步驟：</string>
-    <string name="fingerprint_error_message_something_on_sensor">若此問題仍然存在，請聯絡客戶服務。</string>
+    <string name="fingerprint_error_message_something_on_sensor">請確認指紋感應器清潔並乾燥，然後重試。</string>
     <string name="fingerprint_error_message_timed_out">註冊已逾時。請重試。</string>
     <string name="fingerprint_error_title_no_space">儲存空間不足</string>
     <string name="fingerprint_error_title_not_responding">指紋感應器未回應</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">完成</string>
     <string name="fingerprint_register_guide_side_key">感應器位於手機右側的側鍵上。</string>
     <string name="fingerprint_register_lift_your_finger">將您的手指從指紋感應器上抬起。</string>
-    <string name="fingerprint_register_place_your_finger">調整您手指的位置以取得完整的掃描</string>
+    <string name="fingerprint_register_place_your_finger">掃描您的指紋</string>
     <string name="fingerprint_register_success">已加入指紋</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">太棒了！已識別您的指紋。</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">觸碰指紋感應器。</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">掃描您的指紋。</string>
     <string name="fingerscanner_keyboard_dialog_msg">鍵盤保護套已連接時無法使用 %1$s。%2$s 將被停用。</string>
     <string name="fingerscanner_keyboard_dialog_title">鍵盤保護套已連接</string>
-    <string name="fingerscanner_lift_your_finger_off_first">將手指置於指紋感應器上然後再抬起。</string>
-    <string name="fingerscanner_register_text">在感應器上按下手指，然後在感覺到震動時抬起。</string>
+    <string name="fingerscanner_register_text">將您的手指置於感應器上，然後在感覺到震動時抬起。</string>
     <string name="fingerscanner_toast_back_text">再次輕觸 [返回鍵] 以停止加入您的指紋。</string>
     <string name="forgot_password">忘記密碼</string>
     <string name="forgot_password_header">重設密碼嗎？</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">輸入密碼</string>
     <string name="sec_enter_pin_WC">輸入 PIN 碼</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">啟動指紋感應器</string>
-    <string name="sec_fingerprint_always_on_summary">即使在螢幕關閉時也可掃描您的指紋。</string>
+    <string name="sec_fingerprint_always_on_summary">只需觸碰 [側鍵] 即可喚醒並解鎖您的手機。開啟以進行快速存取，或關閉以避免意外掃描指紋。</string>
     <string name="sec_fingerprint_always_on_summary_dex">即使在螢幕關閉時也可掃描指紋。當 Samsung DeX 執行時不可用。</string>
     <string name="sec_fingerprint_enroll_title">加入指紋</string>
     <string name="sec_fingerprint_error_contact_customer_service">若此問題仍然存在，請聯絡客戶服務。</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">註冊指紋前，請將手機從無線充電器上取下。</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">合上您的手機以繼續加入指紋。</string>
-    <string name="sec_fingerprint_register_guide_text">在感應器上按下手指，然後在感覺到震動時抬起。</string>
+    <string name="sec_fingerprint_register_guide_text">將您的手指置於感應器上，然後在感覺到震動時抬起。</string>
     <string name="sec_fingerprint_register_open_phone">開啟您的手機以繼續加入指紋。</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">在感應器上按下手指，然後在百分比上升時抬起。</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">將手指置於感應器上，然後在百分比上升時抬起。</string>
     <string name="sec_fingerprint_register_reposition_your_finger">每次調整手指的位置以捕捉指紋的邊緣。</string>
     <string name="sec_fingerprint_scan_fingerprint">掃描指紋。</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">當 Samsung DeX 執行時此圖示不會顯示。</string>
     <string name="sec_fingerprint_second_guide_title">取得全面掃描</string>
     <string name="sec_fingerprint_sensor">指紋感應器</string>
     <string name="sec_fingerprint_sensor_activated">已啟動指紋感應器</string>

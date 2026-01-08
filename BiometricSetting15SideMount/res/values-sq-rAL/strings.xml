@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Animacioni</string>
     <string name="fingerprint_custom_icon_title">Ikona</string>
     <string name="fingerprint_dex_toast">Përdor shenjën e gishtit në telefon për të verifikuar identitetin.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Një cipë mbrojtëse e trashë ose me ngjyrë mund të ndikojë në rendiment. Nëse përdor mbrojtëse ekrani, sigurohu që të jetë etiketuar si e pajtueshme me sensorin e shenjës së gishtit në ekran.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Një cipë mbrojtëse e trashë mund të ndikojë në rendiment. Nëse përdor mbrojtëse ekrani, sigurohu që të jetë etiketuar si e pajtueshme me sensorin e shenjës së gishtit në ekran.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Sigurohu që nuk je duke përdorur mbulesë të ekranit, kur po regjistron shenjat e gishtit.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Ky app nuk e mbështet Multi-Window.</string>
-    <string name="fingerprint_duplicate_guide_msg">Sigurohu që ta ndryshosh nga pak pozicionin e gishtit çdo herë.</string>
+    <string name="fingerprint_duplicate_guide_msg">Ndryshoje nga pak pozicionin e gishtit çdo herë, për të marrë skanim të plotë.</string>
     <string name="fingerprint_enroll_dont_move">Mos e lëviz gishtin derisa të përfundojë skanimi.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Mbushe gjithë rrethin</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Lëvize gishtin rreth sensorit</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Nëse kjo përsëritet, rinise telefonin.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Ja disa gjëra që mund të provosh:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Nëse problemi vazhdon, lidhu me Shërbimin e klientit.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Sigurohu që sensori i shenjave të gishtit është i pastër dhe i thatë, pastaj provo sërish.</string>
     <string name="fingerprint_error_message_timed_out">Regjistrimit i kaloi afati. Provo sërish.</string>
     <string name="fingerprint_error_title_no_space">Nuk ka magazinë të mjaftueshme</string>
     <string name="fingerprint_error_title_not_responding">Sensori i sh. të gishtit s’po përgjigjet</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">U krye</string>
     <string name="fingerprint_register_guide_side_key">Sensori është te Butoni Anësor në anën e djathtë të telefonit.</string>
     <string name="fingerprint_register_lift_your_finger">Hiqe gishtin nga sensori i shenjave të gishtit.</string>
-    <string name="fingerprint_register_place_your_finger">Lëvize nga pak gishtin, për skanim të plotë</string>
+    <string name="fingerprint_register_place_your_finger">Skanoje shenjën e gishtit</string>
     <string name="fingerprint_register_success">Shenja e gishtit u shtua</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Shkëlqyeshëm! Shenja jote e gishtit u njoh.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Prek sensorin e shenjës së gishtit.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Skano shenjën e gishtit.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Nuk mund të përdor %1$s kur është lidhur mbulesa e tastierës. %2$s do të paaftësohet.</string>
     <string name="fingerscanner_keyboard_dialog_title">Mbulesa u lidh</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Vendose gishtin mbi sensorin e shenjave të gishtit, pastaj hiqe që andej.</string>
-    <string name="fingerscanner_register_text">Shtype sensorin me gisht, pastaj hiqe gishtin kur të ndiesh një dridhje.</string>
+    <string name="fingerscanner_register_text">Vendose gishtin mbi sensor, pastaj hiqe kur të ndiesh një dridhje.</string>
     <string name="fingerscanner_toast_back_text">Trokit mbi butonin Prapa sërish për ta ndalur shtimin e shenjës së gishtit.</string>
     <string name="forgot_password">Harrova fjalëkalimin</string>
     <string name="forgot_password_header">Ta resetoj fjalëkalimin?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Fut fjalëkalimin</string>
     <string name="sec_enter_pin_WC">Fut PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktivizo sensorin e shenjës së gishtit</string>
-    <string name="sec_fingerprint_always_on_summary">Skanoje shenjën e gishtit edhe kur ekrani është i fikur.</string>
+    <string name="sec_fingerprint_always_on_summary">Zgjoje dhe zhbllokoje telefonin thjesht duke prekur Butonin Anësor. Ndize këtë për akses të shpejtë, ose fike për të shmangur skanimet pa dashur të shenjës së gishtit.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Skanoje shenjën e gishtit edhe kur ekrani është i fikur. Kjo nuk mund të përdoret kur Samsung DeX është duke punuar.</string>
     <string name="sec_fingerprint_enroll_title">Shto shenjë gishti</string>
     <string name="sec_fingerprint_error_contact_customer_service">Nëse problemi vazhdon, lidhu me Shërbimin e klientit.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Shkëpute telefonin nga karikuesi pa tel, para se të regjistrosh shenjën e gishtit.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Mbylle telefonin që të vazhdosh së shtuari shenjën e gishtit.</string>
-    <string name="sec_fingerprint_register_guide_text">Shtype sensorin me gisht, pastaj hiqe gishtin kur të ndiesh një dridhje.</string>
+    <string name="sec_fingerprint_register_guide_text">Vendose gishtin mbi sensor, pastaj hiqe kur të ndiesh një dridhje.</string>
     <string name="sec_fingerprint_register_open_phone">Hape telefonin që të vazhdosh së shtuari shenjën e gishtit.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Shtype sensorin me gisht, pastaj hiqe gishtin kur të rritet përqindja.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Vendose gishtin në sensor, pastaj hiqe kur të rritet përqindja.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Ndërroja pozicionin gishtit çdo herë, për të kapur buzët e shenjës së gishtit.</string>
     <string name="sec_fingerprint_scan_fingerprint">Skano shenjën e gishtit.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ikona nuk do të tregohet kur Samsung DeX të jetë duke punuar.</string>
     <string name="sec_fingerprint_second_guide_title">Bëj një skanim të plotë</string>
     <string name="sec_fingerprint_sensor">Sensori i shenjës së gishtit</string>
     <string name="sec_fingerprint_sensor_activated">Sensori i shenjës së gishtit u aktivizua</string>

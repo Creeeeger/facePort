@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Animasi</string>
     <string name="fingerprint_custom_icon_title">Ikon</string>
     <string name="fingerprint_dex_toast">Gunakan sidik jari untuk memverifikasi identitas Anda di ponsel.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Film pelindung yang tebal atau berwarna dapat memengaruhi performa. Bila Anda menggunakan pelindung layar, pastikan ia memiliki label yang menunjukkan kompatibiltasnya dengan sensor sidik jari di layar.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Film pelindung yang tebal dapat memengaruhi performa. Bila Anda menggunakan pelindung layar, pastikan ia memiliki label yang menunjukkan kompatibiltasnya dengan sensor sidik jari di layar.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Pastikan Anda tidak menggunakan cover layar saat mendaftarkan sidik jari.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Aplikasi ini tidak mendukung Multi jendela.</string>
-    <string name="fingerprint_duplicate_guide_msg">Pastikan untuk sedikit menyesuaikan posisi jari setiap waktu.</string>
+    <string name="fingerprint_duplicate_guide_msg">Ubah sedikit posisi jari Anda setiap kali untuk pemindaian sepenuhnya.</string>
     <string name="fingerprint_enroll_dont_move">Jangan gerakkan jari Anda hingga pemindaian selesai.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Isi seluruh lingkaran</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Gerakkan jari Anda di sekitar sensor</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Jika ini terus berlangsung, mulai ulang telepon Anda.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Berikut adalah beberapa hal yang dapat Anda coba:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Jika masalah ini berlanjut, hubungi Layanan Pelanggan.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Pastikan sensor sidik jari bersih dan kering, lalu coba lagi.</string>
     <string name="fingerprint_error_message_timed_out">Waktu pendaftaran telah habis. Coba lagi.</string>
     <string name="fingerprint_error_title_no_space">Penyimpanan tidak cukup</string>
     <string name="fingerprint_error_title_not_responding">Sensor sidik jari tidak merespons</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Selesai</string>
     <string name="fingerprint_register_guide_side_key">Sensor ada di Tombol samping pada sisi kanan ponsel.</string>
     <string name="fingerprint_register_lift_your_finger">Angkat jari Anda dari sensor sidik jari.</string>
-    <string name="fingerprint_register_place_your_finger">Sesuaikan posisi jari utk mndapat pindaian penuh</string>
+    <string name="fingerprint_register_place_your_finger">Pindai sidik jari Anda</string>
     <string name="fingerprint_register_success">Sidik jari ditambahkan</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Hebat! Sidik jari Anda dikenali.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Sentuh sensor sidik jari.</string>
@@ -253,7 +253,6 @@
     <string name="fingerprint_verification_description_default_text">Pindai sidik jari.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Tidak dapat menggunakan %1$s saat cover keyboard terpasang. %2$s akan dinonaktifkan.</string>
     <string name="fingerscanner_keyboard_dialog_title">Cover keyboard trpsng</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Letakkan jari Anda di sensor sidik jari lalu angkat kembali.</string>
     <string name="fingerscanner_register_text">Letakkan jari Anda di sensor, lalu angkat saat Anda merasakan getaran.</string>
     <string name="fingerscanner_toast_back_text">Ketuk lagi tombol Kembali untuk menghentikan penambahan sidik jari Anda.</string>
     <string name="forgot_password">Lupa kata sandi?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Masukkan kata sandi</string>
     <string name="sec_enter_pin_WC">Masukkan PIN</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Aktifkan sensor sidik jari</string>
-    <string name="sec_fingerprint_always_on_summary">Pindai sidik jari Anda meski layar mati.</string>
+    <string name="sec_fingerprint_always_on_summary">Aktifkan dan buka kunci ponsel cukup dengan menyentuh Tombol samping. Aktifkan untuk mendapat akses cepat, atau nonaktifkan untuk menghindari pemindaian sidik jari tanpa sengaja.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Pindai sidik jari Anda meski layar mati. Tidak tersedia saat Samsung DeX sedang berjalan.</string>
     <string name="sec_fingerprint_enroll_title">Tambah sidik jari</string>
     <string name="sec_fingerprint_error_contact_customer_service">Jika masalah ini berlanjut, hubungi Layanan Pelanggan.</string>
@@ -300,7 +299,6 @@
     <string name="sec_fingerprint_register_percentage_goes_up">Letakkan jari Anda di sensor, lalu angkat saat persentase meningkat.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Posisikan ulang jari Anda setiap kali untuk merekam tepi sidik jari.</string>
     <string name="sec_fingerprint_scan_fingerprint">Pindai sidik jari.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Ikon tidak akan muncul saat Samsung DeX sedang berjalan.</string>
     <string name="sec_fingerprint_second_guide_title">Dapatkan pemindaian penuh</string>
     <string name="sec_fingerprint_sensor">Sensor sidik jari</string>
     <string name="sec_fingerprint_sensor_activated">Sensor sidik jari diaktifkan</string>

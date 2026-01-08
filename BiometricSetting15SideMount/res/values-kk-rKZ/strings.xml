@@ -106,10 +106,10 @@
     <string name="fingerprint_custom_animation_title">Анимация</string>
     <string name="fingerprint_custom_icon_title">Белгіше</string>
     <string name="fingerprint_dex_toast">Өзіңізді куәландыру үшін телефоныңызда саусақ ізіңізді пайдаланыңыз.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Жуан немесе түрлі-түсті қорғаныш пленкасы өнімділікке әсер етуі мүмкін. Экран қорғағышын пайдалансаңыз, оның экрандағы саусақ ізі сенсорымен үйлесімді деп белгіленгенін тексеріңіз.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Жуан қорғаныш пленкасы өнімділікке әсер етуі мүмкін. Экран қорғағышын пайдалансаңыз, оның экрандағы саусақ ізі сенсорымен үйлесімді деп белгіленгенін тексеріңіз.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Саусақ іздерін тіркеу кезінде экран тысын пайдаланып жатпағаныңызға көз жеткізіңіз.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Бұл қолданба Бірнеше терезе көрінісіне қолдау көрсетпейді.</string>
-    <string name="fingerprint_duplicate_guide_msg">Саусағыңыздың күйін әрдайым аздап реттеңіз.</string>
+    <string name="fingerprint_duplicate_guide_msg">Толықтай сканерлеуді алу үшін, саусағыңыздың орналасу қалпын әрдайым аздап өзгертіңіз.</string>
     <string name="fingerprint_enroll_dont_move">Сканерлеу аяқталғанша саусағыңызды жылжытпаңыз.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Бүкіл шеңберді толтырыңыз</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Саусағыңызды сенсордың айналасында жылжыту</string>
@@ -142,7 +142,7 @@
     <string name="fingerprint_error_message_sensor_error">Егер бұл үнемі қайталанса, онда телефоныңызды өшіріп, қайта қосыңыз.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Осы жерде қолданып көруіңізге болатын бірнеше нәрсе бар:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Егер бұл мәселе қайталанса, онда Тұтынушыларға қызмет көрсету орталығына хабарласыңыз.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Саусақ ізін сканерлеу сенсорының таза әрі құрғақ екеніне көз жеткізіп, әрекетті қайталаңыз.</string>
     <string name="fingerprint_error_message_timed_out">Тіркеу уақыты бітті. Әрекетті қайталаңыз.</string>
     <string name="fingerprint_error_title_no_space">Сақтау орны жеткіліксіз</string>
     <string name="fingerprint_error_title_not_responding">Саусақ ізінің сенсоры жауап бермей жатыр</string>
@@ -165,7 +165,7 @@
     <string name="fingerprint_register_done">Дайын</string>
     <string name="fingerprint_register_guide_side_key">Сенсор телефонның оң жағындағы Бүйірлік түймесінде орналасқан.</string>
     <string name="fingerprint_register_lift_your_finger">Саусағыңызды саусақ ізін сканерлеу сенсорынан алыңыз.</string>
-    <string name="fingerprint_register_place_your_finger">Толық скан-ді алу үшін саусағыңыздың күйін рет-з</string>
+    <string name="fingerprint_register_place_your_finger">Саусақ ізіңізді сканерлеңіз</string>
     <string name="fingerprint_register_success">Саусақ ізі қосылды</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Тамаша! Саусақ ізіңіз танылды.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Саусақ ізінің сенсорына қолыңызды тигізіңіз.</string>
@@ -219,8 +219,7 @@
     <string name="fingerprint_verification_description_default_text">Саусақ ізіңізді сканерлеңіз.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Пернетақта жаппасы тіркелген кезде, %1$s элементін пайдалану мүмкін емес. %2$s элементі өшіріледі.</string>
     <string name="fingerscanner_keyboard_dialog_title">Перне. жаппасы тіркелді</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Саусағыңызды саусақ ізін сканерлеу сенсорына қойып, қайтадан алыңыз.</string>
-    <string name="fingerscanner_register_text">Саусағыңызбен датчикке басып, дірілді сезген кезіңізде алып тастаңыз.</string>
+    <string name="fingerscanner_register_text">Саусағыңызды датчикке қойып, сосын дірілді сезген кезіңізде оны алыңыз.</string>
     <string name="fingerscanner_toast_back_text">Саусақ ізіңізді қосуды тоқтату үшін, Артқа түймесін қайтадан түртіңіз.</string>
     <string name="forgot_password">Құпиясөз ұмытылған</string>
     <string name="forgot_password_header">Құпиясөзді ысыру керек пе?</string>
@@ -249,7 +248,7 @@
     <string name="sec_enter_password_WC">Құписөзді енгізу</string>
     <string name="sec_enter_pin_WC">PIN кодын енгізіңіз</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Саусақ ізінің сенсорын белсендіру</string>
-    <string name="sec_fingerprint_always_on_summary">Экран өшірулі болса да саусақ ізін сканерлеңіз.</string>
+    <string name="sec_fingerprint_always_on_summary">Оятып, Бүйірлік түймесін жәй ғана түрту арқылы телефоныңыздың құлпын ашыңыз. Жылдам қатынасу үшін қосыңыз немесе кездейсоқ саусақ іздерін сканерлеуді болдырмас үшін өшіріңіз.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Экран өшірулі болса да саусақ ізіңізді сканерлеңіз. Samsung DeX режимі қосулы кезде қолжетімді емес.</string>
     <string name="sec_fingerprint_enroll_title">Саусақ ізін қосу</string>
     <string name="sec_fingerprint_error_contact_customer_service">Егер бұл мәселе қайталанса, онда Тұтынушыларға қызмет көрсету орталығына хабарласыңыз.</string>
@@ -260,12 +259,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Саусақ ізіңізді тіркемес бұрын телефоныңызды сымсыз зарядтағыштан ажыратып алыңыз.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Саусақ ізін қосуды жалғастыру үшін телефонды жабыңыз.</string>
-    <string name="sec_fingerprint_register_guide_text">Саусағыңызбен датчикке басып, дірілді сезген кезіңізде алып тастаңыз.</string>
+    <string name="sec_fingerprint_register_guide_text">Саусағыңызды датчикке қойып, сосын дірілді сезген кезіңізде оны алыңыз.</string>
     <string name="sec_fingerprint_register_open_phone">Саусақ ізін қосуды жалғастыру үшін телефонды ашыңыз.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Саусағыңызбен датчикті басыңыз, пайыз жоғары көтерілгенде оны қайта алыңыз.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Саусағыңызды датчикке қойыңыз, сосын пайыздық көрсеткіш көтерілген кезде саусағыңызды алыңыз.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Саусақ ізіңіздің жиектерін түсіріп алу үшін саусағыңыздың орналасуын әр уақытта өзгертіп тұрыңыз.</string>
     <string name="sec_fingerprint_scan_fingerprint">Саусақ ізін сканерлеңіз.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Samsung DeX режимі қосулы кезде белгіше көрсетілмейді.</string>
     <string name="sec_fingerprint_second_guide_title">Толық сканерлеуді алу</string>
     <string name="sec_fingerprint_sensor">Саусақ ізінің сенсоры</string>
     <string name="sec_fingerprint_sensor_activated">Саусақ ізінің сенсоры белсендірілді</string>

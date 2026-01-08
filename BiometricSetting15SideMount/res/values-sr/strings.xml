@@ -140,10 +140,10 @@
     <string name="fingerprint_custom_animation_title">Анимација</string>
     <string name="fingerprint_custom_icon_title">Icon</string>
     <string name="fingerprint_dex_toast">Користите отисак прста на телефону за верификацију идентитета.</string>
-    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Заштитна фолија која је дебела или у боји може да утиче на перформансе. Ако користите заштиту за екран, проверите да ли је означена као компатибилна са сензором отиска прста на екрану.</string>
+    <string name="fingerprint_dialog_if_you_use_a_screen_protector">Заштитна фолија која је дебела може да утиче на перформансе. Ако користите заштиту за екран, проверите да ли је означена као компатибилна са сензором отиска прста на екрану.</string>
     <string name="fingerprint_dialog_make_sure_that_you_dont_use">Не смете користити заштиту за екран док региструјете отиске прстију.</string>
     <string name="fingerprint_doesnt_support_multi_window_text">Ова апликација не подржава опцију Више прозора.</string>
-    <string name="fingerprint_duplicate_guide_msg">Обавезно сваки пут мало померите прст.</string>
+    <string name="fingerprint_duplicate_guide_msg">Сваки пут мало померите прст да бисте у потпуности скенирали отисак.</string>
     <string name="fingerprint_enroll_dont_move">Не померајте прст док се скенирање не заврши.</string>
     <string name="fingerprint_enroll_first_guide_indisplay">Попуните цео круг</string>
     <string name="fingerprint_enroll_first_guide_subtitle">Померајте прст око сензора</string>
@@ -176,7 +176,7 @@
     <string name="fingerprint_error_message_sensor_error">Уколико се ово стално понавља, рестартујте телефон.</string>
     <string name="fingerprint_error_message_sensor_error_vzw">An error has occurred with the fingerprint sensor. If this message appears repeatedly, restart your phone.</string>
     <string name="fingerprint_error_message_some_things_try">Ево неколико ствари које можете да испробате:</string>
-    <string name="fingerprint_error_message_something_on_sensor">Ако се овај проблем настави, контактирајте корисничку службу.</string>
+    <string name="fingerprint_error_message_something_on_sensor">Уверите се да је сензор отиска прста чист и сув, а затим покушајте поново.</string>
     <string name="fingerprint_error_message_timed_out">Регистрација је истекла. Покушајте поново.</string>
     <string name="fingerprint_error_title_no_space">Недовољно меморије</string>
     <string name="fingerprint_error_title_not_responding">Сензор за отисак прста не реагује</string>
@@ -199,7 +199,7 @@
     <string name="fingerprint_register_done">Готово</string>
     <string name="fingerprint_register_guide_side_key">Сензор се налази на бочном дугмету на десној страни телефона.</string>
     <string name="fingerprint_register_lift_your_finger">Подигните прст са сензора отиска прста.</string>
-    <string name="fingerprint_register_place_your_finger">Померите прст да бисте у потпуности скенирали</string>
+    <string name="fingerprint_register_place_your_finger">Скенирајте отисак прста</string>
     <string name="fingerprint_register_success">Отисак прста је додат</string>
     <string name="fingerprint_register_swipe_enroll_guide_success">Одлично! Отисак прста је препознат.</string>
     <string name="fingerprint_register_swipe_enroll_guide_tap_text">Додирните сензор отиска прста.</string>
@@ -253,8 +253,7 @@
     <string name="fingerprint_verification_description_default_text">Скенирајте отисак прста.</string>
     <string name="fingerscanner_keyboard_dialog_msg">Није могуће користити %1$s док је причвршћен поклопац тастатуре. %2$s ће се онемогућити.</string>
     <string name="fingerscanner_keyboard_dialog_title">Покл. таст. причвршћен</string>
-    <string name="fingerscanner_lift_your_finger_off_first">Ставите прст на сензор отиска прста, а затим га поново подигните.</string>
-    <string name="fingerscanner_register_text">Прислоните прст уз сензор, а затим га поново подигните када осетите вибрацију.</string>
+    <string name="fingerscanner_register_text">Ставите прст на сензор, а затим га поново подигните када осетите вибрацију.</string>
     <string name="fingerscanner_toast_back_text">Поново куцните на дугме Назад да бисте зауставили додавање отиска прста.</string>
     <string name="forgot_password">Заборави лозинку</string>
     <string name="forgot_password_header">Ресетовати лозинку?</string>
@@ -284,7 +283,7 @@
     <string name="sec_enter_password_WC">Унеси лозинку</string>
     <string name="sec_enter_pin_WC">Унеси ПИН код</string>
     <string name="sec_fingerprint_activate_fingerprint_sensor">Активирајте сензор отиска прста</string>
-    <string name="sec_fingerprint_always_on_summary">Скенирајте отисак прста чак и ако је екран искључен.</string>
+    <string name="sec_fingerprint_always_on_summary">Пробудите и откључајте телефон тако што ћете додирнути бочно дугме. Укључите ову опцију ради брзог приступа или је искључите да бисте избегли случајно скенирање отиска прста.</string>
     <string name="sec_fingerprint_always_on_summary_dex">Скенирајте отисак прста чак и ако је екран искључен. Ово није доступно када је Samsung DeX покренут.</string>
     <string name="sec_fingerprint_enroll_title">Додај отисак прста</string>
     <string name="sec_fingerprint_error_contact_customer_service">Ако се овај проблем настави, контактирајте корисничку службу.</string>
@@ -295,12 +294,11 @@
     <string name="sec_fingerprint_error_wireless_charger">Уклоните телефон са бежичног пуњача пре него што региструјете отисак прста.</string>
     <string name="sec_fingerprint_percent_format">^1<font size="6"> </font>%</string>
     <string name="sec_fingerprint_register_close_phone">Затворите телефон да бисте наставили са додавањем отиска прста.</string>
-    <string name="sec_fingerprint_register_guide_text">Прислоните прст уз сензор, а затим га поново подигните када осетите вибрацију.</string>
+    <string name="sec_fingerprint_register_guide_text">Ставите прст на сензор, а затим га поново подигните када осетите вибрацију.</string>
     <string name="sec_fingerprint_register_open_phone">Отворите телефон да бисте наставили са додавањем отиска прста.</string>
-    <string name="sec_fingerprint_register_percentage_goes_up">Прислоните прст уз сензор, а затим га подигните када проценат порасте.</string>
+    <string name="sec_fingerprint_register_percentage_goes_up">Ставите прст на сензор, а затим га подигните када проценат порасте.</string>
     <string name="sec_fingerprint_register_reposition_your_finger">Сваки пут мало промените положај прста како бисте снимили углове отиска прста.</string>
     <string name="sec_fingerprint_scan_fingerprint">Скенирајте отисак прста.</string>
-    <string name="sec_fingerprint_screen_off_summary_dex">Икона се неће приказивати када је Samsung DeX покренут.</string>
     <string name="sec_fingerprint_second_guide_title">Прављење потпуног скенирања</string>
     <string name="sec_fingerprint_sensor">Сензор отиска прста</string>
     <string name="sec_fingerprint_sensor_activated">Сензор отиска прста је активиран</string>
