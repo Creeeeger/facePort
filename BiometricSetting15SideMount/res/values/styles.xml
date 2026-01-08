@@ -1011,7 +1011,6 @@
         <item name="android:navigationBarColor">@color/intelligent_enroll_background_color</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar">@bool/use_light_status_navi_bar</item>
-        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
     </style>
     <style name="FingerprintEnrollGuideDescriptionStyle">
         <item name="android:textSize">@dimen/sec_fingerprint_register_guideTitle_text_size</item>
@@ -1214,7 +1213,6 @@
         <item name="android:windowLightNavigationBar">@bool/sec_fingerprint_use_light_status_navi_bar</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/sec_ic_blank</item>
-        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
     </style>
     <style name="SecFingerprintFirstGuideStyle">
         <item name="android:textSize">15.0sp</item>
