@@ -65,13 +65,17 @@
     .line 13
     iget-object p0, p1, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mActivity:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;
 
+    iget-object v0, p1, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
     .line 14
     .line 15
     if-eqz p0, :cond_0
 
     .line 16
     .line 17
-    invoke-virtual {p0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment()V
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, v0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment(Landroid/view/View;)V
 
     .line 18
     .line 19

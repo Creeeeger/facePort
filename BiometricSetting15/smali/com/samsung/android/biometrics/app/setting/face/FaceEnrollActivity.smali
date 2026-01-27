@@ -116,7 +116,7 @@
 
 .field public mSoundPool:Landroid/media/SoundPool;
 
-.field public mTextureView:Landroid/view/TextureView;
+.field public mTextureView:Landroid/view/View;
 
 .field public mTts:Landroid/speech/tts/TextToSpeech;
 
@@ -597,7 +597,7 @@
 
     .line 80
     .line 81
-    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/TextureView;
+    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/View;
 
     .line 82
     .line 83
@@ -1122,7 +1122,7 @@
     .line 72
     .line 73
     :cond_2
-    iget-object p1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/TextureView;
+    iget-object p1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/View;
 
     .line 74
     .line 75
@@ -1130,7 +1130,7 @@
 
     .line 76
     .line 77
-    invoke-virtual {p1, v1}, Landroid/view/TextureView;->setVisibility(I)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 78
     .line 79
@@ -1403,27 +1403,11 @@
     .line 39
     .line 40
     .line 41
-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+    const/4 v0, 0x1
 
     .line 42
     .line 43
-    .line 44
-    move-result-object p1
-
-    .line 45
-    const-string v0, "android.hardware.biometrics.face"
-
-    .line 46
-    .line 47
-    invoke-virtual {p1, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
-
-    .line 48
-    .line 49
-    .line 50
-    move-result p1
-
-    .line 51
-    sput-boolean p1, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_FACE_HAL:Z
+    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_FACE_HAL:Z
 
     .line 52
     .line 53
@@ -3986,50 +3970,9 @@
     move-result-object v0
 
     .line 56
-    check-cast v0, Landroid/view/TextureView;
-
     .line 57
     .line 58
-    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/TextureView;
-
-    .line 59
-    .line 60
-    if-eqz v0, :cond_2
-
-    .line 61
-    .line 62
-    invoke-virtual {v0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-
-    .line 63
-    .line 64
-    .line 65
-    move-result-object v0
-
-    .line 66
-    new-instance v1, Landroid/view/Surface;
-
-    .line 67
-    .line 68
-    invoke-direct {v1, v0}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
-
-    .line 69
-    .line 70
-    .line 71
-    :goto_0
-    move-object v8, v1
-
-    .line 72
-    goto :goto_1
-
-    .line 73
-    :cond_2
-    const/4 v1, 0x0
-
-    .line 74
-    goto :goto_0
-
-    .line 75
-    :goto_1
+    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/View;
     iget-object v2, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
 
     .line 76

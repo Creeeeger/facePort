@@ -76,6 +76,48 @@
     goto :goto_5
 
     :cond_b
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
+    instance-of v5, v0, Landroid/view/TextureView;
+
+    if-eqz v5, :cond_tv_ok
+
+    check-cast v0, Landroid/view/TextureView;
+
+    invoke-virtual {v0}, Landroid/view/TextureView;->isAvailable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_tv_ok
+
+    goto :goto_5
+
+    :cond_tv_ok
+    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
+    instance-of v5, v0, Landroid/view/SurfaceView;
+
+    if-eqz v5, :cond_sv_ok
+
+    check-cast v0, Landroid/view/SurfaceView;
+
+    invoke-virtual {v0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
+
+    move-result v0
+
+    if-nez v0, :cond_sv_ok
+
+    goto :goto_5
+
+    :cond_sv_ok
 
     .line 2
     .line 3
@@ -631,10 +673,11 @@
 
     .line 280
     .line 281
+    iget-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+
     if-eqz v0, :cond_6
 
-    .line 282
-    iget-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
+    if-eqz v1, :cond_6
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment(Landroid/view/View;)V
 

@@ -1,0 +1,519 @@
+From f640bc3547f3c1f2b675b11b3a73c3852b97a0a7 Mon Sep 17 00:00:00 2001
+From: Crecker <104427569+Creeeeger@users.noreply.github.com>
+Date: Tue, 27 Jan 2026 18:23:02 +0100
+Subject: [PATCH] BioSettings: OMG FINALLY THE FACE PREVIEW WORKS
+
+no more comment
+---
+ .../app/setting/face/FaceCameraPreview.smali  | 150 +++++++-----------
+ .../setting/face/FaceEnrollActivity$6.smali   |  13 --
+ .../app/setting/face/FaceEnrollActivity.smali |  71 +--------
+ ...llFragment$$ExternalSyntheticLambda0.smali |  47 +++++-
+ ...llFragment$$ExternalSyntheticLambda1.smali |   6 +-
+ .../app/setting/face/FaceEnrollFragment.smali |   4 +-
+ 6 files changed, 118 insertions(+), 173 deletions(-)
+
+diff --git a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceCameraPreview.smali b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceCameraPreview.smali
+index 6eb6d27d02..e87ea56b09 100644
+--- a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceCameraPreview.smali
++++ b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceCameraPreview.smali
+@@ -1,5 +1,5 @@
+ .class public Lcom/samsung/android/biometrics/app/setting/face/FaceCameraPreview;
+-.super Landroid/view/TextureView;
++.super Landroid/view/SurfaceView;
+ .source "qb/99320575 d56624c1bb715a84cea9c0c1dda8efd1b9707127cfd9652e1a6ad0bfbdc507b8"
+ 
+ 
+@@ -8,10 +8,10 @@
+     .locals 0
+ 
+     .line 1
+-    invoke-direct {p0, p1}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
++    invoke-direct {p0, p1}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;)V
+ 
+     .line 2
+-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
++    invoke-virtual {p0}, Landroid/view/SurfaceView;->invalidate()V
+ 
+     return-void
+ .end method
+@@ -20,10 +20,10 @@
+     .locals 0
+ 
+     .line 3
+-    invoke-direct {p0, p1, p2}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
++    invoke-direct {p0, p1, p2}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+ 
+     .line 4
+-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
++    invoke-virtual {p0}, Landroid/view/SurfaceView;->invalidate()V
+ 
+     return-void
+ .end method
+@@ -32,10 +32,10 @@
+     .locals 0
+ 
+     .line 5
+-    invoke-direct {p0, p1, p2, p3}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
++    invoke-direct {p0, p1, p2, p3}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+ 
+     .line 6
+-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
++    invoke-virtual {p0}, Landroid/view/SurfaceView;->invalidate()V
+ 
+     return-void
+ .end method
+@@ -43,151 +43,117 @@
+ 
+ # virtual methods
+ .method public final onSizeChanged(IIII)V
+-    .locals 6
++    .locals 4
+ 
+     .line 1
+-    new-instance v0, Landroid/graphics/Matrix;
++    invoke-virtual {p0}, Landroid/view/SurfaceView;->getResources()Landroid/content/res/Resources;
+ 
+     .line 2
+     .line 3
+-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
++    move-result-object v0
+ 
+     .line 4
++    const v1, 0x7f0b0009
++
+     .line 5
+     .line 6
+-    invoke-virtual {p0, v0}, Landroid/view/TextureView;->getTransform(Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
++    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+ 
+     .line 7
+     .line 8
++    move-result v0
++
+     .line 9
+-    invoke-virtual {p0}, Landroid/view/TextureView;->getResources()Landroid/content/res/Resources;
++    const/4 v1, 0x1
+ 
+     .line 10
++    const/high16 v2, 0x3f800000    # 1.0f
++
+     .line 11
++    const v3, 0x3faa3d71    # 1.33f
++
+     .line 12
+-    move-result-object v1
++    if-ne v0, v1, :cond_0
+ 
+     .line 13
+-    const v2, 0x7f0b0009
++    invoke-virtual {p0}, Landroid/view/SurfaceView;->getWidth()I
+ 
+     .line 14
++    move-result v0
++
+     .line 15
++    invoke-virtual {p0, v2}, Landroid/view/SurfaceView;->setScaleX(F)V
++
+     .line 16
+-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
++    invoke-virtual {p0, v3}, Landroid/view/SurfaceView;->setScaleY(F)V
+ 
+     .line 17
++    const/4 v1, 0x0
++
+     .line 18
++    invoke-virtual {p0, v1}, Landroid/view/SurfaceView;->setTranslationX(F)V
++
+     .line 19
+-    move-result v1
++    int-to-float v0, v0
+ 
+     .line 20
+-    const/4 v2, 0x1
++    mul-float/2addr v3, v0
+ 
+     .line 21
+-    const/4 v3, 0x0
++    sub-float/2addr v0, v3
+ 
+     .line 22
+-    const/high16 v4, 0x3f800000    # 1.0f
++    const/high16 v3, 0x40000000    # 2.0f
+ 
+     .line 23
++    div-float/2addr v0, v3
++
+     .line 24
+-    const v5, 0x3faa3d71    # 1.33f
++    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setTranslationY(F)V
+ 
+     .line 25
++    goto :goto_0
++
+     .line 26
++    :cond_0
++    invoke-virtual {p0}, Landroid/view/SurfaceView;->getHeight()I
++
+     .line 27
+-    if-ne v1, v2, :cond_0
++    move-result v0
+ 
+     .line 28
++    invoke-virtual {p0, v3}, Landroid/view/SurfaceView;->setScaleX(F)V
++
+     .line 29
+-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
++    invoke-virtual {p0, v2}, Landroid/view/SurfaceView;->setScaleY(F)V
+ 
+     .line 30
++    int-to-float v0, v0
++
+     .line 31
++    mul-float/2addr v3, v0
++
+     .line 32
+-    move-result v1
++    sub-float/2addr v0, v3
+ 
+     .line 33
+-    int-to-float v2, v1
++    const/high16 v3, 0x40000000    # 2.0f
+ 
+     .line 34
+-    mul-float/2addr v2, v5
++    div-float/2addr v0, v3
+ 
+     .line 35
+-    float-to-int v2, v2
++    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setTranslationX(F)V
+ 
+     .line 36
+-    sub-int/2addr v1, v2
++    const/4 v0, 0x0
+ 
+     .line 37
+-    div-int/lit8 v1, v1, 0x2
++    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setTranslationY(F)V
+ 
+     .line 38
+-    .line 39
+-    invoke-virtual {v0, v4, v5}, Landroid/graphics/Matrix;->setScale(FF)V
+-
+-    .line 40
+-    .line 41
+-    .line 42
+-    int-to-float v1, v1
+-
+-    .line 43
+-    invoke-virtual {v0, v3, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+-
+-    .line 44
+-    .line 45
+-    .line 46
+-    goto :goto_0
+-
+-    .line 47
+-    :cond_0
+-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+-
+-    .line 48
+-    .line 49
+-    .line 50
+-    move-result v1
+-
+-    .line 51
+-    int-to-float v2, v1
+-
+-    .line 52
+-    mul-float/2addr v2, v5
+-
+-    .line 53
+-    float-to-int v2, v2
+-
+-    .line 54
+-    sub-int/2addr v1, v2
+-
+-    .line 55
+-    div-int/lit8 v1, v1, 0x2
+-
+-    .line 56
+-    .line 57
+-    invoke-virtual {v0, v5, v4}, Landroid/graphics/Matrix;->setScale(FF)V
+-
+-    .line 58
+-    .line 59
+-    .line 60
+-    int-to-float v1, v1
+-
+-    .line 61
+-    invoke-virtual {v0, v1, v3}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+-
+-    .line 62
+-    .line 63
+-    .line 64
+     :goto_0
+-    invoke-virtual {p0, v0}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
+-
+-    .line 65
+-    .line 66
+-    .line 67
+-    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/TextureView;->onSizeChanged(IIII)V
++    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/SurfaceView;->onSizeChanged(IIII)V
+ 
+-    .line 68
+-    .line 69
+-    .line 70
+     return-void
+ .end method
+diff --git a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6.smali b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6.smali
+index af57b20efe..c48dc00e0f 100644
+--- a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6.smali
++++ b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity$6.smali
+@@ -1350,19 +1350,6 @@
+     .locals 14
+ 
+     .line 1
+-    sget-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_FACE_HAL:Z
+-
+-    .line 2
+-    .line 3
+-    if-eqz v0, :cond_0
+-
+-    .line 4
+-    .line 5
+-    rsub-int/lit8 p1, p1, 0x64
+-
+-    .line 6
+-    .line 7
+-    :cond_0
+     new-instance v0, Ljava/lang/StringBuilder;
+ 
+     .line 8
+diff --git a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity.smali b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity.smali
+index 1a806cd85b..c2dbc92297 100644
+--- a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity.smali
++++ b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollActivity.smali
+@@ -116,7 +116,7 @@
+ 
+ .field public mSoundPool:Landroid/media/SoundPool;
+ 
+-.field public mTextureView:Landroid/view/TextureView;
++.field public mTextureView:Landroid/view/View;
+ 
+ .field public mTts:Landroid/speech/tts/TextToSpeech;
+ 
+@@ -597,7 +597,7 @@
+ 
+     .line 80
+     .line 81
+-    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/TextureView;
++    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/View;
+ 
+     .line 82
+     .line 83
+@@ -1122,7 +1122,7 @@
+     .line 72
+     .line 73
+     :cond_2
+-    iget-object p1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/TextureView;
++    iget-object p1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/View;
+ 
+     .line 74
+     .line 75
+@@ -1130,7 +1130,7 @@
+ 
+     .line 76
+     .line 77
+-    invoke-virtual {p1, v1}, Landroid/view/TextureView;->setVisibility(I)V
++    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+ 
+     .line 78
+     .line 79
+@@ -1403,27 +1403,11 @@
+     .line 39
+     .line 40
+     .line 41
+-    invoke-virtual {p0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
++    const/4 v0, 0x1
+ 
+     .line 42
+     .line 43
+-    .line 44
+-    move-result-object p1
+-
+-    .line 45
+-    const-string v0, "android.hardware.biometrics.face"
+-
+-    .line 46
+-    .line 47
+-    invoke-virtual {p1, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+-
+-    .line 48
+-    .line 49
+-    .line 50
+-    move-result p1
+-
+-    .line 51
+-    sput-boolean p1, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_FACE_HAL:Z
++    sput-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_FACE_HAL:Z
+ 
+     .line 52
+     .line 53
+@@ -3986,50 +3970,9 @@
+     move-result-object v0
+ 
+     .line 56
+-    check-cast v0, Landroid/view/TextureView;
+-
+     .line 57
+     .line 58
+-    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/TextureView;
+-
+-    .line 59
+-    .line 60
+-    if-eqz v0, :cond_2
+-
+-    .line 61
+-    .line 62
+-    invoke-virtual {v0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+-
+-    .line 63
+-    .line 64
+-    .line 65
+-    move-result-object v0
+-
+-    .line 66
+-    new-instance v1, Landroid/view/Surface;
+-
+-    .line 67
+-    .line 68
+-    invoke-direct {v1, v0}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+-
+-    .line 69
+-    .line 70
+-    .line 71
+-    :goto_0
+-    move-object v8, v1
+-
+-    .line 72
+-    goto :goto_1
+-
+-    .line 73
+-    :cond_2
+-    const/4 v1, 0x0
+-
+-    .line 74
+-    goto :goto_0
+-
+-    .line 75
+-    :goto_1
++    iput-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mTextureView:Landroid/view/View;
+     iget-object v2, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->mFaceManager:Lcom/samsung/android/bio/face/SemBioFaceManager;
+ 
+     .line 76
+diff --git a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda0.smali b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda0.smali
+index c67fdaec49..be92269e82 100644
+--- a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda0.smali
++++ b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda0.smali
+@@ -76,6 +76,48 @@
+     goto :goto_5
+ 
+     :cond_b
++    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
++
++    instance-of v5, v0, Landroid/view/TextureView;
++
++    if-eqz v5, :cond_tv_ok
++
++    check-cast v0, Landroid/view/TextureView;
++
++    invoke-virtual {v0}, Landroid/view/TextureView;->isAvailable()Z
++
++    move-result v0
++
++    if-nez v0, :cond_tv_ok
++
++    goto :goto_5
++
++    :cond_tv_ok
++    iget-object v0, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
++
++    instance-of v5, v0, Landroid/view/SurfaceView;
++
++    if-eqz v5, :cond_sv_ok
++
++    check-cast v0, Landroid/view/SurfaceView;
++
++    invoke-virtual {v0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
++
++    move-result-object v0
++
++    invoke-interface {v0}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
++
++    move-result-object v0
++
++    invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
++
++    move-result v0
++
++    if-nez v0, :cond_sv_ok
++
++    goto :goto_5
++
++    :cond_sv_ok
+ 
+     .line 2
+     .line 3
+@@ -631,10 +673,11 @@
+ 
+     .line 280
+     .line 281
++    iget-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
++
+     if-eqz v0, :cond_6
+ 
+-    .line 282
+-    iget-object v1, p0, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
++    if-eqz v1, :cond_6
+ 
+     invoke-virtual {v0, v1}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment(Landroid/view/View;)V
+ 
+diff --git a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda1.smali b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda1.smali
+index 624cd3f45f..d199fa491f 100644
+--- a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda1.smali
++++ b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment$$ExternalSyntheticLambda1.smali
+@@ -65,13 +65,17 @@
+     .line 13
+     iget-object p0, p1, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mActivity:Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;
+ 
++    iget-object v0, p1, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollFragment;->mFacePreview:Landroid/view/View;
++
+     .line 14
+     .line 15
+     if-eqz p0, :cond_0
+ 
+     .line 16
+     .line 17
+-    invoke-virtual {p0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment()V
++    if-eqz v0, :cond_0
++
++    invoke-virtual {p0, v0}, Lcom/samsung/android/biometrics/app/setting/face/FaceEnrollActivity;->startEnrollment(Landroid/view/View;)V
+ 
+     .line 18
+     .line 19
+diff --git a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment.smali b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment.smali
+index a310692777..a641adc0c4 100644
+--- a/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment.smali
++++ b/BiometricSetting15/smali/com/samsung/android/biometrics/app/setting/face/FaceEnrollFragment.smali
+@@ -545,7 +545,9 @@
+ 
+     .line 207
+     .line 208
+-    invoke-virtual {p2, v1}, Landroid/widget/ImageView;->setVisibility(I)V
++    const/4 v10, 0x4
++
++    invoke-virtual {p2, v10}, Landroid/widget/ImageView;->setVisibility(I)V
+ 
+     .line 203
+     .line 204
