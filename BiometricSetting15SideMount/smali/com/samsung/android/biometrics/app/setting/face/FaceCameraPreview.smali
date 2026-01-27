@@ -1,5 +1,5 @@
 .class public Lcom/samsung/android/biometrics/app/setting/face/FaceCameraPreview;
-.super Landroid/view/TextureView;
+.super Landroid/view/SurfaceView;
 .source "qb/99320575 d56624c1bb715a84cea9c0c1dda8efd1b9707127cfd9652e1a6ad0bfbdc507b8"
 
 
@@ -8,10 +8,10 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->invalidate()V
 
     return-void
 .end method
@@ -20,10 +20,10 @@
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 4
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->invalidate()V
 
     return-void
 .end method
@@ -32,10 +32,10 @@
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 6
-    invoke-virtual {p0}, Landroid/view/TextureView;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->invalidate()V
 
     return-void
 .end method
@@ -43,151 +43,117 @@
 
 # virtual methods
 .method public final onSizeChanged(IIII)V
-    .locals 6
+    .locals 4
 
     .line 1
-    new-instance v0, Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->getResources()Landroid/content/res/Resources;
 
     .line 2
     .line 3
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    move-result-object v0
 
     .line 4
+    const v1, 0x7f0b0009
+
     .line 5
     .line 6
-    invoke-virtual {p0, v0}, Landroid/view/TextureView;->getTransform(Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     .line 7
     .line 8
+    move-result v0
+
     .line 9
-    invoke-virtual {p0}, Landroid/view/TextureView;->getResources()Landroid/content/res/Resources;
+    const/4 v1, 0x1
 
     .line 10
+    const/high16 v2, 0x3f800000    # 1.0f
+
     .line 11
+    const v3, 0x3faa3d71    # 1.33f
+
     .line 12
-    move-result-object v1
+    if-ne v0, v1, :cond_0
 
     .line 13
-    const v2, 0x7f0b0009
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->getWidth()I
 
     .line 14
+    move-result v0
+
     .line 15
+    invoke-virtual {p0, v2}, Landroid/view/SurfaceView;->setScaleX(F)V
+
     .line 16
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
+    invoke-virtual {p0, v3}, Landroid/view/SurfaceView;->setScaleY(F)V
 
     .line 17
+    const/4 v1, 0x0
+
     .line 18
+    invoke-virtual {p0, v1}, Landroid/view/SurfaceView;->setTranslationX(F)V
+
     .line 19
-    move-result v1
+    int-to-float v0, v0
 
     .line 20
-    const/4 v2, 0x1
+    mul-float/2addr v3, v0
 
     .line 21
-    const/4 v3, 0x0
+    sub-float/2addr v0, v3
 
     .line 22
-    const/high16 v4, 0x3f800000    # 1.0f
+    const/high16 v3, 0x40000000    # 2.0f
 
     .line 23
+    div-float/2addr v0, v3
+
     .line 24
-    const v5, 0x3faa3d71    # 1.33f
+    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setTranslationY(F)V
 
     .line 25
-    .line 26
-    .line 27
-    if-ne v1, v2, :cond_0
-
-    .line 28
-    .line 29
-    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
-
-    .line 30
-    .line 31
-    .line 32
-    move-result v1
-
-    .line 33
-    int-to-float v2, v1
-
-    .line 34
-    mul-float/2addr v2, v5
-
-    .line 35
-    float-to-int v2, v2
-
-    .line 36
-    sub-int/2addr v1, v2
-
-    .line 37
-    div-int/lit8 v1, v1, 0x2
-
-    .line 38
-    .line 39
-    invoke-virtual {v0, v4, v5}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    .line 40
-    .line 41
-    .line 42
-    int-to-float v1, v1
-
-    .line 43
-    invoke-virtual {v0, v3, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    .line 44
-    .line 45
-    .line 46
     goto :goto_0
 
-    .line 47
+    .line 26
     :cond_0
-    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/SurfaceView;->getHeight()I
 
-    .line 48
-    .line 49
-    .line 50
-    move-result v1
+    .line 27
+    move-result v0
 
-    .line 51
-    int-to-float v2, v1
+    .line 28
+    invoke-virtual {p0, v3}, Landroid/view/SurfaceView;->setScaleX(F)V
 
-    .line 52
-    mul-float/2addr v2, v5
+    .line 29
+    invoke-virtual {p0, v2}, Landroid/view/SurfaceView;->setScaleY(F)V
 
-    .line 53
-    float-to-int v2, v2
+    .line 30
+    int-to-float v0, v0
 
-    .line 54
-    sub-int/2addr v1, v2
+    .line 31
+    mul-float/2addr v3, v0
 
-    .line 55
-    div-int/lit8 v1, v1, 0x2
+    .line 32
+    sub-float/2addr v0, v3
 
-    .line 56
-    .line 57
-    invoke-virtual {v0, v5, v4}, Landroid/graphics/Matrix;->setScale(FF)V
+    .line 33
+    const/high16 v3, 0x40000000    # 2.0f
 
-    .line 58
-    .line 59
-    .line 60
-    int-to-float v1, v1
+    .line 34
+    div-float/2addr v0, v3
 
-    .line 61
-    invoke-virtual {v0, v1, v3}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+    .line 35
+    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setTranslationX(F)V
 
-    .line 62
-    .line 63
-    .line 64
+    .line 36
+    const/4 v0, 0x0
+
+    .line 37
+    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setTranslationY(F)V
+
+    .line 38
     :goto_0
-    invoke-virtual {p0, v0}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/SurfaceView;->onSizeChanged(IIII)V
 
-    .line 65
-    .line 66
-    .line 67
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/TextureView;->onSizeChanged(IIII)V
-
-    .line 68
-    .line 69
-    .line 70
     return-void
 .end method

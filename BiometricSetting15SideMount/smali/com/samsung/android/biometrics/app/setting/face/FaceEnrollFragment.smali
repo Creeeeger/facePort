@@ -545,7 +545,9 @@
 
     .line 207
     .line 208
-    invoke-virtual {p2, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    const/4 v10, 0x4
+
+    invoke-virtual {p2, v10}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 203
     .line 204

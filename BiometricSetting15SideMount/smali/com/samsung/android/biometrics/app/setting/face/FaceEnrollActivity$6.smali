@@ -1350,19 +1350,6 @@
     .locals 14
 
     .line 1
-    sget-boolean v0, Lcom/samsung/android/biometrics/app/setting/Utils$Config;->FEATURE_FACE_HAL:Z
-
-    .line 2
-    .line 3
-    if-eqz v0, :cond_0
-
-    .line 4
-    .line 5
-    rsub-int/lit8 p1, p1, 0x64
-
-    .line 6
-    .line 7
-    :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 8
